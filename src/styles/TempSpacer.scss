@@ -1,0 +1,11 @@
+.spacer {
+    width: 100%;
+    height: 60vh;
+    background-color: black;
+    &:nth-child(odd) {
+        background-color: #2a2929;
+    }
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
