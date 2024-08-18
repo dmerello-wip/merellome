@@ -1,9 +1,9 @@
-// import _TempSpacer from '@/styles/TempSpacer.scss'
+import _loader from '@/styles/loader.scss'
 
 const Loader = () => {
 
   return (
-    <div className='loading'>
+    <div className='loader'>
       loading
     </div>
   )

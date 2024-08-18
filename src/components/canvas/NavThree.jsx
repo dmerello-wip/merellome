@@ -3,21 +3,20 @@
 import { Suspense } from 'react'
 import { PerspectiveCamera } from '@react-three/drei'
 import dynamic from 'next/dynamic'
+import { Loader } from '@/components/dom/Loader'
 
 const NavNode = dynamic(() => import('@/components/canvas/NavNode').then((mod) => mod.NavNode), { ssr: false })
 const View = dynamic(() => import('@/components/canvas/View').then((mod) => mod.View), {
   ssr: false,
   loading: () => (
-    <div className='loading'>
-      loading
-    </div>
+    <Loader /> 
   ),
 })
 
 
 export const NavThree = ({ ...props }) => {
   return (
-   <View style={{ width: '100%', height: '100vh'}}>
+   <View className="navigator__canvas__scene" style={{ width: '100%', height: '100vh'}}>
       <Suspense fallback={null}>
         <ambientLight />
         <pointLight position={[20, 30, 10]} intensity={3} decay={0.2} />
