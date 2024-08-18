@@ -2,10 +2,9 @@
 
 import { Suspense } from 'react'
 import { PerspectiveCamera } from '@react-three/drei'
-import { NavNode } from '@/components/canvas/NavNode'
 import dynamic from 'next/dynamic'
 
-
+const NavNode = dynamic(() => import('@/components/canvas/NavNode').then((mod) => mod.NavNode), { ssr: false })
 const View = dynamic(() => import('@/components/canvas/View').then((mod) => mod.View), {
   ssr: false,
   loading: () => (
@@ -14,6 +13,8 @@ const View = dynamic(() => import('@/components/canvas/View').then((mod) => mod.
     </div>
   ),
 })
+
+
 export const NavThree = ({ ...props }) => {
   return (
    <View style={{ width: '100%', height: '100vh'}}>

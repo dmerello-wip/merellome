@@ -2,6 +2,7 @@
     width: 100%;
     height: 60vh;
     background-color: black;
+    border: 1px dotted white;
     &:nth-child(odd) {
         background-color: #2a2929;
     }

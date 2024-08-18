@@ -15,8 +15,7 @@ export const NavNode = ({ route = '/', ...props }) => {
       onPointerOut={() => hover(false)}
       {...props}>
       <sphereGeometry args={[1, 64, 64]} />
-      <MeshDistortMaterial factor={10} speed={2} color={hovered ? 'hotpink' : '#1fb2f5'} />
-      {/* <MeshDistortMaterial roughness={0.1} color={hovered ? 'hotpink' : '#1fb2f5'} /> */}
+      <MeshDistortMaterial roughness={0.5}  factor={10} speed={2} color={hovered ? '#333' : '#555'} />
     </mesh>
   )
 } 
