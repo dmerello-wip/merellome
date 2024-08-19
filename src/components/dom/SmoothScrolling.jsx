@@ -1,15 +1,18 @@
 "use client";
 
+import gsap from 'gsap';
+import { useRef, useEffect } from 'react';
 import { ReactLenis, useLenis } from '@studio-freight/react-lenis'
 
 function SmoothScrolling({ children }) {
 
   const lenisRef = useRef()
 
-  //  const lenis = useLenis(({ scroll }) => {
-  //   console.log('scroll', scroll);
-  // });
+   const lenis = useLenis(({ scroll }) => {
+    // console.log('scroll', scroll);
+  });
 
+  // in case of gsap set autoRaf={false} to ReactLenis component
   useEffect(() => {
     function update(time) {
       lenisRef.current?.lenis?.raf(time * 1000)

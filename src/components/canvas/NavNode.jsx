@@ -1,15 +1,16 @@
 'use client'
 
-import { useState } from 'react'
-import { useCursor, MeshDistortMaterial, MeshWobbleMaterial, Sphere } from '@react-three/drei'
+import { useRef, useState } from 'react'
+import { useCursor, MeshDistortMaterial } from '@react-three/drei'
 import { useRouter } from 'next/navigation'
 
 export const NavNode = ({ route = '/', ...props }) => {
   const router = useRouter()
   const [hovered, hover] = useState(false)
   useCursor(hovered)
+
   return (
-    <mesh
+    <mesh 
       onClick={() => router.push(route)}
       onPointerOver={() => hover(true)}
       onPointerOut={() => hover(false)}
