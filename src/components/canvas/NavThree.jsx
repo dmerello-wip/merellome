@@ -16,7 +16,7 @@ const View = dynamic(() => import('@/components/canvas/View').then((mod) => mod.
 
 export const NavThree = ({ ...props }) => {
   return (
-   <View className="navigator__canvas__scene" style={{ width: '100%', height: '100vh'}}>
+   <View className="navigator__canvas__scene" >
       <Suspense fallback={null}>
         <ambientLight />
         <pointLight position={[20, 30, 10]} intensity={3} decay={0.2} />

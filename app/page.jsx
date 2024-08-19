@@ -8,14 +8,12 @@ export default function Page() {
   return (
     <>
       <div className="navigator">
-        <div className="navigator__content">
           <TempSpacer>spacer 1</TempSpacer>
           <TempSpacer>spacer 2</TempSpacer>
           <TempSpacer>spacer 3</TempSpacer>
           <TempSpacer>spacer 4</TempSpacer>
           <TempSpacer>spacer 5</TempSpacer>
           <TempSpacer>spacer 6</TempSpacer>
-        </div>
         <div className='navigator__canvas'>
           <NavThree />
         </div>
