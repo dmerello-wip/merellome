@@ -17,6 +17,15 @@ const View = dynamic(() => import('@/components/canvas/View').then((mod) => mod.
 export const NavThree = ({ rotation }) => {
 
   const nodeRef = useRef();
+  const radius = 6;
+  const contents = [
+    'primo',
+    'secondo',
+    'terzo',
+    'primo',
+    'secondo',
+    'terzo',
+  ]
 
 
   useEffect(() => {
@@ -25,7 +34,17 @@ export const NavThree = ({ rotation }) => {
     }
   }, [rotation]);
 
-
+  const renderNodes = () => {
+    let baseDegrees = (2 * Math.PI) / contents.length;
+    return contents.map((el, i) => {
+      let z = radius * Math.cos(i * baseDegrees);
+      let y = radius * Math.sin(i * baseDegrees);
+      return <NavNode
+        key={`node-${i}`}
+        position={[0, y, z]}
+      />;
+    });
+  };
   return (
    <View className="navigator__canvas__scene" >
       <Suspense fallback={null}>
@@ -34,9 +53,7 @@ export const NavThree = ({ rotation }) => {
         <pointLight position={[-10, -10, -10]} color='blue' decay={0.2} />
         <PerspectiveCamera makeDefault fov={40} position={[0, 0, 14]} />
         <group ref={nodeRef}>
-            <NavNode position={[0, -2, 0]}/>
-            <NavNode position={[0, 0, 0]}/>
-            <NavNode position={[0, 2, 0]}/>
+          {renderNodes()}
         </group>
       </Suspense>
   </View>
