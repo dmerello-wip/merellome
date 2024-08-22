@@ -1,21 +1,17 @@
 .navigator {
     position: relative;
-    background: black;
-    border: 3px solid green;
     &__canvas {
         position: absolute;
         top: 0;
         right: 0;
         width: 50vw;
         height: 100%;
-        border: 3px solid red;
         &__scene {
             position: sticky;
             top: 0;
             left: 0;
             width: 100%;
             height: 100vh;
-            background-color: rgba(221, 50, 50, 0.5);
         }
     }
 }

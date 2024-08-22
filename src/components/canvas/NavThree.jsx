@@ -18,13 +18,14 @@ export const NavThree = ({ rotation }) => {
 
   const nodeRef = useRef();
   const radius = 6;
+  // prendere l'array di contenuti dalla stessa sorgente delle slide html
   const contents = [
     'primo',
     'secondo',
     'terzo',
-    'primo',
-    'secondo',
-    'terzo',
+    'quarto',
+    'quinto',
+    'sesto',
   ]
 
 

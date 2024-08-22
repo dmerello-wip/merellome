@@ -39,18 +39,18 @@ export default function Page() {
   return (
     <>
       <div className="navigator" ref={navigatorWrapperRef}>
-        <TempSpacer>spacer 1</TempSpacer>
-        <TempSpacer>spacer 2</TempSpacer>
-        <TempSpacer>spacer 3</TempSpacer>
-        <TempSpacer>spacer 4</TempSpacer>
-        <TempSpacer>spacer 5</TempSpacer>
-        <TempSpacer>spacer 6</TempSpacer>
+        <TempSpacer>1. elemento contenuto del navigator</TempSpacer>
+        <TempSpacer>2. elemento contenuto del navigator</TempSpacer>
+        <TempSpacer>3. elemento contenuto del navigator</TempSpacer>
+        <TempSpacer>4. elemento contenuto del navigator</TempSpacer>
+        <TempSpacer>5. elemento contenuto del navigator</TempSpacer>
+        <TempSpacer>6. elemento contenuto del navigator</TempSpacer>
         <div className='navigator__canvas'>
           <NavThree rotation={rotation}/>
         </div>
       </div>
-      <TempSpacer>spacer outside 1</TempSpacer>
-      <TempSpacer>spacer outside 2</TempSpacer>
+      <TempSpacer>1. Contenuto sotto al navigator</TempSpacer>
+      <TempSpacer>2. Contenuto sotto al navigator</TempSpacer>
     </>
   )
 }
