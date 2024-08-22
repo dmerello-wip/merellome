@@ -18,10 +18,10 @@ export const NavThree = ({ rotation }) => {
 
   const nodeRef = useRef();
 
+
   useEffect(() => {
     if(nodeRef.current) {
     nodeRef.current.rotation.x = rotation
-    console.log('rotation', rotation)
     }
   }, [rotation]);
 

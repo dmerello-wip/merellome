@@ -9,7 +9,7 @@ import _navigator from '@/styles/navigator.scss'
 
 export default function Page() {
 
-  const navigatorRef = useRef()
+  const navigatorWrapperRef = useRef()
   // state to change render in Gsap update
   const [rotation, setRotation] = useState(0)
 
@@ -19,10 +19,11 @@ export default function Page() {
     const gsapRotationValue = {y:0};
 
     const timeLineTrigger = {
-        trigger: navigatorRef.current,
+        trigger: navigatorWrapperRef.current,
         start: 'top top',
-        end: 'bottom center',
+        end: 'bottom bottom',
         scrub: true,
+        // markers:true,
     }
     const timeLine = gsap.timeline({
         scrollTrigger: timeLineTrigger,
@@ -37,7 +38,7 @@ export default function Page() {
 
   return (
     <>
-      <div className="navigator" ref={navigatorRef}>
+      <div className="navigator" ref={navigatorWrapperRef}>
         <TempSpacer>spacer 1</TempSpacer>
         <TempSpacer>spacer 2</TempSpacer>
         <TempSpacer>spacer 3</TempSpacer>

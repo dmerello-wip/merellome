@@ -14,10 +14,11 @@ export const NavNode = ({position}) => {
         // onClick={() => router.push(route)}
         onPointerOver={() => hover(true)}
         onPointerOut={() => hover(false)}>
+        <sphereGeometry args={[1, 64, 64]} />
+        <MeshDistortMaterial roughness={0.5}  factor={10} speed={2} color={hovered ? '#333' : '#555'}/>    
         
-          <sphereGeometry args={[1, 64, 64]} />
-          <MeshDistortMaterial roughness={0.5}  factor={10} speed={2} color={hovered ? '#333' : '#555'}/>
-       
+          {/* <boxGeometry args={[1,1,1]} />
+          <meshBasicMaterial color={'yellow'} />    */}
       </mesh>
   )
 } 
