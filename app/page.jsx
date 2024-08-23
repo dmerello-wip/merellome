@@ -3,6 +3,7 @@
 import { useRef, useEffect, useState } from "react"
 import { NavThree } from "@/components/canvas/NavThree"
 import { TempSpacer } from "@/components/dom/TempSpacer"
+import { NavSlide } from "@/components/dom/NavSlide"
 import gsap from "gsap"
 import { ScrollTrigger } from 'gsap/all'
 import _navigator from '@/styles/navigator.scss'
@@ -23,7 +24,6 @@ export default function Page() {
         start: 'top top',
         end: 'bottom bottom',
         scrub: true,
-        // markers:true,
     }
     const timeLine = gsap.timeline({
         scrollTrigger: timeLineTrigger,
@@ -39,12 +39,36 @@ export default function Page() {
   return (
     <>
       <div className="navigator" ref={navigatorWrapperRef}>
-        <TempSpacer>1. elemento contenuto del navigator</TempSpacer>
-        <TempSpacer>2. elemento contenuto del navigator</TempSpacer>
-        <TempSpacer>3. elemento contenuto del navigator</TempSpacer>
-        <TempSpacer>4. elemento contenuto del navigator</TempSpacer>
-        <TempSpacer>5. elemento contenuto del navigator</TempSpacer>
-        <TempSpacer>6. elemento contenuto del navigator</TempSpacer>
+        <NavSlide
+          title="numero 1"
+          description="description 1">
+          <div>Elemento 1 contenuto del navigator</div>
+        </NavSlide>
+        <NavSlide
+          title="numero 2"
+          description="description 2">
+          <div>Elemento 2 contenuto del navigator</div>
+        </NavSlide>
+        <NavSlide
+          title="numero 3"
+          description="description 3">
+          <div>Elemento 3 contenuto del navigator</div>
+        </NavSlide>
+        <NavSlide
+          title="numero 4"
+          description="description 4">
+          <div>Elemento 4 contenuto del navigator</div>
+        </NavSlide>
+        <NavSlide
+          title="numero 5"
+          description="description 5">
+          <div>Elemento 5 contenuto del navigator</div>
+        </NavSlide>
+        <NavSlide
+          title="numero 6"
+          description="description 6">
+          <div>Elemento 6 contenuto del navigator</div>
+        </NavSlide>
         <div className='navigator__canvas'>
           <NavThree rotation={rotation}/>
         </div>
