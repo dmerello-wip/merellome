@@ -9,7 +9,6 @@ import { NavSlide } from "@/components/NavSlide"
 
 const Navigator = ( { contents }) => {
 
-
   // ref to be used in Gsap
   const navigatorWrapperRef = useRef()
   // state to change rendering called in gsap onUpdate

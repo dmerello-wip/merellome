@@ -10,10 +10,14 @@
     margin: 0;
     padding: 0;
     font-family: var(--base-font-family);
+    background-color: var(--color-dark);
+    color: var(--text-color);
   }
 
   :root {
-    --primary-color: #000000;
-    --secondary-color: #ffffff;
+    --color-primary: #000000;
+    --color-secondary : #ffffff;
+    --color-dark: #101010;
     --base-font-family: 'system-ui', sans-serif;
+    --text-color: #c6b7b7;
   }

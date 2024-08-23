@@ -7,6 +7,10 @@
     -webkit-text-fill-color: transparent;
 }
 
-%gradient-text {
-    @include masking-text(linear-gradient(180deg, rgba(255, 255, 255, 1) 60%, rgba(0, 0, 0, 0.5) 100%));
+@mixin multiline-gradient-text($lineHeigth: 1.2em) {
+    // pay attention: padding will crash the logic, wrap your text if you need it
+    line-height: #{$lineHeigth}em;
+    @include masking-text(
+        repeating-linear-gradient(to bottom, rgba(255, 255, 255, 1) 0, rgb(142, 142, 142) #{$lineHeigth}em)
+    );
 }
