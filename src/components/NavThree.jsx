@@ -14,19 +14,10 @@ const View = dynamic(() => import('@/components/View').then((mod) => mod.View), 
 })
 
 
-export const NavThree = ({ rotation }) => {
+export const NavThree = ({ rotation, slides}) => {
 
   const nodeRef = useRef();
   const radius = 6;
-  // prendere l'array di contenuti dalla stessa sorgente delle slide html
-  const contents = [
-    'primo',
-    'secondo',
-    'terzo',
-    'quarto',
-    'quinto',
-    'sesto',
-  ]
 
 
   useEffect(() => {
@@ -36,13 +27,14 @@ export const NavThree = ({ rotation }) => {
   }, [rotation]);
 
   const renderNodes = () => {
-    let baseDegrees = (2 * Math.PI) / contents.length;
-    return contents.map((el, i) => {
+    let baseDegrees = (2 * Math.PI) / slides.length;
+    return slides.map((el, i) => {
       let z = radius * Math.cos(i * baseDegrees);
       let y = radius * Math.sin(i * baseDegrees);
       return <NavNode
         key={`node-${i}`}
         position={[0, y, z]}
+        color= {el.color}
       />;
     });
   };

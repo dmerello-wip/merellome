@@ -50,7 +50,7 @@ const Navigator = ( { contents }) => {
       <div className="navigator" ref={navigatorWrapperRef}>
         {renderNavSlides()}
         <div className='navigator__canvas'>
-          <NavThree rotation={rotation}/>
+          <NavThree rotation={rotation} slides={contents.slides}/>
         </div>
       </div>
   )

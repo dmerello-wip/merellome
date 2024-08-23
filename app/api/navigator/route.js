@@ -21,22 +21,32 @@ export async function GET() {
         {
             id: 0,
             title: `Hi!`,
-            description: `My name is Diego Merello, and i'm just trying to use some 3d technologies in relation to scroll animations techineques.`
+            description: `My name is Diego Merello, and i'm just trying to use some 3d technologies in relation to scroll animations techineques.`,
+            color: `red`
         },
         {
             id: 1,
             title: `Design`,
-            description: `My name is Diego Merello, and i'm just trying to use some 3d technologies in relation to scroll animations techineques.`
+            description: `My name is Diego Merello, and i'm just trying to use some 3d technologies in relation to scroll animations techineques.`,
+            color: `green`
         },
         {
             id: 2,
             title: `Music`,
-            description: `My name is Diego Merello, and i'm just trying to use some 3d technologies in relation to scroll animations techineques.`
+            description: `My name is Diego Merello, and i'm just trying to use some 3d technologies in relation to scroll animations techineques.`,
+            color: `blue`
         },
         {
-            id: 2,
+            id: 3,
             title: `Education`,
-            description: `My name is Diego Merello, and i'm just trying to use some 3d technologies in relation to scroll animations techineques.`
+            description: `My name is Diego Merello, and i'm just trying to use some 3d technologies in relation to scroll animations techineques.`,
+            color: `orange`
+        },
+        {
+            id: 4,
+            title: `Company`,
+            description: `My name is Diego Merello, and i'm just trying to use some 3d technologies in relation to scroll animations techineques.`,
+            color: `purple`
         },
     ];
 
