@@ -1,5 +1,5 @@
-import { Layout } from '@/components/dom/Layout'
-import SmoothScrolling from "@/components/dom/SmoothScrolling";
+import { Layout } from '@/components/Layout'
+import SmoothScrolling from "@/components/SmoothScrolling";
 import '@/global.css'
 
 export const metadata = {

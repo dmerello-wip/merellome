@@ -3,10 +3,10 @@
 import { Suspense, useRef, useEffect } from 'react'
 import { PerspectiveCamera } from '@react-three/drei'
 import dynamic from 'next/dynamic'
-import { Loader } from '@/components/dom/Loader'
+import { Loader } from '@/components/Loader'
 
-const NavNode = dynamic(() => import('@/components/canvas/NavNode').then((mod) => mod.NavNode), { ssr: false })
-const View = dynamic(() => import('@/components/canvas/View').then((mod) => mod.View), {
+const NavNode = dynamic(() => import('@/components/NavNode').then((mod) => mod.NavNode), { ssr: false })
+const View = dynamic(() => import('@/components/View').then((mod) => mod.View), {
   ssr: false,
   loading: () => (
     <Loader /> 
