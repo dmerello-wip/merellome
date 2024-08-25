@@ -17,7 +17,7 @@ const View = dynamic(() => import('@/components/View').then((mod) => mod.View), 
 export const NavThree = ({ rotation, slides}) => {
 
   const nodeRef = useRef();
-  const radius = 6;
+  const radius = 4;
 
 
   useEffect(() => {
@@ -44,8 +44,8 @@ export const NavThree = ({ rotation, slides}) => {
         <ambientLight />
         <pointLight position={[20, 30, 10]} intensity={3} decay={0.2} />
         <pointLight position={[-10, -10, -10]} color='blue' decay={0.2} />
-        <PerspectiveCamera makeDefault fov={40} position={[0, 0, 14]} />
-        <group ref={nodeRef}>
+        <PerspectiveCamera makeDefault fov={40} position={[0, 0, 12]} />
+        <group ref={nodeRef} rotation={[0,0,-Math.PI/30]}>
           {renderNodes()}
         </group>
       </Suspense>

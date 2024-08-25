@@ -10,11 +10,12 @@
     height: 100vh;
     text-align: left;
     padding: 4rem;
+    outline: 1px solid rgb(38, 38, 38);
     &:nth-child(odd) {
         background-color: hsla(var(--color-dark), 0.5);
     }
     &__content {
-        width: 50%;
+        max-width: 40rem;
         &__title {
             @include typo.multiline-gradient-text(1.1);
             font-size: 6rem;

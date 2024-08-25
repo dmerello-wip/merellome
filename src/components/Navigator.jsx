@@ -6,6 +6,7 @@ import gsap from "gsap"
 import { ScrollTrigger } from 'gsap/all'
 import { NavThree } from "@/components/NavThree"
 import { NavSlide } from "@/components/NavSlide"
+import * as THREE from 'three';
 
 const Navigator = ( { contents }) => {
 
@@ -24,6 +25,7 @@ const Navigator = ( { contents }) => {
         start: 'top top',
         end: 'bottom bottom',
         scrub: true,
+        markers: true
     }
     const timeLine = gsap.timeline({
         scrollTrigger: timeLineTrigger,
@@ -31,8 +33,12 @@ const Navigator = ( { contents }) => {
             setRotation(gsapRotationValue.y)
         }
     });
+
+    // const targetRotationEnd = THREE.MathUtils.degToRad(360) - (THREE.MathUtils.degToRad(360) / contents.slides.length) ;
+    const targetRotationEnd = THREE.MathUtils.degToRad(360) - (THREE.MathUtils.degToRad(360) / contents.slides.length) ;
+    
     gsap.set(gsapRotationValue, { y: 0})
-    timeLine.to(gsapRotationValue, { y:  Math.PI })
+    timeLine.to(gsapRotationValue, { y:  targetRotationEnd})
 
   }, []);
 
@@ -41,7 +47,8 @@ const Navigator = ( { contents }) => {
       return <NavSlide
         key={`slide-${i}`}
         title={el.title}
-        description={el.description}>
+        description={el.description}
+        color={el.color}>
       </NavSlide>
     })
   }

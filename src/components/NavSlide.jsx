@@ -2,7 +2,7 @@ import _NavSlide from '@/styles/NavSlide.scss'
 
 const NavSlide = (props) => {
 
-  const { title, description, children } = props;
+  const { title, description, children, color } = props;
 
   return (
     <div className="navSlide">
@@ -10,7 +10,7 @@ const NavSlide = (props) => {
         <div className='navSlide__content__title'>
           {title}
         </div>
-        <div className='navSlide__content__description'>
+        <div className='navSlide__content__description' style={{color: color}}>
           {description}
         </div>
         {children}

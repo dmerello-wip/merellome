@@ -10,8 +10,17 @@
     margin: 0;
     padding: 0;
     font-family: var(--base-font-family);
-    background-color: var(--color-dark);
     color: var(--text-color);
+    background-color: var(--color-dark);
+    /* fixed limbo bg */
+    /* &::before {
+      position: fixed;
+      content: '';
+      top:0; left:0;
+      width: 100vw;
+      height: 100vh;
+      background: linear-gradient(180deg, rgb(210, 210, 210) 0%, rgba(255, 255, 255, 1) 30%, rgba(255, 255, 255, 1) 60%, rgba(190, 190, 190, 190) 100%);
+    } */
   }
 
   :root {
@@ -19,5 +28,5 @@
     --color-secondary : #ffffff;
     --color-dark: #101010;
     --base-font-family: 'system-ui', sans-serif;
-    --text-color: #c6b7b7;
+    --text-color: var(--color-primary);
   }
