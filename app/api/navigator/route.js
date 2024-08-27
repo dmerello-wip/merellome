@@ -20,33 +20,39 @@ export async function GET() {
     const slides = [
         {
             id: 0,
-            title: `Hi!`,
-            description: `My name is Diego Merello, and i'm just trying to use some 3d technologies in relation to scroll animations techineques.`,
+            title: ` 0!`,
+            description: `description text`,
             color: `red`
         },
         {
             id: 1,
-            title: `Design`,
-            description: `My name is Diego Merello, and i'm just trying to use some 3d technologies in relation to scroll animations techineques.`,
+            title: ` 1`,
+            description: `description text`,
             color: `green`
         },
         {
             id: 2,
-            title: `Music`,
-            description: `My name is Diego Merello, and i'm just trying to use some 3d technologies in relation to scroll animations techineques.`,
+            title: ` 2`,
+            description: `description text`,
             color: `blue`
         },
         {
             id: 3,
-            title: `Education`,
-            description: `My name is Diego Merello, and i'm just trying to use some 3d technologies in relation to scroll animations techineques.`,
+            title: ` 3`,
+            description: `description text`,
             color: `orange`
         },
         {
             id: 4,
-            title: `Company`,
-            description: `My name is Diego Merello, and i'm just trying to use some 3d technologies in relation to scroll animations techineques.`,
+            title: ` 4`,
+            description: `description text`,
             color: `purple`
+        },
+        {
+            id: 5,
+            title: ` 5`,
+            description: `description text`,
+            color: `grey`
         },
     ];
 
