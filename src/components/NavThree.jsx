@@ -21,7 +21,6 @@ export const NavThree = ({ rotation, slides}) => {
   const radius = 5;
   const elementSize = 2;
 
-
   useEffect(() => {
     if(nodeRef.current) {
     nodeRef.current.rotation.z = -rotation

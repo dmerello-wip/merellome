@@ -1,12 +1,9 @@
 'use client'
 
 import _navigator from '@/styles/Navigator.scss'
-import { useRef, useEffect, useState } from "react"
-import gsap from "gsap"
-import { ScrollTrigger } from 'gsap/all'
+import { use, useRef, useState } from "react"
 import { NavThree } from "@/components/NavThree"
 import { NavSlide } from "@/components/NavSlide"
-import * as THREE from 'three';
 
 const Navigator = ( { contents }) => {
 
@@ -15,40 +12,16 @@ const Navigator = ( { contents }) => {
   // state to change rendering called in gsap onUpdate
   const [rotation, setRotation] = useState(0)
 
-  useEffect(() => {
-    gsap.registerPlugin(ScrollTrigger)
-
-    const gsapRotationValue = {y:0};
-
-    const timeLineTrigger = {
-        trigger: navigatorWrapperRef.current,
-        start: 'top top',
-        end: 'bottom bottom',
-        scrub: true,
-        markers: true
-    }
-    const timeLine = gsap.timeline({
-        scrollTrigger: timeLineTrigger,
-        onUpdate: () => {
-            setRotation(gsapRotationValue.y)
-        }
-    });
-
-    // const targetRotationEnd = THREE.MathUtils.degToRad(360) - (THREE.MathUtils.degToRad(360) / contents.slides.length) ;
-    const targetRotationEnd = THREE.MathUtils.degToRad(360) - (THREE.MathUtils.degToRad(360) / contents.slides.length) ;
-    
-    gsap.set(gsapRotationValue, { y: 0})
-    timeLine.to(gsapRotationValue, { y:  targetRotationEnd})
-
-  }, []);
-
   const renderNavSlides = () => {
     return contents.slides.map((el, i) => {
       return <NavSlide
         key={`slide-${i}`}
         title={el.title}
         description={el.description}
-        color={el.color}>
+        color={el.color}
+        angle={el.angle}
+        setRotation={setRotation}
+        >
       </NavSlide>
     })
   }
