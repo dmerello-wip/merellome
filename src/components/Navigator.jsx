@@ -5,19 +5,20 @@ import { useRef } from "react"
 import { NavThree } from "@/components/NavThree"
 import { NavSlide } from "@/components/NavSlide"
 import  { useNavigatorStore } from "@/store/navigatorStore"
+import * as THREE from 'three'
 
 const Navigator = ( { contents }) => {
 
-  // ref to be used in Gsap
   const navigatorWrapperRef = useRef()
   
-  const rotation = useNavigatorStore((state) => state.rotation)
+  const rotation = THREE.MathUtils.radToDeg( useNavigatorStore((state) => state.rotation) )
 
   const renderNavSlides = () => {
     return contents.slides.map((el, i) => {
       const latestRotation = (i === 0) ? 0 : contents.slides[i-1].rotation
       return <NavSlide
         key={`slide-${i}`}
+        id={`slide-${i}`}
         title={el.title}
         description={el.description}
         color={el.color}

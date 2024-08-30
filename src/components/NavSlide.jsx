@@ -7,7 +7,7 @@ import  { useNavigatorStore } from "@/store/navigatorStore"
 
 const NavSlide = (props) => {
 
-  const { title, description, children, color, prevSlideFinalRotation, thisSlideFinalRotation } = props;
+  const { title, description, children, color, prevSlideFinalRotation, thisSlideFinalRotation, id } = props;
   const slideRef = useRef();
   const increaseRotation = useNavigatorStore((state) => state.increaseRotation)
   
@@ -16,33 +16,30 @@ const NavSlide = (props) => {
     gsap.registerPlugin(ScrollTrigger)
   }, [])
 
-  useGSAP(( context, contextSafe ) => {
-      let ctx = gsap.context(() => {
-
-        const controlledRotation = { y: prevSlideFinalRotation }; 
+  useGSAP((context, contextSafe) => {
+    let ctx = gsap.context(() => {
         const timeLineTrigger = {
             trigger: slideRef.current,
-            start: 'top top',
-            end: 'bottom bottom',
-            scrub: true,
-            markers: true
+            markers: true,
+            scrub: 0.1
         }
-        const timeLine = gsap.timeline({
-            scrollTrigger: timeLineTrigger,
-            onUpdate: () => {
-               increaseRotation(controlledRotation)
-            }
+        const controlledRotation = { y: prevSlideFinalRotation };
+        gsap.to(controlledRotation, {
+          y: thisSlideFinalRotation,
+          scrollTrigger: timeLineTrigger,
+          onUpdate: () => {
+              console.log(id, controlledRotation.y);
+              increaseRotation(controlledRotation.y)
+          }
         });
+    });
 
-        timeLine.to(controlledRotation, { y:  thisSlideFinalRotation})
+    return () => ctx.revert();
 
-      });
-
-      return () => ctx.revert();
-  });
+  }, [prevSlideFinalRotation, thisSlideFinalRotation, id]);
 
   return (
-    <div className="navSlide" ref={slideRef}>
+    <div className="navSlide" ref={slideRef} id={id}>
       <div className='navSlide__content'>
         <div className='navSlide__content__title'>
           {title}
