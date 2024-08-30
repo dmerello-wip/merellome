@@ -1,30 +1,33 @@
 'use client'
 
 import _navigator from '@/styles/Navigator.scss'
-import { use, useRef, useState } from "react"
+import { useRef } from "react"
 import { NavThree } from "@/components/NavThree"
 import { NavSlide } from "@/components/NavSlide"
+import  { useNavigatorStore } from "@/store/navigatorStore"
 
 const Navigator = ( { contents }) => {
 
   // ref to be used in Gsap
   const navigatorWrapperRef = useRef()
-  // state to change rendering called in gsap onUpdate
-  const [rotation, setRotation] = useState(0)
+  
+  const rotation = useNavigatorStore((state) => state.rotation)
 
   const renderNavSlides = () => {
     return contents.slides.map((el, i) => {
+      const latestRotation = (i === 0) ? 0 : contents.slides[i-1].rotation
       return <NavSlide
         key={`slide-${i}`}
         title={el.title}
         description={el.description}
         color={el.color}
-        angle={el.angle}
-        setRotation={setRotation}
+        prevSlideFinalRotation={latestRotation}
+        thisSlideFinalRotation={el.rotation}
         >
       </NavSlide>
     })
   }
+
 
   return (
       <div className="navigator" ref={navigatorWrapperRef}>

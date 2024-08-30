@@ -1,36 +1,45 @@
 import _NavSlide from '@/styles/NavSlide.scss'
 import gsap from "gsap"
+import { useGSAP } from '@gsap/react'
 import { ScrollTrigger } from 'gsap/all'
-import { useEffect, useRef } from "react"
+import { useLayoutEffect, useRef } from "react"
+import  { useNavigatorStore } from "@/store/navigatorStore"
 
 const NavSlide = (props) => {
 
-  const { title, description, children, color, setRotation, angle } = props;
+  const { title, description, children, color, prevSlideFinalRotation, thisSlideFinalRotation } = props;
   const slideRef = useRef();
+  const increaseRotation = useNavigatorStore((state) => state.increaseRotation)
+  
 
+  useLayoutEffect(() => {
+    gsap.registerPlugin(ScrollTrigger)
+  }, [])
 
-  useEffect(() => {
-      gsap.registerPlugin(ScrollTrigger)
+  useGSAP(( context, contextSafe ) => {
+      let ctx = gsap.context(() => {
 
-      const gsapRotationValue = {y:0};
+        const controlledRotation = { y: prevSlideFinalRotation }; 
+        const timeLineTrigger = {
+            trigger: slideRef.current,
+            start: 'top top',
+            end: 'bottom bottom',
+            scrub: true,
+            markers: true
+        }
+        const timeLine = gsap.timeline({
+            scrollTrigger: timeLineTrigger,
+            onUpdate: () => {
+               increaseRotation(controlledRotation)
+            }
+        });
 
-      const timeLineTrigger = {
-          trigger: slideRef.current,
-          start: 'top top',
-          end: 'bottom bottom',
-          scrub: true,
-          markers: true
-      }
-      const timeLine = gsap.timeline({
-          scrollTrigger: timeLineTrigger,
-          onUpdate: () => {
-              setRotation(gsapRotationValue.y)
-          }
+        timeLine.to(controlledRotation, { y:  thisSlideFinalRotation})
+
       });
 
-      timeLine.to(gsapRotationValue, { y:  150})
-
-    }, [angle, setRotation]);
+      return () => ctx.revert();
+  });
 
   return (
     <div className="navSlide" ref={slideRef}>
@@ -45,6 +54,9 @@ const NavSlide = (props) => {
       </div>
     </div>
   )
+
 }
+
+
 
 export { NavSlide }
