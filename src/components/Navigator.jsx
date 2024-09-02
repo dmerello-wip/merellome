@@ -11,7 +11,7 @@ const Navigator = ( { contents }) => {
 
   const navigatorWrapperRef = useRef()
   
-  const rotation =  useNavigatorStore((state) => state.rotation) 
+  const mainObjRotation =  useNavigatorStore((state) => state.mainObjRotation) 
 
   const renderNavSlides = () => {
     return contents.slides.map((el, i) => {
@@ -34,7 +34,7 @@ const Navigator = ( { contents }) => {
       <div className="navigator" ref={navigatorWrapperRef}>
         {renderNavSlides()}
         <div className='navigator__canvas'>
-          <NavThree rotation={rotation} slides={contents.slides}/>
+          <NavThree rotation={mainObjRotation} slides={contents.slides}/>
         </div>
       </div>
   )

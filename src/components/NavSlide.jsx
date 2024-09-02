@@ -9,7 +9,7 @@ const NavSlide = (props) => {
 
   const { title, description, children, color, prevSlideFinalRotation, thisSlideFinalRotation, id } = props;
   const slideRef = useRef();
-  const increaseRotation = useNavigatorStore((state) => state.increaseRotation)
+  const setMainObjRotation = useNavigatorStore((state) => state.setMainObjRotation)
   
 
   useLayoutEffect(() => {
@@ -28,9 +28,8 @@ const NavSlide = (props) => {
         gsap.to(controlledRotation, {
           y: thisSlideFinalRotation,
           scrollTrigger: timeLineTrigger,
-          ease: "none",
           onUpdate: () => {
-              increaseRotation(controlledRotation.y)
+              setMainObjRotation(controlledRotation.y)
           }
         });
     });

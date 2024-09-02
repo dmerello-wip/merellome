@@ -20,8 +20,8 @@ export const NavNode = ({position, color, size}) => {
         {/* <sphereGeometry args={[1, 64, 64]} />
         <meshBasicMaterial wireframe color={color} />   */}
              
-        <sphereGeometry args={[size, 12, 12]} />
-        <MeshDistortMaterial wireframe roughness={0.5}  factor={10} speed={2} color={hovered ? '#333' : color}/>   
+        <sphereGeometry args={[size, 64, 64]} />
+        <MeshDistortMaterial roughness={0.2}  distort={0.2} speed={1} color={hovered ? '#333' : color}/>   
 
         {/* <boxGeometry args={[size,size,size]} />
         <meshBasicMaterial wireframe color={color} /> */}

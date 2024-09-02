@@ -5,7 +5,6 @@ import { PerspectiveCamera } from '@react-three/drei'
 import dynamic from 'next/dynamic'
 import { Loader } from '@/components/Loader'
 import * as THREE from 'three'
-import { useControls } from 'leva'
 
 const NavNode = dynamic(() => import('@/components/NavNode').then((mod) => mod.NavNode), { ssr: false })
 const View = dynamic(() => import('@/components/View').then((mod) => mod.View), {
@@ -21,14 +20,12 @@ export const NavThree = ({ rotation, slides}) => {
   const nodeRef = useRef();
   const radius = 5;
   const elementSize = 2;
-  const { rotationLeva} = useControls({ rotationLeva: 0 })
 
   useEffect(() => {
     if(nodeRef.current) {
     nodeRef.current.rotation.z = -rotation
-    // nodeRef.current.rotation.z = rotationLeva
     }
-  }, [rotation, rotationLeva]);
+  }, [rotation]);
 
   const renderNodes = () => {
     let baseDegrees = (2 * Math.PI) / slides.length;
