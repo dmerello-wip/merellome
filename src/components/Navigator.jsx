@@ -21,7 +21,6 @@ const Navigator = ( { contents }) => {
         id={`slide-${i}`}
         title={el.title}
         description={el.description}
-        color={el.color}
         prevSlideFinalRotation={latestRotation}
         thisSlideFinalRotation={el.rotation}
         >

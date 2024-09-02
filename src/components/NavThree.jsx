@@ -35,7 +35,6 @@ export const NavThree = ({ rotation, slides}) => {
       return <NavNode
         key={`node-${i}`}
         position={[x, y, 0]}
-        color= {el.color}
         size = {elementSize}
       />;
     });

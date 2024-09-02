@@ -28,5 +28,5 @@
     --color-secondary : #ffffff;
     --color-dark: #101010;
     --base-font-family: 'system-ui', sans-serif;
-    --text-color: var(--color-primary);
+    --text-color: var(--color-secondary);
   }

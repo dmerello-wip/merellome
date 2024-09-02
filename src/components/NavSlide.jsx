@@ -7,7 +7,7 @@ import  { useNavigatorStore } from "@/store/navigatorStore"
 
 const NavSlide = (props) => {
 
-  const { title, description, children, color, prevSlideFinalRotation, thisSlideFinalRotation, id } = props;
+  const { title, description, children, prevSlideFinalRotation, thisSlideFinalRotation, id } = props;
   const slideRef = useRef();
   const setMainObjRotation = useNavigatorStore((state) => state.setMainObjRotation)
   
@@ -44,7 +44,7 @@ const NavSlide = (props) => {
         <div className='navSlide__content__title'>
           {title}
         </div>
-        <div className='navSlide__content__description' style={{color: color}}>
+        <div className='navSlide__content__description'>
           {description}
         </div>
         {children}
