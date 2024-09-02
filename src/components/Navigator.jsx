@@ -11,7 +11,7 @@ const Navigator = ( { contents }) => {
 
   const navigatorWrapperRef = useRef()
   
-  const rotation = THREE.MathUtils.radToDeg( useNavigatorStore((state) => state.rotation) )
+  const rotation =  useNavigatorStore((state) => state.rotation) 
 
   const renderNavSlides = () => {
     return contents.slides.map((el, i) => {

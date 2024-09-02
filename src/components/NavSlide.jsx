@@ -28,7 +28,6 @@ const NavSlide = (props) => {
           y: thisSlideFinalRotation,
           scrollTrigger: timeLineTrigger,
           onUpdate: () => {
-              console.log(id, controlledRotation.y);
               increaseRotation(controlledRotation.y)
           }
         });

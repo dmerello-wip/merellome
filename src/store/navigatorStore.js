@@ -1,7 +1,7 @@
 import { create } from 'zustand';
 
 const useNavigatorStore = create(set => ({
-    rotation: 0,
+    rotation: Math.PI,
     increaseRotation: (val) => set((state) => {
         return ({ rotation: val });
     }),
