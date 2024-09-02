@@ -15,14 +15,15 @@ const Navigator = ( { contents }) => {
 
   const renderNavSlides = () => {
     return contents.slides.map((el, i) => {
-      const latestRotation = (i === 0) ? 0 : contents.slides[i-1].rotation
+      const initialRotation = el.rotation
+      const targetRotation = (i === contents.slides.length - 1) ? el.rotation : contents.slides[i + 1].rotation
       return <NavSlide
         key={`slide-${i}`}
         id={`slide-${i}`}
-        title={el.title}
+        title={`${el.title} - ${el.color}`}
         description={el.description}
-        prevSlideFinalRotation={latestRotation}
-        thisSlideFinalRotation={el.rotation}
+        prevSlideFinalRotation={initialRotation}
+        thisSlideFinalRotation={targetRotation}
         >
       </NavSlide>
     })

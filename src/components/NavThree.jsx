@@ -36,6 +36,7 @@ export const NavThree = ({ rotation, slides}) => {
         key={`node-${i}`}
         position={[x, y, 0]}
         size = {elementSize}
+        color = {el.color}
       />;
     });
   };
