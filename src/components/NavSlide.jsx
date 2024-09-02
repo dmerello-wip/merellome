@@ -21,12 +21,14 @@ const NavSlide = (props) => {
         const timeLineTrigger = {
             trigger: slideRef.current,
             markers: true,
-            scrub: 0.1
+            scrub: 0.1,
+            start: 'top top',
         }
         const controlledRotation = { y: prevSlideFinalRotation };
         gsap.to(controlledRotation, {
           y: thisSlideFinalRotation,
           scrollTrigger: timeLineTrigger,
+          ease: "none",
           onUpdate: () => {
               increaseRotation(controlledRotation.y)
           }

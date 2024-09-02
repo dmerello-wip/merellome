@@ -23,42 +23,35 @@ export async function GET() {
             title: ` 0!`,
             description: `description text`,
             color: `red`,
-            rotation: 1.25664
+            rotation: 1.4
         },
         {
             id: 1,
             title: ` 1`,
             description: `description text`,
             color: `green`,
-            rotation: 2.51328
+            rotation: 2.5
         },
         {
             id: 2,
             title: ` 2`,
             description: `description text`,
             color: `blue`,
-            rotation: 3.76992
+            rotation: 3.8
         },
         {
             id: 3,
             title: ` 3`,
             description: `description text`,
             color: `orange`,
-            rotation: 5.02656
+            rotation: 5.1
         },
         {
             id: 4,
             title: ` 4`,
             description: `description text`,
             color: `purple`,
-            rotation: 6.2832
-        },
-        {
-            id: 5,
-            title: ` 5`,
-            description: `description text`,
-            color: `grey`,
-            rotation: 7.53984
+            rotation: 5.1
         },
     ];
 
