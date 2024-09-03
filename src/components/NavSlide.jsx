@@ -1,8 +1,8 @@
 import _NavSlide from '@/styles/NavSlide.scss'
-import gsap from "gsap"
 import { useGSAP } from '@gsap/react'
-import { ScrollTrigger } from 'gsap/all'
 import { useLayoutEffect, useRef } from "react"
+import  { gsap } from "gsap"
+import { ScrollTrigger } from 'gsap/all'
 
 const NavSlide = (props) => {
 
@@ -27,6 +27,7 @@ const NavSlide = (props) => {
         gsap.to(controlledRotation, {
           z: rotationEnd,
           scrollTrigger: trigger,
+          ease: "none",
           onUpdate: () => {
               setMainObjRotation(controlledRotation.z)
           }

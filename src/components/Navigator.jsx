@@ -17,6 +17,7 @@ const View = dynamic(() => import('@/components/View').then((mod) => mod.View), 
   ),
 })
 
+
 const Navigator = ( { contents }) => {
 
   const mainObjRef = useRef()
