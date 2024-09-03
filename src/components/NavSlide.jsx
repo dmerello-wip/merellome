@@ -3,13 +3,11 @@ import gsap from "gsap"
 import { useGSAP } from '@gsap/react'
 import { ScrollTrigger } from 'gsap/all'
 import { useLayoutEffect, useRef } from "react"
-import  { useNavigatorStore } from "@/store/navigatorStore"
 
 const NavSlide = (props) => {
 
-  const { title, description, children, prevSlideFinalRotation, thisSlideFinalRotation, id } = props;
+  const { title, description, children, rotationStart, rotationEnd, id, setMainObjRotation } = props;
   const slideRef = useRef();
-  const setMainObjRotation = useNavigatorStore((state) => state.setMainObjRotation)
   
 
   useLayoutEffect(() => {
@@ -18,25 +16,26 @@ const NavSlide = (props) => {
 
   useGSAP((context, contextSafe) => {
     let ctx = gsap.context(() => {
-        const timeLineTrigger = {
+      
+        const trigger = {
             trigger: slideRef.current,
-            markers: true,
             scrub: 0.1,
             start: 'top top',
         }
-        const controlledRotation = { y: prevSlideFinalRotation };
+        const controlledRotation = { z: rotationStart };
+        
         gsap.to(controlledRotation, {
-          y: thisSlideFinalRotation,
-          scrollTrigger: timeLineTrigger,
+          z: rotationEnd,
+          scrollTrigger: trigger,
           onUpdate: () => {
-              setMainObjRotation(controlledRotation.y)
+              setMainObjRotation(controlledRotation.z)
           }
         });
     });
 
     return () => ctx.revert();
 
-  }, [prevSlideFinalRotation, thisSlideFinalRotation, id]);
+  }, [rotationStart, rotationEnd, id]);
 
   return (
     <div className="navSlide" ref={slideRef} id={id}>
