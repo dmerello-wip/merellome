@@ -20,15 +20,15 @@ export async function GET() {
     const slides = [
         {
             id: 0,
-            title: ` 0!`,
-            description: `description text`,
+            title: `Hello, nice to meet you`,
+            description: `I'm Diego Merello, proud father, humble husband, passionate designer, wanna be musician, recidivist griller`,
             rotation: 0,
             color: 'yellow'
         },
         {
             id: 1,
-            title: ` 1`,
-            description: `description text`,
+            title: `Maybe in another life...`,
+            description: `... i could have been a musician, but till now i play and write songs about friends, and stuff that happens`,
             rotation: 1.4,
             color: 'orange'
         },

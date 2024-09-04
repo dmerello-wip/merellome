@@ -4,7 +4,7 @@ import { useState } from 'react'
 import { useCursor, MeshDistortMaterial } from '@react-three/drei'
 import { useRouter } from 'next/navigation'
 
-export const NavNode = ({position, size, color}) => {
+export const NavNode = ({position, rotation, size, color, wired}) => {
   // const router = useRouter()
   const [hovered, hover] = useState(false)
   useCursor(hovered)
@@ -18,8 +18,8 @@ export const NavNode = ({position, size, color}) => {
         {/* <sphereGeometry args={[1, 64, 64]} />
         <meshBasicMaterial wireframe color={color} />   */}
              
-        <sphereGeometry args={[(hovered) ? size * 1.1 : size, 64, 64]} />
-        <MeshDistortMaterial roughness={0.2}  distort={0.2} speed={3} color={color}/>
+        <sphereGeometry  args={[(hovered) ? size * 1.1 : size, 32, 32]} rotation={rotation}/>
+        <MeshDistortMaterial wireframe={wired} roughness={0.2}  distort={0.2} speed={3} color={color}/>
         
 
         {/* <boxGeometry args={[size,size,size]} />
