@@ -34,22 +34,22 @@ export async function GET() {
         },
         {
             id: 2,
-            title: ` 2`,
-            description: `description text`,
+            title: `Hello, nice to meet you`,
+            description: `I'm Diego Merello, proud father, humble husband, passionate designer, wanna be musician, recidivist griller`,
             rotation: 2.5,
             color: 'red'
         },
         {
             id: 3,
-            title: ` 3`,
-            description: `description text`,
+            title: `Maybe in another life...`,
+            description: `... i could have been a musician, but till now i play and write songs about friends, and stuff that happens`,
             rotation: 3.8,
             color: 'purple'
         },
         {
             id: 4,
-            title: ` 4`,
-            description: `description text`,
+            title: `Hello, nice to meet you`,
+            description: `I'm Diego Merello, proud father, humble husband, passionate designer, wanna be musician, recidivist griller`,
             rotation: 5.1,
             color: 'blue'
         },

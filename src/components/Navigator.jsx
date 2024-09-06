@@ -12,6 +12,7 @@ const NavSlide = dynamic(() => import('@/components/NavSlide').then((mod) => mod
 const NavNode = dynamic(() => import('@/components/NavNode').then((mod) => mod.NavNode), { ssr: false })
 const Eyeglasses = dynamic(() => import('@/components/Eyeglasses').then((mod) => mod.Eyeglasses), { ssr: false })
 const Bass = dynamic(() => import('@/components/Bass').then((mod) => mod.Bass), { ssr: false })
+const Office = dynamic(() => import('@/components/Office').then((mod) => mod.Office), { ssr: false })
 const View = dynamic(() => import('@/components/View').then((mod) => mod.View), {
   ssr: false,
   loading: () => (
@@ -81,7 +82,7 @@ const Navigator = ( { contents }) => {
       <div className="navigator">
         {renderNavSlides()}
         <div className='navigator__canvas'>
-          <View  className="navigator__canvas__scene" >
+          <View   className="navigator__canvas__scene" >
               <Suspense fallback={null}>
                 <fog attach="fog" args={['#101010',20, 25]} />
                 <ambientLight />
@@ -93,8 +94,8 @@ const Navigator = ( { contents }) => {
                   <Eyeglasses position={positionsMap()[0].position} />
                   <Bass position={positionsMap()[1].position} />
                   <NavNode position={positionsMap()[2].position} size={2}  color = {'red'} wired={true}/>
-                  <NavNode position={positionsMap()[3].position} size={2}  color = {'green'} wired={false}/>
-                  <NavNode position={positionsMap()[4].position} size={2}  color = {'orange'} wired={true}/>
+                  <Office position={positionsMap()[3].position} />
+                  <NavNode position={positionsMap()[4].position} size={2}  color = {'orange'} wired={false}/>
                 </group>
               </Suspense>
           </View>
