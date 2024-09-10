@@ -16,6 +16,7 @@ export function Bass(props) {
         receiveShadow
         geometry={nodes.mesh_0.geometry}
         material={material}
+        position={[-2, 0, 0]}
         scale={[5, 5, 5]}
         rotation={[0, Math.PI/9, Math.PI/2]}
       />

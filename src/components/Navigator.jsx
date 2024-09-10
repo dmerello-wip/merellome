@@ -25,7 +25,7 @@ const Navigator = ( { contents }) => {
   const mainObjRef = useRef()
   const mainObjRotationRef = useRef(0);
   const radius = 8;
-  const solarized = false;
+  const solarized = true;
 
   const setMainObjRotation = (val) => {
     if(mainObjRef.current) {
@@ -84,7 +84,7 @@ const Navigator = ( { contents }) => {
         <div className='navigator__canvas'>
           <View   className="navigator__canvas__scene" >
               <Suspense fallback={null}>
-                <fog attach="fog" args={['#101010',20, 25]} />
+                <fog attach="fog" args={['#101010',15, 25]} />
                 
                 <ambientLight />
                 <pointLight position={[20, 30, 10]} intensity={1} decay={0.2} />
