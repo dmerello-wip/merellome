@@ -22,14 +22,14 @@ const NavSlide = (props) => {
             scrub: 0.1,
             start: 'top top',
         }
-        const controlledRotation = { z: rotationStart };
+        const controlledRotation = { y: rotationStart };
         
         gsap.to(controlledRotation, {
-          z: rotationEnd,
+          y: rotationEnd,
           scrollTrigger: trigger,
           ease: "none",
           onUpdate: () => {
-              setMainObjRotation(controlledRotation.z)
+              setMainObjRotation(controlledRotation.y)
           }
         });
     });
