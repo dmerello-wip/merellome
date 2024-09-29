@@ -22,40 +22,70 @@ export async function GET() {
             id: 0,
             title: `Hello, nice to meet you`,
             description: `I'm Diego Merello, proud father, humble husband, passionate designer, wanna be musician, recidivist griller`,
-            cameraRotation: { x: 0, y: 0, z: 0 },
-            cameraPosition: { x: 0, y: 5, z: 22 },
+            camera: {
+                rotationX: -90,
+                rotationY: 0,
+                rotationZ: 0,
+                positionX: -5,
+                positionY: 30,
+                positionZ: 0
+            },
             color: 'yellow'
         },
         {
             id: 1,
             title: `Maybe in another life...`,
             description: `... i could have been a musician, but till now i play and write songs about friends, and stuff that happens`,
-            cameraRotation: { x: 0, y: -0.5, z: 0 },
-            cameraPosition: { x: -1, y: 5, z: 22 },
+            camera: {
+                rotationX: 0,
+                rotationY: -10,
+                rotationZ: 0,
+                positionX: 6,
+                positionY: 4,
+                positionZ: 15
+            },
             color: 'orange'
         },
         {
             id: 2,
             title: `Hello, nice to meet you`,
             description: `I'm Diego Merello, proud father, humble husband, passionate designer, wanna be musician, recidivist griller`,
-            cameraRotation: { x: 0, y: 0, z: 0 },
-            cameraPosition: { x: 0, y: 5, z: 22 },
+            camera: {
+                rotationX: -10,
+                rotationY: -25,
+                rotationZ: 0,
+                positionX: -12,
+                positionY: 8,
+                positionZ: 15
+            },
             color: 'red'
         },
         {
             id: 3,
             title: `Maybe in another life...`,
             description: `... i could have been a musician, but till now i play and write songs about friends, and stuff that happens`,
-            cameraRotation: { x: 0, y: 0.5, z: 0 },
-            cameraPosition: { x: 1, y: 5, z: 22 },
+            camera: {
+                rotationX: 0,
+                rotationY: 0.5,
+                rotationZ: 0,
+                positionX: 0,
+                positionY: 5,
+                positionZ: 22
+            },
             color: 'purple'
         },
         {
             id: 4,
             title: `Hello, nice to meet you`,
             description: `I'm Diego Merello, proud father, humble husband, passionate designer, wanna be musician, recidivist griller`,
-            cameraRotation: { x: 0, y: 0, z: 0 },
-            cameraPosition: { x: 0, y: 5, z: 22 },
+            camera: {
+                rotationX: 0,
+                rotationY: 0,
+                rotationZ: 0,
+                positionX: 0,
+                positionY: 5,
+                positionZ: 22
+            },
             color: 'blue'
         },
     ];

@@ -6,7 +6,7 @@ import { ScrollTrigger } from 'gsap/all'
 
 const NavSlide = (props) => {
 
-  const { title, description, children, cameraRotationStart, cameraRotationEnd, id, setCameraRotation } = props;
+  const { title, description, children, cameraStartSettings, cameraEndSettings, id, setCamera } = props;
   const slideRef = useRef();
   
 
@@ -22,23 +22,26 @@ const NavSlide = (props) => {
             scrub: 0.1,
             start: 'top top',
         }
-        const controlledRotation = cameraRotationStart;
+        const controlledRotation = cameraStartSettings;
         
         gsap.to(controlledRotation, {
-          x: cameraRotationEnd.x,
-          y: cameraRotationEnd.y,
-          z: cameraRotationEnd.z,
+          rotationX: cameraEndSettings.rotationX,
+          rotationY: cameraEndSettings.rotationY,
+          rotationZ: cameraEndSettings.rotationZ,
+          positionX: cameraEndSettings.positionX,
+          positionY: cameraEndSettings.positionY,
+          positionZ: cameraEndSettings.positionZ,
           scrollTrigger: trigger,
           ease: "none",
           onUpdate: () => {
-              setCameraRotation(controlledRotation)
+              setCamera(controlledRotation)
           }
         });
     });
 
     return () => ctx.revert();
 
-  }, [cameraRotationStart, cameraRotationEnd, id]);
+  }, [cameraStartSettings, cameraEndSettings, id]);
 
   return (
     <div className="navSlide" ref={slideRef} id={id}>

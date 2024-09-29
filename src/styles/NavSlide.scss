@@ -1,6 +1,7 @@
 @use "./utils/typography" as typo;
 
 .navSlide {
+    position: relative;
     display: flex;
     flex-direction: column;
     justify-content: center;

@@ -2,7 +2,12 @@
     position: relative;
     background: repeating-linear-gradient(90deg, transparent 0, transparent 100px, #181818 100px, #181818 101px),
         repeating-linear-gradient(0deg, transparent 0, transparent 100px, #181818 100px, #181818 101px);
+
+    .navSlide {
+        z-index: 2;
+    }
     &__canvas {
+        z-index: 1;
         position: absolute;
         top: 0;
         right: 0;

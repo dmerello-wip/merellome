@@ -5,6 +5,7 @@ import { useRef, useEffect, Suspense } from "react"
 import dynamic from 'next/dynamic'
 import { Loader } from '@/components/Loader'
 import { PerspectiveCamera } from '@react-three/drei'
+import * as THREE from 'three'
 
 
 const NavSlide = dynamic(() => import('@/components/NavSlide').then((mod) => mod.NavSlide), { ssr: false })
@@ -22,26 +23,43 @@ const Navigator = ( { contents }) => {
 
   const cameraRef = useRef()
 
-  const setCameraRotation = (newRotation) => {
+  useEffect(() => {
+    if(contents.slides.length > 0) {
+      setTimeout(() => {
+        // TODO: remove this orrible hack
+        // the first rendering is not correclty getting the values
+        setCamera(contents.slides[0].camera)
+      }, 500)
+    }
+  }, [contents])
+
+  const setCamera = (newSettings) => {
     if(cameraRef.current) {
-      cameraRef.current.rotation.x = -newRotation.x
-      cameraRef.current.rotation.y = -newRotation.y
-      cameraRef.current.rotation.z = -newRotation.z
+      cameraRef.current.position.set(
+        newSettings.positionX,
+        newSettings.positionY,
+        newSettings.positionZ
+      )
+      cameraRef.current.rotation.set(
+        THREE.MathUtils.degToRad(newSettings.rotationX),
+        THREE.MathUtils.degToRad(newSettings.rotationY),
+        THREE.MathUtils.degToRad(newSettings.rotationZ)
+      )
     }
   }
 
   const renderNavSlides = () => {
     return contents.slides.map((el, i) => {
-      const initialCameraRotation = el.cameraRotation
-      const targetCameraRotation = (i === contents.slides.length - 1) ? el.cameraRotation : contents.slides[i + 1].cameraRotation
+      const initialCameraSet = el.camera
+      const targetCameraSet = (i === contents.slides.length - 1) ? el.camera : contents.slides[i + 1].camera
       return <NavSlide
         key={`slide-${i}`}
         id={`slide-${i}`}
         title={el.title}
         description={el.description}
-        cameraRotationStart={initialCameraRotation}
-        cameraRotationEnd={targetCameraRotation}
-        setCameraRotation={setCameraRotation}
+        cameraStartSettings={initialCameraSet}
+        cameraEndSettings={targetCameraSet}
+        setCamera={setCamera}
         >
       </NavSlide>
     })
@@ -49,15 +67,20 @@ const Navigator = ( { contents }) => {
 
   return (
       <div className="navigator">
-        {renderNavSlides()}
         <div className='navigator__canvas'>
           <View   className="navigator__canvas__scene" >
               <Suspense fallback={null}>
-                <fog attach="fog" args={['#101010',15, 25]} />
+                <fog attach="fog" args={['#101010',15, 35]} />
                 <ambientLight />
                 <pointLight position={[-10, 20, 10]} intensity={10} decay={0.2} />
                 <pointLight position={[10, -10, 10]} color='white' decay={0.2} />
-                <PerspectiveCamera ref={cameraRef} makeDefault fov={40} position={[0, 5, 22]} />    
+                <PerspectiveCamera
+                  ref={cameraRef}
+                  makeDefault
+                  fov={40}
+                  position={[contents.slides[0].camera.positionX, contents.slides[0].camera.positionY, contents.slides[0].camera.positionZ]} 
+                  rotation={[contents.slides[0].camera.rotationX, contents.slides[0].camera.rotationY, contents.slides[0].camera.rotationZ]} 
+                />    
                 <group
                   position={[4, 0, 0]}
                   rotation={[ 0,0,0 ]}>
@@ -66,6 +89,7 @@ const Navigator = ( { contents }) => {
               </Suspense>
           </View>
         </div>
+        {renderNavSlides()}
       </div>
   )
 }
