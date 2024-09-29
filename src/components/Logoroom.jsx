@@ -9,20 +9,32 @@ import { useGLTF } from '@react-three/drei'
 
 export function Logoroom(props) {
   const { nodes, materials } = useGLTF('/models/logoroom.glb')
-  return (
+return (
     <group {...props} dispose={null}>
-      <group position={[19.188, 3.1, 7.303]} rotation={[-0.355, 0.59, -1.312]}>
+      <group position={[19.167, 3.196, 7.283]} rotation={[-0.355, 0.59, -1.312]} scale={1.024}>
         <mesh
           castShadow
           receiveShadow
           geometry={nodes.Skateboard_1.geometry}
-          material={materials.Skateboard_Mat}
+          material={materials.metal}
         />
         <mesh
           castShadow
           receiveShadow
           geometry={nodes.Skateboard_2.geometry}
-          material={materials['08___Default']}
+          material={materials.wood}
+        />
+        <mesh
+          castShadow
+          receiveShadow
+          geometry={nodes.Skateboard_3.geometry}
+          material={materials['dark-grey']}
+        />
+        <mesh
+          castShadow
+          receiveShadow
+          geometry={nodes.Skateboard_4.geometry}
+          material={materials.red}
         />
       </group>
       <group position={[1.262, 6.292, 7.39]} rotation={[-1.562, -0.007, 2.927]} scale={-0.337}>
@@ -30,13 +42,19 @@ export function Logoroom(props) {
           castShadow
           receiveShadow
           geometry={nodes.IMac_01_Cube026_1.geometry}
-          material={materials.FFFFFF}
+          material={materials.metal}
         />
         <mesh
           castShadow
           receiveShadow
           geometry={nodes.IMac_01_Cube026_2.geometry}
-          material={materials['1A1A1A']}
+          material={materials['dark-grey']}
+        />
+        <mesh
+          castShadow
+          receiveShadow
+          geometry={nodes.IMac_01_Cube026_3.geometry}
+          material={materials.green}
         />
       </group>
       <group
@@ -47,7 +65,7 @@ export function Logoroom(props) {
           castShadow
           receiveShadow
           geometry={nodes.group1030983910.geometry}
-          material={materials.mat21}
+          material={materials.white}
           position={[-0.03, -0.515, -0.063]}
           rotation={[1.571, -0.012, 3.127]}
           scale={[-0.789, -2.419, -22.589]}
@@ -56,7 +74,7 @@ export function Logoroom(props) {
           castShadow
           receiveShadow
           geometry={nodes.group1075691498.geometry}
-          material={materials.mat21}
+          material={materials.white}
           position={[-0.03, -0.515, -0.063]}
           rotation={[1.571, -0.012, 3.127]}
           scale={[-0.789, -2.419, -22.589]}
@@ -65,7 +83,7 @@ export function Logoroom(props) {
           castShadow
           receiveShadow
           geometry={nodes.group1149852049.geometry}
-          material={materials.mat21}
+          material={materials.white}
           position={[-0.03, -0.515, -0.063]}
           rotation={[1.571, -0.012, 3.127]}
           scale={[-0.789, -2.419, -22.589]}
@@ -74,7 +92,7 @@ export function Logoroom(props) {
           castShadow
           receiveShadow
           geometry={nodes.group1152190519.geometry}
-          material={materials.mat21}
+          material={materials.white}
           position={[-0.03, -0.515, -0.063]}
           rotation={[1.571, -0.012, 3.127]}
           scale={[-0.789, -2.419, -22.589]}
@@ -83,7 +101,7 @@ export function Logoroom(props) {
           castShadow
           receiveShadow
           geometry={nodes.group1180881246.geometry}
-          material={materials.mat21}
+          material={materials.white}
           position={[-0.03, -0.515, -0.063]}
           rotation={[1.571, -0.012, 3.127]}
           scale={[-0.789, -2.419, -22.589]}
@@ -92,7 +110,7 @@ export function Logoroom(props) {
           castShadow
           receiveShadow
           geometry={nodes.group1238060299.geometry}
-          material={materials.mat21}
+          material={materials.white}
           position={[-0.03, -0.515, -0.063]}
           rotation={[1.571, -0.012, 3.127]}
           scale={[-0.789, -2.419, -22.589]}
@@ -101,7 +119,7 @@ export function Logoroom(props) {
           castShadow
           receiveShadow
           geometry={nodes.group1238428394.geometry}
-          material={materials.mat21}
+          material={materials.white}
           position={[-0.03, -0.515, -0.063]}
           rotation={[1.571, -0.012, 3.127]}
           scale={[-0.789, -2.419, -22.589]}
@@ -110,7 +128,7 @@ export function Logoroom(props) {
           castShadow
           receiveShadow
           geometry={nodes.group1272091893.geometry}
-          material={materials.mat21}
+          material={materials.white}
           position={[-0.03, -0.515, -0.063]}
           rotation={[1.571, -0.012, 3.127]}
           scale={[-0.789, -2.419, -22.589]}
@@ -119,7 +137,7 @@ export function Logoroom(props) {
           castShadow
           receiveShadow
           geometry={nodes.group1316349499.geometry}
-          material={materials.mat21}
+          material={materials.white}
           position={[-0.03, -0.515, -0.063]}
           rotation={[1.571, -0.012, 3.127]}
           scale={[-0.789, -2.419, -22.589]}
@@ -128,7 +146,7 @@ export function Logoroom(props) {
           castShadow
           receiveShadow
           geometry={nodes.group1323238240.geometry}
-          material={materials.mat21}
+          material={materials.white}
           position={[-0.03, -0.515, -0.063]}
           rotation={[1.571, -0.012, 3.127]}
           scale={[-0.789, -2.419, -22.589]}
@@ -137,7 +155,7 @@ export function Logoroom(props) {
           castShadow
           receiveShadow
           geometry={nodes.group145618305.geometry}
-          material={materials.mat21}
+          material={materials.white}
           position={[-0.03, -0.515, -0.063]}
           rotation={[1.571, -0.012, 3.127]}
           scale={[-0.789, -2.419, -22.589]}
@@ -146,7 +164,7 @@ export function Logoroom(props) {
           castShadow
           receiveShadow
           geometry={nodes.group1486350934.geometry}
-          material={materials.mat21}
+          material={materials.white}
           position={[-0.03, -0.515, -0.063]}
           rotation={[1.571, -0.012, 3.127]}
           scale={[-0.789, -2.419, -22.589]}
@@ -155,7 +173,7 @@ export function Logoroom(props) {
           castShadow
           receiveShadow
           geometry={nodes.group150579309.geometry}
-          material={materials.mat21}
+          material={materials.white}
           position={[-0.03, -0.515, -0.063]}
           rotation={[1.571, -0.012, 3.127]}
           scale={[-0.789, -2.419, -22.589]}
@@ -164,7 +182,7 @@ export function Logoroom(props) {
           castShadow
           receiveShadow
           geometry={nodes.group1529968652.geometry}
-          material={materials.mat21}
+          material={materials.white}
           position={[-0.03, -0.515, -0.063]}
           rotation={[1.571, -0.012, 3.127]}
           scale={[-0.789, -2.419, -22.589]}
@@ -173,7 +191,7 @@ export function Logoroom(props) {
           castShadow
           receiveShadow
           geometry={nodes.group1571332333.geometry}
-          material={materials.mat21}
+          material={materials.white}
           position={[-0.03, -0.515, -0.063]}
           rotation={[1.571, -0.012, 3.127]}
           scale={[-0.789, -2.419, -22.589]}
@@ -182,7 +200,7 @@ export function Logoroom(props) {
           castShadow
           receiveShadow
           geometry={nodes.group1581414308.geometry}
-          material={materials.mat21}
+          material={materials.white}
           position={[-0.03, -0.515, -0.063]}
           rotation={[1.571, -0.012, 3.127]}
           scale={[-0.789, -2.419, -22.589]}
@@ -191,7 +209,7 @@ export function Logoroom(props) {
           castShadow
           receiveShadow
           geometry={nodes.group1589752359.geometry}
-          material={materials.mat21}
+          material={materials.white}
           position={[-0.03, -0.515, -0.063]}
           rotation={[1.571, -0.012, 3.127]}
           scale={[-0.789, -2.419, -22.589]}
@@ -200,7 +218,7 @@ export function Logoroom(props) {
           castShadow
           receiveShadow
           geometry={nodes.group1629393722.geometry}
-          material={materials.mat21}
+          material={materials.white}
           position={[-0.03, -0.515, -0.063]}
           rotation={[1.571, -0.012, 3.127]}
           scale={[-0.789, -2.419, -22.589]}
@@ -209,7 +227,7 @@ export function Logoroom(props) {
           castShadow
           receiveShadow
           geometry={nodes.group1629609685.geometry}
-          material={materials.mat21}
+          material={materials.white}
           position={[-0.03, -0.515, -0.063]}
           rotation={[1.571, -0.012, 3.127]}
           scale={[-0.789, -2.419, -22.589]}
@@ -218,7 +236,7 @@ export function Logoroom(props) {
           castShadow
           receiveShadow
           geometry={nodes.group1675960081.geometry}
-          material={materials.mat21}
+          material={materials.white}
           position={[-0.03, -0.515, -0.063]}
           rotation={[1.571, -0.012, 3.127]}
           scale={[-0.789, -2.419, -22.589]}
@@ -227,7 +245,7 @@ export function Logoroom(props) {
           castShadow
           receiveShadow
           geometry={nodes.group1740918352.geometry}
-          material={materials.mat21}
+          material={materials.white}
           position={[-0.03, -0.515, -0.063]}
           rotation={[1.571, -0.012, 3.127]}
           scale={[-0.789, -2.419, -22.589]}
@@ -236,7 +254,7 @@ export function Logoroom(props) {
           castShadow
           receiveShadow
           geometry={nodes.group1753917514.geometry}
-          material={materials.mat21}
+          material={materials.white}
           position={[-0.03, -0.515, -0.063]}
           rotation={[1.571, -0.012, 3.127]}
           scale={[-0.789, -2.419, -22.589]}
@@ -245,7 +263,7 @@ export function Logoroom(props) {
           castShadow
           receiveShadow
           geometry={nodes.group1754683637.geometry}
-          material={materials.mat21}
+          material={materials.white}
           position={[-0.03, -0.515, -0.063]}
           rotation={[1.571, -0.012, 3.127]}
           scale={[-0.789, -2.419, -22.589]}
@@ -254,7 +272,7 @@ export function Logoroom(props) {
           castShadow
           receiveShadow
           geometry={nodes.group1764140354.geometry}
-          material={materials.mat21}
+          material={materials.white}
           position={[-0.03, -0.515, -0.063]}
           rotation={[1.571, -0.012, 3.127]}
           scale={[-0.789, -2.419, -22.589]}
@@ -272,7 +290,7 @@ export function Logoroom(props) {
           castShadow
           receiveShadow
           geometry={nodes.group1899843208.geometry}
-          material={materials.mat21}
+          material={materials.white}
           position={[-0.03, -0.515, -0.063]}
           rotation={[1.571, -0.012, 3.127]}
           scale={[-0.789, -2.419, -22.589]}
@@ -281,7 +299,7 @@ export function Logoroom(props) {
           castShadow
           receiveShadow
           geometry={nodes.group1956214489.geometry}
-          material={materials.mat21}
+          material={materials.white}
           position={[-0.03, -0.515, -0.063]}
           rotation={[1.571, -0.012, 3.127]}
           scale={[-0.789, -2.419, -22.589]}
@@ -290,7 +308,7 @@ export function Logoroom(props) {
           castShadow
           receiveShadow
           geometry={nodes.group196400395.geometry}
-          material={materials.mat21}
+          material={materials.white}
           position={[-0.03, -0.515, -0.063]}
           rotation={[1.571, -0.012, 3.127]}
           scale={[-0.789, -2.419, -22.589]}
@@ -299,7 +317,7 @@ export function Logoroom(props) {
           castShadow
           receiveShadow
           geometry={nodes.group1976194690.geometry}
-          material={materials.mat21}
+          material={materials.white}
           position={[-0.03, -0.515, -0.063]}
           rotation={[1.571, -0.012, 3.127]}
           scale={[-0.789, -2.419, -22.589]}
@@ -308,7 +326,7 @@ export function Logoroom(props) {
           castShadow
           receiveShadow
           geometry={nodes.group205302596.geometry}
-          material={materials.mat21}
+          material={materials.white}
           position={[-0.03, -0.515, -0.063]}
           rotation={[1.571, -0.012, 3.127]}
           scale={[-0.789, -2.419, -22.589]}
@@ -317,7 +335,7 @@ export function Logoroom(props) {
           castShadow
           receiveShadow
           geometry={nodes.group2074153597.geometry}
-          material={materials.mat21}
+          material={materials.white}
           position={[-0.03, -0.515, -0.063]}
           rotation={[1.571, -0.012, 3.127]}
           scale={[-0.789, -2.419, -22.589]}
@@ -326,7 +344,7 @@ export function Logoroom(props) {
           castShadow
           receiveShadow
           geometry={nodes.group2085389804.geometry}
-          material={materials.mat21}
+          material={materials.white}
           position={[-0.03, -0.515, -0.063]}
           rotation={[1.571, -0.012, 3.127]}
           scale={[-0.789, -2.419, -22.589]}
@@ -335,7 +353,7 @@ export function Logoroom(props) {
           castShadow
           receiveShadow
           geometry={nodes.group2091112366.geometry}
-          material={materials.mat21}
+          material={materials.white}
           position={[-0.03, -0.515, -0.063]}
           rotation={[1.571, -0.012, 3.127]}
           scale={[-0.789, -2.419, -22.589]}
@@ -344,7 +362,7 @@ export function Logoroom(props) {
           castShadow
           receiveShadow
           geometry={nodes.group2106755496.geometry}
-          material={materials.mat21}
+          material={materials.white}
           position={[-0.03, -0.515, -0.063]}
           rotation={[1.571, -0.012, 3.127]}
           scale={[-0.789, -2.419, -22.589]}
@@ -353,7 +371,7 @@ export function Logoroom(props) {
           castShadow
           receiveShadow
           geometry={nodes.group2146178072.geometry}
-          material={materials.mat21}
+          material={materials.white}
           position={[-0.03, -0.515, -0.063]}
           rotation={[1.571, -0.012, 3.127]}
           scale={[-0.789, -2.419, -22.589]}
@@ -362,7 +380,7 @@ export function Logoroom(props) {
           castShadow
           receiveShadow
           geometry={nodes.group252681800.geometry}
-          material={materials.mat21}
+          material={materials.white}
           position={[-0.03, -0.515, -0.063]}
           rotation={[1.571, -0.012, 3.127]}
           scale={[-0.789, -2.419, -22.589]}
@@ -371,7 +389,7 @@ export function Logoroom(props) {
           castShadow
           receiveShadow
           geometry={nodes.group268332703.geometry}
-          material={materials.mat21}
+          material={materials.white}
           position={[-0.03, -0.515, -0.063]}
           rotation={[1.571, -0.012, 3.127]}
           scale={[-0.789, -2.419, -22.589]}
@@ -380,7 +398,7 @@ export function Logoroom(props) {
           castShadow
           receiveShadow
           geometry={nodes.group287159489.geometry}
-          material={materials.mat21}
+          material={materials.white}
           position={[-0.03, -0.515, -0.063]}
           rotation={[1.571, -0.012, 3.127]}
           scale={[-0.789, -2.419, -22.589]}
@@ -389,7 +407,7 @@ export function Logoroom(props) {
           castShadow
           receiveShadow
           geometry={nodes.group295085766.geometry}
-          material={materials.mat21}
+          material={materials.white}
           position={[-0.03, -0.515, -0.063]}
           rotation={[1.571, -0.012, 3.127]}
           scale={[-0.789, -2.419, -22.589]}
@@ -398,7 +416,7 @@ export function Logoroom(props) {
           castShadow
           receiveShadow
           geometry={nodes.group311988427.geometry}
-          material={materials.mat22}
+          material={materials.metal}
           position={[-0.03, -0.515, -0.063]}
           rotation={[1.571, -0.012, 3.127]}
           scale={[-0.789, -2.419, -22.589]}
@@ -407,7 +425,7 @@ export function Logoroom(props) {
           castShadow
           receiveShadow
           geometry={nodes.group34220672.geometry}
-          material={materials.mat21}
+          material={materials.white}
           position={[-0.03, -0.515, -0.063]}
           rotation={[1.571, -0.012, 3.127]}
           scale={[-0.789, -2.419, -22.589]}
@@ -416,7 +434,7 @@ export function Logoroom(props) {
           castShadow
           receiveShadow
           geometry={nodes.group384612072.geometry}
-          material={materials.mat21}
+          material={materials.white}
           position={[-0.03, -0.515, -0.063]}
           rotation={[1.571, -0.012, 3.127]}
           scale={[-0.789, -2.419, -22.589]}
@@ -425,7 +443,7 @@ export function Logoroom(props) {
           castShadow
           receiveShadow
           geometry={nodes.group418912012.geometry}
-          material={materials.mat21}
+          material={materials.white}
           position={[-0.03, -0.515, -0.063]}
           rotation={[1.571, -0.012, 3.127]}
           scale={[-0.789, -2.419, -22.589]}
@@ -434,7 +452,7 @@ export function Logoroom(props) {
           castShadow
           receiveShadow
           geometry={nodes.group42243725.geometry}
-          material={materials.mat21}
+          material={materials.white}
           position={[-0.03, -0.515, -0.063]}
           rotation={[1.571, -0.012, 3.127]}
           scale={[-0.789, -2.419, -22.589]}
@@ -443,7 +461,7 @@ export function Logoroom(props) {
           castShadow
           receiveShadow
           geometry={nodes.group425587018.geometry}
-          material={materials.mat21}
+          material={materials.white}
           position={[-0.03, -0.515, -0.063]}
           rotation={[1.571, -0.012, 3.127]}
           scale={[-0.789, -2.419, -22.589]}
@@ -452,7 +470,7 @@ export function Logoroom(props) {
           castShadow
           receiveShadow
           geometry={nodes.group449779970.geometry}
-          material={materials.mat21}
+          material={materials.white}
           position={[-0.03, -0.515, -0.063]}
           rotation={[1.571, -0.012, 3.127]}
           scale={[-0.789, -2.419, -22.589]}
@@ -461,7 +479,7 @@ export function Logoroom(props) {
           castShadow
           receiveShadow
           geometry={nodes.group45382983.geometry}
-          material={materials.mat21}
+          material={materials.white}
           position={[-0.03, -0.515, -0.063]}
           rotation={[1.571, -0.012, 3.127]}
           scale={[-0.789, -2.419, -22.589]}
@@ -470,7 +488,7 @@ export function Logoroom(props) {
           castShadow
           receiveShadow
           geometry={nodes.group475225180.geometry}
-          material={materials.mat21}
+          material={materials.white}
           position={[-0.03, -0.515, -0.063]}
           rotation={[1.571, -0.012, 3.127]}
           scale={[-0.789, -2.419, -22.589]}
@@ -479,7 +497,7 @@ export function Logoroom(props) {
           castShadow
           receiveShadow
           geometry={nodes.group573547017.geometry}
-          material={materials.mat21}
+          material={materials.white}
           position={[-0.03, -0.515, -0.063]}
           rotation={[1.571, -0.012, 3.127]}
           scale={[-0.789, -2.419, -22.589]}
@@ -488,7 +506,7 @@ export function Logoroom(props) {
           castShadow
           receiveShadow
           geometry={nodes.group588539140.geometry}
-          material={materials.mat21}
+          material={materials.white}
           position={[-0.03, -0.515, -0.063]}
           rotation={[1.571, -0.012, 3.127]}
           scale={[-0.789, -2.419, -22.589]}
@@ -497,7 +515,7 @@ export function Logoroom(props) {
           castShadow
           receiveShadow
           geometry={nodes.group601803475.geometry}
-          material={materials.mat21}
+          material={materials.white}
           position={[-0.03, -0.515, -0.063]}
           rotation={[1.571, -0.012, 3.127]}
           scale={[-0.789, -2.419, -22.589]}
@@ -506,7 +524,7 @@ export function Logoroom(props) {
           castShadow
           receiveShadow
           geometry={nodes.group616518658.geometry}
-          material={materials.mat21}
+          material={materials.white}
           position={[-0.03, -0.515, -0.063]}
           rotation={[1.571, -0.012, 3.127]}
           scale={[-0.789, -2.419, -22.589]}
@@ -515,7 +533,7 @@ export function Logoroom(props) {
           castShadow
           receiveShadow
           geometry={nodes.group687259746.geometry}
-          material={materials.mat21}
+          material={materials.white}
           position={[-0.03, -0.515, -0.063]}
           rotation={[1.571, -0.012, 3.127]}
           scale={[-0.789, -2.419, -22.589]}
@@ -524,7 +542,7 @@ export function Logoroom(props) {
           castShadow
           receiveShadow
           geometry={nodes.group706802639.geometry}
-          material={materials.mat21}
+          material={materials.white}
           position={[-0.03, -0.515, -0.063]}
           rotation={[1.571, -0.012, 3.127]}
           scale={[-0.789, -2.419, -22.589]}
@@ -533,7 +551,7 @@ export function Logoroom(props) {
           castShadow
           receiveShadow
           geometry={nodes.group729811280.geometry}
-          material={materials.mat21}
+          material={materials.white}
           position={[-0.03, -0.515, -0.063]}
           rotation={[1.571, -0.012, 3.127]}
           scale={[-0.789, -2.419, -22.589]}
@@ -542,7 +560,7 @@ export function Logoroom(props) {
           castShadow
           receiveShadow
           geometry={nodes.group77921105.geometry}
-          material={materials.mat21}
+          material={materials.white}
           position={[-0.03, -0.515, -0.063]}
           rotation={[1.571, -0.012, 3.127]}
           scale={[-0.789, -2.419, -22.589]}
@@ -551,7 +569,7 @@ export function Logoroom(props) {
           castShadow
           receiveShadow
           geometry={nodes.group790925258.geometry}
-          material={materials.mat21}
+          material={materials.white}
           position={[-0.03, -0.515, -0.063]}
           rotation={[1.571, -0.012, 3.127]}
           scale={[-0.789, -2.419, -22.589]}
@@ -560,7 +578,7 @@ export function Logoroom(props) {
           castShadow
           receiveShadow
           geometry={nodes.group801095923.geometry}
-          material={materials.mat21}
+          material={materials.white}
           position={[-0.03, -0.515, -0.063]}
           rotation={[1.571, -0.012, 3.127]}
           scale={[-0.789, -2.419, -22.589]}
@@ -569,7 +587,7 @@ export function Logoroom(props) {
           castShadow
           receiveShadow
           geometry={nodes.group806343109.geometry}
-          material={materials.mat21}
+          material={materials.white}
           position={[-0.03, -0.515, -0.063]}
           rotation={[1.571, -0.012, 3.127]}
           scale={[-0.789, -2.419, -22.589]}
@@ -578,7 +596,7 @@ export function Logoroom(props) {
           castShadow
           receiveShadow
           geometry={nodes.group826580911.geometry}
-          material={materials.mat21}
+          material={materials.white}
           position={[-0.03, -0.515, -0.063]}
           rotation={[1.571, -0.012, 3.127]}
           scale={[-0.789, -2.419, -22.589]}
@@ -587,7 +605,7 @@ export function Logoroom(props) {
           castShadow
           receiveShadow
           geometry={nodes.group873458270.geometry}
-          material={materials.mat21}
+          material={materials.white}
           position={[-0.03, -0.515, -0.063]}
           rotation={[1.571, -0.012, 3.127]}
           scale={[-0.789, -2.419, -22.589]}
@@ -596,7 +614,7 @@ export function Logoroom(props) {
           castShadow
           receiveShadow
           geometry={nodes.group873558583.geometry}
-          material={materials.mat21}
+          material={materials.white}
           position={[-0.03, -0.515, -0.063]}
           rotation={[1.571, -0.012, 3.127]}
           scale={[-0.789, -2.419, -22.589]}
@@ -605,7 +623,7 @@ export function Logoroom(props) {
           castShadow
           receiveShadow
           geometry={nodes.group877249531.geometry}
-          material={materials.mat9}
+          material={materials.green}
           position={[-0.03, -0.515, -0.063]}
           rotation={[1.571, -0.012, 3.127]}
           scale={[-0.789, -2.419, -22.589]}
@@ -614,7 +632,7 @@ export function Logoroom(props) {
           castShadow
           receiveShadow
           geometry={nodes.group954813675.geometry}
-          material={materials.mat21}
+          material={materials.white}
           position={[-0.03, -0.515, -0.063]}
           rotation={[1.571, -0.012, 3.127]}
           scale={[-0.789, -2.419, -22.589]}
@@ -623,7 +641,7 @@ export function Logoroom(props) {
           castShadow
           receiveShadow
           geometry={nodes.group96314515.geometry}
-          material={materials.mat21}
+          material={materials.white}
           position={[-0.03, -0.515, -0.063]}
           rotation={[1.571, -0.012, 3.127]}
           scale={[-0.789, -2.419, -22.589]}
@@ -632,7 +650,7 @@ export function Logoroom(props) {
           castShadow
           receiveShadow
           geometry={nodes.group96968687.geometry}
-          material={materials.mat21}
+          material={materials.white}
           position={[-0.03, -0.515, -0.063]}
           rotation={[1.571, -0.012, 3.127]}
           scale={[-0.789, -2.419, -22.589]}
@@ -641,7 +659,7 @@ export function Logoroom(props) {
           castShadow
           receiveShadow
           geometry={nodes.group993315105.geometry}
-          material={materials.mat21}
+          material={materials.white}
           position={[-0.03, -0.515, -0.063]}
           rotation={[1.571, -0.012, 3.127]}
           scale={[-0.789, -2.419, -22.589]}
@@ -658,19 +676,24 @@ export function Logoroom(props) {
           castShadow
           receiveShadow
           geometry={nodes.Laptop_01_Cube025_2.geometry}
-          material={materials['1A1A1A']}
+          material={materials['dark-grey']}
         />
       </group>
-      <mesh
-        castShadow
-        receiveShadow
-        geometry={nodes.ComputerMouse.geometry}
-        material={materials.FFFFFF}
-        position={[3.461, 6.052, 11.565]}
-        rotation={[Math.PI / 2, 0, -2.58]}
-        scale={0.212}
-      />
-      <group position={[10.938, 10.128, 3.688]} rotation={[Math.PI / 2, 0, 2.36]} scale={0.066}>
+      <group position={[3.461, 6.197, 11.565]} rotation={[Math.PI / 2, 0, -2.58]} scale={0.212}>
+        <mesh
+          castShadow
+          receiveShadow
+          geometry={nodes.ComputerMouse_1.geometry}
+          material={materials.white}
+        />
+        <mesh
+          castShadow
+          receiveShadow
+          geometry={nodes.ComputerMouse_2.geometry}
+          material={materials['dark-grey']}
+        />
+      </group>
+      <group position={[10.938, 9.149, 3.688]} rotation={[Math.PI / 2, 0, 2.36]} scale={0.104}>
         <mesh
           castShadow
           receiveShadow
@@ -681,23 +704,730 @@ export function Logoroom(props) {
           castShadow
           receiveShadow
           geometry={nodes['1345_Analog_Clock_2'].geometry}
-          material={materials['1A1A1A']}
+          material={materials['dark-grey']}
+        />
+      </group>
+      <group position={[-14.184, 0.227, -1.684]} rotation={[1.516, -0.194, 0.785]} scale={0.438}>
+        <mesh
+          castShadow
+          receiveShadow
+          geometry={nodes.ElectricGuitar001.geometry}
+          material={materials['medium-grey']}
+        />
+        <mesh
+          castShadow
+          receiveShadow
+          geometry={nodes.ElectricGuitar001_1.geometry}
+          material={materials.metal}
+        />
+        <mesh
+          castShadow
+          receiveShadow
+          geometry={nodes.ElectricGuitar001_2.geometry}
+          material={materials.wood}
+        />
+      </group>
+      <group position={[7.644, 6.321, 13.718]} rotation={[Math.PI / 2, 0, 2.028]} scale={0.449}>
+        <mesh
+          castShadow
+          receiveShadow
+          geometry={nodes.Desk_lamp_01_Circle001_1.geometry}
+          material={materials['dark-grey']}
+        />
+        <mesh
+          castShadow
+          receiveShadow
+          geometry={nodes.Desk_lamp_01_Circle001_2.geometry}
+          material={materials.red}
         />
       </group>
       <mesh
         castShadow
         receiveShadow
-        geometry={nodes.ElectricGuitar.geometry}
-        material={materials.lambert2SG}
-        position={[-15.559, 0.131, 1.191]}
-        rotation={[1.511, 0.468, -1.439]}
-        scale={0.465}
+        geometry={nodes.Plane.geometry}
+        material={materials.White}
+        position={[4.45, 0.113, -11.162]}
+        rotation={[Math.PI / 2, 0, -0.176]}
+        scale={-0.007}
       />
       <mesh
         castShadow
         receiveShadow
+        geometry={nodes.Plane001.geometry}
+        material={materials['White.001']}
+        position={[2.693, 0.113, -10.344]}
+        rotation={[Math.PI / 2, 0, 1.066]}
+        scale={-0.007}
+      />
+      <mesh
+        castShadow
+        receiveShadow
+        geometry={nodes.Plane002.geometry}
+        material={materials['White.002']}
+        position={[14.22, 4.452, -9.041]}
+        rotation={[Math.PI / 2, -0.129, -1.467]}
+        scale={-0.007}
+      />
+      <group position={[-19.056, 0.069, -5.206]} rotation={[Math.PI / 2, 0, 0.782]} scale={0.148}>
+        <mesh
+          castShadow
+          receiveShadow
+          geometry={nodes.Amp_1318_1.geometry}
+          material={materials.metal}
+        />
+        <mesh
+          castShadow
+          receiveShadow
+          geometry={nodes.Amp_1318_2.geometry}
+          material={materials.metal}
+        />
+        <mesh
+          castShadow
+          receiveShadow
+          geometry={nodes.Amp_1318_3.geometry}
+          material={materials.metal}
+        />
+        <mesh
+          castShadow
+          receiveShadow
+          geometry={nodes.Amp_1318_4.geometry}
+          material={materials.metal}
+        />
+        <mesh
+          castShadow
+          receiveShadow
+          geometry={nodes.Amp_1318_5.geometry}
+          material={materials['medium-grey']}
+        />
+        <mesh
+          castShadow
+          receiveShadow
+          geometry={nodes.Amp_1318_6.geometry}
+          material={materials['dark-grey']}
+        />
+      </group>
+      <group position={[-4.066, 3.817, -19.889]} rotation={[Math.PI / 2, 0, 3.12]} scale={10.872}>
+        <mesh
+          castShadow
+          receiveShadow
+          geometry={nodes.model_1.geometry}
+          material={materials.wood}
+        />
+        <mesh
+          castShadow
+          receiveShadow
+          geometry={nodes.model_2.geometry}
+          material={materials.metal}
+        />
+        <mesh
+          castShadow
+          receiveShadow
+          geometry={nodes.model_3.geometry}
+          material={materials['dark-grey']}
+        />
+        <mesh
+          castShadow
+          receiveShadow
+          geometry={nodes.model_4.geometry}
+          material={materials.metal}
+        />
+        <mesh castShadow receiveShadow geometry={nodes.model_5.geometry} material={materials.red} />
+        <mesh
+          castShadow
+          receiveShadow
+          geometry={nodes.model_6.geometry}
+          material={materials.meat}
+        />
+        <mesh
+          castShadow
+          receiveShadow
+          geometry={nodes.model_7.geometry}
+          material={materials.bread}
+        />
+      </group>
+      <group position={[-24.241, 2.256, -9.891]} rotation={[Math.PI / 2, 0, -1.471]} scale={3.864}>
+        <mesh
+          castShadow
+          receiveShadow
+          geometry={nodes.group2121441309.geometry}
+          material={materials['dark-grey']}
+        />
+        <mesh
+          castShadow
+          receiveShadow
+          geometry={nodes.group2121441309_1.geometry}
+          material={materials.metal}
+        />
+        <mesh
+          castShadow
+          receiveShadow
+          geometry={nodes.group2121441309_2.geometry}
+          material={materials.red}
+        />
+      </group>
+      <group
+        position={[-10.957, 5.678, 0.512]}
+        rotation={[-0.326, -0.576, -0.135]}
+        scale={[7.514, 7.514, 6.976]}>
+        <mesh
+          castShadow
+          receiveShadow
+          geometry={nodes.Cube001.geometry}
+          material={materials.wood}
+        />
+        <mesh
+          castShadow
+          receiveShadow
+          geometry={nodes.Cube001_1.geometry}
+          material={materials.metal}
+        />
+        <mesh
+          castShadow
+          receiveShadow
+          geometry={nodes.Cube001_2.geometry}
+          material={materials['dark-grey']}
+        />
+        <mesh
+          castShadow
+          receiveShadow
+          geometry={nodes.Cube001_3.geometry}
+          material={materials['dark-grey']}
+        />
+        <mesh
+          castShadow
+          receiveShadow
+          geometry={nodes.Cube001_4.geometry}
+          material={materials.white}
+        />
+      </group>
+      <group position={[-11.919, 4.382, 11.016]} rotation={[-0.038, -1.121, -0.16]} scale={0.168}>
+        <mesh
+          castShadow
+          receiveShadow
+          geometry={nodes.Microphone001.geometry}
+          material={materials['dark-grey']}
+        />
+        <mesh
+          castShadow
+          receiveShadow
+          geometry={nodes.Microphone001_1.geometry}
+          material={materials.metal}
+        />
+      </group>
+      <group position={[-8.278, 2.259, 3.861]} rotation={[-0.215, -0.473, -0.056]} scale={3.616}>
+        <mesh
+          castShadow
+          receiveShadow
+          geometry={nodes.Cube007.geometry}
+          material={materials.metal}
+        />
+        <mesh
+          castShadow
+          receiveShadow
+          geometry={nodes.Cube007_1.geometry}
+          material={materials.wood}
+        />
+        <mesh
+          castShadow
+          receiveShadow
+          geometry={nodes.Cube007_2.geometry}
+          material={materials['dark-grey']}
+        />
+      </group>
+      <group position={[-15.421, 4.377, 6.541]} rotation={[Math.PI / 2, 0, -0.766]} scale={0.003}>
+        <mesh
+          castShadow
+          receiveShadow
+          geometry={nodes.LowPolyKeyboardobj_1.geometry}
+          material={materials.white}
+        />
+        <mesh
+          castShadow
+          receiveShadow
+          geometry={nodes.LowPolyKeyboardobj_2.geometry}
+          material={materials['medium-grey']}
+        />
+      </group>
+      <mesh
+        castShadow
+        receiveShadow
+        geometry={nodes.Plane003.geometry}
+        material={materials['dark-grey']}
+        position={[-6.149, 0.013, -6.331]}
+        rotation={[0, -0.776, 0]}
+        scale={5.653}
+      />
+      <group position={[-4.972, 4.963, -8.397]} rotation={[Math.PI / 2, 0, -0.832]} scale={2.4}>
+        <mesh
+          castShadow
+          receiveShadow
+          geometry={nodes.cushions_1.geometry}
+          material={materials.red}
+        />
+        <mesh
+          castShadow
+          receiveShadow
+          geometry={nodes.cushions_2.geometry}
+          material={materials.white}
+        />
+      </group>
+      <group
+        position={[24.594, 1.471, -7.218]}
+        rotation={[0, 0.625, 0]}
+        scale={[1.673, 1.499, 1.5]}>
+        <mesh
+          castShadow
+          receiveShadow
+          geometry={nodes.group1521911262.geometry}
+          material={materials['mat23.002']}
+          position={[-0.209, 0.374, 0.053]}
+          rotation={[Math.PI / 2, 0, 0]}
+          scale={[5.373, 5.993, 5.998]}
+        />
+        <mesh
+          castShadow
+          receiveShadow
+          geometry={nodes.group1800798373.geometry}
+          material={materials['dark-grey']}
+          position={[-0.325, 0.401, 0.053]}
+          rotation={[Math.PI / 2, 0, 0]}
+          scale={[5.373, 5.993, 5.998]}
+        />
+        <group
+          position={[-0.325, 0.31, 0.053]}
+          rotation={[Math.PI / 2, 0, 0]}
+          scale={[5.373, 5.993, 5.998]}>
+          <mesh
+            castShadow
+            receiveShadow
+            geometry={nodes.group1809739776_1.geometry}
+            material={materials['dark-grey']}
+          />
+          <mesh
+            castShadow
+            receiveShadow
+            geometry={nodes.group1809739776_2.geometry}
+            material={materials.metal}
+          />
+          <mesh
+            castShadow
+            receiveShadow
+            geometry={nodes.group1809739776_3.geometry}
+            material={materials.red}
+          />
+        </group>
+        <mesh
+          castShadow
+          receiveShadow
+          geometry={nodes.group267658192.geometry}
+          material={materials['mat23.002']}
+          position={[-0.325, 0.401, 0.053]}
+          rotation={[Math.PI / 2, 0, 0]}
+          scale={[5.373, 5.993, 5.998]}
+        />
+      </group>
+      <group
+        position={[2.566, 6.521, -0.554]}
+        rotation={[Math.PI / 2, 0, -2.21]}
+        scale={[1.919, 4.411, 4.411]}>
+        <mesh
+          castShadow
+          receiveShadow
+          geometry={nodes.model001_1.geometry}
+          material={materials.white}
+        />
+        <mesh
+          castShadow
+          receiveShadow
+          geometry={nodes.model001_2.geometry}
+          material={materials['dark-grey']}
+        />
+      </group>
+      <group
+        position={[24.847, 5.355, -1.377]}
+        rotation={[-3.141, -0.356, 0]}
+        scale={[-1.353, -0.149, -1.053]}>
+        <mesh
+          castShadow
+          receiveShadow
+          geometry={nodes.Cube011.geometry}
+          material={materials.white}
+        />
+        <mesh
+          castShadow
+          receiveShadow
+          geometry={nodes.Cube011_1.geometry}
+          material={materials['dark-grey']}
+        />
+      </group>
+      <group
+        position={[24.841, 5.093, -1.267]}
+        rotation={[-3.141, -0.14, 0]}
+        scale={[-1.353, -0.106, -1.053]}>
+        <mesh
+          castShadow
+          receiveShadow
+          geometry={nodes.Cube010.geometry}
+          material={materials.white}
+        />
+        <mesh
+          castShadow
+          receiveShadow
+          geometry={nodes.Cube010_1.geometry}
+          material={materials.white}
+        />
+      </group>
+      <group
+        position={[24.876, 4.902, -1.274]}
+        rotation={[-3.141, -0.261, 0]}
+        scale={[-1.353, -0.082, -1.053]}>
+        <mesh
+          castShadow
+          receiveShadow
+          geometry={nodes.Cube009.geometry}
+          material={materials.white}
+        />
+        <mesh
+          castShadow
+          receiveShadow
+          geometry={nodes.Cube009_1.geometry}
+          material={materials.red}
+        />
+      </group>
+      <group
+        position={[24.851, 4.659, -1.269]}
+        rotation={[-3.141, -0.175, 0]}
+        scale={[-1.353, -0.149, -1.053]}>
+        <mesh
+          castShadow
+          receiveShadow
+          geometry={nodes.Cube008.geometry}
+          material={materials.white}
+        />
+        <mesh
+          castShadow
+          receiveShadow
+          geometry={nodes.Cube008_1.geometry}
+          material={materials['dark-grey']}
+        />
+      </group>
+      <group
+        position={[19.869, 4.837, -5.513]}
+        rotation={[-3.14, -1.021, 0]}
+        scale={[-1.421, -0.172, -1.045]}>
+        <mesh
+          castShadow
+          receiveShadow
+          geometry={nodes.Cube002.geometry}
+          material={materials['white.006']}
+        />
+        <mesh
+          castShadow
+          receiveShadow
+          geometry={nodes.Cube002_1.geometry}
+          material={materials['dark-grey.001']}
+        />
+      </group>
+      <group
+        position={[20.571, 5.133, -6.248]}
+        rotation={[-3.141, -0.865, 0]}
+        scale={[-1.421, -0.123, -1.045]}>
+        <mesh
+          castShadow
+          receiveShadow
+          geometry={nodes.Cube003.geometry}
+          material={materials['white.006']}
+        />
+        <mesh
+          castShadow
+          receiveShadow
+          geometry={nodes.Cube003_1.geometry}
+          material={materials['white.006']}
+        />
+      </group>
+      <group
+        position={[20.213, 4.555, -5.829]}
+        rotation={[-3.141, -1.123, 0]}
+        scale={[-1.421, -0.094, -1.045]}>
+        <mesh
+          castShadow
+          receiveShadow
+          geometry={nodes.Cube004.geometry}
+          material={materials['white.006']}
+        />
+        <mesh
+          castShadow
+          receiveShadow
+          geometry={nodes.Cube004_1.geometry}
+          material={materials['red.003']}
+        />
+      </group>
+      <group
+        position={[20.462, 5.441, -6.13]}
+        rotation={[-3.141, -0.951, 0]}
+        scale={[-1.421, -0.172, -1.045]}>
+        <mesh
+          castShadow
+          receiveShadow
+          geometry={nodes.Cube005.geometry}
+          material={materials['white.006']}
+        />
+        <mesh
+          castShadow
+          receiveShadow
+          geometry={nodes.Cube005_1.geometry}
+          material={materials['dark-grey.001']}
+        />
+      </group>
+      <group
+        position={[20.571, 5.726, -6.248]}
+        rotation={[-3.141, -0.805, 0]}
+        scale={[-1.421, -0.123, -1.045]}>
+        <mesh
+          castShadow
+          receiveShadow
+          geometry={nodes.Cube012.geometry}
+          material={materials['white.007']}
+        />
+        <mesh
+          castShadow
+          receiveShadow
+          geometry={nodes.Cube012_1.geometry}
+          material={materials['white.007']}
+        />
+      </group>
+      <group
+        position={[20.214, 6.645, -5.827]}
+        rotation={[-3.141, -0.51, 0]}
+        scale={[-1.421, -0.094, -1.045]}>
+        <mesh
+          castShadow
+          receiveShadow
+          geometry={nodes.Cube013.geometry}
+          material={materials['white.007']}
+        />
+        <mesh
+          castShadow
+          receiveShadow
+          geometry={nodes.Cube013_1.geometry}
+          material={materials['red.004']}
+        />
+      </group>
+      <group
+        position={[20.461, 6.365, -6.13]}
+        rotation={[-3.141, -0.657, 0]}
+        scale={[-1.421, -0.172, -1.045]}>
+        <mesh
+          castShadow
+          receiveShadow
+          geometry={nodes.Cube014.geometry}
+          material={materials['white.007']}
+        />
+        <mesh
+          castShadow
+          receiveShadow
+          geometry={nodes.Cube014_1.geometry}
+          material={materials['dark-grey.002']}
+        />
+      </group>
+      <group position={[-0.561, 5.106, -14.266]} rotation={[Math.PI / 2, 0, 2.768]} scale={0.07}>
+        <mesh
+          castShadow
+          receiveShadow
+          geometry={nodes.Mesh_Cat001.geometry}
+          material={materials.white}
+        />
+        <mesh
+          castShadow
+          receiveShadow
+          geometry={nodes.Mesh_Cat001_1.geometry}
+          material={materials['dark-grey']}
+        />
+        <mesh
+          castShadow
+          receiveShadow
+          geometry={nodes.Mesh_Cat001_2.geometry}
+          material={materials.meat}
+        />
+      </group>
+      <mesh
+        castShadow
+        receiveShadow
+        geometry={nodes.Plane004.geometry}
+        material={materials['table.001']}
+        position={[1.129, 2.252, -13.459]}
+        rotation={[0, -0.788, 0]}
+        scale={5.651}
+      />
+      <group
+        position={[13.351, 9.575, 3.501]}
+        rotation={[1.534, -0.023, 0.796]}
+        scale={[4.956, 4.291, 4.563]}>
+        <mesh
+          castShadow
+          receiveShadow
+          geometry={nodes.model007.geometry}
+          material={materials['dark-grey']}
+        />
+        <mesh
+          castShadow
+          receiveShadow
+          geometry={nodes.model007_1.geometry}
+          material={materials.metal}
+        />
+        <mesh
+          castShadow
+          receiveShadow
+          geometry={nodes.model007_2.geometry}
+          material={materials.poli}
+        />
+      </group>
+      <group
+        position={[19.869, 6.034, -5.512]}
+        rotation={[-3.14, -1.021, 0]}
+        scale={[-1.421, -0.172, -1.045]}>
+        <mesh
+          castShadow
+          receiveShadow
+          geometry={nodes.Cube021.geometry}
+          material={materials['white.013']}
+        />
+        <mesh
+          castShadow
+          receiveShadow
+          geometry={nodes.Cube021_1.geometry}
+          material={materials['dark-grey.008']}
+        />
+      </group>
+      <group
+        position={[16.006, 6.619, 3.821]}
+        rotation={[0, -0.8, 0]}
+        scale={[1.867, 1.417, 1.586]}>
+        <group
+          position={[0.483, -0.038, -0.003]}
+          rotation={[-3.14, 0.086, 1.662]}
+          scale={[-0.918, -0.086, -0.74]}>
+          <mesh
+            castShadow
+            receiveShadow
+            geometry={nodes.Cube006.geometry}
+            material={materials['white.007']}
+          />
+          <mesh
+            castShadow
+            receiveShadow
+            geometry={nodes.Cube006_1.geometry}
+            material={materials['dark-grey.002']}
+          />
+        </group>
+        <group
+          position={[-0.394, -0.172, -0.027]}
+          rotation={[3.122, 0.066, 1.787]}
+          scale={[-0.774, -0.087, -0.741]}>
+          <mesh
+            castShadow
+            receiveShadow
+            geometry={nodes.Cube015.geometry}
+            material={materials['white.002']}
+          />
+          <mesh
+            castShadow
+            receiveShadow
+            geometry={nodes.Cube015_1.geometry}
+            material={materials['bread.001']}
+          />
+        </group>
+        <group
+          position={[-0.58, -0.034, 0.105]}
+          rotation={[3.138, 0.056, 1.747]}
+          scale={[-0.916, -0.087, -0.741]}>
+          <mesh
+            castShadow
+            receiveShadow
+            geometry={nodes.Cube016.geometry}
+            material={materials['white.003']}
+          />
+          <mesh
+            castShadow
+            receiveShadow
+            geometry={nodes.Cube016_1.geometry}
+            material={materials['red.001']}
+          />
+        </group>
+        <group
+          position={[0.706, -0.037, -0.207]}
+          rotation={[-3.128, 0.007, 1.674]}
+          scale={[-0.918, -0.086, -0.741]}>
+          <mesh
+            castShadow
+            receiveShadow
+            geometry={nodes.Cube020.geometry}
+            material={materials['white.012']}
+          />
+          <mesh
+            castShadow
+            receiveShadow
+            geometry={nodes.Cube020_1.geometry}
+            material={materials.red}
+          />
+        </group>
+        <group
+          position={[0.09, -0.032, -0.036]}
+          rotation={[3.122, 0.067, 1.715]}
+          scale={[-0.917, -0.086, -0.741]}>
+          <mesh
+            castShadow
+            receiveShadow
+            geometry={nodes.Cube023.geometry}
+            material={materials['white.015']}
+          />
+          <mesh
+            castShadow
+            receiveShadow
+            geometry={nodes.Cube023_1.geometry}
+            material={materials.bread}
+          />
+        </group>
+        <group
+          position={[0.28, 0.023, -0.023]}
+          rotation={[3.073, 0.055, 1.717]}
+          scale={[-0.917, -0.086, -0.741]}>
+          <mesh
+            castShadow
+            receiveShadow
+            geometry={nodes.Cube024.geometry}
+            material={materials['white.016']}
+          />
+          <mesh
+            castShadow
+            receiveShadow
+            geometry={nodes.Cube024_1.geometry}
+            material={materials.white}
+          />
+        </group>
+        <group
+          position={[-0.148, -0.028, -0.054]}
+          rotation={[3.125, 0.099, 1.714]}
+          scale={[-0.917, -0.087, -0.74]}>
+          <mesh
+            castShadow
+            receiveShadow
+            geometry={nodes.Cube025.geometry}
+            material={materials['white.017']}
+          />
+          <mesh
+            castShadow
+            receiveShadow
+            geometry={nodes.Cube025_1.geometry}
+            material={materials['dark-grey']}
+          />
+        </group>
+      </group>
+      <mesh
+        castShadow
+        receiveShadow
         geometry={nodes.Curve.geometry}
-        material={materials['SVGMat.008']}
+        material={materials['dark-grey']}
         position={[-28.053, 0.04, 16.653]}
         scale={[133.812, 167.414, 133.812]}
       />
@@ -705,19 +1435,19 @@ export function Logoroom(props) {
         castShadow
         receiveShadow
         geometry={nodes.Curve005.geometry}
-        material={materials['SVGMat.008']}
+        material={materials['glossy-grey']}
       />
       <mesh
         castShadow
         receiveShadow
         geometry={nodes.Curve006.geometry}
-        material={materials['SVGMat.008']}
+        material={materials['glossy-grey']}
       />
       <mesh
         castShadow
         receiveShadow
         geometry={nodes.Curve007.geometry}
-        material={materials['SVGMat.008']}
+        material={materials.white}
         position={[-28.053, 0.04, 16.653]}
         scale={[133.812, 236.792, 133.812]}
       />
@@ -725,23 +1455,29 @@ export function Logoroom(props) {
         castShadow
         receiveShadow
         geometry={nodes.Curve008.geometry}
-        material={materials['SVGMat.008']}
+        material={materials['dark-grey']}
         position={[-28.053, 0.04, 16.653]}
         scale={[133.812, 158.822, 133.812]}
       />
-      <mesh
-        castShadow
-        receiveShadow
-        geometry={nodes.Curve009.geometry}
-        material={materials['SVGMat.008']}
-        position={[-28.053, 0.04, 16.653]}
-        scale={[133.812, 285.809, 133.812]}
-      />
+      <group position={[-28.053, 0.04, 16.653]} scale={[133.812, 285.809, 133.812]}>
+        <mesh
+          castShadow
+          receiveShadow
+          geometry={nodes.Curve018.geometry}
+          material={materials.white}
+        />
+        <mesh
+          castShadow
+          receiveShadow
+          geometry={nodes.Curve018_1.geometry}
+          material={materials.bread}
+        />
+      </group>
       <mesh
         castShadow
         receiveShadow
         geometry={nodes.Curve010.geometry}
-        material={materials['SVGMat.008']}
+        material={materials['dark-grey']}
         position={[-28.053, 0.04, 16.653]}
         scale={[133.812, 79.598, 133.812]}
       />

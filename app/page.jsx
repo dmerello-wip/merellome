@@ -1,13 +1,15 @@
+import '@/helpers/envConfig'
 import { Navigator } from "@/components/Navigator"
 import { TempSpacer } from "@/components/TempSpacer"
 
 
+
 export default async function Page() {
 
-  //TODO: solve https and put in .env
-  const navigatorContents = await fetch('http://localhost:3000/api/navigator', { next: { tags: ['navigator'] } }).then((res) =>
+  
+const navigatorContents = await fetch(`${process.env.BASE_URL}/api/navigator`, { next: { tags: ['navigator'] } }).then((res) =>
     res.json()
-  )
+  ) 
  
   return (
     <>

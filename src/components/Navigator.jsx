@@ -5,13 +5,10 @@ import { useRef, useEffect, Suspense } from "react"
 import dynamic from 'next/dynamic'
 import { Loader } from '@/components/Loader'
 import { PerspectiveCamera } from '@react-three/drei'
-import * as THREE from 'three'
 
 
 const NavSlide = dynamic(() => import('@/components/NavSlide').then((mod) => mod.NavSlide), { ssr: false })
 const NavNode = dynamic(() => import('@/components/NavNode').then((mod) => mod.NavNode), { ssr: false })
-const Eyeglasses = dynamic(() => import('@/components/Eyeglasses').then((mod) => mod.Eyeglasses), { ssr: false })
-const Bass = dynamic(() => import('@/components/Bass').then((mod) => mod.Bass), { ssr: false })
 const Logoroom = dynamic(() => import('@/components/Logoroom').then((mod) => mod.Logoroom), { ssr: false })
 const View = dynamic(() => import('@/components/View').then((mod) => mod.View), {
   ssr: false,
@@ -25,8 +22,6 @@ const Navigator = ( { contents }) => {
 
   const mainObjRef = useRef()
   const mainObjRotationRef = useRef(0);
-  const radius = 8;
-  const solarized = true;
 
   const setMainObjRotation = (val) => {
     if(mainObjRef.current) {
@@ -51,14 +46,13 @@ const Navigator = ( { contents }) => {
     })
   }
 
-
   return (
       <div className="navigator">
         {renderNavSlides()}
         <div className='navigator__canvas'>
           <View   className="navigator__canvas__scene" >
               <Suspense fallback={null}>
-                {/* <fog attach="fog" args={['#101010',15, 25]} /> */}
+                <fog attach="fog" args={['#101010',15, 25]} />
                 <ambientLight />
                 <pointLight position={[-10, 20, 10]} intensity={10} decay={0.2} />
                 <pointLight position={[10, -10, 10]} color='white' decay={0.2} />
