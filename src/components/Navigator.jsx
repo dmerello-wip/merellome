@@ -20,27 +20,28 @@ const View = dynamic(() => import('@/components/View').then((mod) => mod.View), 
 
 const Navigator = ( { contents }) => {
 
-  const mainObjRef = useRef()
-  const mainObjRotationRef = useRef(0);
+  const cameraRef = useRef()
 
-  const setMainObjRotation = (val) => {
-    if(mainObjRef.current) {
-      mainObjRef.current.rotation.y = -val
+  const setCameraRotation = (newRotation) => {
+    if(cameraRef.current) {
+      cameraRef.current.rotation.x = -newRotation.x
+      cameraRef.current.rotation.y = -newRotation.y
+      cameraRef.current.rotation.z = -newRotation.z
     }
   }
 
   const renderNavSlides = () => {
     return contents.slides.map((el, i) => {
-      const initialRotation = el.rotation
-      const targetRotation = (i === contents.slides.length - 1) ? el.rotation : contents.slides[i + 1].rotation
+      const initialCameraRotation = el.cameraRotation
+      const targetCameraRotation = (i === contents.slides.length - 1) ? el.cameraRotation : contents.slides[i + 1].cameraRotation
       return <NavSlide
         key={`slide-${i}`}
         id={`slide-${i}`}
         title={el.title}
         description={el.description}
-        rotationStart={initialRotation}
-        rotationEnd={targetRotation}
-        setMainObjRotation={setMainObjRotation}
+        cameraRotationStart={initialCameraRotation}
+        cameraRotationEnd={targetCameraRotation}
+        setCameraRotation={setCameraRotation}
         >
       </NavSlide>
     })
@@ -56,8 +57,10 @@ const Navigator = ( { contents }) => {
                 <ambientLight />
                 <pointLight position={[-10, 20, 10]} intensity={10} decay={0.2} />
                 <pointLight position={[10, -10, 10]} color='white' decay={0.2} />
-                <PerspectiveCamera makeDefault fov={40} position={[0, 5, 22]} />    
-                <group ref={mainObjRef} position={[4, 0, 0]} rotation={[ 0, mainObjRotationRef.current , 0 ]}>
+                <PerspectiveCamera ref={cameraRef} makeDefault fov={40} position={[0, 5, 22]} />    
+                <group
+                  position={[4, 0, 0]}
+                  rotation={[ 0,0,0 ]}>
                   <Logoroom scale={[0.4, 0.4, 0.4]} position={[0, 0, 0]} />
                 </group>
               </Suspense>

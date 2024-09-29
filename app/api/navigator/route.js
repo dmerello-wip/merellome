@@ -22,35 +22,40 @@ export async function GET() {
             id: 0,
             title: `Hello, nice to meet you`,
             description: `I'm Diego Merello, proud father, humble husband, passionate designer, wanna be musician, recidivist griller`,
-            rotation: 0,
+            cameraRotation: { x: 0, y: 0, z: 0 },
+            cameraPosition: { x: 0, y: 5, z: 22 },
             color: 'yellow'
         },
         {
             id: 1,
             title: `Maybe in another life...`,
             description: `... i could have been a musician, but till now i play and write songs about friends, and stuff that happens`,
-            rotation: 2,
+            cameraRotation: { x: 0, y: -0.5, z: 0 },
+            cameraPosition: { x: -1, y: 5, z: 22 },
             color: 'orange'
         },
         {
             id: 2,
             title: `Hello, nice to meet you`,
             description: `I'm Diego Merello, proud father, humble husband, passionate designer, wanna be musician, recidivist griller`,
-            rotation: 4,
+            cameraRotation: { x: 0, y: 0, z: 0 },
+            cameraPosition: { x: 0, y: 5, z: 22 },
             color: 'red'
         },
         {
             id: 3,
             title: `Maybe in another life...`,
             description: `... i could have been a musician, but till now i play and write songs about friends, and stuff that happens`,
-            rotation: 6,
+            cameraRotation: { x: 0, y: 0.5, z: 0 },
+            cameraPosition: { x: 1, y: 5, z: 22 },
             color: 'purple'
         },
         {
             id: 4,
             title: `Hello, nice to meet you`,
             description: `I'm Diego Merello, proud father, humble husband, passionate designer, wanna be musician, recidivist griller`,
-            rotation: 8,
+            cameraRotation: { x: 0, y: 0, z: 0 },
+            cameraPosition: { x: 0, y: 5, z: 22 },
             color: 'blue'
         },
     ];
