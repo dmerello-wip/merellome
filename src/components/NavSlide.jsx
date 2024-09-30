@@ -32,7 +32,7 @@ const NavSlide = (props) => {
           positionY: cameraEndSettings.positionY,
           positionZ: cameraEndSettings.positionZ,
           scrollTrigger: trigger,
-          ease: "none",
+          ease: "power1.inOut",
           onUpdate: () => {
               setCamera(controlledRotation)
           }

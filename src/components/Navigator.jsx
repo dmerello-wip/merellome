@@ -6,7 +6,7 @@ import dynamic from 'next/dynamic'
 import { Loader } from '@/components/Loader'
 import { PerspectiveCamera } from '@react-three/drei'
 import * as THREE from 'three'
-
+import { useControls } from 'leva'
 
 const NavSlide = dynamic(() => import('@/components/NavSlide').then((mod) => mod.NavSlide), { ssr: false })
 const NavNode = dynamic(() => import('@/components/NavNode').then((mod) => mod.NavNode), { ssr: false })
@@ -22,6 +22,21 @@ const View = dynamic(() => import('@/components/View').then((mod) => mod.View), 
 const Navigator = ( { contents }) => {
 
   const cameraRef = useRef()
+  const {
+    levaRotationX,
+    levaRotationY,
+    levaRotationZ,
+    levaPositionX,
+    levaPositionY,
+    levaPositionZ,
+  } = useControls({
+    levaRotationX: 0,
+    levaRotationY: -10,
+    levaRotationZ: 0,
+    levaPositionX: 6,
+    levaPositionY: 4,
+    levaPositionZ: 15
+  });
 
   useEffect(() => {
     if(contents.slides.length > 0) {
@@ -34,6 +49,7 @@ const Navigator = ( { contents }) => {
   }, [contents])
 
   const setCamera = (newSettings) => {
+    
     if(cameraRef.current) {
       cameraRef.current.position.set(
         newSettings.positionX,
@@ -46,6 +62,7 @@ const Navigator = ( { contents }) => {
         THREE.MathUtils.degToRad(newSettings.rotationZ)
       )
     }
+    
   }
 
   const renderNavSlides = () => {
@@ -80,6 +97,9 @@ const Navigator = ( { contents }) => {
                   fov={40}
                   position={[contents.slides[0].camera.positionX, contents.slides[0].camera.positionY, contents.slides[0].camera.positionZ]} 
                   rotation={[contents.slides[0].camera.rotationX, contents.slides[0].camera.rotationY, contents.slides[0].camera.rotationZ]} 
+                  // position={[levaPositionX, levaPositionY, levaPositionZ]} 
+                  // rotation={[THREE.MathUtils.degToRad(levaRotationX), THREE.MathUtils.degToRad(levaRotationY), THREE.MathUtils.degToRad(levaRotationZ)]} 
+                  
                 />    
                 <group
                   position={[4, 0, 0]}
