@@ -87,7 +87,7 @@ const Navigator = ( { contents }) => {
         <div className='navigator__canvas'>
           <View   className="navigator__canvas__scene" >
               <Suspense fallback={null}>
-                <fog attach="fog" args={['#101010',15, 35]} />
+                {/* <fog attach="fog" args={['#101010',0, 25]} /> */}
                 <ambientLight />
                 <pointLight position={[-10, 20, 10]} intensity={10} decay={0.2} />
                 <pointLight position={[10, -10, 10]} color='white' decay={0.2} />
