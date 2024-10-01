@@ -26,9 +26,9 @@ export async function GET() {
                 rotationX: -90,
                 rotationY: 0,
                 rotationZ: 0,
-                positionX: -4,
-                positionY: 28,
-                positionZ: -2
+                positionX: -15,
+                positionY: 60,
+                positionZ: -3
             },
             color: 'yellow'
         },
@@ -37,12 +37,12 @@ export async function GET() {
             title: `Education`,
             description: `... i could have been a musician, but till now i play and write songs about friends, and stuff that happens`,
             camera: {
-                rotationX: 16,
-                rotationY: 146,
-                rotationZ: -10,
-                positionX: 19,
-                positionY: 4,
-                positionZ: -6
+                rotationX: 0,
+                rotationY: 153,
+                rotationZ: 0,
+                positionX: 38,
+                positionY: 5,
+                positionZ: -18
             },
             color: 'purple'
         },
@@ -51,12 +51,12 @@ export async function GET() {
             title: `work...`,
             description: `... i could have been a musician, but till now i play and write songs about friends, and stuff that happens`,
             camera: {
-                rotationX: -9,
-                rotationY: -13,
-                rotationZ: -3.6,
-                positionX: 2.2,
-                positionY: 5.3,
-                positionZ: 10.5
+                rotationX: -12,
+                rotationY: 5,
+                rotationZ: -2,
+                positionX: -1,
+                positionY: 14,
+                positionZ: 35
             },
             color: 'orange'
         },
@@ -65,12 +65,12 @@ export async function GET() {
             title: `music`,
             description: `I'm Diego Merello, proud father, humble husband, passionate designer, wanna be musician, recidivist griller`,
             camera: {
-                rotationX: -22,
-                rotationY: -1,
-                rotationZ: -0,
-                positionX: -5,
-                positionY: 6,
-                positionZ: 10
+                rotationX: -26,
+                rotationY: 1,
+                rotationZ: -7,
+                positionX: -19,
+                positionY: 14,
+                positionZ: 22
             },
             color: 'red'
         },
@@ -79,12 +79,12 @@ export async function GET() {
             title: `Family`,
             description: `I'm Diego Merello, proud father, humble husband, passionate designer, wanna be musician, recidivist griller`,
             camera: {
-                rotationX: 19,
-                rotationY: -194,
-                rotationZ: -7,
-                positionX: 8.2,
-                positionY: 5.5,
-                positionZ: -14.3
+                rotationX: -168,
+                rotationY: 15,
+                rotationZ: -184,
+                positionX: 10,
+                positionY: 11,
+                positionZ: -35
             },
             color: 'blue'
         },
