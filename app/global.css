@@ -11,17 +11,26 @@
     padding: 0;
     font-family: var(--base-font-family);
     color: var(--text-color);
-    background: radial-gradient(circle, rgb(15, 15, 15) 30%, rgba(0, 0, 0, 1) 100%);
-    background-attachment: fixed;
-    /* fixed limbo bg */
-    /* &::before {
-      position: fixed;
-      content: '';
-      top:0; left:0;
-      width: 100vw;
-      height: 100vh;
-      background: linear-gradient(180deg, rgb(210, 210, 210) 0%, rgba(255, 255, 255, 1) 30%, rgba(255, 255, 255, 1) 60%, rgba(190, 190, 190, 190) 100%);
-    } */
+  }
+
+  body {
+    background: rgba(15, 15, 15, 1);
+  }
+  body::before {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 1;
+    pointer-events: none;
+    content: "";
+    background: repeating-linear-gradient(90deg, transparent 0, transparent 100px, #272727 100px, #272727 101px),
+      repeating-linear-gradient(0deg, transparent 0, transparent 100px, #272727 100px, #272727 101px);
+    z-index: 1;
+  }
+  body > * {
+    z-index: 2;
   }
 
   :root {

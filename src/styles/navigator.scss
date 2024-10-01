@@ -1,8 +1,5 @@
 .navigator {
     position: relative;
-    background: repeating-linear-gradient(90deg, transparent 0, transparent 100px, #181818 100px, #181818 101px),
-        repeating-linear-gradient(0deg, transparent 0, transparent 100px, #181818 100px, #181818 101px);
-
     .navSlide {
         z-index: 2;
     }
@@ -22,3 +19,13 @@
         }
     }
 }
+
+// &::after {
+//     background: radial-gradient(
+//         at 80% 50%,
+//         rgba(15, 15, 15, 0) 0%,
+//         rgba(15, 15, 15, 0.8) 60%,
+//         rgb(15, 15, 15) 100%
+//     );
+//     z-index: 2;
+// }

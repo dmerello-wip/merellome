@@ -37,16 +37,8 @@ const Navigator = ( { contents }) => {
     levaPositionY: 4,
     levaPositionZ: 15
   });
+  
 
-  useEffect(() => {
-    if(contents.slides.length > 0) {
-      setTimeout(() => {
-        // TODO: remove this orrible hack
-        // the first rendering is not correclty getting the values
-        setCamera(contents.slides[0].camera)
-      }, 500)
-    }
-  }, [contents])
 
   const setCamera = (newSettings) => {
     
@@ -89,14 +81,22 @@ const Navigator = ( { contents }) => {
               <Suspense fallback={null}>
                 {/* <fog attach="fog" args={['#101010',0, 25]} /> */}
                 <ambientLight />
-                <pointLight position={[-10, 20, 10]} intensity={10} decay={0.2} />
-                <pointLight position={[10, -10, 10]} color='white' decay={0.2} />
+                <pointLight position={[-10, 20, 10]} intensity={2} decay={0.2} />
+                <pointLight position={[10, 0, -10]} decay={0.2} />
                 <PerspectiveCamera
                   ref={cameraRef}
                   makeDefault
                   fov={40}
-                  position={[contents.slides[0].camera.positionX, contents.slides[0].camera.positionY, contents.slides[0].camera.positionZ]} 
-                  rotation={[contents.slides[0].camera.rotationX, contents.slides[0].camera.rotationY, contents.slides[0].camera.rotationZ]} 
+                  position={[
+                    contents.slides[0].camera.positionX, 
+                    contents.slides[0].camera.positionY, 
+                    contents.slides[0].camera.positionZ
+                  ]} 
+                  rotation={[
+                    THREE.MathUtils.degToRad(contents.slides[0].camera.rotationX), 
+                    THREE.MathUtils.degToRad(contents.slides[0].camera.rotationY), 
+                    THREE.MathUtils.degToRad(contents.slides[0].camera.rotationZ)
+                  ]} 
                   // position={[levaPositionX, levaPositionY, levaPositionZ]} 
                   // rotation={[THREE.MathUtils.degToRad(levaRotationX), THREE.MathUtils.degToRad(levaRotationY), THREE.MathUtils.degToRad(levaRotationZ)]} 
                   
