@@ -11,6 +11,7 @@ import { useControls } from 'leva'
 const NavSlide = dynamic(() => import('@/components/NavSlide').then((mod) => mod.NavSlide), { ssr: false })
 const NavNode = dynamic(() => import('@/components/NavNode').then((mod) => mod.NavNode), { ssr: false })
 const Logoroom = dynamic(() => import('@/components/Logoroom').then((mod) => mod.Logoroom), { ssr: false })
+const GetItTouch = dynamic(() => import('@/components/GetItTouch').then((mod) => mod.GetItTouch), { ssr: false })
 const View = dynamic(() => import('@/components/View').then((mod) => mod.View), {
   ssr: false,
   loading: () => (
@@ -25,11 +26,11 @@ const Navigator = ( { contents }) => {
   const cameraHolderRef = useRef()
 
   /* GUI to test positions */
-  const {
-    levaRotationX, levaRotationY, levaRotationZ, levaPositionX, levaPositionY, levaPositionZ,
-  } = useControls({
-    levaRotationX: 0,levaRotationY: 0,levaRotationZ: 0,levaPositionX: 0,levaPositionY: 0,levaPositionZ: 0
- });
+//   const {
+//     levaRotationX, levaRotationY, levaRotationZ, levaPositionX, levaPositionY, levaPositionZ,
+//   } = useControls({
+//     levaRotationX: 0,levaRotationY: 0,levaRotationZ: 0,levaPositionX: 0,levaPositionY: 0,levaPositionZ: 0
+//  });
   
 
   /* Callback to set Camera from dom scroll */
@@ -68,6 +69,7 @@ const Navigator = ( { contents }) => {
   }
 
   return (
+    <>
       <div className="navigator">
         <div className='navigator__canvas'>
           <View   className="navigator__canvas__scene" >
@@ -112,6 +114,7 @@ const Navigator = ( { contents }) => {
         </div>
         {renderNavSlides()}
       </div>
+        <GetItTouch/></>
   )
 }
 

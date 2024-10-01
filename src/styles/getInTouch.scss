@@ -1,0 +1,19 @@
+@use "./utils/typography" as typo;
+
+.getInTouch {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    border-top: 1px solid var(--bg-lines-color);
+    &__title {
+        position: relative;
+        top: 0;
+        left: 0;
+        font-size: 22vw;
+        font-weight: 700;
+        white-space: nowrap;
+        text-transform: uppercase;
+        -webkit-text-stroke: 2px white;
+        -webkit-text-fill-color: transparent;
+    }
+}

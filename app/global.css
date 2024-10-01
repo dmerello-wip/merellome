@@ -2,6 +2,16 @@
     box-sizing: border-box;
   }
 
+  :root {
+    --color-bg: rgba(10, 10, 10, 1);
+    --color-primary: #000000;
+    --color-secondary: #ffffff;
+    --color-dark: #101010;
+    --base-font-family: Arial, sans-serif;
+    --text-color: #9b9b9b;--bg-lines-color: #1a1a1a;
+  }
+
+
   html,
   body,
   #root {
@@ -14,11 +24,9 @@
   }
 
   body {
-    background: rgba(10, 10, 10, 1);
+    background: var(--color-bg);
   }
   body::before {
-
-    --bg-lines-color: #1a1a1a;
     position: fixed;
     top: 0;
     left: 0;
@@ -35,10 +43,4 @@
     z-index: 2;
   }
 
-  :root {
-    --color-primary: #000000;
-    --color-secondary : #ffffff;
-    --color-dark: #101010;
-    --base-font-family: 'system-ui', sans-serif;
-    --text-color: #9b9b9b;
-  }
+  

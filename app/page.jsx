@@ -1,6 +1,7 @@
 import '@/helpers/envConfig'
 import { Navigator } from "@/components/Navigator"
 import { TempSpacer } from "@/components/TempSpacer"
+import dynamic from 'next/dynamic'
 
 
 
