@@ -14,9 +14,11 @@
   }
 
   body {
-    background: rgba(15, 15, 15, 1);
+    background: rgba(10, 10, 10, 1);
   }
   body::before {
+
+    --bg-lines-color: #1a1a1a;
     position: fixed;
     top: 0;
     left: 0;
@@ -25,8 +27,8 @@
     z-index: 1;
     pointer-events: none;
     content: "";
-    background: repeating-linear-gradient(90deg, transparent 0, transparent 100px, #272727 100px, #272727 101px),
-      repeating-linear-gradient(0deg, transparent 0, transparent 100px, #272727 100px, #272727 101px);
+    background: repeating-linear-gradient(90deg, transparent 0, transparent 100px, var(--bg-lines-color) 100px, var(--bg-lines-color) 101px),
+      repeating-linear-gradient(0deg, transparent 0, transparent 100px, var(--bg-lines-color) 100px, var(--bg-lines-color) 101px);
     z-index: 1;
   }
   body > * {
