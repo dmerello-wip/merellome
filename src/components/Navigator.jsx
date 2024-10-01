@@ -114,7 +114,9 @@ const Navigator = ( { contents }) => {
         </div>
         {renderNavSlides()}
       </div>
-        <GetItTouch/></>
+      {/* TODO: move this component outside of Navigator and check if Scrolltrigger works on this */}
+      <GetItTouch/>
+    </>
   )
 }
 
