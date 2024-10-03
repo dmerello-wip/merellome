@@ -9,7 +9,7 @@ import { useGLTF } from '@react-three/drei'
 
 export function Logoroom(props) {
   const { nodes, materials } = useGLTF('/models/logoroom.glb')
-return (
+   return (
     <group {...props} dispose={null}>
       <group position={[19.167, 3.196, 7.283]} rotation={[-0.355, 0.59, -1.312]} scale={1.024}>
         <mesh
@@ -42,7 +42,7 @@ return (
           castShadow
           receiveShadow
           geometry={nodes.IMac_01_Cube026_1.geometry}
-          material={materials.metal}
+          material={materials.white}
         />
         <mesh
           castShadow
@@ -727,20 +727,15 @@ return (
           material={materials.wood}
         />
       </group>
-      <group position={[7.644, 6.321, 13.718]} rotation={[Math.PI / 2, 0, 2.028]} scale={0.449}>
-        <mesh
-          castShadow
-          receiveShadow
-          geometry={nodes.Desk_lamp_01_Circle001_1.geometry}
-          material={materials['dark-grey']}
-        />
-        <mesh
-          castShadow
-          receiveShadow
-          geometry={nodes.Desk_lamp_01_Circle001_2.geometry}
-          material={materials.red}
-        />
-      </group>
+      <mesh
+        castShadow
+        receiveShadow
+        geometry={nodes.Desk_lamp_01_Circle001.geometry}
+        material={materials.bread}
+        position={[7.644, 6.321, 13.718]}
+        rotation={[Math.PI / 2, 0, 2.028]}
+        scale={0.449}
+      />
       <mesh
         castShadow
         receiveShadow
@@ -1250,6 +1245,26 @@ return (
           material={materials.meat}
         />
       </group>
+      <group position={[0.692, 3.572, -11.406]} rotation={[Math.PI / 2, 0, 0.578]} scale={3.947}>
+        <mesh
+          castShadow
+          receiveShadow
+          geometry={nodes.model002.geometry}
+          material={materials.white}
+        />
+        <mesh
+          castShadow
+          receiveShadow
+          geometry={nodes.model002_1.geometry}
+          material={materials.metal}
+        />
+        <mesh
+          castShadow
+          receiveShadow
+          geometry={nodes.model002_2.geometry}
+          material={materials['dark-grey']}
+        />
+      </group>
       <mesh
         castShadow
         receiveShadow
@@ -1259,6 +1274,26 @@ return (
         rotation={[0, -0.788, 0]}
         scale={5.651}
       />
+      <group position={[2.774, 3.572, -10.717]} rotation={[Math.PI / 2, 0, -0.151]} scale={3.947}>
+        <mesh
+          castShadow
+          receiveShadow
+          geometry={nodes.model006.geometry}
+          material={materials['white.010']}
+        />
+        <mesh
+          castShadow
+          receiveShadow
+          geometry={nodes.model006_1.geometry}
+          material={materials['metal.002']}
+        />
+        <mesh
+          castShadow
+          receiveShadow
+          geometry={nodes.model006_2.geometry}
+          material={materials['dark-grey.005']}
+        />
+      </group>
       <group
         position={[13.351, 9.575, 3.501]}
         rotation={[1.534, -0.023, 0.796]}
@@ -1427,7 +1462,7 @@ return (
         castShadow
         receiveShadow
         geometry={nodes.Curve.geometry}
-        material={materials['dark-grey']}
+        material={materials.red}
         position={[-28.053, 0.04, 16.653]}
         scale={[133.812, 167.414, 133.812]}
       />
@@ -1455,7 +1490,7 @@ return (
         castShadow
         receiveShadow
         geometry={nodes.Curve008.geometry}
-        material={materials['dark-grey']}
+        material={materials['red.001']}
         position={[-28.053, 0.04, 16.653]}
         scale={[133.812, 158.822, 133.812]}
       />
@@ -1477,7 +1512,7 @@ return (
         castShadow
         receiveShadow
         geometry={nodes.Curve010.geometry}
-        material={materials['dark-grey']}
+        material={materials.red}
         position={[-28.053, 0.04, 16.653]}
         scale={[133.812, 79.598, 133.812]}
       />

@@ -76,9 +76,9 @@ const Navigator = ( { contents }) => {
               <Suspense fallback={null}>
                 
                 {/* ambient light */}
-                <ambientLight />
+                <ambientLight intensity={1} />
                 <pointLight position={[-10, 20, 10]} intensity={2} decay={0.2} />
-                <pointLight position={[10, 0, -10]} decay={0.2} />
+                <pointLight position={[10, 0, -10]} intensity={2} decay={0.2} />
 
                 {/* camera inside a group to sert rotation on its own axis */}
                 <group
