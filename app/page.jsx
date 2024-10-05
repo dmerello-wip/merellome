@@ -1,8 +1,7 @@
 import '@/helpers/envConfig'
+import { Header } from "@/components/Header"
 import { Navigator } from "@/components/Navigator"
 import { TempSpacer } from "@/components/TempSpacer"
-import dynamic from 'next/dynamic'
-
 
 
 export default async function Page() {
@@ -14,6 +13,7 @@ const navigatorContents = await fetch(`${process.env.BASE_URL}/api/navigator`, {
  
   return (
     <>
+      <Header />
       <Navigator contents={navigatorContents}/>
       <TempSpacer>1. Contenuto sotto al navigator</TempSpacer>
       <TempSpacer>2. Contenuto sotto al navigator</TempSpacer>
