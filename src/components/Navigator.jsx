@@ -1,7 +1,7 @@
 'use client'
 
 import _navigator from '@/styles/Navigator.scss'
-import { useRef, useEffect, Suspense } from "react"
+import { useRef, Suspense } from "react"
 import dynamic from 'next/dynamic'
 import { Loader } from '@/components/Loader'
 import { PerspectiveCamera } from '@react-three/drei'
@@ -15,7 +15,7 @@ const GetItTouch = dynamic(() => import('@/components/GetItTouch').then((mod) =>
 const View = dynamic(() => import('@/components/View').then((mod) => mod.View), {
   ssr: false,
   loading: () => (
-    <Loader /> 
+    <Loader fixed={true} /> 
   ),
 })
 
@@ -72,7 +72,7 @@ const Navigator = ( { contents }) => {
     <>
       <div className="navigator">
         <div className='navigator__canvas'>
-          <View   className="navigator__canvas__scene" >
+          <View className="navigator__canvas__scene" >
               <Suspense fallback={null}>
                 
                 {/* ambient light */}

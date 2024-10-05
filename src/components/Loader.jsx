@@ -1,11 +1,16 @@
+import classNames from 'classnames'
 import _loader from '@/styles/loader.scss'
 
-const Loader = () => {
+const Loader = ({fixed = false}) => {
 
-  return (
-    <div className='loader'>
-      loading
-    </div>
+  const wrapperClass = classNames('loader', { 'loader--fixed': fixed });
+
+return (
+    <div className={wrapperClass} >
+      <div className="loader__border">
+        <div className="loader__core"></div>
+      </div>  
+    </div>  
   )
 }
 

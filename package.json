@@ -23,6 +23,7 @@
     "@react-three/drei": "^9.92.7",
     "@react-three/fiber": "^8.15.12",
     "@studio-freight/react-lenis": "^0.0.47",
+    "classnames": "^2.5.1",
     "glsl-random": "^0.0.5",
     "gsap": "^3.12.5",
     "lenis": "^1.1.9",
