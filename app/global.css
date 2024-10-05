@@ -5,11 +5,13 @@
 
   :root {
     --color-bg: rgba(10, 10, 10, 1);
+    --color--bg-lines: #1a1a1a;
+    --color--bg-lines: #1a1a1a;
     --color-primary: #000000;
     --color-secondary: #ffffff;
     --color-dark: #101010;
+    --color--text: #aeaeae;
     --base-font-family: 'Archivo', sans-serif;
-    --text-color: #9b9b9b;--bg-lines-color: #1a1a1a;
   }
 
 
@@ -25,8 +27,7 @@
   body {
     background: var(--color-bg);
     font-family: var(--base-font-family);
-    color: var(--text-color);
-    font-weight: 200;
+    color: var(--color--text);
   }
   
   body::before {
@@ -38,8 +39,8 @@
     z-index: 1;
     pointer-events: none;
     content: "";
-    background: repeating-linear-gradient(90deg, transparent 0, transparent 100px, var(--bg-lines-color) 100px, var(--bg-lines-color) 101px),
-      repeating-linear-gradient(0deg, transparent 0, transparent 100px, var(--bg-lines-color) 100px, var(--bg-lines-color) 101px);
+    background: repeating-linear-gradient(90deg, transparent 0, transparent 100px, var(--color--bg-lines) 100px, var(--color--bg-lines) 101px),
+      repeating-linear-gradient(0deg, transparent 0, transparent 100px, var(--color--bg-lines) 100px, var(--color--bg-lines) 101px);
     z-index: 1;
   }
   body > * {
