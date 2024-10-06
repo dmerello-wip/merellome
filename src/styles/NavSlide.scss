@@ -18,9 +18,14 @@
     &__content {
         max-width: 40rem;
         &__title {
-            font-weight: 400;
-            @include typo.multiline-gradient-text(1.1);
-            font-size: 4.1rem;
+            overflow: hidden;
+            h2 {
+                position: relative;
+                font-weight: 400;
+                // @include typo.multiline-gradient-text(1.1);
+                font-size: 4.1rem;
+                transition: all 0.3s ease-in-out;
+            }
         }
         &__description {
             position: relative;
