@@ -3,8 +3,8 @@ import SmoothScrolling from "@/components/SmoothScrolling";
 import _global from '@/styles/global.scss'
 
 export const metadata = {
-  title: 'Next.js + Three.js',
-  description: 'A minimal starter for Nextjs + React-three-fiber and Threejs.',
+  title: 'Diego Merello | UX/UI Design passionate, music enthusiast, proud father', 
+  description: 'Personal website of Diego Merello, COO of WIP Italia, musician, designer, recidivist griller. Passionate of creativity and technology and all their mixes.',
 }
 
 export default function RootLayout({ children }) {
