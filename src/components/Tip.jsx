@@ -7,7 +7,7 @@ const Tip = ({ children, action }) => {
   const ref = useRef()
 
   const actionHandler = () => {
-    alert({action})
+    alert('Action: ' + action)
   }
 
   return (

@@ -77,8 +77,10 @@ const Navigator = ( { contents }) => {
                 
                 {/* ambient light */}
                 <ambientLight intensity={1} />
-                <pointLight position={[-10, 20, 10]} intensity={2} decay={0.2} />
-                <pointLight position={[10, 0, -10]} intensity={2} decay={0.2} />
+                <pointLight position={[20, 20, 20]} intensity={1} decay={0.2} />
+                <pointLight position={[-20, 20, -20]} intensity={2} decay={0.2} />
+                {/* <pointLight position={[-10, 20, 10]} intensity={2} decay={0.2} />
+                <pointLight position={[10, 0, -10]} intensity={2} decay={0.2} /> */}
 
                 {/* camera inside a group to sert rotation on its own axis */}
                 <group
