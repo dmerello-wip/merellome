@@ -48,7 +48,7 @@ const NavSlide = (props) => {
     <div className="navSlide" ref={slideRef} id={id}>
       <div className='navSlide__content'>
         <div className='navSlide__content__title'>
-          {title}
+          <h2>{title}</h2>
         </div>
         <div className='navSlide__content__description' dangerouslySetInnerHTML={{ __html: description }} />
         {children}

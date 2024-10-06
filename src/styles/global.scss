@@ -1,37 +1,38 @@
+@use "font";
+@use "reset";
 
 * {
     box-sizing: border-box;
-  }
+}
 
-  :root {
+:root {
     --color-bg: rgba(10, 10, 10, 1);
     --color--bg-lines: #1a1a1a;
-    --color--bg-lines: #1a1a1a;
+    --color--bg-lines: #292525;
     --color-primary: #000000;
     --color-secondary: rgb(191, 49, 49);
     --color-dark: #101010;
     --color--text: #b8b8b8;
-    --base-font-family: 'Archivo', sans-serif;
-  }
+    --base-font-family: "Archivo", sans-serif;
+}
 
-
-  html,
-  body,
-  #root {
+html,
+body,
+#root {
     width: 100%;
     min-height: 100%;
     margin: 0;
     padding: 0;
-  }
+}
 
-  body {
+body {
     background: var(--color-bg);
     font-family: var(--base-font-family);
     color: var(--color--text);
     font-weight: 200;
-  }
-  
-  body::before {
+}
+
+body::before {
     position: fixed;
     top: 0;
     left: 0;
@@ -40,12 +41,22 @@
     z-index: 1;
     pointer-events: none;
     content: "";
-    background: repeating-linear-gradient(90deg, transparent 0, transparent 100px, var(--color--bg-lines) 100px, var(--color--bg-lines) 101px),
-      repeating-linear-gradient(0deg, transparent 0, transparent 100px, var(--color--bg-lines) 100px, var(--color--bg-lines) 101px);
+    background: repeating-linear-gradient(
+            90deg,
+            transparent 0,
+            transparent 100px,
+            var(--color--bg-lines) 100px,
+            var(--color--bg-lines) 101px
+        ),
+        repeating-linear-gradient(
+            0deg,
+            transparent 0,
+            transparent 100px,
+            var(--color--bg-lines) 100px,
+            var(--color--bg-lines) 101px
+        );
     z-index: 1;
-  }
-  body > * {
+}
+body > * {
     z-index: 2;
-  }
-
-  
+}

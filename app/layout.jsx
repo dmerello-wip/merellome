@@ -1,7 +1,6 @@
 import { Layout } from '@/components/Layout'
 import SmoothScrolling from "@/components/SmoothScrolling";
-import '@/global.css'
-import '../src/styles/font.css'
+import _global from '@/styles/global.scss'
 
 export const metadata = {
   title: 'Next.js + Three.js',
