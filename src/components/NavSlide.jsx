@@ -50,9 +50,7 @@ const NavSlide = (props) => {
         <div className='navSlide__content__title'>
           {title}
         </div>
-        <div className='navSlide__content__description'>
-          {description}
-        </div>
+        <div className='navSlide__content__description' dangerouslySetInnerHTML={{ __html: description }} />
         {children}
       </div>
     </div>

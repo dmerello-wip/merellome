@@ -28,9 +28,14 @@
             line-height: 1.5em;
             margin: 3rem 0 1rem 5em;
             letter-spacing: 1px;
+            color: var(--color--text);
+            strong {
+                color: var(--color-secondary);
+                font-weight: 600;
+            }
             &::before {
                 content: "";
-                border-left: 1px solid var(--color--text);
+                border-left: 1px solid var(--color-secondary);
                 position: absolute;
                 top: 0;
                 left: -2em;

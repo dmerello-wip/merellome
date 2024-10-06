@@ -8,9 +8,9 @@
     --color--bg-lines: #1a1a1a;
     --color--bg-lines: #1a1a1a;
     --color-primary: #000000;
-    --color-secondary: #ffffff;
+    --color-secondary: rgb(191, 49, 49);
     --color-dark: #101010;
-    --color--text: #aeaeae;
+    --color--text: #b8b8b8;
     --base-font-family: 'Archivo', sans-serif;
   }
 
@@ -28,6 +28,7 @@
     background: var(--color-bg);
     font-family: var(--base-font-family);
     color: var(--color--text);
+    font-weight: 200;
   }
   
   body::before {
