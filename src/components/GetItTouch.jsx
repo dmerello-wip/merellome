@@ -18,9 +18,8 @@ const GetItTouch = (props) => {
 
   useGSAP((context, contextSafe) => {
     let ctx = gsap.context(() => {
-
-      
-        const trigger = {
+        
+      const trigger = {
             trigger: titleRef.current,
             scrub: true,
             start: 'top bottom',
@@ -33,7 +32,7 @@ const GetItTouch = (props) => {
           scrollTrigger: trigger,
           ease: "power1.inOut",
         });
-    }, { scope: sectionRef });
+    });
 
     return () => ctx.revert();
 
