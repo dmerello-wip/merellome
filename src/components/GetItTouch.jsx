@@ -1,7 +1,7 @@
 'use client'
 
 
-import _GetItTouch from '@/styles/getInTouch.scss'
+import _GetItTouch from '@/styles/components/getInTouch.scss'
 import { useGSAP } from '@gsap/react'
 import { useLayoutEffect, useRef } from "react"
 import  { gsap } from "gsap"

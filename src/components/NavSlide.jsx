@@ -1,20 +1,32 @@
-import _NavSlide from '@/styles/NavSlide.scss'
-import { useGSAP } from '@gsap/react'
+import _NavSlide from '@/styles/components/NavSlide.scss'
 import { useLayoutEffect, useRef } from "react"
-import  { gsap } from "gsap"
 import { ScrollTrigger } from 'gsap/all'
+import useNavigatorStore from '@/stores/navigatorStore'
+import  { gsap } from "gsap"
+import { useGSAP } from '@gsap/react'
 
 const NavSlide = (props) => {
 
   const { title, description, children, cameraStartSettings, cameraEndSettings, id, setCamera } = props;
   const slideRef = useRef();
-  
+  const firstRun = useRef(true);
+
+
+  const setSection = useNavigatorStore((state) => state.setSection)
+  // const { section } = useNavigatorStore((state) => state)
+
 
   useLayoutEffect(() => {
     gsap.registerPlugin(ScrollTrigger)
   }, [])
 
   useGSAP((context, contextSafe) => {
+
+    if (firstRun.current) {
+      firstRun.current = false;
+      return;
+    }
+    
     let ctx = gsap.context(() => {
       
         const controlledRotation = cameraStartSettings;
@@ -28,13 +40,17 @@ const NavSlide = (props) => {
           positionZ: cameraEndSettings.positionZ,
           scrollTrigger: {
               trigger: slideRef.current,
-              scrub: 0.1,
+              scrub: 0.2,
               start: 'top top',
+              // markers : true,
           },
           ease: "power1.inOut",
+
           onUpdate: () => {
               setCamera(controlledRotation)
-          }
+              setSection(id)
+              // console.log('update', id);
+          }, 
         });
 
         gsap.from(`#${id} .letter`, {
@@ -43,8 +59,8 @@ const NavSlide = (props) => {
           scrollTrigger: {
               trigger: slideRef.current,
               scrub: 0.1,
-              start: 'top 30%',
-              end: 'top top',
+              start: 'top center',
+              end: 'top 20%',
           },
           stagger: {
               each: 0.04,
@@ -58,7 +74,7 @@ const NavSlide = (props) => {
           scrollTrigger: {
               trigger: slideRef.current,
               scrub: 0.1,
-              start: 'top 5%',
+              start: 'top 20%',
               end: 'top top',
           },
         });
@@ -66,7 +82,7 @@ const NavSlide = (props) => {
 
     return () => ctx.revert();
 
-  }, [cameraStartSettings, cameraEndSettings, id]);
+  }, [cameraStartSettings, cameraEndSettings, id, firstRun]);
 
   const renderSplitByLetter = str => {
       const words = str.split(' ');

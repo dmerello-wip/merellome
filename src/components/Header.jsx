@@ -1,5 +1,18 @@
-import _header from '@/styles/header.scss'
+import _header from '@/styles/components/header.scss'
 
+/*************  ✨ Codeium Command ⭐  *************/
+/**
+ * The main header component. It contains the logo (a svg that can be modified with tailwind classes)
+ * and some basic styles.
+ *
+ * @example
+ * import Header from '@/components/Header'
+ *
+ * <Header />
+ *
+ * @returns {React.ReactElement} The header component.
+ */
+/******  647baca0-efe5-4d5d-a9aa-0950927f0e2b  *******/
 const Header = () => {
 
   return (

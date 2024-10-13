@@ -1,5 +1,5 @@
 @use "font";
-@use "reset";
+@use "./utils/reset";
 
 * {
     box-sizing: border-box;
@@ -29,6 +29,9 @@ body {
     font-family: var(--base-font-family);
     color: var(--color--text);
     font-weight: 200;
+    // i can't do it in navigator for mantain sticky context
+    // i need it for html tips inside threejs
+    overflow-x: hidden;
 }
 
 body::before {

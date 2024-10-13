@@ -1,6 +1,6 @@
 'use client'
 
-import _navigator from '@/styles/Navigator.scss'
+import _navigator from '@/styles/components/Navigator.scss'
 import { useRef, Suspense } from "react"
 import dynamic from 'next/dynamic'
 import { Loader } from '@/components/Loader'

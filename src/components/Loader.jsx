@@ -1,5 +1,5 @@
 import classNames from 'classnames'
-import _loader from '@/styles/loader.scss'
+import _loader from '@/styles/components/loader.scss'
 
 const Loader = ({fixed = false}) => {
 
