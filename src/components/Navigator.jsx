@@ -9,7 +9,6 @@ import * as THREE from 'three'
 import { useControls } from 'leva'
 
 const NavSlide = dynamic(() => import('@/components/NavSlide').then((mod) => mod.NavSlide), { ssr: false })
-const NavNode = dynamic(() => import('@/components/NavNode').then((mod) => mod.NavNode), { ssr: false })
 const Logoroom = dynamic(() => import('@/components/Logoroom').then((mod) => mod.Logoroom), { ssr: false })
 const GetItTouch = dynamic(() => import('@/components/GetItTouch').then((mod) => mod.GetItTouch), { ssr: false })
 const View = dynamic(() => import('@/components/View').then((mod) => mod.View), {
