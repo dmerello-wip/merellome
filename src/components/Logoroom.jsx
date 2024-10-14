@@ -828,8 +828,6 @@ export function Logoroom(props) {
           rotation={[1.516, -0.194, 0.785]}
           scale={0.438}>
             
-              <Tip action="ElectricGuitar"  section="slide-3" />
-            
           <mesh
             name="ElectricGuitar001"
             castShadow
@@ -868,7 +866,7 @@ export function Logoroom(props) {
           receiveShadow
           geometry={nodes.paperplane001.geometry}
           material={materials.White}
-          position={[4.45, 0.113, -11.162]}
+          position={[7, 0.113, -11]}
           rotation={[Math.PI / 2, 0, -0.176]}
           scale={-0.007}
         />
@@ -1074,6 +1072,8 @@ export function Logoroom(props) {
           position={[-11.919, 4.382, 11.016]}
           rotation={[-0.038, -1.121, -0.16]}
           scale={0.168}>
+            
+              <Tip action="Microphone"  section="slide-3" />
           <mesh
             name="Microphone001"
             castShadow

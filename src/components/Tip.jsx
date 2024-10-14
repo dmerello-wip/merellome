@@ -24,7 +24,7 @@ const Tip = ({ children, action, section }) => {
       <Html>
         {visibility && 
           <div className="tip" onClick={actionHandler}>
-            {children}
+            <div className="tip__circle">{children}</div>
           </div>
         }
       </Html>
