@@ -60,7 +60,7 @@ const NavSlide = (props) => {
               trigger: slideRef.current,
               scrub: 0.1,
               start: 'top center',
-              end: 'top 20%',
+              end: 'top 0%',
           },
           stagger: {
               each: 0.04,
