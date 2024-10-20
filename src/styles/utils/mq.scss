@@ -1,0 +1,81 @@
+@use "sass:map";
+
+:root {
+    --grid-cols-default: 20;
+    --grid-gapx-default: 20;
+    --grid-gapy-default: 10;
+    --grid-gap: 20;
+    --main-container-pad-x: 20;
+}
+
+//VIEWPORTS
+$viewports: (
+    xxxl: (
+        base: 1600
+    ),
+    xxl: (
+        base: 1340
+    ),
+    xl: (
+        base: 1280
+    ),
+    lg: (
+        base: 1024
+    ),
+    md: (
+        base: 768
+    ),
+    sm: (
+        base: 375
+    )
+);
+
+@mixin responsiveTo($viewportRef) {
+    $currBreak: map.get($viewports, $viewportRef);
+    $selectedViewport: map.get($currBreak, "base");
+    $viewportTotal: $selectedViewport - 1;
+    @media screen and (max-width: $viewportTotal*1px) {
+        @content;
+    }
+}
+
+@mixin responsiveFrom($viewportRef) {
+    $currBreak: map.get($viewports, $viewportRef);
+    $selectedViewport: map.get($currBreak, "base");
+    $viewportTotal: $selectedViewport;
+    @media screen and (min-width: $viewportTotal*1px) {
+        @content;
+    }
+}
+
+@mixin mainContainer() {
+    $currBreak: map.get($viewports, "xxl");
+    $maxWidth: map.get(
+        $map: $currBreak,
+        $key: "base"
+    );
+    width: calc(100% - (var(--main-container-pad-x) * 2px));
+    max-width: $maxWidth * 1px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+@mixin grid($cols: var(--grid-cols-default), $gapY: var(--grid-gapy-default), $gapX: var(--grid-gapx-default)) {
+    display: grid;
+    grid-template-columns: repeat($cols, 1fr);
+    gap: calc(#{$gapY} * 1px) calc(#{$gapX} * 1px);
+}
+
+@include responsiveFrom("lg") {
+    :root {
+        --main-container-pad-x: 30;
+    }
+}
+@include responsiveFrom("xl") {
+    :root {
+        --main-container-pad-x: 100;
+    }
+}
+
+$mainContainerPadX: calc(var(--main-container-pad-x) * 1px);
+$mainContainerPadY: calc(var(--main-container-pad-x) * 0.5px);

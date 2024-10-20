@@ -1,14 +1,26 @@
+@use "@/styles/utils/mq" as mq;
+
 .header {
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     z-index: 5;
-    padding: 3rem;
     &__logo {
         width: 100px;
         svg {
             object-fit: contain;
         }
+    }
+}
+
+@include mq.responsiveTo("md") {
+    .header {
+        padding: 2rem;
+    }
+}
+@include mq.responsiveFrom("md") {
+    .header {
+        padding: 3rem;
     }
 }
