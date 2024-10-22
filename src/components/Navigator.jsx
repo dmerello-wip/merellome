@@ -6,6 +6,7 @@ import dynamic from 'next/dynamic'
 import { Loader } from '@/components/Loader'
 import { PerspectiveCamera } from '@react-three/drei'
 import * as THREE from 'three'
+import { useIsMobile } from '@/hooks/useIsMobile';
 import { useControls } from 'leva'
 
 const NavSlide = dynamic(() => import('@/components/NavSlide').then((mod) => mod.NavSlide), { ssr: false })
@@ -23,6 +24,8 @@ const Navigator = ( { contents }) => {
 
 
   const cameraHolderRef = useRef()
+  const isMobile = useIsMobile();
+  const deviceType = isMobile ? 'mobile' : 'desktop';
 
   /* GUI to test positions */
 //   const {
@@ -52,8 +55,10 @@ const Navigator = ( { contents }) => {
   /* dom slides render */
   const renderNavSlides = () => {
     return contents.slides.map((el, i) => {
-      const initialCameraSet = el.camera
-      const targetCameraSet = (i === contents.slides.length - 1) ? el.camera : contents.slides[i + 1].camera
+      const initialCameraSet = el.camera[deviceType];
+      const targetCameraSet = (i === contents.slides.length - 1) 
+          ? el.camera[deviceType] 
+          : contents.slides[i + 1].camera[deviceType];
       return <NavSlide
         key={`slide-${i}`}
         id={`slide-${i}`}
@@ -85,16 +90,15 @@ const Navigator = ( { contents }) => {
                 <group
                   ref={cameraHolderRef}
                   position={[
-                    contents.slides[0].camera.positionX, 
-                    contents.slides[0].camera.positionY, 
-                    contents.slides[0].camera.positionZ
-                  ]} 
+                      contents.slides[0].camera[deviceType].positionX, 
+                      contents.slides[0].camera[deviceType].positionY, 
+                      contents.slides[0].camera[deviceType].positionZ
+                    ]} 
                   rotation={[
-                    THREE.MathUtils.degToRad(contents.slides[0].camera.rotationX), 
-                    THREE.MathUtils.degToRad(contents.slides[0].camera.rotationY), 
-                    THREE.MathUtils.degToRad(contents.slides[0].camera.rotationZ)
-                  ]} 
-
+                    THREE.MathUtils.degToRad(contents.slides[0].camera[deviceType].rotationX), 
+                    THREE.MathUtils.degToRad(contents.slides[0].camera[deviceType].rotationY), 
+                    THREE.MathUtils.degToRad(contents.slides[0].camera[deviceType].rotationZ)
+                  ]}
                   // position={[
                   //   levaPositionX, levaPositionY, levaPositionZ
                   // ]} 

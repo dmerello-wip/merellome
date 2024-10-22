@@ -61,6 +61,7 @@ export function Logoroom(props) {
           position={[1.262, 6.292, 7.39]}
           rotation={[-1.562, -0.007, 2.927]}
           scale={-0.337}>
+              <Tip action="Macbook" section="slide-2"/>
           <mesh
             name="IMac_01_Cube026"
             castShadow
@@ -765,8 +766,6 @@ export function Logoroom(props) {
           rotation={[Math.PI / 2, 0, 0.807]}
           scale={0.23}>
             
-              <Tip action="Macbook" section="slide-2"/>
-            
           <mesh
             name="Laptop_01_Cube025"
             castShadow
@@ -1072,8 +1071,6 @@ export function Logoroom(props) {
           position={[-11.919, 4.382, 11.016]}
           rotation={[-0.038, -1.121, -0.16]}
           scale={0.168}>
-            
-              <Tip action="Microphone"  section="slide-3" />
           <mesh
             name="Microphone001"
             castShadow
@@ -1121,9 +1118,6 @@ export function Logoroom(props) {
           position={[-15.421, 4.377, 6.541]}
           rotation={[Math.PI / 2, 0, -0.766]}
           scale={0.003}>
-            
-              <Tip action="Keyboards"  section="slide-3"/>
-            
           <mesh
             name="LowPolyKeyboardobj"
             castShadow
@@ -1238,8 +1232,6 @@ export function Logoroom(props) {
           rotation={[Math.PI / 2, 0, -2.21]}
           scale={[1.919, 4.411, 4.411]}>
             
-              <Tip action="Polaroid"  section="slide-4"/>
-            
           <mesh
             name="model001"
             castShadow
@@ -1259,10 +1251,7 @@ export function Logoroom(props) {
           name="book4"
           position={[24.847, 5.355, -1.377]}
           rotation={[-3.141, -0.356, 0]}
-          scale={[-1.353, -0.149, -1.053]}>
-            
-              <Tip action="Book"  section="slide-1"/>
-            
+          scale={[-1.353, -0.149, -1.053]}>            
           <mesh
             name="Cube011"
             castShadow
@@ -1423,6 +1412,9 @@ export function Logoroom(props) {
           position={[20.571, 5.726, -6.248]}
           rotation={[-3.141, -0.805, 0]}
           scale={[-1.421, -0.123, -1.045]}>
+
+          <Tip action="Book"  section="slide-1"/>
+
           <mesh
             name="Cube012"
             castShadow
