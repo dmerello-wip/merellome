@@ -1,4 +1,5 @@
 @use "@/styles/utils/mq" as mq;
+@use "@/styles/utils/typography" as typo;
 
 .header {
     position: fixed;
@@ -6,11 +7,23 @@
     left: 0;
     width: 100%;
     z-index: 5;
+    display: flex;
+    justify-content: space-between;
     &__logo {
         width: 100px;
         svg {
             object-fit: contain;
         }
+    }
+    &__title {
+        font-size: 0.8rem;
+        letter-spacing: 5px;
+        text-transform: uppercase;
+        writing-mode: vertical-rl;
+        text-orientation: mixed;
+        -webkit-font-smoothing: antialiased;
+        font-weight: 900;
+        color: var(--color-secondary);
     }
 }
 

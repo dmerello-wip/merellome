@@ -1,6 +1,6 @@
 @use "@/styles/utils/typography" as typo;
 
-.getInTouch {
+.slidingTitle {
     position: relative;
     width: 100%;
     overflow: hidden;
@@ -9,7 +9,7 @@
         position: relative;
         top: 0;
         left: 0;
-        font-size: 22vw;
+        font-size: 15.5vw;
         font-weight: 700;
         white-space: nowrap;
         text-transform: uppercase;

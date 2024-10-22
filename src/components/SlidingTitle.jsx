@@ -1,13 +1,13 @@
 'use client'
 
 
-import _GetItTouch from '@/styles/components/getInTouch.scss'
+import _GetItTouch from '@/styles/components/slidingTitle.scss'
 import { useGSAP } from '@gsap/react'
 import { useLayoutEffect, useRef } from "react"
 import  { gsap } from "gsap"
 import { ScrollTrigger } from 'gsap/all'
 
-const GetItTouch = (props) => {
+const GetItTouch = ({content}) => {
 
   const sectionRef = useRef();
   const titleRef = useRef();
@@ -39,9 +39,9 @@ const GetItTouch = (props) => {
   }, []);
 
   return (
-    <div className="getInTouch"  ref={sectionRef}>
-      <div className="getInTouch__title" ref={titleRef} >
-        get in touch
+    <div className="slidingTitle"  ref={sectionRef}>
+      <div className="slidingTitle__title" ref={titleRef} >
+        {content}
       </div>
     </div>
   )

@@ -2,7 +2,7 @@ export async function GET() {
     const slides = [
         {
             id: 0,
-            title: `Nice to meet you, let me introduce myself`,
+            title: `Hey there, let me introduce myself`,
             description: `I'm <strong>Diego Merello</strong>, proud father, humble husband, passionate designer, wanna be musician, recidivist griller`,
             camera: {
                 desktop: {
