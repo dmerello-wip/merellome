@@ -23,6 +23,8 @@ export default async function Page() {
         <TempSpacer>3. Contenuto sotto al navigator</TempSpacer>
         <TempSpacer>4. Contenuto sotto al navigator</TempSpacer>
       </Suspense>
+
+      {/* <Footer /> */}
     </>
   )
 }

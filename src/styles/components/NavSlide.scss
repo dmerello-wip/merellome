@@ -12,11 +12,13 @@
     height: 100vh;
     text-align: left;
     justify-content: flex-end;
-    // background: linear-gradient(-90deg, rgba(10, 10, 10, 0) 0%, rgba(10, 10, 10, 0.8) 60%, rgb(10, 10, 10) 100%);
+    // perspective: 400rem;
     &:nth-child(odd) {
         background-color: hsla(var(--color-dark), 0.5);
     }
     &__content {
+        background-color: var(--color-dark);
+        border-radius: 10px;
         &__title {
             overflow: hidden;
             h2 {
@@ -29,7 +31,7 @@
         &__description {
             position: relative;
             line-height: 1.5em;
-            margin: 3rem 0 1rem 5em;
+            margin: 3rem 0 1rem 6vw;
             letter-spacing: 1px;
             color: var(--color--text);
             strong {
@@ -50,8 +52,9 @@
 
 @include mq.responsiveTo("md") {
     .navSlide {
-        padding: 0rem 4rem 3rem 2rem;
+        padding: 0rem 2rem 3rem 2rem;
         &__content {
+            padding: 3rem;
             &__title {
                 h2 {
                     font-size: 2.3rem;
@@ -69,13 +72,14 @@
         padding: 0 6vw 20vh 6vw;
         max-width: 52rem;
         &__content {
+            padding: 4rem;
             &__title {
                 h2 {
-                    font-size: 4.4rem;
+                    font-size: 3.2rem;
                 }
             }
             &__description {
-                font-size: 1.2rem;
+                font-size: 1.1rem;
             }
         }
     }

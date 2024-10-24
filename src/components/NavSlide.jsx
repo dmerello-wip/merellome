@@ -67,14 +67,23 @@ const NavSlide = (props) => {
           },
         });
 
-
         gsap.from(`#${id} .navSlide__content__description`, {
           opacity: 0,
-          y: 0,
+          y: '-2rem',
           scrollTrigger: {
               trigger: slideRef.current,
               scrub: 0.1,
               start: 'top 20%',
+              end: 'top top',
+          },
+        });
+
+        gsap.from(`#${id} .navSlide__content`, {
+          y: '30%',
+          scrollTrigger: {
+              trigger: slideRef.current,
+              scrub: 0.1,
+              start: 'top bottom',
               end: 'top top',
           },
         });
