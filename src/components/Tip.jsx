@@ -13,6 +13,9 @@ const Tip = ({ children, action, section }) => {
   const [visibility, setVisibility] = useState(false);
 
   useEffect(() => {
+
+    console.log(currentSection)
+    console.log(section)
     setVisibility( (currentSection === section) )
   }, [currentSection, section])
 

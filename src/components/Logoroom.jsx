@@ -55,7 +55,7 @@ export function Logoroom(props) {
           position={[1.262, 6.292, 7.39]}
           rotation={[-1.562, -0.007, 2.927]}
           scale={-0.337}>
-              <Tip action="Macbook" section="2"/>
+              <Tip action="Macbook" section={2}/>
           <mesh
             name="IMac_01_Cube026"
             castShadow
@@ -937,7 +937,7 @@ export function Logoroom(props) {
           rotation={[Math.PI / 2, 0, 3.12]}
           scale={10.872}>
             
-              <Tip action="Grill"  section="4"/>
+              <Tip action="Grill"  section={4}/>
             
           <mesh
             name="model"
@@ -1022,7 +1022,7 @@ export function Logoroom(props) {
           rotation={[-0.326, -0.576, -0.135]}
           scale={[7.514, 7.514, 6.976]}>
             
-              <Tip action="Bass"  section="3"/>
+              <Tip action="Bass"  section={3}/>
             
           <mesh
             name="Cube001"
@@ -1407,7 +1407,7 @@ export function Logoroom(props) {
           rotation={[-3.141, -0.805, 0]}
           scale={[-1.421, -0.123, -1.045]}>
 
-          <Tip action="Book"  section="1"/>
+          <Tip action="Book"  section={1}/>
 
           <mesh
             name="Cube012"
@@ -1470,7 +1470,7 @@ export function Logoroom(props) {
           rotation={[Math.PI / 2, 0, 2.768]}
           scale={0.07}>
             
-              <Tip action="Cat"  section="4"/>
+              <Tip action="Cat"  section={4}/>
             
           <mesh
             name="Mesh_Cat001"
@@ -1510,7 +1510,7 @@ export function Logoroom(props) {
           rotation={[1.534, -0.023, 0.796]}
           scale={[4.956, 4.291, 4.563]}>
             
-              <Tip action="Politecnico"  section="1"/>
+              <Tip action="Politecnico"  section={1}/>
             
           <mesh
             name="model007"
