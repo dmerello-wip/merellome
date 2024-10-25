@@ -1,0 +1,28 @@
+{
+  "tips": [
+    {
+      "id": 0,
+      "slide": 0,
+      "title": "lorem ipsum 0-0",
+      "description": "lorem ipsum cum sum dolor sit amet consectetur adipisicing elit. Quisquam, quos."
+    },
+    {
+      "id": 1,
+      "slide": 0,
+      "title": "lorem ipsum 0-1",
+      "description": "lorem ipsum cum sum dolor sit amet consectetur adipisicing elit. Quisquam, quos. 2"
+    },
+    {
+      "id": 2,
+      "slide": 1,
+      "title": "lorem ipsum 1-0",
+      "description": "lorem ipsum cum sum dolor sit amet consectetur adipisicing elit. Quisquam, quos."
+    },
+    {
+      "id": 3,
+      "slide": 1,
+      "title": "lorem ipsum 1-1",
+      "description": "lorem ipsum cum sum dolor sit amet consectetur adipisicing elit. Quisquam, quos. 2"
+    }
+  ]
+}
