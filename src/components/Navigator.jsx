@@ -62,7 +62,7 @@ const Navigator = ( { contents }) => {
       return (
 <       NavSlide
           key={`slide-${i}`}
-          id={`slide-${i}`}
+          id={i}
           title={el.title}
           description={el.description}
           cameraStartSettings={initialCameraSet}

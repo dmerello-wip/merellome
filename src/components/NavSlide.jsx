@@ -54,7 +54,7 @@ const NavSlide = (props) => {
           }, 
         });
 
-        gsap.from(`#${id} .letter`, {
+        gsap.from(`#slide-${id} .letter`, {
           opacity: 0,
           filter: 'blur(10px)',
           scrollTrigger: {
@@ -68,7 +68,7 @@ const NavSlide = (props) => {
           },
         });
 
-        gsap.from(`#${id} .navSlide__content__description`, {
+        gsap.from(`#slide-${id} .navSlide__content__description`, {
           opacity: 0,
           y: '-2rem',
           scrollTrigger: {
@@ -79,7 +79,7 @@ const NavSlide = (props) => {
           },
         });
 
-        gsap.from(`#${id} .navSlide__content`, {
+        gsap.from(`#slide-${id} .navSlide__content`, {
           x: '-100%',
           rotateY: '180deg',
           rotateX: '90deg',
@@ -98,7 +98,7 @@ const NavSlide = (props) => {
 
 
   return (
-    <div className="navSlide" ref={slideRef} id={id}>
+    <div className="navSlide" ref={slideRef} id={`slide-${id}`}>
       <div className='navSlide__content'>
         <div className='navSlide__content__title'>
           <h2>{splitTextByLetter(title)}</h2>
