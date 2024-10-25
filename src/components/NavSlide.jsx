@@ -79,12 +79,14 @@ const NavSlide = (props) => {
         });
 
         gsap.from(`#${id} .navSlide__content`, {
-          y: '30%',
+          x: '-100%',
+          rotateY: '180deg',
+          rotateX: '90deg',
           scrollTrigger: {
               trigger: slideRef.current,
               scrub: 0.1,
               start: 'top bottom',
-              end: 'top top',
+              end: 'center center',
           },
         });
     });
