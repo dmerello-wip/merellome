@@ -59,16 +59,17 @@ const Navigator = ( { contents }) => {
       const targetCameraSet = (i === contents.slides.length - 1) 
           ? el.camera[deviceType] 
           : contents.slides[i + 1].camera[deviceType];
-      return <NavSlide
-        key={`slide-${i}`}
-        id={`slide-${i}`}
-        title={el.title}
-        description={el.description}
-        cameraStartSettings={initialCameraSet}
-        cameraEndSettings={targetCameraSet}
-        setCamera={setCamera}
-        >
-      </NavSlide>
+      return (
+<       NavSlide
+          key={`slide-${i}`}
+          id={`slide-${i}`}
+          title={el.title}
+          description={el.description}
+          cameraStartSettings={initialCameraSet}
+          cameraEndSettings={targetCameraSet}
+          setCamera={setCamera}
+         />
+      )
     })
   }
 
