@@ -1,6 +1,7 @@
 import _NavSlide from '@/styles/components/NavSlide.scss'
 import { useLayoutEffect, useRef } from "react"
 import { ScrollTrigger } from 'gsap/all'
+import { splitTextByLetter } from '@/helpers/textUtils';
 import useNavigatorStore from '@/stores/navigatorStore'
 import  { gsap } from "gsap"
 import { useGSAP } from '@gsap/react'
@@ -95,19 +96,12 @@ const NavSlide = (props) => {
 
   }, [cameraStartSettings, cameraEndSettings, id, firstRun]);
 
-  const renderSplitByLetter = str => {
-      const words = str.split(' ');
-      return words.map((el, i) => {
-          const letters = el.split('').map((el, i) => <span className="letter" key={`letter-${i}`}>{el}</span>);
-          return <span className="word" key={`word-${i}`}>{letters} </span>;
-      });
-  };
 
   return (
     <div className="navSlide" ref={slideRef} id={id}>
       <div className='navSlide__content'>
         <div className='navSlide__content__title'>
-          <h2>{renderSplitByLetter(title)}</h2>
+          <h2>{splitTextByLetter(title)}</h2>
         </div>
         <div className='navSlide__content__description' dangerouslySetInnerHTML={{ __html: description }} />
         {children}
