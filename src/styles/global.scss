@@ -15,16 +15,17 @@
     --color--text: #b8b8b8;
     --color--light: #ffffff;
     --base-font-family: "Archivo", sans-serif;
+    --cards-radius: 10px;
 }
 
 @include mq.responsiveTo("md") {
     :root {
-        --padding-cards: 3rem;
+        --padding-cards: 2rem;
     }
 }
 @include mq.responsiveFrom("md") {
     :root {
-        --padding-cards: 4rem;
+        --padding-cards: 3.5rem;
     }
 }
 

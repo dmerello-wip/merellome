@@ -15,6 +15,8 @@ const NavSlide = (props) => {
 
   const { section, setSection} = useNavigatorStore((state) => state)
 
+  
+
   /* -------------------- animations -------------------- */
 
   useLayoutEffect(() => {

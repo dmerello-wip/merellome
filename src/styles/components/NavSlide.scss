@@ -14,10 +14,12 @@
     text-align: left;
     justify-content: flex-end;
     perspective: 80rem;
+    pointer-events: none;
     &:nth-child(odd) {
         background-color: hsla(var(--color-dark), 0.5);
     }
     &__content {
+        pointer-events: auto;
         &__tips {
             @extend %absoluteCentered;
             z-index: 1;
@@ -29,7 +31,7 @@
             z-index: 2;
             padding: var(--padding-cards);
             background-color: var(--color-dark);
-            border-radius: 10px;
+            border-radius: var(--cards-radius);
             &__title {
                 overflow: hidden;
                 h2 {
