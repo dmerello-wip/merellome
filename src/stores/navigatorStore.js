@@ -2,9 +2,12 @@ import { create } from 'zustand'
 
 const useNavigatorStore = create((set) => ({
     section: 0,
+    tip: null,
     setSection: (id) => set((state) => {
-        // console.log(id)
         return { section: id }
+    }),
+    setTip: (id) => set((state) => {
+        return { tip: id }
     })
 }))
 

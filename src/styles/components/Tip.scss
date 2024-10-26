@@ -5,12 +5,22 @@
     width: 3rem;
     height: 3rem;
     cursor: pointer;
+    display: none;
     .tip__circle {
         width: 100%;
         height: 100%;
         border: 3px solid var(--color--text);
         border-radius: 50%;
         animation: pulse 0.8s ease-in-out 0s infinite;
+    }
+    &--visible {
+        display: block;
+    }
+    &--active {
+        .tip__circle {
+            border-color: var(--color-secondary);
+            animation: none;
+        }
     }
 }
 
