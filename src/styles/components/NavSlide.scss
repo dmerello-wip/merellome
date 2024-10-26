@@ -1,5 +1,6 @@
 @use "@/styles/utils/typography" as typo;
 @use "@/styles/utils/mq" as mq;
+@use "@/styles/utils/shortcuts";
 
 // TODO create variables for font size and change them
 
@@ -17,37 +18,45 @@
         background-color: hsla(var(--color-dark), 0.5);
     }
     &__content {
-        background-color: var(--color-dark);
-        // background-color: rgba(0, 0, 0, 0.2);
-        // border: 1px solid var(--color--text);
-        border-radius: 10px;
-        // transform-origin: center center;
-        &__title {
-            overflow: hidden;
-            h2 {
-                position: relative;
-                font-weight: 400;
-                // @include typo.multiline-gradient-text(1.1);
-                transition: all 0.3s ease-in-out;
-            }
+        &__tips {
+            @extend %absoluteCentered;
+            z-index: 1;
+            width: 100%;
+            height: 100%;
         }
-        &__description {
+        &__card {
             position: relative;
-            line-height: 1.5em;
-            margin: 3rem 0 1rem 6vw;
-            letter-spacing: 1px;
-            color: var(--color--text);
-            strong {
-                color: var(--color-secondary);
-                font-weight: 600;
+            z-index: 2;
+            padding: var(--padding-cards);
+            background-color: var(--color-dark);
+            border-radius: 10px;
+            &__title {
+                overflow: hidden;
+                h2 {
+                    position: relative;
+                    font-weight: 400;
+                    // @include typo.multiline-gradient-text(1.1);
+                    transition: all 0.3s ease-in-out;
+                }
             }
-            &::before {
-                content: "";
-                border-left: 1px solid var(--color-secondary);
-                position: absolute;
-                top: 0;
-                left: -2em;
-                height: 100%;
+            &__description {
+                position: relative;
+                line-height: 1.5em;
+                margin: 3rem 0 1rem 6vw;
+                letter-spacing: 1px;
+                color: var(--color--text);
+                strong {
+                    color: var(--color-secondary);
+                    font-weight: 600;
+                }
+                &::before {
+                    content: "";
+                    border-left: 1px solid var(--color-secondary);
+                    position: absolute;
+                    top: 0;
+                    left: -2em;
+                    height: 100%;
+                }
             }
         }
     }
@@ -56,8 +65,7 @@
 @include mq.responsiveTo("md") {
     .navSlide {
         padding: 0rem 2rem 3rem 2rem;
-        &__content {
-            padding: 3rem;
+        &__content__card {
             &__title {
                 h2 {
                     font-size: 2.3rem;
@@ -74,8 +82,7 @@
     .navSlide {
         padding: 0 6vw 20vh 6vw;
         max-width: 52rem;
-        &__content {
-            padding: 4rem;
+        &__content__card {
             &__title {
                 h2 {
                     font-size: 3.2rem;

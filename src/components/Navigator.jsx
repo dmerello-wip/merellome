@@ -63,7 +63,7 @@ const Navigator = ( { contents }) => {
       return (
 <       NavSlide
           key={`slide-${i}`}
-          id={i}
+          slideIndex={i}
           title={el.title}
           description={el.description}
           tips={el.tips}

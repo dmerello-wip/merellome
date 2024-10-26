@@ -9,6 +9,7 @@
     z-index: 5;
     display: flex;
     justify-content: space-between;
+    padding: var(--padding);
     &__logo {
         width: 100px;
         svg {
@@ -16,8 +17,12 @@
         }
     }
     &__title {
+        position: absolute;
+        top: var(--padding);
+        right: var(--padding);
         font-size: 0.8rem;
         letter-spacing: 5px;
+        white-space: nowrap;
         text-transform: uppercase;
         writing-mode: vertical-rl;
         text-orientation: mixed;
@@ -29,11 +34,11 @@
 
 @include mq.responsiveTo("md") {
     .header {
-        padding: 2rem;
+        --padding: 2rem;
     }
 }
 @include mq.responsiveFrom("md") {
     .header {
-        padding: 3rem;
+        --padding: 3rem;
     }
 }

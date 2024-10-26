@@ -1,5 +1,6 @@
 @use "font";
 @use "./utils/reset";
+@use "@/styles/utils/mq" as mq;
 
 * {
     box-sizing: border-box;
@@ -14,6 +15,17 @@
     --color--text: #b8b8b8;
     --color--light: #ffffff;
     --base-font-family: "Archivo", sans-serif;
+}
+
+@include mq.responsiveTo("md") {
+    :root {
+        --padding-cards: 3rem;
+    }
+}
+@include mq.responsiveFrom("md") {
+    :root {
+        --padding-cards: 4rem;
+    }
 }
 
 html,

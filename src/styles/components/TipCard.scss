@@ -1,0 +1,15 @@
+@use "@/styles/utils/typography" as typo;
+@use "@/styles/utils/mq" as mq;
+@use "@/styles/utils/shortcuts";
+
+.Tipcard {
+    @extend %absoluteCentered;
+    width: calc(90% - var(--padding-cards));
+    height: calc(90% - var(--padding-cards));
+    background: var(--color--light);
+    padding: var(--padding-cards);
+    transition: all 0.8s ease-in-out;
+    &--active {
+        transform: translate(50%, -50%);
+    }
+}

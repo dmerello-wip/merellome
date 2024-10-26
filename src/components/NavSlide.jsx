@@ -9,11 +9,11 @@ import { TipCard } from './TipCard'
 
 const NavSlide = (props) => {
 
-  const { title, description, tips, cameraStartSettings, cameraEndSettings, id, setCamera } = props;
+  const { title, description, tips, cameraStartSettings, cameraEndSettings, slideIndex, setCamera } = props;
   const slideRef = useRef();
   const firstRun = useRef(true);
 
-  const { setSection} = useNavigatorStore((state) => state)
+  const { section, setSection} = useNavigatorStore((state) => state)
 
   /* -------------------- animations -------------------- */
 
@@ -49,12 +49,12 @@ const NavSlide = (props) => {
 
           onUpdate: () => {
               setCamera(controlledRotation)
-              setSection(id)
+              setSection(slideIndex)
               // console.log('update', id);
           }, 
         });
 
-        gsap.from(`#slide-${id} .letter`, {
+        gsap.from(`#slide-${slideIndex} .letter`, {
           opacity: 0,
           filter: 'blur(10px)',
           scrollTrigger: {
@@ -68,7 +68,7 @@ const NavSlide = (props) => {
           },
         });
 
-        gsap.from(`#slide-${id} .navSlide__content__description`, {
+        gsap.from(`#slide-${slideIndex} .navSlide__content__description`, {
           opacity: 0,
           y: '-2rem',
           scrollTrigger: {
@@ -79,7 +79,7 @@ const NavSlide = (props) => {
           },
         });
 
-        gsap.from(`#slide-${id} .navSlide__content`, {
+        gsap.from(`#slide-${slideIndex} .navSlide__content`, {
           x: '-100%',
           rotateY: '180deg',
           rotateX: '90deg',
@@ -94,27 +94,29 @@ const NavSlide = (props) => {
 
     return () => ctx.revert();
 
-  }, [cameraStartSettings, cameraEndSettings, id, firstRun]);
+  }, [cameraStartSettings, cameraEndSettings, slideIndex, firstRun]);
 
   /* -------------------- tips cards -------------------- */
 
 
   const renderTipCards = () => {
-    return tips.map((tip) => {
-      return <TipCard key={tip.id} id={tip.id} title={tip.title} description={tip.description}/>
+    return tips.map((tip,i) => {
+      return <TipCard key={`tip-${i}`} sectionIndex={slideIndex} tipIndex={i} title={tip.title} description={tip.description}/>
     })
   }
 
   /* -------------------- render -------------------- */
 
   return (
-    <div className="navSlide" ref={slideRef} id={`slide-${id}`}>
-      <div className='navSlide__content'>
-        <div className='navSlide__content__title'>
-          <h2>{splitTextByLetter(title)}</h2>
+    <div className="navSlide" ref={slideRef} id={`slide-${slideIndex}`}>
+      <div className="navSlide__content">
+        <div className="navSlide__content__card">
+          <div className='navSlide__content__card__title'>
+            <h2>{splitTextByLetter(title)}</h2>
+          </div>
+          <div className='navSlide__content__card__description' dangerouslySetInnerHTML={{ __html: description }} />
         </div>
-        <div className='navSlide__content__description' dangerouslySetInnerHTML={{ __html: description }} />
-        <div className='navSlide__content__cards'>
+        <div className='navSlide__content__tips'>
           {renderTipCards()}
         </div>
       </div>
