@@ -8,7 +8,10 @@ import { Loader } from '@/components/Loader'
 
 export default async function Page() {
   
-  const navigatorContents = await fetch(`${process.env.BASE_URL}/api/navigator`, { next: { tags: ['navigator'] } }).then((res) =>
+  const slides = await fetch(`${process.env.BASE_URL}/api/navigator`, { next: { tags: ['navigator'] } }).then((res) =>
+    res.json()
+  )
+  const tipsContents = await fetch(`${process.env.BASE_URL}/api/tips`, { next: { tags: ['tips'] } }).then((res) =>
     res.json()
   )
 
@@ -17,7 +20,7 @@ export default async function Page() {
       <Header />
 
       <Suspense fallback={<Loader fixed={true} />}>
-        <Navigator contents={navigatorContents}/>
+        <Navigator contents={slides} tips={tipsContents} />
         <TempSpacer>1. Contenuto sotto al navigator</TempSpacer>
         <TempSpacer>2. Contenuto sotto al navigator</TempSpacer>
         <TempSpacer>3. Contenuto sotto al navigator</TempSpacer>

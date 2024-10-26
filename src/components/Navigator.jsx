@@ -20,7 +20,7 @@ const View = dynamic(() => import('@/components/View').then((mod) => mod.View), 
 })
 
 
-const Navigator = ( { contents }) => {
+const Navigator = ( { contents, tips }) => {
 
 
   const cameraHolderRef = useRef()
@@ -54,6 +54,7 @@ const Navigator = ( { contents }) => {
 
   /* dom slides render */
   const renderNavSlides = () => {
+
     return contents.slides.map((el, i) => {
       const initialCameraSet = el.camera[deviceType];
       const targetCameraSet = (i === contents.slides.length - 1) 
@@ -65,6 +66,7 @@ const Navigator = ( { contents }) => {
           id={i}
           title={el.title}
           description={el.description}
+          tips={el.tips.filter(tip => tip.slide == i)}
           cameraStartSettings={initialCameraSet}
           cameraEndSettings={targetCameraSet}
           setCamera={setCamera}
@@ -84,8 +86,6 @@ const Navigator = ( { contents }) => {
                 <ambientLight intensity={1} />
                 <pointLight position={[20, 20, 20]} intensity={1} decay={0.2} />
                 <pointLight position={[-20, 20, -20]} intensity={2} decay={0.2} />
-                {/* <pointLight position={[-10, 20, 10]} intensity={2} decay={0.2} />
-                <pointLight position={[10, 0, -10]} intensity={2} decay={0.2} /> */}
 
                 {/* camera inside a group to sert rotation on its own axis */}
                 <group

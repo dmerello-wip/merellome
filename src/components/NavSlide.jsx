@@ -1,21 +1,21 @@
 import _NavSlide from '@/styles/components/NavSlide.scss'
-import { useLayoutEffect, useRef } from "react"
+import { useEffect, useLayoutEffect, useRef, useState } from "react"
 import { ScrollTrigger } from 'gsap/all'
 import { splitTextByLetter } from '@/helpers/textUtils';
 import useNavigatorStore from '@/stores/navigatorStore'
 import  { gsap } from "gsap"
 import { useGSAP } from '@gsap/react'
+import { TipCard } from './TipCard'
 
 const NavSlide = (props) => {
 
-  const { title, description, children, cameraStartSettings, cameraEndSettings, id, setCamera } = props;
+  const { title, description, tips, cameraStartSettings, cameraEndSettings, id, setCamera } = props;
   const slideRef = useRef();
   const firstRun = useRef(true);
 
+  const { setSection} = useNavigatorStore((state) => state)
 
-  const setSection = useNavigatorStore((state) => state.setSection)
-  // const { section } = useNavigatorStore((state) => state)
-
+  /* -------------------- animations -------------------- */
 
   useLayoutEffect(() => {
     gsap.registerPlugin(ScrollTrigger)
@@ -96,6 +96,15 @@ const NavSlide = (props) => {
 
   }, [cameraStartSettings, cameraEndSettings, id, firstRun]);
 
+  /* -------------------- tips cards -------------------- */
+
+
+
+  const renderTipCards = () => {
+    return tips.map((tip) => {
+      return <TipCard key={tip.id} id={tip.id} title={tip.title} description={tip.description}/>
+    })
+  }
 
   return (
     <div className="navSlide" ref={slideRef} id={`slide-${id}`}>
@@ -104,7 +113,9 @@ const NavSlide = (props) => {
           <h2>{splitTextByLetter(title)}</h2>
         </div>
         <div className='navSlide__content__description' dangerouslySetInnerHTML={{ __html: description }} />
-        {children}
+        <div className='navSlide__content__cards'>
+          {renderTipCards()}
+        </div>
       </div>
     </div>
   )

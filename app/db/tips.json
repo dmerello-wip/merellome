@@ -16,12 +16,18 @@
       "id": 2,
       "slide": 1,
       "title": "lorem ipsum 1-0",
-      "description": "lorem ipsum cum sum dolor sit amet consectetur adipisicing elit. Quisquam, quos."
+      "description": "lorem ipsum cum sum dolor sit amet consectetur adipisicing elit. Quisquam, quos. 2"
     },
     {
       "id": 3,
       "slide": 1,
       "title": "lorem ipsum 1-1",
+      "description": "lorem ipsum cum sum dolor sit amet consectetur adipisicing elit. Quisquam, quos."
+    },
+    {
+      "id": 4,
+      "slide": 2,
+      "title": "lorem ipsum 2-0",
       "description": "lorem ipsum cum sum dolor sit amet consectetur adipisicing elit. Quisquam, quos. 2"
     }
   ]
