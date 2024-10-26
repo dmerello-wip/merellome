@@ -21,7 +21,8 @@
           "positionY": 80,
           "positionZ": 8
         }
-      }
+      },
+      "tips": []
     },
     {
       "id": 1,
@@ -44,7 +45,17 @@
           "positionY": 5,
           "positionZ": -35
         }
-      }
+      },
+      "tips": [
+        {
+          "title": "Politecnico di Milano",
+          "description": "tante cose belle del poli"
+        },
+        {
+          "title": "libri che mi hanno preso bene",
+          "description": "tante cose belle sui libri che mi hanno preso bene"
+        }
+      ]
     },
     {
       "id": 2,
@@ -67,7 +78,13 @@
           "positionY": 20,
           "positionZ": 35
         }
-      }
+      },
+      "tips": [
+        {
+          "title": "WIP Italia rulez",
+          "description": "tante cose belle della WIP"
+        }
+      ]
     },
     {
       "id": 3,
@@ -90,7 +107,17 @@
           "positionY": 14,
           "positionZ": 22
         }
-      }
+      },
+      "tips": [
+        {
+          "title": "Suono questo",
+          "description": "e suono anche quell'altro"
+        },
+        {
+          "title": "ascoltami su qui",
+          "description": "e ascoltami anche su li"
+        }
+      ]
     },
     {
       "id": 4,
@@ -113,7 +140,17 @@
           "positionY": 12,
           "positionZ": -45
         }
-      }
+      },
+      "tips": [
+        {
+          "title": "Ho un gatto",
+          "description": "ed è molto stupido"
+        },
+        {
+          "title": "faccio le costine",
+          "description": "e mi vengono pure male"
+        }
+      ]
     }
   ]
 }

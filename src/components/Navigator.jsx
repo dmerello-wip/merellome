@@ -20,7 +20,7 @@ const View = dynamic(() => import('@/components/View').then((mod) => mod.View), 
 })
 
 
-const Navigator = ( { contents, tips }) => {
+const Navigator = ( { contents }) => {
 
 
   const cameraHolderRef = useRef()
@@ -66,7 +66,7 @@ const Navigator = ( { contents, tips }) => {
           id={i}
           title={el.title}
           description={el.description}
-          tips={el.tips.filter(tip => tip.slide == i)}
+          tips={el.tips}
           cameraStartSettings={initialCameraSet}
           cameraEndSettings={targetCameraSet}
           setCamera={setCamera}

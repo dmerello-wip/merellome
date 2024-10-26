@@ -99,12 +99,13 @@ const NavSlide = (props) => {
   /* -------------------- tips cards -------------------- */
 
 
-
   const renderTipCards = () => {
     return tips.map((tip) => {
       return <TipCard key={tip.id} id={tip.id} title={tip.title} description={tip.description}/>
     })
   }
+
+  /* -------------------- render -------------------- */
 
   return (
     <div className="navSlide" ref={slideRef} id={`slide-${id}`}>

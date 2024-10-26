@@ -11,16 +11,13 @@ export default async function Page() {
   const slides = await fetch(`${process.env.BASE_URL}/api/navigator`, { next: { tags: ['navigator'] } }).then((res) =>
     res.json()
   )
-  const tipsContents = await fetch(`${process.env.BASE_URL}/api/tips`, { next: { tags: ['tips'] } }).then((res) =>
-    res.json()
-  )
 
   return (
     <>
       <Header />
 
       <Suspense fallback={<Loader fixed={true} />}>
-        <Navigator contents={slides} tips={tipsContents} />
+        <Navigator contents={slides} />
         <TempSpacer>1. Contenuto sotto al navigator</TempSpacer>
         <TempSpacer>2. Contenuto sotto al navigator</TempSpacer>
         <TempSpacer>3. Contenuto sotto al navigator</TempSpacer>
