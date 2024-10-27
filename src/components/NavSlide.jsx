@@ -6,6 +6,7 @@ import useNavigatorStore from '@/stores/navigatorStore'
 import  { gsap } from "gsap"
 import { useGSAP } from '@gsap/react'
 import { TipCard } from './TipCard'
+import classNames from 'classnames';
 
 const NavSlide = (props) => {
 
@@ -14,6 +15,7 @@ const NavSlide = (props) => {
   const firstRun = useRef(true);
 
   const { section, setSection} = useNavigatorStore((state) => state)
+  const currentTip = useNavigatorStore((state) => state.tip)
 
   
 
@@ -58,7 +60,7 @@ const NavSlide = (props) => {
 
         gsap.from(`#slide-${slideIndex} .letter`, {
           opacity: 0,
-          filter: 'blur(10px)',
+          // filter: 'blur(10px)',
           scrollTrigger: {
               trigger: slideRef.current,
               scrub: 0.1,
@@ -98,8 +100,8 @@ const NavSlide = (props) => {
 
   }, [cameraStartSettings, cameraEndSettings, slideIndex, firstRun]);
 
-  /* -------------------- tips cards -------------------- */
 
+  /* -------------------- tips cards -------------------- */
 
   const renderTipCards = () => {
     return tips.map((tip,i) => {
@@ -107,10 +109,14 @@ const NavSlide = (props) => {
     })
   }
 
+  const navSlideClasses = classNames('navSlide', {
+    'navSlide--open': (currentTip && Number(currentTip.split('|')[0]) === slideIndex)
+  })
+
   /* -------------------- render -------------------- */
 
   return (
-    <div className="navSlide" ref={slideRef} id={`slide-${slideIndex}`}>
+    <div className={navSlideClasses} ref={slideRef} id={`slide-${slideIndex}`}>
       <div className="navSlide__content">
         <div className="navSlide__content__card">
           <div className='navSlide__content__card__title'>

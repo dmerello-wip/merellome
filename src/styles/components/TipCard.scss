@@ -11,8 +11,10 @@
     padding-left: calc(var(--padding-cards));
     transition: all 0.5s ease-in-out;
     border-radius: var(--cards-radius);
+    opacity: 0;
     &--active {
         transform: translate(50%, -50%);
+        opacity: 1;
     }
     &__close {
         position: absolute;
