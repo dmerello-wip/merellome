@@ -4,14 +4,20 @@
 
 .Tipcard {
     @extend %absoluteCentered;
-    width: calc(90% - var(--padding-cards));
-    height: calc(90% - var(--padding-cards));
+    width: calc(100% - var(--padding-cards));
+    height: calc(100% - var(--padding-cards));
     background: var(--color--light);
-    padding: var(--padding-cards);
-    padding-left: calc(2 * var(--padding-cards));
+    padding: calc(var(--padding-cards) / 2);
+    padding-left: calc(var(--padding-cards));
     transition: all 0.5s ease-in-out;
     border-radius: var(--cards-radius);
     &--active {
         transform: translate(50%, -50%);
+    }
+    &__close {
+        position: absolute;
+        top: 0;
+        right: 0;
+        padding: var(--cta-pad-horiz);
     }
 }

@@ -70,7 +70,7 @@ const NavSlide = (props) => {
           },
         });
 
-        gsap.from(`#slide-${slideIndex} .navSlide__content__description`, {
+        gsap.from(`#slide-${slideIndex} .navSlide__content__card__description`, {
           opacity: 0,
           y: '-2rem',
           scrollTrigger: {
@@ -82,8 +82,8 @@ const NavSlide = (props) => {
         });
 
         gsap.from(`#slide-${slideIndex} .navSlide__content`, {
-          x: '-100%',
-          rotateY: '180deg',
+          // x: '-100%',
+          // rotateY: '180deg',
           rotateX: '90deg',
           scrollTrigger: {
               trigger: slideRef.current,

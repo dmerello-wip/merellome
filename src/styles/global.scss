@@ -1,6 +1,7 @@
 @use "font";
 @use "./utils/reset";
 @use "@/styles/utils/mq" as mq;
+@use "@/styles/basics/buttons";
 
 * {
     box-sizing: border-box;
