@@ -21,7 +21,6 @@
         background-color: hsla(var(--color-dark), 0.5);
     }
     &--open {
-        // left: -10%;
         .navSlide__content__card {
             transform: rotateY(-10deg);
         }
@@ -78,6 +77,9 @@
 @include mq.responsiveTo("md") {
     .navSlide {
         padding: 0rem 2rem 3rem 2rem;
+        &--open {
+            left: -80%;
+        }
         &__content__card {
             &__title {
                 h2 {
@@ -94,7 +96,10 @@
 @include mq.responsiveFrom("md") {
     .navSlide {
         padding: 0 6vw 20vh 6vw;
-        max-width: 52rem;
+        max-width: 48rem;
+        &--open {
+            left: -3rem;
+        }
         &__content__card {
             &__title {
                 h2 {
