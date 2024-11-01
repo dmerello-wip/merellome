@@ -17,10 +17,13 @@
     perspective: 80rem;
     pointer-events: none;
     transition: all 0.3s ease;
+    --max-width: 48rem;
+    max-width: var(--max-width);
     &:nth-child(odd) {
         background-color: hsla(var(--color-dark), 0.5);
     }
     &--open {
+        left: calc(var(--max-width) * -1);
         .navSlide__content__card {
             transform: rotateY(-10deg);
         }
@@ -88,9 +91,8 @@
 @include mq.responsiveFrom("md") {
     .navSlide {
         padding: 0 6vw 20vh 6vw;
-        max-width: 48rem;
         &--open {
-            left: -3rem;
+            left: -20rem;
         }
     }
 }
