@@ -48,12 +48,14 @@
       },
       "tips": [
         {
-          "title": "Politecnico di Milano",
-          "description": "tante cose belle del poli"
+          "title": "libri che mi hanno preso bene",
+          "description": "tante cose belle sui libri che mi hanno preso bene",
+          "image": "/img/poli.jpg"
         },
         {
-          "title": "libri che mi hanno preso bene",
-          "description": "tante cose belle sui libri che mi hanno preso bene"
+          "title": "Politecnico di Milano",
+          "description": "I graduated with top honors from the Politecnico di Milano, in the Industrial Design faculty, specializing in Interface Design. It was a journey that went beyond merely acquiring skills or techniques; it was an in-depth exploration of design culture, embodying the qualities that have distinguished the best designers across all fields.",
+          "image": "/img/poli.jpg"
         }
       ]
     },
@@ -82,7 +84,8 @@
       "tips": [
         {
           "title": "WIP Italia rulez",
-          "description": "tante cose belle della WIP"
+          "description": "tante cose belle della WIP",
+          "image": "/img/family_b&w.jpg"
         }
       ]
     },

@@ -2,11 +2,12 @@ import classNames from 'classnames'
 import useNavigatorStore from '@/stores/navigatorStore'
 import _TipCard from '@/styles/components/TipCard.scss'
 import Image from 'next/image'
+import { IconX } from './icons/x'
 
-const TipCard = ({title, description, sectionIndex, tipIndex }) => {
+const TipCard = ({content, sectionIndex, index }) => {
   
   const currentTip = useNavigatorStore((state) => state.tip)
-  const thisTip = `${sectionIndex}|${tipIndex}`
+  const thisTip = `${sectionIndex}|${index}`
 
   const tipClasses = classNames('Tipcard', {
     'Tipcard--active': thisTip === currentTip
@@ -15,15 +16,21 @@ const TipCard = ({title, description, sectionIndex, tipIndex }) => {
 return (
     <div className={tipClasses} id={`Tipcard--${thisTip}`}>
       <button className='Tipcard__close btn' onClick={() => useNavigatorStore.getState().setTip(null)}>
-        <Image
-          src="/img/icons/x.svg"
-          width={30}
-          height={30}
-          alt="close icone"
-        />
+        <IconX />
       </button>
-      <div className='Tipcard__title'>{title}</div>
-      <div className='Tipcard__description'>{description}</div>
+      <div className='Tipcard__image'>
+        <Image 
+          src={content.image}
+          width={500}
+          height={300}
+          loading='lazy'
+          alt={content.title}
+        />
+      </div>
+      <div className='Tipcard__content'>
+        <div className='Tipcard__content__title'>{content.title}</div>
+        <div className='Tipcard__content__description'>{content.description}</div>
+      </div>
     </div>  
   )
 }

@@ -14,7 +14,7 @@ const NavSlide = (props) => {
   const slideRef = useRef();
   const firstRun = useRef(true);
 
-  const { section, setSection} = useNavigatorStore((state) => state)
+  const { setSection} = useNavigatorStore((state) => state)
   const currentTip = useNavigatorStore((state) => state.tip)
 
   
@@ -86,7 +86,7 @@ const NavSlide = (props) => {
         gsap.from(`#slide-${slideIndex} .navSlide__content`, {
           // x: '-100%',
           // rotateY: '180deg',
-          rotateX: '90deg',
+          rotateX: '120deg',
           scrollTrigger: {
               trigger: slideRef.current,
               scrub: 0.1,
@@ -105,7 +105,7 @@ const NavSlide = (props) => {
 
   const renderTipCards = () => {
     return tips.map((tip,i) => {
-      return <TipCard key={`tip-${i}`} sectionIndex={slideIndex} tipIndex={i} title={tip.title} description={tip.description}/>
+      return <TipCard key={`tip-${i}`} sectionIndex={slideIndex} index={i} content={tip}/>
     })
   }
 

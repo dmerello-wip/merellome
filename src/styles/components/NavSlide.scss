@@ -49,14 +49,16 @@
                     font-weight: 400;
                     // @include typo.multiline-gradient-text(1.1);
                     transition: all 0.3s ease;
+                    font-size: var(--text-heading1-font-size);
+                    line-height: var(--text-heading1-line-height);
                 }
             }
             &__description {
                 position: relative;
-                line-height: 1.5em;
                 margin: 3rem 0 1rem 6vw;
                 letter-spacing: 1px;
                 color: var(--color--text);
+                line-height: var(--text-line-height);
                 strong {
                     color: var(--color-secondary);
                     font-weight: 600;
@@ -80,16 +82,6 @@
         &--open {
             left: -80%;
         }
-        &__content__card {
-            &__title {
-                h2 {
-                    font-size: 2.3rem;
-                }
-            }
-            &_description {
-                font-size: 1rem;
-            }
-        }
     }
 }
 
@@ -99,16 +91,6 @@
         max-width: 48rem;
         &--open {
             left: -3rem;
-        }
-        &__content__card {
-            &__title {
-                h2 {
-                    font-size: 3.2rem;
-                }
-            }
-            &__description {
-                font-size: 1.1rem;
-            }
         }
     }
 }

@@ -5,13 +5,14 @@
 .Tipcard {
     @extend %absoluteCentered;
     width: calc(100% - var(--padding-cards));
-    height: calc(100% - var(--padding-cards));
+    // height: calc(100% - var(--padding-cards));
     background: var(--color--light);
-    padding: calc(var(--padding-cards) / 2);
-    padding-left: calc(var(--padding-cards));
     transition: all 0.5s ease-in-out;
     border-radius: var(--cards-radius);
     opacity: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
     &--active {
         transform: translate(50%, -50%);
         opacity: 1;
@@ -21,5 +22,29 @@
         top: 0;
         right: 0;
         padding: var(--cta-pad-horiz);
+        color: white;
+    }
+    &__image {
+        width: 100%;
+        height: 150px;
+        border-top-right-radius: var(--cards-radius);
+        border-top-left-radius: var(--cards-radius);
+        overflow: hidden;
+        img {
+            width: 100%;
+            object-fit: cover;
+            height: 100%;
+        }
+    }
+    &__content {
+        padding: calc(var(--padding-cards) / 2);
+        padding-left: var(--padding-cards);
+        line-height: var(--text-line-height);
+        color: var(--color-dark);
+        &__title {
+            font-size: var(--text-heading2-font-size);
+            line-height: var(--text-heading2-line-height);
+            padding: 0 0 1rem 0;
+        }
     }
 }
