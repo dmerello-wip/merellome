@@ -12,7 +12,6 @@ export function Logoroom(props) {
   const { nodes, materials } = useGLTF('/models/logoroom.glb')
   const modelRef = useRef();
 
-
   return (
     <group {...props} dispose={null} ref={modelRef}>
       <group
@@ -75,6 +74,13 @@ export function Logoroom(props) {
           receiveShadow
           geometry={nodes.IMac_01_Cube026_2.geometry}
           material={materials.green}
+        />
+        <mesh
+          name="IMac_01_Cube026_3"
+          castShadow
+          receiveShadow
+          geometry={nodes.IMac_01_Cube026_3.geometry}
+          material={materials.wipsite}
         />
       </group>
       <group
@@ -856,7 +862,7 @@ export function Logoroom(props) {
         receiveShadow
         geometry={nodes.paperplane001.geometry}
         material={materials.White}
-        position={[4.45, 0.113, -11.162]}
+        position={[5.174, 0.113, -7.077]}
         rotation={[Math.PI / 2, 0, -0.176]}
         scale={-0.007}
       />
@@ -866,7 +872,7 @@ export function Logoroom(props) {
         receiveShadow
         geometry={nodes.paperplane.geometry}
         material={materials['White.001']}
-        position={[2.693, 0.113, -10.344]}
+        position={[4.736, 1.995, -6.641]}
         rotation={[Math.PI / 2, 0, 1.066]}
         scale={-0.007}
       />
@@ -1017,7 +1023,6 @@ export function Logoroom(props) {
         scale={[7.514, 7.514, 6.976]}>
 
           <Tip id={'3|0'}/>
-
         <mesh
           name="Cube001"
           castShadow
@@ -1061,7 +1066,6 @@ export function Logoroom(props) {
         scale={0.168}>
 
           <Tip id={'3|1'}/>
-
         <mesh
           name="Microphone001"
           castShadow
@@ -1106,7 +1110,7 @@ export function Logoroom(props) {
       </group>
       <group
         name="keyboards"
-        position={[-15.421, 4.377, 6.541]}
+        position={[-15.105, 4.377, 6.237]}
         rotation={[Math.PI / 2, 0, -0.766]}
         scale={0.003}>
         <mesh
@@ -1402,8 +1406,6 @@ export function Logoroom(props) {
         position={[20.571, 5.726, -6.248]}
         rotation={[-3.141, -0.805, 0]}
         scale={[-1.421, -0.123, -1.045]}>
-
-        
         <mesh
           name="Cube012"
           castShadow
@@ -1505,7 +1507,6 @@ export function Logoroom(props) {
         scale={[4.956, 4.291, 4.563]}>
 
               <Tip id={'1|1'}/>
-
         <mesh
           name="model007"
           castShadow
@@ -1590,7 +1591,7 @@ export function Logoroom(props) {
             castShadow
             receiveShadow
             geometry={nodes.Cube015_1.geometry}
-            material={materials['white']}
+            material={materials.white}
           />
         </group>
         <group
@@ -1603,7 +1604,7 @@ export function Logoroom(props) {
             castShadow
             receiveShadow
             geometry={nodes.Cube016.geometry}
-            material={materials['white']}
+            material={materials['white.003']}
           />
           <mesh
             name="Cube016_1"
@@ -1725,7 +1726,7 @@ export function Logoroom(props) {
         />
       </group>
       <group
-        name="elevision"
+        name="television"
         position={[12.171, 10.364, 4.88]}
         rotation={[1.597, 0.018, -2.361]}
         scale={[22.413, 4.291, 7.948]}>
@@ -1750,6 +1751,34 @@ export function Logoroom(props) {
           receiveShadow
           geometry={nodes.model004_2.geometry}
           material={materials['poli.002']}
+        />
+      </group>
+      <group
+        name="soundcloud"
+        position={[-16.944, 3.896, 8.74]}
+        rotation={[0.159, 0.752, 3.041]}
+        scale={[3.79, 4.291, 3.49]}>
+              <Tip id={'3|2'}/>
+        <mesh
+          name="model008"
+          castShadow
+          receiveShadow
+          geometry={nodes.model008.geometry}
+          material={materials['dark-grey.007']}
+        />
+        <mesh
+          name="model008_1"
+          castShadow
+          receiveShadow
+          geometry={nodes.model008_1.geometry}
+          material={materials['metal.005']}
+        />
+        <mesh
+          name="model008_2"
+          castShadow
+          receiveShadow
+          geometry={nodes.model008_2.geometry}
+          material={materials.soundlcloud}
         />
       </group>
       <mesh
