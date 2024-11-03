@@ -48,13 +48,18 @@
       },
       "tips": [
         {
-          "title": "libri che mi hanno preso bene",
-          "description": "tante cose belle sui libri che mi hanno preso bene",
+          "title": "Politecnico di Milano",
+          "description": "I graduated with top honors from the Politecnico di Milano, specializing in Interface Design at Design Faculty. I lived in an in-depth exploration of design culture, embodying the qualities that have distinguished the best designers across all fields.",
           "image": "/img/poli.jpg"
         },
         {
-          "title": "Politecnico di Milano",
-          "description": "I graduated with top honors from the Politecnico di Milano, in the Industrial Design faculty, specializing in Interface Design. It was a journey that went beyond merely acquiring skills or techniques; it was an in-depth exploration of design culture, embodying the qualities that have distinguished the best designers across all fields.",
+          "title": "Escola Elisava",
+          "description": "During a year of studies in Barcelona for the Erasmus project, the passion for interface design mixed with an interest in coding and experimentation. I was fascinated by the possibility of creating a new way of thinking about design and engeneering.",
+          "image": "/img/elisava.jpg"
+        },
+        {
+          "title": "libri che mi hanno preso bene",
+          "description": "tante cose belle sui libri che mi hanno preso bene",
           "image": "/img/poli.jpg"
         }
       ]
@@ -85,6 +90,11 @@
         {
           "title": "WIP Italia rulez",
           "description": "tante cose belle della WIP",
+          "image": "/img/family_b&w.jpg"
+        },
+        {
+          "title": "WIP Italia rulez 2",
+          "description": "tante cose belle della WIP 2",
           "image": "/img/family_b&w.jpg"
         }
       ]

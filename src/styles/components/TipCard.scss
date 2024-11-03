@@ -37,8 +37,8 @@
         }
     }
     &__content {
-        padding: calc(var(--padding-cards) / 2);
-        padding-left: var(--padding-cards);
+        padding: var(--padding-cards);
+        padding-left: calc(var(--padding-cards) * 1.5);
         line-height: var(--text-line-height);
         color: var(--color-dark);
         &__title {
