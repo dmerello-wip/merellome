@@ -15,19 +15,20 @@
     padding: var(--cta-pad-vert) var(--cta-pad-horiz);
     appearance: none;
     border: 1px solid var(--cta-border-color);
-    font-size: 1.2rem;
+    font-size: 1rem;
     min-height: 2.5rem;
     text-decoration: none;
     text-align: var(--cta-text-align);
     font-weight: 700;
     cursor: pointer;
-    text-transform: uppercase;
+    // text-transform: uppercase;
     color: var(--cta-text-color);
     border-radius: var(--cta-border-radius);
     background-color: var(--cta-bg-color);
     &:hover {
         color: var(--cta-bg-color);
         background-color: var(--cta-text-color);
+        border: 1px solid var(--cta-border-color);
     }
     &:focus {
         outline: none;
@@ -70,28 +71,36 @@
 }
 
 .btn {
-    @extend %base-btn;
     &--primary {
+        @extend %base-btn;
         --cta-border-color: var(--color-primary);
         --cta-bg-color: var(--color-primary);
         --cta-text-color: var(--color--light);
+        --cta-border-color: transparent;
     }
     &--secondary {
+        @extend %base-btn;
         --cta-border-color: var(--color-secondary);
         --cta-bg-color: var(--color-secondary);
         --cta-text-color: var(--color--light);
+        --cta-border-color: transparent;
     }
     &--primary-stroked {
+        @extend %base-btn;
         --cta-border-color: var(--color-primary);
         --cta-bg-color: transparent;
         --cta-text-color: var(--color--primary);
     }
     &--secondary-stroked {
+        @extend %base-btn;
         --cta-border-color: var(--color-secondary);
         --cta-bg-color: transparent;
         --cta-text-color: var(--color--secondary);
     }
     &--text {
+        @extend %base-btn;
+        --cta-text-color: var(--color-secondary);
+        padding-left: 0;
         //specific btn styles here
     }
 }

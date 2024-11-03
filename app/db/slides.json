@@ -56,11 +56,6 @@
           "title": "Escola Elisava",
           "description": "During a year of studies in Barcelona for the Erasmus project, the passion for interface design mixed with an interest in coding and experimentation. I was fascinated by the possibility of creating a new way of thinking about design and engeneering.",
           "image": "/img/elisava.jpg"
-        },
-        {
-          "title": "libri che mi hanno preso bene",
-          "description": "tante cose belle sui libri che mi hanno preso bene",
-          "image": "/img/poli.jpg"
         }
       ]
     },
@@ -90,19 +85,27 @@
         {
           "title": "My working day in WIP Italia",
           "description": "At WIP Italia, I supervise the User Experience team and I provide consulting to our clients for the design and development of digital products, combining the strong technical skills of our developers with the choices of our designers.",
-          "image": "/img/wip_1.jpg"
+          "image": "/img/wip_1.jpg",
+          "link": {
+            "url": "https://wipitalia.it",
+            "label": "Discover more"
+          }
         },
         {
           "title": "The Digital Design Company",
-          "description": "WIP Italia specializes in Digital Design, focusing on User Experience, Content Creation, and the development of B2C and B2B digital products. Their work spans from analyzing user needs and behaviors to producing videos, content, and full-stack development.",
-          "image": "/img/wip_2.jpg"
+          "description": "WIP Italia specializes in Digital Design, focusing on User Experience, Content Creation, and the development of B2C and B2B digital products. Our work spans from analyzing needs and behaviors to producing videos, content, and code.",
+          "image": "/img/wip_2.jpg",
+          "link": {
+            "url": "https://wipitalia.it",
+            "label": "Discover more"
+          }
         }
       ]
     },
     {
       "id": 3,
       "title": "Music is just my little dream world",
-      "description": "I love to create songs about people i'm fond of. I play <strong>bass</strong>, <strong>guitar</strong>, some choords in piano and I sing like a dog in the shower. My music generates a serious sense of embarrassment in those who listen to it..",
+      "description": "I love to create songs about people i'm fond of. I play <strong>bass</strong>, <strong>guitar</strong>, some choords in piano and I sing like a dog in the shower. My music generates a serious sense of embarrassment in those who listen to it.",
       "camera": {
         "desktop": {
           "rotationX": -26,
@@ -123,16 +126,16 @@
       },
       "tips": [
         {
-          "title": "Suono questo",
-          "description": "e suono anche quell'altro"
+          "title": "Bass, Guitar and other stuff",
+          "description": "I've been playing guitar and bass for many years, but no bands, except for occasionally joining in with some more serious musician friends."
         },
         {
-          "title": "ascoltami su qui",
-          "description": "e ascoltami anche su li"
-        },
-        {
-          "title": "promettilo",
-          "description": "e ascoltami anche su li"
+          "title": "Are you brave? listen to me",
+          "description": "Yes, I often regret it, but I write songs. You can listen to them on SoundCloud, but don't expect much.",
+          "link": {
+            "url": "https://soundcloud.com/diegomerello",
+            "label": "Listen now"
+          }
         }
       ]
     },

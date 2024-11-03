@@ -1064,8 +1064,6 @@ export function Logoroom(props) {
         position={[-11.919, 4.382, 11.016]}
         rotation={[-0.038, -1.121, -0.16]}
         scale={0.168}>
-
-          <Tip id={'3|1'}/>
         <mesh
           name="Microphone001"
           castShadow
@@ -1758,7 +1756,7 @@ export function Logoroom(props) {
         position={[-16.944, 3.896, 8.74]}
         rotation={[0.159, 0.752, 3.041]}
         scale={[3.79, 4.291, 3.49]}>
-              <Tip id={'3|2'}/>
+              <Tip id={'3|1'}/>
         <mesh
           name="model008"
           castShadow
