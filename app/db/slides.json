@@ -88,21 +88,21 @@
       },
       "tips": [
         {
-          "title": "WIP Italia rulez",
-          "description": "tante cose belle della WIP",
-          "image": "/img/family_b&w.jpg"
+          "title": "My working day in WIP Italia",
+          "description": "At WIP Italia, I supervise the User Experience team and I provide consulting to our clients for the design and development of digital products, combining the strong technical skills of our developers with the choices of our designers.",
+          "image": "/img/wip_1.jpg"
         },
         {
-          "title": "WIP Italia rulez 2",
-          "description": "tante cose belle della WIP 2",
-          "image": "/img/family_b&w.jpg"
+          "title": "The Digital Design Company",
+          "description": "WIP Italia specializes in Digital Design, focusing on User Experience, Content Creation, and the development of B2C and B2B digital products. Their work spans from analyzing user needs and behaviors to producing videos, content, and full-stack development.",
+          "image": "/img/wip_2.jpg"
         }
       ]
     },
     {
       "id": 3,
       "title": "Music is just my little dream world",
-      "description": "I love to create songs about people i'm fond of. I play <strong>bass</strong>, <strong>guitar</strong>, some choords in piano and I sing like a dog in the shower. My music generates a serious sense of embarrassment in those who listen to it.<strong>Listen to me on SoundCloud</strong>.",
+      "description": "I love to create songs about people i'm fond of. I play <strong>bass</strong>, <strong>guitar</strong>, some choords in piano and I sing like a dog in the shower. My music generates a serious sense of embarrassment in those who listen to it..",
       "camera": {
         "desktop": {
           "rotationX": -26,
