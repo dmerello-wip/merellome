@@ -35,7 +35,24 @@ const NavSlide = (props) => {
     let ctx = gsap.context(() => {
       
         const controlledRotation = cameraStartSettings;
+
+        /* --- 01. progress to manage the section change --- */
+        const sectionPartialProgress = { perc: 0};
+          gsap.to(sectionPartialProgress, {
+          perc: 1,
+          scrollTrigger: {
+              trigger: slideRef.current,
+              scrub: 0.2,
+              start: 'top center',
+          },
+          ease: "none",
+          onUpdate: () => {
+              setSection(slideIndex)
+              console.log(`section ${slideIndex}`, sectionPartialProgress.perc);
+          }, 
+        });
         
+        /* ------------ 02. animate camera ------------ */
         gsap.to(controlledRotation, {
           rotationX: cameraEndSettings.rotationX,
           rotationY: cameraEndSettings.rotationY,
@@ -50,14 +67,26 @@ const NavSlide = (props) => {
               // markers : true,
           },
           ease: "power1.inOut",
-
           onUpdate: () => {
               setCamera(controlledRotation)
-              setSection(slideIndex)
-              // console.log('update', id);
           }, 
         });
 
+        /* ------------ 03. animate slide card ------------ */
+        gsap.from(`#slide-${slideIndex} .navSlide__content`, {
+          // x: '-100%',
+          // rotateY: '180deg',
+          rotateX: '120deg',
+          scrollTrigger: {
+              trigger: slideRef.current,
+              scrub: 0.1,
+              start: 'top bottom',
+              end: 'center center',
+          },
+        });
+
+
+        /* ------------ 04. animate slide titles ------------ */
         gsap.from(`#slide-${slideIndex} .letter`, {
           opacity: 0,
           // filter: 'blur(10px)',
@@ -72,6 +101,7 @@ const NavSlide = (props) => {
           },
         });
 
+        /* ------------ 05. animate slide descriptions ------------ */
         gsap.from(`#slide-${slideIndex} .navSlide__content__card__description`, {
           opacity: 0,
           y: '-2rem',
@@ -83,17 +113,6 @@ const NavSlide = (props) => {
           },
         });
 
-        gsap.from(`#slide-${slideIndex} .navSlide__content`, {
-          // x: '-100%',
-          // rotateY: '180deg',
-          rotateX: '120deg',
-          scrollTrigger: {
-              trigger: slideRef.current,
-              scrub: 0.1,
-              start: 'top bottom',
-              end: 'center center',
-          },
-        });
     });
 
     return () => ctx.revert();

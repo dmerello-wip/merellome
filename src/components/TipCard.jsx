@@ -21,20 +21,22 @@ return (
           <IconX />
         </button>
       </div>
-      <div className='Tipcard__image'>
-        <Image 
-          src={content.image}
-          width={500}
-          height={300}
-          loading='lazy'
-          alt={content.title}
-        />
-      </div>
+      {content.image &&
+        <div className='Tipcard__image'>
+          <Image 
+            src={content.image}
+            width={500}
+            height={300}
+            loading='lazy'
+            alt={content.title}
+          />
+        </div>
+      }
       <div className='Tipcard__content'>
         <div className='Tipcard__content__title'>{content.title}</div>
         <div className='Tipcard__content__description'>{content.description}</div>
         {content.link &&
-          <a className='Tipcard__content__link btn--text --has-icon' href={content.link.url}>
+          <a className='Tipcard__content__link btn--text --has-icon' href={content.link.url} target='_blank'>
             <IconArrowRight />
             {content.link.label}
           </a>

@@ -25,6 +25,7 @@
     color: var(--cta-text-color);
     border-radius: var(--cta-border-radius);
     background-color: var(--cta-bg-color);
+    transition: all 0.2s ease;
     &:hover {
         color: var(--cta-bg-color);
         background-color: var(--cta-text-color);
@@ -101,6 +102,11 @@
         @extend %base-btn;
         --cta-text-color: var(--color-secondary);
         padding-left: 0;
-        //specific btn styles here
+        &:hover {
+            --cta-bg-color: var(--color-primary);
+            background-color: transparent;
+            border: 0px solid transparent;
+            padding-left: var(--cta-pad-horiz);
+        }
     }
 }
