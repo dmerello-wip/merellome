@@ -165,12 +165,14 @@
       },
       "tips": [
         {
-          "title": "Ho un gatto",
-          "description": "ed è molto stupido"
+          "title": "grill & beer is creativity gasoline",
+          "description": "Forging friendships one rib after another, no project can replace the creativity of the unexpected that can happen in front of a grill",
+          "image": "/img/grill.jpg"
         },
         {
-          "title": "faccio le costine",
-          "description": "e mi vengono pure male"
+          "title": "4 women (and a stupid cat)",
+          "description": "4 women, 3 of them teenagers, silence is not something familiar in my house. Glitch (the stupid cat) endures them silently, which is why he is noteworthy.",
+          "image": "/img/family_kitchen.jpg"
         }
       ]
     }

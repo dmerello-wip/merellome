@@ -12,6 +12,7 @@ export function Logoroom(props) {
   const { nodes, materials } = useGLTF('/models/logoroom.glb')
   const modelRef = useRef();
 
+  
   return (
     <group {...props} dispose={null} ref={modelRef}>
       <group
@@ -53,7 +54,9 @@ export function Logoroom(props) {
         position={[1.262, 6.292, 7.39]}
         rotation={[-1.562, -0.007, 2.927]}
         scale={-0.337}>
+
               <Tip id={'2|0'}/>
+
         <mesh
           name="IMac_01_Cube026"
           castShadow
@@ -872,7 +875,7 @@ export function Logoroom(props) {
         receiveShadow
         geometry={nodes.paperplane.geometry}
         material={materials['White.001']}
-        position={[4.736, 1.995, -6.641]}
+        position={[7.489, -0.036, -8.161]}
         rotation={[Math.PI / 2, 0, 1.066]}
         scale={-0.007}
       />
@@ -939,6 +942,9 @@ export function Logoroom(props) {
         position={[-4.066, 3.817, -19.889]}
         rotation={[Math.PI / 2, 0, 3.12]}
         scale={10.872}>
+
+              <Tip id={'4|0'}/>
+              
         <mesh
           name="model"
           castShadow
@@ -1023,6 +1029,7 @@ export function Logoroom(props) {
         scale={[7.514, 7.514, 6.976]}>
 
           <Tip id={'3|0'}/>
+
         <mesh
           name="Cube001"
           castShadow
@@ -1465,7 +1472,6 @@ export function Logoroom(props) {
         rotation={[Math.PI / 2, 0, 2.768]}
         scale={0.07}>
 
-              <Tip id={'4|0'}/>
         <mesh
           name="Mesh_Cat001"
           castShadow
@@ -1499,12 +1505,50 @@ export function Logoroom(props) {
         scale={5.651}
       />
       <group
+        name="picture-2"
+        position={[2.954, 3.572, -11.198]}
+        rotation={[Math.PI / 2, 0, -0.124]}
+        scale={[5.665, 3.947, 3.947]}>
+
+              <Tip id={'4|1'}/>
+
+        <mesh
+          name="model006"
+          castShadow
+          receiveShadow
+          geometry={nodes.model006.geometry}
+          material={materials['white.010']}
+        />
+        <mesh
+          name="model006_1"
+          castShadow
+          receiveShadow
+          geometry={nodes.model006_1.geometry}
+          material={materials['metal.002']}
+        />
+        <mesh
+          name="model006_2"
+          castShadow
+          receiveShadow
+          geometry={nodes.model006_2.geometry}
+          material={materials['dark-grey.005']}
+        />
+        <mesh
+          name="model006_3"
+          castShadow
+          receiveShadow
+          geometry={nodes.model006_3.geometry}
+          material={materials.family}
+        />
+      </group>
+      <group
         name="elisava"
         position={[13.301, 9.574, 3.45]}
         rotation={[1.505, -0.053, 0.795]}
         scale={[4.956, 4.291, 4.563]}>
 
               <Tip id={'1|1'}/>
+
         <mesh
           name="model007"
           castShadow
@@ -1700,7 +1744,6 @@ export function Logoroom(props) {
         scale={[4.956, 4.291, 4.563]}>
 
               <Tip id={'1|0'}/>
-
         <mesh
           name="model003"
           castShadow
@@ -1728,7 +1771,9 @@ export function Logoroom(props) {
         position={[12.171, 10.364, 4.88]}
         rotation={[1.597, 0.018, -2.361]}
         scale={[22.413, 4.291, 7.948]}>
+              
               <Tip id={'2|1'}/>
+
         <mesh
           name="model004"
           castShadow
@@ -1756,7 +1801,9 @@ export function Logoroom(props) {
         position={[-16.944, 3.896, 8.74]}
         rotation={[0.159, 0.752, 3.041]}
         scale={[3.79, 4.291, 3.49]}>
+
               <Tip id={'3|1'}/>
+
         <mesh
           name="model008"
           castShadow
