@@ -19,6 +19,7 @@
     transition: all 0.6s cubic-bezier(0.5, 0, 0.5, 1);
     --max-width: 48rem;
     max-width: var(--max-width);
+    border: 0px solid transparent;
     &:nth-child(odd) {
         background-color: hsla(var(--color-dark), 0.5);
     }

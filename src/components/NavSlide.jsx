@@ -48,7 +48,7 @@ const NavSlide = (props) => {
           ease: "none",
           onUpdate: () => {
               setSection(slideIndex)
-              console.log(`section ${slideIndex}`, sectionPartialProgress.perc);
+              // console.log(`section ${slideIndex}`, sectionPartialProgress.perc);
           }, 
         });
         
