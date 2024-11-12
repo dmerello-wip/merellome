@@ -1,5 +1,5 @@
 import _NavSlide from '@/styles/components/NavSlide.scss'
-import { useEffect, useLayoutEffect, useRef, useState } from "react"
+import { useEffect, useRef, useState } from "react"
 import { ScrollTrigger } from 'gsap/all'
 import { splitTextByLetter } from '@/helpers/textUtils';
 import useNavigatorStore from '@/stores/navigatorStore'
@@ -17,14 +17,20 @@ const NavSlide = (props) => {
   const { setSection} = useNavigatorStore((state) => state)
   const currentTip = useNavigatorStore((state) => state.tip)
 
-  
 
   /* -------------------- animations -------------------- */
 
-  useLayoutEffect(() => {
+  // TODO: fix this dirty hack
+  // onload of these slides i refresh scrolltrigger to make the next components work using it
+  useEffect(() => {
     gsap.registerPlugin(ScrollTrigger)
+    if (document.readyState === 'complete') {
+      ScrollTrigger.refresh();
+    } else {
+      window.addEventListener('load', ScrollTrigger.refresh);
+    }
   }, [])
-
+  
   useGSAP((context, contextSafe) => {
 
     if (firstRun.current) {

@@ -11,12 +11,8 @@ import { useControls } from 'leva'
 
 const NavSlide = dynamic(() => import('@/components/NavSlide').then((mod) => mod.NavSlide), { ssr: false })
 const Logoroom = dynamic(() => import('@/components/Logoroom').then((mod) => mod.Logoroom), { ssr: false })
-const SlidingTitle = dynamic(() => import('@/components/SlidingTitle').then((mod) => mod.GetItTouch), { ssr: false })
 const View = dynamic(() => import('@/components/View').then((mod) => mod.View), {
-  ssr: false,
-  loading: () => (
-    <Loader fixed={true} /> 
-  ),
+  ssr: false
 })
 
 
@@ -120,8 +116,6 @@ const Navigator = ( { contents }) => {
         </div>
         {renderNavSlides()}
       </div>
-      {/* TODO: move this component outside of Navigator and check if Scrolltrigger works on this */}
-      <SlidingTitle content={":; readings :; readings"} />
     </>
   )
 }

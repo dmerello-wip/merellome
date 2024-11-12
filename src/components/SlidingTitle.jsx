@@ -1,18 +1,17 @@
 'use client'
 
 
-import _GetItTouch from '@/styles/components/slidingTitle.scss'
+import _SlidingTitle from '@/styles/components/slidingTitle.scss'
 import { useGSAP } from '@gsap/react'
-import { useLayoutEffect, useRef } from "react"
+import { useEffect, useRef } from "react"
 import  { gsap } from "gsap"
 import { ScrollTrigger } from 'gsap/all'
 
-const GetItTouch = ({content}) => {
+const SlidingTitle = ({content}) => {
 
-  const sectionRef = useRef();
   const titleRef = useRef();
   
-  useLayoutEffect(() => {
+  useEffect(() => {
     gsap.registerPlugin(ScrollTrigger)
   }, [])
 
@@ -24,6 +23,7 @@ const GetItTouch = ({content}) => {
             scrub: true,
             start: 'top bottom',
             end: 'bottom center',
+            invalidateOnRefresh: true,
             // markers: true,
         }
         
@@ -39,7 +39,7 @@ const GetItTouch = ({content}) => {
   }, []);
 
   return (
-    <div className="slidingTitle"  ref={sectionRef}>
+    <div className="slidingTitle" >
       <div className="slidingTitle__title" ref={titleRef} >
         {content}
       </div>
@@ -50,4 +50,4 @@ const GetItTouch = ({content}) => {
 
 
 
-export { GetItTouch }
+export { SlidingTitle }
