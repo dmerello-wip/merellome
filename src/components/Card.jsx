@@ -26,7 +26,7 @@ return (
             width={image.width || 500}
             height={image.height || 300}
             loading='lazy'
-            alt={title}
+            alt={image.alt || title}
           />
         </div>
       }

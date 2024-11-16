@@ -1,23 +1,19 @@
 'use client'
 
 import Image from 'next/image';
+import { Card } from './Card';
 
 const ArticlesCards = ({contents}) => {
 
   const renderItems = () => {
       return contents.map((el, i) => {
         return (
-          <div 
-            key={`item-${el.title}`} 
-            className="articlesSlider__box"
-          >
-            <Image 
-              src={el.image} 
-              alt={el.alt} 
-              className="articlesSLider__image" 
-              width={450} 
-              height={300} 
-            />
+          <div className='articlesSlider__box' key={`item-${i}`}>
+            <Card
+                image={el.image}
+                title={el.title}
+                description ={el.description}
+              />
           </div>
         );
       });

@@ -2,23 +2,35 @@
   "articles": [
     {
       "title": "Spiaggia",
-      "image": "/img/articles/test1.jpg",
-      "alt": "Spiaggia"
+      "description": "lorem ipsum cagnasso",
+      "image": {
+        "url": "/img/articles/test1.jpg",
+        "alt": "Spiaggia"
+      }
     },
     {
       "title": "Quaderni",
-      "image": "/img/articles/test2.jpg",
-      "alt": "Quaderni"
+      "description": "lorem ipsum zuckemberg",
+      "image": {
+        "url": "/img/articles/test2.jpg",
+        "alt": "Quaderni"
+      }
     },
     {
       "title": "Cane",
-      "image": "/img/articles/test1.jpg",
-      "alt": "Cane"
+      "description": "lorem ipsum frigorifero",
+      "image": {
+        "url": "/img/articles/test1.jpg",
+        "alt": "Cane"
+      }
     },
     {
       "title": "Gatto",
-      "image": "/img/articles/test2.jpg",
-      "alt": "Gatto"
+      "description": "lorem ipsum pagnottella",
+      "image": {
+        "url": "/img/articles/test2.jpg",
+        "alt": "Gatto"
+      }
     }
   ]
 }
