@@ -1,0 +1,24 @@
+{
+  "articles": [
+    {
+      "title": "Spiaggia",
+      "image": "/img/articles/test1.jpg",
+      "alt": "Spiaggia"
+    },
+    {
+      "title": "Quaderni",
+      "image": "/img/articles/test2.jpg",
+      "alt": "Quaderni"
+    },
+    {
+      "title": "Cane",
+      "image": "/img/articles/test1.jpg",
+      "alt": "Cane"
+    },
+    {
+      "title": "Gatto",
+      "image": "/img/articles/test2.jpg",
+      "alt": "Gatto"
+    }
+  ]
+}

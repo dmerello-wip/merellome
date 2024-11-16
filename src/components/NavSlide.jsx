@@ -5,7 +5,7 @@ import { splitTextByLetter } from '@/helpers/textUtils';
 import useNavigatorStore from '@/stores/navigatorStore'
 import  { gsap } from "gsap"
 import { useGSAP } from '@gsap/react'
-import { TipCard } from './TipCard'
+import { Card } from './Card'
 import classNames from 'classnames';
 
 const NavSlide = (props) => {
@@ -16,6 +16,7 @@ const NavSlide = (props) => {
 
   const { setSection} = useNavigatorStore((state) => state)
   const currentTip = useNavigatorStore((state) => state.tip)
+  const setTip = useNavigatorStore((state) => state.setTip)
 
 
   /* -------------------- animations -------------------- */
@@ -128,11 +129,7 @@ const NavSlide = (props) => {
 
   /* -------------------- tips cards -------------------- */
 
-  const renderTipCards = () => {
-    return tips.map((tip,i) => {
-      return <TipCard key={`tip-${i}`} sectionIndex={slideIndex} index={i} content={tip}/>
-    })
-  }
+
 
   const navSlideClasses = classNames('navSlide', {
     'navSlide--open': (currentTip && Number(currentTip.split('|')[0]) === slideIndex)
@@ -150,7 +147,19 @@ const NavSlide = (props) => {
           <div className='navSlide__content__card__description' dangerouslySetInnerHTML={{ __html: description }} />
         </div>
         <div className='navSlide__content__tips'>
-          {renderTipCards()}
+          {tips.map((tip,i) => {
+            return (
+              <Card
+                key={`tip-${i}`}
+                isActive={currentTip === `${slideIndex}|${i}`}
+                image={tip.image}
+                title={tip.title}
+                description ={tip.description}
+                link={tip.link}
+                closeAction={()=> setTip(null)}
+              />
+            )
+          })}
         </div>
       </div>
     </div>

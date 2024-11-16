@@ -50,12 +50,16 @@
         {
           "title": "Politecnico di Milano",
           "description": "I graduated with top honors from the Politecnico di Milano, specializing in Interface Design at Design Faculty. I lived in an in-depth exploration of design culture, embodying the qualities that have distinguished the best designers across all fields.",
-          "image": "/img/poli.jpg"
+          "image": {
+            "url": "/img/poli.jpg"
+          }
         },
         {
           "title": "Escola Elisava",
           "description": "During a year of studies in Barcelona for the Erasmus project, the passion for interface design mixed with an interest in coding and experimentation. I was fascinated by the possibility of creating a new way of thinking about design and engeneering.",
-          "image": "/img/elisava.jpg"
+          "image": {
+            "url": "/img/elisava.jpg"
+          }
         }
       ]
     },
@@ -85,7 +89,9 @@
         {
           "title": "My working day in WIP Italia",
           "description": "At WIP Italia, I supervise the User Experience team and I provide consulting to our clients for the design and development of digital products, combining the strong technical skills of our developers with the choices of our designers.",
-          "image": "/img/wip_1.jpg",
+          "image": {
+            "url": "/img/wip_1.jpg"
+          },
           "link": {
             "url": "https://wipitalia.it",
             "label": "Discover more"
@@ -94,7 +100,9 @@
         {
           "title": "The Digital Design Company",
           "description": "WIP Italia specializes in Digital Design, focusing on User Experience, Content Creation, and the development of B2C and B2B digital products. Our work spans from analyzing needs and behaviors to producing videos, content, and code.",
-          "image": "/img/wip_2.jpg",
+          "image": {
+            "url": "/img/wip_2.jpg"
+          },
           "link": {
             "url": "https://wipitalia.it",
             "label": "Discover more"
@@ -128,12 +136,16 @@
         {
           "title": "Bass, Guitar and other stuff",
           "description": "I've been playing guitar and bass for many years, but no bands, except for occasionally joining in with some more serious musician friends.",
-          "image": "/img/instruments.jpg"
+          "image": {
+            "url": "/img/instruments.jpg"
+          }
         },
         {
           "title": "Are you brave? listen to me",
           "description": "Yes, I often regret it, but I write songs. You can listen to them on SoundCloud, but don't expect much.",
-          "image": "/img/dz_soundcloud.jpg",
+          "image": {
+            "url": "/img/dz_soundcloud.jpg"
+          },
           "link": {
             "url": "https://soundcloud.com/diegomerello",
             "label": "Listen now"
@@ -167,12 +179,16 @@
         {
           "title": "grill & beer is creativity gasoline",
           "description": "Forging friendships one rib after another, no project can replace the creativity of the unexpected that can happen in front of a grill",
-          "image": "/img/grill.jpg"
+          "image": {
+            "url": "/img/grill.jpg"
+          }
         },
         {
           "title": "4 women (and a stupid cat)",
           "description": "4 women, 3 of them teenagers, silence is not something familiar in my house. Glitch (the stupid cat) endures them silently, which is why he is noteworthy.",
-          "image": "/img/family_kitchen.jpg"
+          "image": {
+            "url": "/img/family_kitchen.jpg"
+          }
         }
       ]
     }
