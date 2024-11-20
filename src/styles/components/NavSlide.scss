@@ -17,21 +17,21 @@
     perspective: 80rem;
     pointer-events: none;
     transition: all 0.6s cubic-bezier(0.5, 0, 0.5, 1);
-    --max-width: 48rem;
+    --max-width: 50rem;
     max-width: var(--max-width);
     border: 0px solid transparent;
     &:nth-child(odd) {
         background-color: hsla(var(--color-dark), 0.5);
     }
     &--open {
-        left: calc(var(--max-width) * -1);
+        // left: calc(var(--max-width) * -1);
         .navSlide__content__card {
             transform: rotateY(-10deg);
         }
     }
     &__content {
         pointer-events: auto;
-        perspective: 150rem;
+        transform-style: preserve-3d;
         &__tips {
             @extend %absoluteCentered;
             z-index: 1;
@@ -51,7 +51,9 @@
             position: relative;
             z-index: 2;
             padding: calc(var(--padding-cards) * 1.6);
-            background-color: var(--color-dark);
+            background-color: rgba(0, 0, 0, 0.6);
+            backdrop-filter: blur(10px);
+            // border: 1px solid var(--color-secondary);
             border-radius: var(--cards-radius);
             transition: all 0.3s ease-in-out;
             transform-origin: left center;
@@ -102,7 +104,14 @@
     .navSlide {
         padding: 0 6vw 20vh 6vw;
         &--open {
-            left: -20rem;
+            left: -30rem;
+        }
+    }
+}
+@include mq.responsiveFrom("lg") {
+    .navSlide {
+        &--open {
+            left: -3rem;
         }
     }
 }

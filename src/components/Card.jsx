@@ -34,7 +34,7 @@ return (
         <div className='Card__content__title'>{title}</div>
         <div className='Card__content__description'>{description}</div>
         {link &&
-          <a className='Card__content__link btn--text --has-icon' href={link.url} target='_blank'>
+          <a className='Card__content__link btn--text --has-icon' href={link.url} target={link.target || '_blank'}>
             <IconArrowRight />
             {link.label || 'Read more'}
           </a>

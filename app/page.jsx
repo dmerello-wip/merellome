@@ -19,8 +19,6 @@ export default async function Page() {
   )
 
 
-  const SlidingTitle = dynamic(() => import('@/components/SlidingTitle').then((mod) => mod.SlidingTitle), { ssr: false })
-
   return (
     <>
       <Header />
@@ -28,7 +26,6 @@ export default async function Page() {
       <Suspense fallback={<Loader fixed={true} />}>
         <Navigator contents={slides} />
       </Suspense>
-      <SlidingTitle content={":; readings :; readings"} />
       <ArticlesSlider contents={articles.items} />
       <TempSpacer>1. Contenuto sotto al navigator</TempSpacer>
       <TempSpacer>2. Contenuto sotto al navigator</TempSpacer>

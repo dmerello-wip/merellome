@@ -1,35 +1,99 @@
 {
   "articles": [
     {
-      "title": "Spiaggia",
-      "description": "lorem ipsum cagnasso",
+      "title": "Artificial Intelligence, concrete steps",
+      "description": "When hype takes off, common sense knocks on the door. Today, artificial intelligence is the hype par excellence, and there are very good reasons for this enthusiasm. But what goals are we setting ourselves by using it?",
       "image": {
         "url": "/img/articles/test1.jpg",
         "alt": "Spiaggia"
+      },
+      "link": {
+        "url": "https://www.wipitalia.it/it/journal/intelligenza-artificiale-passi-concreti",
+        "label": "more on wipitalia.it"
       }
     },
     {
-      "title": "Quaderni",
-      "description": "lorem ipsum zuckemberg",
+      "title": "The impact of new generations on UX",
+      "description": "Are young people more accustomed to digital? Real. Should we expect more expert navigation? Absolutely not. The different propensity of these generations to purchase online compared to the past is clear to everyone, but it is worth thinking about the impact that this greater predisposition could have on the design of user experiences and the development of new digital products",
       "image": {
         "url": "/img/articles/test2.jpg",
         "alt": "Quaderni"
+      },
+      "link": {
+        "url": "https://www.google.it",
+        "label": "more on wipitalia.it"
       }
     },
     {
-      "title": "Cane",
-      "description": "lorem ipsum frigorifero",
+      "title": "Design Thinking and the creativity of the programmer",
+      "description": "Let's definitively break the image of creatives and programmers. Creative ( /cre·a·tì·vo/ ): is he really an unruly subject who cooks ideas by trial and error? Programmer ( /pro·gram·ma·tó·re/ ): Is he really a cold planner with mathematical certainty?",
       "image": {
         "url": "/img/articles/test1.jpg",
         "alt": "Cane"
+      },
+      "link": {
+        "url": "https://www.wipitalia.it/it/journal/la-creativita-del-programmatore",
+        "label": "more on wipitalia.it"
       }
     },
     {
-      "title": "Gatto",
-      "description": "lorem ipsum pagnottella",
+      "title": "Apply Design Thinking? My daughter will explain it to you",
+      "description": "We often hear about Design Thinking in recent years. But what really happens in a Design Thinking process? Who is involved and how much effort and time does it require? Is it only applicable to large projects? We verified it with one of the most creative minds of this century: My daughter",
       "image": {
         "url": "/img/articles/test2.jpg",
         "alt": "Gatto"
+      },
+      "link": {
+        "url": "https://www.wipitalia.it/it/journal/applicare-il-design-thinking-ve-lo-spiega-mia-figlia",
+        "label": "more on wipitalia.it"
+      }
+    },
+    {
+      "title": "The role of the Designer in the time of Enterprise platforms",
+      "description": "We were amazed by the power of solid, structured solutions built for needs analyzed on large numbers. The role of Design has changed again, because redesigning a product in which such heavy investments have been made is a delicate issue. Very delicate.",
+      "image": {
+        "url": "/img/articles/test2.jpg",
+        "alt": "Gatto"
+      },
+      "link": {
+        "url": "https://www.wipitalia.it/it/journal/il-ruolo-del-designer-nel-tempo-delle-piattaforme-enterprise",
+        "label": "more on wipitalia.it"
+      }
+    },
+    {
+      "title": "Let's take it lightly. Design Thinking: is UX a Post-it?",
+      "description": "Continuous Butt Exhibition, Write Big in a Small Square Task and Dirty wall Drama are just some of the topics to be resolved during a Design Thinking session, but they shouldn't worry us: the world of consultancy is creating architectures with walls made only of glass, walks with free selfie and coordinators who are increasingly agile in bending over. The future of innovation is bright.",
+      "image": {
+        "url": "/img/articles/test2.jpg",
+        "alt": "Gatto"
+      },
+      "link": {
+        "url": "https://www.wipitalia.it/it/journal/prendiamola-alla-leggera-design-thinking-la-ux-del-post-it",
+        "label": "more on wipitalia.it"
+      }
+    },
+    {
+      "title": "Gain experience to be able to design it",
+      "description": "Do we really want to limit this concept to the pleasant use of a platform or the improvement of its performance? It is certainly a good start, but the experience of those who use a digital platform cannot and must not depend only on the effective design of the interfaces and the resulting flows.",
+      "image": {
+        "url": "/img/articles/test2.jpg",
+        "alt": "Gatto"
+      },
+      "link": {
+        "url": "https://www.wipitalia.it/it/journal/fare-esperienza-per-poterla-progettare",
+        "label": "more on wipitalia.it"
+      }
+    },
+    {
+      "title": "User Experience: the one they tell you and the real one",
+      "description": "We tried to understand what was behind those magical words and we made them our own, with our working method: the BuonSenso Approach. Because in the daily challenge of work we encounter companies, with their complexity, their history, their constraints, their objectives and above all their people.",
+      "image": {
+        "url": "/img/articles/test2.jpg",
+        "alt": "Gatto"
+      },
+      "link": {
+        "url": "https://www.wipitalia.it/it/journal/user-experience-quella-che-vi-raccontano-e-quella-reale",
+        "label": "more on wipitalia.it"
       }
     }
   ]

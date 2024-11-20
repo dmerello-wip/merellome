@@ -1,103 +1,30 @@
-$gapX: 10;
-$gapY: 20;
-$gapZ: 5;
-$nItems: 6;
-$imageW: 450px;
-$imageH: 300px;
+@use "@/styles/utils/functions" as f;
 
 .articlesSlider {
-    position: relative;
-    width: 80%;
-    display: flex;
-    justify-content: space-between;
-    padding: 3rem;
-    overflow: hidden;
-
-    img {
-        max-width: 100%;
-        height: auto;
-    }
-
-    &__wrap {
-        width: 50%;
-        height: 500px;
-        line-height: 0;
+    &__gallery {
         position: relative;
-        transform-style: preserve-3d;
-        transform: perspective(200px);
-        transition: 0.2s;
+        display: flex;
+        justify-content: flex-start;
+        gap: 2rem;
+        // flex-wrap: wrap;
+        align-items: center;
+        // overflow-x: scroll;
     }
 
     &__box {
-        position: absolute;
-        top: calc(50% - #{$imageH / 2});
-        left: calc(50% - #{$imageW / 2});
+        position: relative;
         transform-style: preserve-3d;
-        transition: 0.4s ease;
-        img {
-            width: $imageW;
+        box-shadow: 0px 0px 1rem 0 rgba(0, 0, 0, 0.6);
+        min-width: 30rem;
+
+        .Card {
+            width: 100%;
         }
 
-        @for $i from 1 through $nItems {
+        @for $i from 1 through 8 {
             &:nth-of-type(#{$i}) {
-                transform: scale(1) translateX(0) translateY(#{-$i * $gapY}px) translateZ(#{$i * -$gapZ}px);
-                img {
-                    filter: blur(#{$i * 0.8}px);
-                }
+                // transform: rotate(1deg * f.random-float(-3, 3));
             }
         }
-
-        &:nth-of-type(1) {
-            animation: fadeIn 0.2s backwards;
-            outline: none;
-            transform: scale(1) translateX(0) translateY(20px) translateZ(20px);
-            img {
-                filter: blur(0px);
-            }
-        }
-    }
-
-    &__menu {
-        li {
-            padding: 0.5rem;
-            font-weight: 700;
-            a {
-                position: relative;
-                display: block;
-                text-decoration: none;
-                color: #575252;
-                padding: 0 0 0 2rem;
-                transition: all 0.2s ease;
-                &:before {
-                    position: absolute;
-                    top: 50%;
-                    left: 0;
-                    transform: translate(0, -50%);
-                    width: 10px;
-                    height: 0;
-                    background: black;
-                    content: " ";
-                    transition: all 0.2s ease;
-                    border-radius: 5px;
-                }
-                &:hover {
-                    color: black;
-                    &:before {
-                        height: 100%;
-                    }
-                }
-            }
-        }
-    }
-}
-
-@keyframes fadeIn {
-    0% {
-        transform: scale(1) translateX(0) translateY(80px) translateZ(20px);
-        opacity: 0;
-    }
-    100% {
-        transform: scale(1) translateX(0) translateY(20px) translateZ(20px);
-        opacity: 1;
     }
 }
