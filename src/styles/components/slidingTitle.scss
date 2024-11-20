@@ -1,4 +1,5 @@
 @use "@/styles/utils/typography" as typo;
+@use "@/styles/utils/mq" as mq;
 
 .slidingTitle {
     position: relative;
@@ -9,11 +10,28 @@
         position: relative;
         top: 0;
         left: 0;
-        font-size: 15.5vw;
         font-weight: 700;
         white-space: nowrap;
         text-transform: uppercase;
         -webkit-text-stroke: 2px white;
         -webkit-text-fill-color: transparent;
+    }
+}
+
+@include mq.responsiveTo("md") {
+    .slidingTitle {
+        padding-top: 8rem;
+        &__title {
+            font-size: 14vw;
+        }
+    }
+}
+
+@include mq.responsiveFrom("md") {
+    .slidingTitle {
+        padding-top: 5rem;
+        &__title {
+            font-size: 15.1vw;
+        }
     }
 }
