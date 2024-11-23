@@ -27,7 +27,7 @@
     {
       "id": 1,
       "title": "Iconic design masters molded my vision",
-      "description": "Design culture grew up in me at the <strong>Politecnico di Milano</strong>, during workshops with Giovanni Anceschi, Bob Noorda, Giovanni Baule, Sebastiano Bagnara. The one-year experience at the <strong>Escola Elisava</strong> in Barcelona triggered my interest in <strong>technology as creativity inspiration</strong>.",
+      "description": "I built my design culture at the <strong>Politecnico di Milano</strong>, attending courses with masters such as Giovanni Anceschi, Bob Noorda, and Sebastiano Bagnara. My experience at the <strong>Elisava School</strong> in Barcelona reignited my interest in the fusion of <strong>technology and creativity</strong>",
       "camera": {
         "desktop": {
           "rotationX": 0,
@@ -66,7 +66,7 @@
     {
       "id": 2,
       "title": "Working in digital design since 2000",
-      "description": "I started with my small personal company during Italy's digital communication boom. After 3 years, with Andrea, Michele and Nicola, we created <strong>WIP Italia</strong>, a <strong>digital design company</strong> that has been developing products for renowned Italian and international brands since 2003",
+      "description": "I started as a freelancer during Italy's digital communication boom. With Andrea, Michele and Nicola, we created <strong>WIP Italia</strong>, a <strong>digital design company</strong> that has been developing products for renowned Italian and international brands since 2003",
       "camera": {
         "desktop": {
           "rotationX": -12,
@@ -81,7 +81,7 @@
           "rotationY": 5,
           "rotationZ": -2,
           "positionX": 5,
-          "positionY": 20,
+          "positionY": 17,
           "positionZ": 35
         }
       },
@@ -125,11 +125,11 @@
         },
         "mobile": {
           "rotationX": -26,
-          "rotationY": 1,
+          "rotationY": 7,
           "rotationZ": -7,
           "positionX": -12,
-          "positionY": 14,
-          "positionZ": 22
+          "positionY": 10,
+          "positionZ": 27
         }
       },
       "tips": [
@@ -167,11 +167,11 @@
           "positionZ": -35
         },
         "mobile": {
-          "rotationX": -158,
+          "rotationX": -155,
           "rotationY": 15,
-          "rotationZ": -184,
+          "rotationZ": -185,
           "positionX": 6,
-          "positionY": 12,
+          "positionY": 13,
           "positionZ": -45
         }
       },

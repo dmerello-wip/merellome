@@ -17,7 +17,7 @@
     perspective: 80rem;
     pointer-events: none;
     transition: all 0.6s cubic-bezier(0.5, 0, 0.5, 1);
-    --max-width: 50rem;
+    --max-width: 45rem;
     max-width: var(--max-width);
     border: 0px solid transparent;
     &:nth-child(odd) {
@@ -61,7 +61,7 @@
                 overflow: hidden;
                 h2 {
                     position: relative;
-                    font-weight: 400;
+                    // font-weight: 200;
                     // @include typo.multiline-gradient-text(1.1);
                     transition: all 0.3s ease;
                     font-size: var(--text-heading1-font-size);
@@ -93,7 +93,7 @@
 
 @include mq.responsiveTo("md") {
     .navSlide {
-        padding: 0rem 2rem 3rem 2rem;
+        padding: 0rem var(--container-pad-x) 3rem var(--container-pad-x);
         &--open {
             left: -80%;
         }

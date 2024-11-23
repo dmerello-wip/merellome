@@ -4,18 +4,13 @@ export const useIsMobile = () => {
     const [isMobile, setIsMobile] = useState(false);
 
     useEffect(() => {
-        // Funzione che controlla la dimensione della viewport
         const checkMobile = () => {
             setIsMobile(window.innerWidth < 768);
         };
-
-        // Check iniziale
         checkMobile();
 
-        // Aggiungi event listener per il resize
         window.addEventListener('resize', checkMobile);
 
-        // Cleanup dell'event listener
         return () => {
             window.removeEventListener('resize', checkMobile);
         };

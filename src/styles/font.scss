@@ -1,6 +1,22 @@
 @font-face {
-  font-family: 'Archivo';
-  src: url('../fonts/Archivo-VariableFont_wdth,wght.ttf') format('truetype');
+  font-family: "Archivo";
+  src: url("../fonts/Archivo-VariableFont_wdth,wght.ttf") format("truetype");
+  font-weight: 200 700;
+  font-display: swap;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "playfair";
+  src: url("../fonts/PlayfairDisplay-VariableFont_wght.ttf") format("truetype");
+  font-weight: 200 700;
+  font-display: swap;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "RaveoVF";
+  src: url("../fonts/RaveoVF.ttf") format("truetype");
   font-weight: 200 700;
   font-display: swap;
   font-style: normal;
