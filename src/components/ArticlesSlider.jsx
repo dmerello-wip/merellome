@@ -18,26 +18,37 @@ const ArticlesSlider = ({contents}) => {
   }, [])
 
   useGSAP((context, contextSafe) => {
-    if(!wrapperRef.current) {
-      return;
-    }
+    if(!wrapperRef.current) return;
+
     let ctx = gsap.context(() => {
         
-      const trigger = {
+      gsap.to(galleryRef.current.children, {
+        scrollTrigger: {
             trigger: wrapperRef.current,
             start: 'top top',
             end: () => "+=" + wrapperRef.current.offsetWidth,
             pin: true,
             scrub: true,
-            invalidateOnRefresh: true,
-            // markers: true,
-        }
+        },
+        x: () => -(galleryRef.current.scrollWidth - document.documentElement.clientWidth) + "px",
+        ease: 'none'
+      });
         
-        gsap.to(galleryRef.current.children, {
-          scrollTrigger: trigger,
-          x: () => -(galleryRef.current.scrollWidth - document.documentElement.clientWidth) + "px",
-          ease: 'none'
-        });
+      gsap.from(galleryRef.current.children, {
+        scrollTrigger: {
+            trigger: wrapperRef.current,
+            start: 'top 30%',
+            end: 'bottom top',
+            scrub: true,
+            // markers: true
+        },
+        // y: '2rem',
+        scale: 0.9,
+        opacity: 0,
+        ease: 'none',
+        stagger: 1
+      });
+       
     });
 
     return () => ctx.revert();

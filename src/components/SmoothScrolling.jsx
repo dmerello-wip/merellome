@@ -27,8 +27,8 @@ function SmoothScrolling({ children }) {
 
   return (
     <ReactLenis root className="lenis-wrapper" ref={lenisRef} autoRaf={false} options={{   
-      lerp: 0.1,  // Valore più basso per uno scroll più lento e fluido
-      duration: 1.5,
+      lerp: 0.1,  // 0.1 > smoother - 1 > neater
+      duration: 0.5, 
       smoothTouch: true,
       wheelMultiplier: 0.8,
       touchMultiplier: 0.8, 

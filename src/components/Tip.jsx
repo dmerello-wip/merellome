@@ -38,7 +38,6 @@ const Tip = ({ id }) => {
   return (
       <Html>
         <div className={tipClasses} onClick={actionHandler}>
-          <div className="tip__circle"></div>
         </div>
       </Html>
   )
