@@ -2,7 +2,6 @@ import '@/helpers/envConfig'
 import { Header } from "@/components/Header"
 import { Navigator } from "@/components/Navigator"
 import { TempSpacer } from "@/components/TempSpacer"
-import dynamic from 'next/dynamic'
 import { Suspense } from 'react';
 import { Loader } from '@/components/Loader'
 import { ArticlesSlider } from '@/components/ArticlesSlider'

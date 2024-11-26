@@ -1,3 +1,5 @@
+'use client'
+
 import _NavSlide from '@/styles/components/NavSlide.scss'
 import { useEffect, useRef, useState } from "react"
 import { ScrollTrigger } from 'gsap/all'

@@ -15,13 +15,14 @@
     --color-dark: #101010;
     --color--text: #b8b8b8;
     --color--light: #ffffff;
-    --base-font-family: "Archivo", sans-serif;
+    --base-font-family: "madefor", sans-serif;
+    // --base-font-family: "Archivo", sans-serif;
     // --base-font-family: "playfair", sans-serif;
     // --base-font-family: "RaveoVF", sans-serif;
     // --base-font-family: system-ui, sans-serif;
     --cards-radius: 10px;
     --text-line-height: 1.6em;
-    --text-heading1-line-height: 1em;
+    --text-heading1-line-height: 1.1em;
     --text-heading2-line-height: 1.3em;
 }
 
@@ -37,8 +38,8 @@
 @include mq.responsiveFrom("md") {
     :root {
         --padding-cards: 2.5rem;
-        --text-heading1-font-size: 3.2rem;
-        --text-heading2-font-size: 1.8rem;
+        --text-heading1-font-size: 2.5rem;
+        --text-heading2-font-size: 1.4rem;
         --text-base-font-size: 16px;
         --container-pad-x: 3rem;
     }
