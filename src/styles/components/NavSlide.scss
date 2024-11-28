@@ -115,7 +115,7 @@
 }
 @include mq.responsiveFrom("lg") {
     .navSlide {
-        &--open {
+        &:has(.NavTrigger--open) {
             left: -3rem;
         }
     }
