@@ -1,0 +1,7 @@
+@use "@/styles/utils/shortcuts";
+
+.NavTrigger {
+    position: absolute;
+    @extend %absoluteCentered;
+    height: 100vh;
+}

@@ -1,22 +1,20 @@
-'use client'
 
 
 import _SlidingTitle from '@/styles/components/slidingTitle.scss'
-import { useGSAP } from '@gsap/react'
-import { useEffect, useRef } from "react"
-import  { gsap } from "gsap"
-import { ScrollTrigger } from 'gsap/all'
+import { useRef } from "react"
+
+import { gsap } from 'gsap/dist/gsap'
+import { ScrollTrigger } from 'gsap/dist/ScrollTrigger'
+import { useIsomorphicLayoutEffect } from '@/hooks/useIsomorphicLayoutEffect';
 
 const SlidingTitle = ({content}) => {
 
   const titleRef = useRef();
   
-  useEffect(() => {
-    gsap.registerPlugin(ScrollTrigger)
-  }, [])
-
-  useGSAP((context, contextSafe) => {
+  useIsomorphicLayoutEffect(() => {
     let ctx = gsap.context(() => {
+
+    gsap.registerPlugin(ScrollTrigger)
         
       const trigger = {
             trigger: titleRef.current,

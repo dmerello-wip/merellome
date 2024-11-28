@@ -4,14 +4,14 @@ import Image from 'next/image'
 import { IconX } from './icons/IconX'
 import { IconArrowRight } from './icons/IconArrowRight'
 
-const Card = ({image, title, description, link, isActive, closeAction }) => {
+const Card = ({id, image, title, description, link, isActive, closeAction }) => {
 
   const tipClasses = classNames('Card', {
     'Card--active': isActive
   })
 
 return (
-    <div className={tipClasses}>
+    <div className={tipClasses} data-id={id}>
       <div className='Card__close'>
         {closeAction &&
           <button className="btn--primary" onClick={closeAction}>

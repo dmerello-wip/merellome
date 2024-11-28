@@ -2,10 +2,12 @@
 
 import _ArticlesSlider from '@/styles/components/articlesSlider.scss'
 import { Card } from './Card';
-import { useGSAP } from '@gsap/react'
-import { useEffect, useRef } from "react"
-import  { gsap } from "gsap"
-import { ScrollTrigger } from 'gsap/all'
+import { useRef } from "react"
+
+import { gsap } from 'gsap/dist/gsap'
+import { ScrollTrigger } from 'gsap/dist/ScrollTrigger'
+import { useIsomorphicLayoutEffect } from '@/hooks/useIsomorphicLayoutEffect';
+
 import { SlidingTitle } from './SlidingTitle';
 
 const ArticlesSlider = ({contents}) => {
@@ -13,14 +15,13 @@ const ArticlesSlider = ({contents}) => {
    const wrapperRef = useRef();
    const galleryRef = useRef();
   
-  useEffect(() => {
-    gsap.registerPlugin(ScrollTrigger)
-  }, [])
+  useIsomorphicLayoutEffect(() => {
 
-  useGSAP((context, contextSafe) => {
-    if(!wrapperRef.current) return;
-
+    if(!wrapperRef.current || !gsap || !ScrollTrigger) return;
+    
     let ctx = gsap.context(() => {
+
+      gsap.registerPlugin(ScrollTrigger)
         
       gsap.to(galleryRef.current.children, {
         scrollTrigger: {
@@ -53,7 +54,8 @@ const ArticlesSlider = ({contents}) => {
 
     return () => ctx.revert();
 
-  }, []);
+
+  }, [])
 
 
   return (

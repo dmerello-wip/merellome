@@ -1,47 +1,52 @@
 'use client'
 
-import _NavSlide from '@/styles/components/NavSlide.scss'
-import { useEffect, useRef, useState } from "react"
-import { ScrollTrigger } from 'gsap/all'
-import { splitTextByLetter } from '@/helpers/textUtils';
+import _NavSlide from '@/styles/components/NavTrigger.scss'
+import {  useEffect, useRef } from "react"
 import useNavigatorStore from '@/stores/navigatorStore'
-import  { gsap } from "gsap"
-import { useGSAP } from '@gsap/react'
-import { Card } from './Card'
 import classNames from 'classnames';
 
-const NavSlide = (props) => {
+import { gsap } from 'gsap/dist/gsap'
+import { ScrollTrigger } from 'gsap/dist/ScrollTrigger'
+import { useIsomorphicLayoutEffect } from '@/hooks/useIsomorphicLayoutEffect';
 
-  const { title, description, tips, cameraStartSettings, cameraEndSettings, slideIndex, setCamera } = props;
-  const slideRef = useRef();
-  const firstRun = useRef(true);
+const NavTrigger = (props) => {
 
+  const { cameraStartSettings, cameraEndSettings, slideIndex, setCamera } = props;
+  const navTriggerRef = useRef();
   const { setSection} = useNavigatorStore((state) => state)
   const currentTip = useNavigatorStore((state) => state.tip)
-  const setTip = useNavigatorStore((state) => state.setTip)
+  // const setTip = useNavigatorStore((state) => state.setTip)
 
+  const NavTriggerClasses = classNames('NavTrigger', {
+     'NavTrigger--open': (currentTip && Number(currentTip.split('|')[0]) === slideIndex)
+  })
 
-  /* -------------------- animations -------------------- */
-
-  // TODO: fix this dirty hack
-  // onload of these slides i refresh scrolltrigger to make the next components work using it
   useEffect(() => {
-    gsap.registerPlugin(ScrollTrigger)
-    if (document.readyState === 'complete') {
-      ScrollTrigger.refresh();
-    } else {
-      window.addEventListener('load', ScrollTrigger.refresh);
+    const closeAllCards = () => {
+      console.log('closeAllCards');
+      const cards = document.querySelectorAll('.navSlide__content__tips .Card');
+      cards.forEach(card => {
+          card.classList.remove('Card--active');
+      });
     }
-  }, [])
-  
-  useGSAP((context, contextSafe) => {
+    const activateCard = () => {
+      closeAllCards();
+      const tipElement = document.querySelector(`[data-id="${currentTip}"]`);
+      tipElement.classList.add('Card--active'); 
+    }
 
-    if (firstRun.current) {
-      firstRun.current = false;
-      return;
+    if(!currentTip) {
+      closeAllCards();
+    } else {
+      activateCard()
     }
+  }, [currentTip, slideIndex])
+
+  useIsomorphicLayoutEffect(() => {
     
     let ctx = gsap.context(() => {
+        
+        gsap.registerPlugin(ScrollTrigger)
       
         const controlledRotation = cameraStartSettings;
 
@@ -50,7 +55,7 @@ const NavSlide = (props) => {
           gsap.to(sectionPartialProgress, {
           perc: 1,
           scrollTrigger: {
-              trigger: slideRef.current,
+              trigger: navTriggerRef.current,
               scrub: 0.2,
               start: 'top center',
           },
@@ -74,7 +79,7 @@ const NavSlide = (props) => {
           positionY: cameraEndSettings.positionY,
           positionZ: cameraEndSettings.positionZ,
           scrollTrigger: {
-              trigger: slideRef.current,
+              trigger: navTriggerRef.current,
               scrub: 0.2,
               start: 'top top',
               // markers : true,
@@ -85,13 +90,14 @@ const NavSlide = (props) => {
           }, 
         });
 
+
         /* ------------ 03. animate slide card ------------ */
         gsap.from(`#slide-${slideIndex} .navSlide__content`, {
           // x: '-100%',
           // rotateY: '180deg',
           rotateX: '120deg',
           scrollTrigger: {
-              trigger: slideRef.current,
+              trigger: navTriggerRef.current,
               scrub: 0.1,
               start: 'top bottom',
               end: 'center center',
@@ -104,7 +110,7 @@ const NavSlide = (props) => {
           opacity: 0,
           // filter: 'blur(10px)',
           scrollTrigger: {
-              trigger: slideRef.current,
+              trigger: navTriggerRef.current,
               scrub: 0.1,
               start: 'top center',
               end: 'top 0%',
@@ -119,7 +125,7 @@ const NavSlide = (props) => {
           opacity: 0,
           y: '-2rem',
           scrollTrigger: {
-              trigger: slideRef.current,
+              trigger: navTriggerRef.current,
               scrub: 0.1,
               start: 'top 20%',
               end: 'top top',
@@ -130,49 +136,18 @@ const NavSlide = (props) => {
 
     return () => ctx.revert();
 
-  }, [cameraStartSettings, cameraEndSettings, slideIndex, firstRun]);
+  }, [cameraStartSettings, cameraEndSettings, slideIndex]);
 
 
-  /* -------------------- tips cards -------------------- */
-
-
-
-  const navSlideClasses = classNames('navSlide', {
-    'navSlide--open': (currentTip && Number(currentTip.split('|')[0]) === slideIndex)
-  })
 
   /* -------------------- render -------------------- */
 
   return (
-    <div className={navSlideClasses} ref={slideRef} id={`slide-${slideIndex}`}>
-      <div className="navSlide__content">
-        <div className="navSlide__content__card">
-          <div className='navSlide__content__card__title'>
-            <h2>{splitTextByLetter(title)}</h2>
-          </div>
-          <div className='navSlide__content__card__description' dangerouslySetInnerHTML={{ __html: description }} />
-        </div>
-        <div className='navSlide__content__tips'>
-          {tips.map((tip,i) => {
-            return (
-              <Card
-                key={`tip-${i}`}
-                isActive={currentTip === `${slideIndex}|${i}`}
-                image={tip.image}
-                title={tip.title}
-                description ={tip.description}
-                link={tip.link}
-                closeAction={()=> setTip(null)}
-              />
-            )
-          })}
-        </div>
-      </div>
-    </div>
+    <div className={NavTriggerClasses} ref={navTriggerRef} id={`slide-${slideIndex}`} data-index={slideIndex} data-tip={currentTip} />
   )
 
 }
 
 
 
-export { NavSlide }
+export { NavTrigger }

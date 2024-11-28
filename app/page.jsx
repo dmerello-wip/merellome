@@ -1,10 +1,11 @@
 import '@/helpers/envConfig'
 import { Header } from "@/components/Header"
-import { Navigator } from "@/components/Navigator"
+import { Navigator } from "@/components/navigator/Navigator"
 import { TempSpacer } from "@/components/TempSpacer"
-import { Suspense } from 'react';
-import { Loader } from '@/components/Loader'
+// import { Suspense } from 'react';
+// import { Loader } from '@/components/Loader'
 import { ArticlesSlider } from '@/components/ArticlesSlider'
+import dynamic from 'next/dynamic';
 
 
 export default async function Page() {
@@ -17,14 +18,15 @@ export default async function Page() {
     res.json()
   )
 
-
   return (
     <>
       <Header />
 
-      <Suspense fallback={<Loader fixed={true} />}>
+      
+      {/* <Suspense fallback={<Loader fixed={true} />}> */}
         <Navigator contents={slides} />
-      </Suspense>
+      {/* </Suspense>  */}
+     
       <ArticlesSlider contents={articles.items} />
       <TempSpacer>1. Contenuto sotto al navigator</TempSpacer>
       <TempSpacer>2. Contenuto sotto al navigator</TempSpacer>

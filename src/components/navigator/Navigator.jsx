@@ -3,13 +3,11 @@
 import _navigator from '@/styles/components/Navigator.scss'
 import { useRef, Suspense } from "react"
 import dynamic from 'next/dynamic'
-import { Loader } from '@/components/Loader'
+import { NavSlide } from '@/components/navigator/NavSlide'
 import { PerspectiveCamera } from '@react-three/drei'
 import * as THREE from 'three'
 import { useIsMobile } from '@/hooks/useIsMobile';
-import { useControls } from 'leva'
 
-const NavSlide = dynamic(() => import('@/components/NavSlide').then((mod) => mod.NavSlide), { ssr: false })
 const Logoroom = dynamic(() => import('@/components/Logoroom').then((mod) => mod.Logoroom), { ssr: false })
 const View = dynamic(() => import('@/components/View').then((mod) => mod.View), {
   ssr: false
@@ -18,18 +16,9 @@ const View = dynamic(() => import('@/components/View').then((mod) => mod.View), 
 
 const Navigator = ( { contents }) => {
 
-
   const cameraHolderRef = useRef()
   const isMobile = useIsMobile();
   const deviceType = isMobile ? 'mobile' : 'desktop';
-
-  /* GUI to test positions */
-//   const {
-//     levaRotationX, levaRotationY, levaRotationZ, levaPositionX, levaPositionY, levaPositionZ,
-//   } = useControls({
-//     levaRotationX: 0,levaRotationY: 0,levaRotationZ: 0,levaPositionX: 0,levaPositionY: 0,levaPositionZ: 0
-//  });
-  
 
   /* Callback to set Camera from dom scroll */
   const setCamera = (newSettings) => {
@@ -47,7 +36,6 @@ const Navigator = ( { contents }) => {
     }
   }
 
-
   /* dom slides render */
   const renderNavSlides = () => {
 
@@ -57,7 +45,7 @@ const Navigator = ( { contents }) => {
           ? el.camera[deviceType] 
           : contents.slides[i + 1].camera[deviceType];
       return (
-<       NavSlide
+        <NavSlide
           key={`slide-${i}`}
           slideIndex={i}
           title={el.title}
@@ -96,12 +84,6 @@ const Navigator = ( { contents }) => {
                     THREE.MathUtils.degToRad(contents.slides[0].camera[deviceType].rotationY), 
                     THREE.MathUtils.degToRad(contents.slides[0].camera[deviceType].rotationZ)
                   ]}
-                  // position={[
-                  //   levaPositionX, levaPositionY, levaPositionZ
-                  // ]} 
-                  // rotation={[
-                  //   THREE.MathUtils.degToRad(levaRotationX), THREE.MathUtils.degToRad(levaRotationY), THREE.MathUtils.degToRad(levaRotationZ)
-                  // ]}
                   >
                     <PerspectiveCamera
                       makeDefault
