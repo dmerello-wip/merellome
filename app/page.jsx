@@ -5,7 +5,6 @@ import { TempSpacer } from "@/components/TempSpacer"
 // import { Suspense } from 'react';
 // import { Loader } from '@/components/Loader'
 import { ArticlesSlider } from '@/components/ArticlesSlider'
-import dynamic from 'next/dynamic';
 
 
 export default async function Page() {

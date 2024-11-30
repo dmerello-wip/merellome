@@ -21,36 +21,36 @@ const ArticlesSlider = ({contents}) => {
     
     let ctx = gsap.context(() => {
 
-      gsap.registerPlugin(ScrollTrigger)
-        
-      gsap.to(galleryRef.current.children, {
-        scrollTrigger: {
-            trigger: wrapperRef.current,
-            start: 'top top',
-            end: () => "+=" + wrapperRef.current.offsetWidth,
-            pin: true,
-            scrub: true,
-        },
-        x: () => -(galleryRef.current.scrollWidth - document.documentElement.clientWidth) + "px",
-        ease: 'none'
-      });
-        
-      gsap.from(galleryRef.current.children, {
-        scrollTrigger: {
-            trigger: wrapperRef.current,
-            start: 'top 30%',
-            end: 'bottom top',
-            scrub: true,
-            // markers: true
-        },
-        // y: '2rem',
-        scale: 0.9,
-        opacity: 0,
-        ease: 'none',
-        stagger: 1
-      });
+        gsap.registerPlugin(ScrollTrigger)
+          
+        /* ------------ animate all cards wrapper ------------ */
+        gsap.to(galleryRef.current.children, {
+          scrollTrigger: {
+              trigger: wrapperRef.current,
+              start: 'top top',
+              end: () => "+=" + wrapperRef.current.offsetWidth,
+              pin: true,
+              scrub: true,
+          },
+          x: () => -(galleryRef.current.scrollWidth - document.documentElement.clientWidth) + "px",
+          ease: 'none'
+        });
+          
+        /* ------------ animate single cards ------------ */
+        gsap.from(galleryRef.current.children, {
+          scrollTrigger: {
+              trigger: wrapperRef.current,
+              start: 'top 40%',
+              scrub: true,
+              markers: true
+          },
+          scale: 0.9,
+          opacity: 0,
+          ease: 'none',
+          stagger: 1
+        });
        
-    });
+    }, wrapperRef);
 
     return () => ctx.revert();
 

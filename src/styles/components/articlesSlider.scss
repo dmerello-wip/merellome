@@ -21,6 +21,12 @@
 
         .Card {
             width: 100%;
+            transition: all 0.25s ease-in-out;
+        }
+        &:hover {
+            .Card {
+                transform: scale(1.025);
+            }
         }
 
         @for $i from 1 through 8 {

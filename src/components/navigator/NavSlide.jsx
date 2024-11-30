@@ -1,8 +1,8 @@
 import _NavSlide from '@/styles/components/NavSlide.scss'
-import { splitTextByLetter } from '@/helpers/textUtils'
 
 import { Card } from '@/components/Card'
 import { NavTrigger } from '@/components/navigator/NavTrigger'
+import { SplittedText } from '@/components/SplittedText'
 
 const NavSlide = (props) => {
 
@@ -21,7 +21,7 @@ const NavSlide = (props) => {
       <div className="navSlide__content">
         <div className="navSlide__content__card">
           <div className='navSlide__content__card__title'>
-            <h2>{splitTextByLetter(title)}</h2>
+            <h2><SplittedText contentString={title} /></h2>
           </div>
           <div className='navSlide__content__card__description' dangerouslySetInnerHTML={{ __html: description }} />
         </div>

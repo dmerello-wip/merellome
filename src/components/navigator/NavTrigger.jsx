@@ -23,7 +23,6 @@ const NavTrigger = (props) => {
 
   useEffect(() => {
     const closeAllCards = () => {
-      console.log('closeAllCards');
       const cards = document.querySelectorAll('.navSlide__content__tips .Card');
       cards.forEach(card => {
           card.classList.remove('Card--active');
@@ -104,21 +103,6 @@ const NavTrigger = (props) => {
           },
         });
 
-
-        /* ------------ 04. animate slide titles ------------ */
-        gsap.from(`#slide-${slideIndex} .letter`, {
-          opacity: 0,
-          // filter: 'blur(10px)',
-          scrollTrigger: {
-              trigger: navTriggerRef.current,
-              scrub: 0.1,
-              start: 'top center',
-              end: 'top 0%',
-          },
-          stagger: {
-              each: 0.04,
-          },
-        });
 
         /* ------------ 05. animate slide descriptions ------------ */
         gsap.from(`#slide-${slideIndex} .navSlide__content__card__description`, {
