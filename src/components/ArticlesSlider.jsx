@@ -10,6 +10,9 @@ import { useIsomorphicLayoutEffect } from '@/hooks/useIsomorphicLayoutEffect';
 
 import { SlidingTitle } from './SlidingTitle';
 
+//TODO: usare l'hook useAspectRation per gestire alternativamente il pin dello scrollTrigger fra wrapper e gallery
+// se no su 16:9 non si vedono le cards
+
 const ArticlesSlider = ({contents}) => {
 
    const wrapperRef = useRef();
@@ -22,7 +25,7 @@ const ArticlesSlider = ({contents}) => {
     let ctx = gsap.context(() => {
 
         gsap.registerPlugin(ScrollTrigger)
-          
+
         /* ------------ animate all cards wrapper ------------ */
         gsap.to(galleryRef.current.children, {
           scrollTrigger: {
@@ -42,7 +45,7 @@ const ArticlesSlider = ({contents}) => {
               trigger: wrapperRef.current,
               start: 'top 40%',
               scrub: true,
-              markers: true
+              // markers: true
           },
           scale: 0.9,
           opacity: 0,
