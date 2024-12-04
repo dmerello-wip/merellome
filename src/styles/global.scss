@@ -15,22 +15,30 @@
     --color-dark: #101010;
     --color--text: #b8b8b8;
     --color--light: #ffffff;
-    --base-font-family: "madefor", sans-serif;
+    --base-font-family: "figtree", sans-serif;
+    // --base-font-family: "madefor", sans-serif;
     // --base-font-family: "Archivo", sans-serif;
     // --base-font-family: "playfair", sans-serif;
     // --base-font-family: "RaveoVF", sans-serif;
     // --base-font-family: system-ui, sans-serif;
     --cards-radius: 10px;
+
     --text-line-height: 1.6em;
-    --text-heading1-line-height: 1.1em;
-    --text-heading2-line-height: 1.3em;
+
+    --text-heading1-font-weight: 400;
+    --text-heading2-font-weight: 400;
 }
 
 @include mq.responsiveTo("md") {
     :root {
         --padding-cards: 1.5rem;
+
         --text-heading1-font-size: 1.8rem;
-        --text-heading2-font-size: 1.4rem;
+        --text-heading1-line-height: 2.2rem;
+
+        --text-heading2-font-size: 1.6rem;
+        --text-heading2-line-height: 2rem;
+
         --text-base-font-size: 14px;
         --container-pad-x: 2rem;
     }
@@ -38,8 +46,13 @@
 @include mq.responsiveFrom("md") {
     :root {
         --padding-cards: 2.5rem;
+
         --text-heading1-font-size: 2.5rem;
-        --text-heading2-font-size: 1.4rem;
+        --text-heading1-line-height: 2.8rem;
+
+        --text-heading2-font-size: 1.8rem;
+        --text-heading2-line-height: 2.2rem;
+
         --text-base-font-size: 16px;
         --container-pad-x: 3rem;
     }

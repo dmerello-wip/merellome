@@ -61,9 +61,9 @@
                 overflow: hidden;
                 font-size: var(--text-heading1-font-size);
                 line-height: var(--text-heading1-line-height);
+                font-weight: var(--text-heading1-font-weight);
                 h2 {
                     position: relative;
-                    // font-weight: 200;
                     // @include typo.multiline-gradient-text(1.1);
                     transition: all 0.3s ease;
                 }
