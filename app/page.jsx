@@ -14,7 +14,7 @@ export default async function Page() {
     res.json()
   )
   const articles = await fetch(`${url}/api/articles`, { next: { tags: ['articles'] } }).then((res) =>
-    res.json(
+    res.json()
   )
 
   // yes, using the api is useless... why don't:
@@ -24,10 +24,7 @@ export default async function Page() {
   return (
     <>
       <Header />
-
-      
       <Navigator contents={slides} />
-     
       <ArticlesSlider contents={articles.items} />
       <TempSpacer>1. Contenuto sotto al navigator</TempSpacer>
       <TempSpacer>2. Contenuto sotto al navigator</TempSpacer>
