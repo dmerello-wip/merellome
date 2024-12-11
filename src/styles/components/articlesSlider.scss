@@ -2,6 +2,9 @@
 @use "@/styles/utils/mq" as mq;
 
 .articlesSlider {
+    &__wrapper {
+        position: relative;
+    }
     &__gallery {
         position: relative;
         display: flex;
