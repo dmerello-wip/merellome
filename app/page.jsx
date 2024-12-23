@@ -8,7 +8,7 @@ import { ArticlesSlider } from '@/components/ArticlesSlider'
 
 export default async function Page() {
 
-  const url = process.env.BASE_URL || '';
+  const url = process.env.BASE_URL || 'https://merellome.vercel.app';
   
   const slides = await fetch(`${url}/api/navigator`, { next: { tags: ['navigator'] } }).then((res) =>
     res.json()
