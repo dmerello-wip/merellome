@@ -9,10 +9,10 @@
 
 :root {
     --color-bg: rgba(10, 10, 10, 1);
-    --color--bg-lines: #292525;
+    --color-dark: rgb(21, 21, 21);
+    --color-bg-lines: #201e1e;
     --color-primary: #000000;
     --color-secondary: rgb(197, 23, 23);
-    --color-dark: #101010;
     --color--text: #b8b8b8;
     --color--light: #ffffff;
     --base-font-family: "figtree", sans-serif;
@@ -34,8 +34,8 @@
         --text-heading2-font-size: 1.6rem;
         --text-heading2-line-height: 2rem;
 
-        --text-base-font-size: 14px;
-        --container-pad-x: 2rem;
+        --text-base-font-size: 16px;
+        --container-pad-x: 1rem;
     }
 }
 @include mq.responsiveFrom("md") {
@@ -67,41 +67,41 @@ body {
     background: var(--color-bg);
     font-family: var(--base-font-family);
     color: var(--color--text);
-    font-weight: 200;
-    // i can't do it in navigator for mantain sticky context
-    // i need it for html tips inside threejs
-    overflow-x: hidden;
+    font-weight: 400;
+    --square-size: 40px;
+    --line-width: 1px;
+    background: var(--color-bg);
 
     > * {
         z-index: 2;
     }
-    &:before {
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100vw;
-        height: 100vh;
-        z-index: 1;
-        pointer-events: none;
-        content: "";
-        --square-size: 60px;
-        --line-width: 1px;
-        background: repeating-linear-gradient(
-                90deg,
-                transparent 0,
-                transparent var(--square-size),
-                var(--color--bg-lines) var(--square-size),
-                var(--color--bg-lines) calc(var(--square-size) + var(--line-width))
-            ),
-            repeating-linear-gradient(
-                0deg,
-                transparent 0,
-                transparent var(--square-size),
-                var(--color--bg-lines) var(--square-size),
-                var(--color--bg-lines) calc(var(--square-size) + var(--line-width))
-            );
-        z-index: 1;
-    }
+    // &:before {
+    //     position: fixed;
+    //     top: 0;
+    //     left: 0;
+    //     width: 100vw;
+    //     height: 100vh;
+    //     z-index: 1;
+    //     pointer-events: none;
+    //     content: "";
+    //     --square-size: 60px;
+    //     --line-width: 1px;
+    //     background: repeating-linear-gradient(
+    //             90deg,
+    //             transparent 0,
+    //             transparent var(--square-size),
+    //             var(--color-bg-lines) var(--square-size),
+    //             var(--color-bg-lines) calc(var(--square-size) + var(--line-width))
+    //         ),
+    //         repeating-linear-gradient(
+    //             0deg,
+    //             transparent 0,
+    //             transparent var(--square-size),
+    //             var(--color-bg-lines) var(--square-size),
+    //             var(--color-bg-lines) calc(var(--square-size) + var(--line-width))
+    //         );
+    //     z-index: 1;
+    // }
 }
 
 .word {

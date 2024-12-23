@@ -7,6 +7,7 @@ import { NavSlide } from '@/components/navigator/NavSlide'
 import { PerspectiveCamera } from '@react-three/drei'
 import * as THREE from 'three'
 import { useIsMobile } from '@/hooks/useIsMobile';
+import {Loading} from '@/components/Loading';
 
 const Logoroom = dynamic(() => import('@/components/Logoroom').then((mod) => mod.Logoroom), { ssr: false })
 const View = dynamic(() => import('@/components/View').then((mod) => mod.View), {
@@ -61,43 +62,41 @@ const Navigator = ( { contents }) => {
 
   return (
     <>
-      <div className="navigator">
-        <div className='navigator__canvas'>
-          <View className="navigator__canvas__scene" >
-              <Suspense fallback={null}>
-                
-                {/* ambient light */}
-                <ambientLight intensity={1} />
-                <pointLight position={[20, 20, 20]} intensity={1} decay={0.2} />
-                <pointLight position={[-20, 20, -20]} intensity={2} decay={0.2} />
+        <div className="navigator">
+          <div className='navigator__canvas'>
+            <View className="navigator__canvas__scene" >
+                  
+                  <ambientLight intensity={1} />
+                  <pointLight position={[20, 20, 20]} intensity={1} decay={0.2} />
+                  <pointLight position={[-20, 20, -20]} intensity={2} decay={0.2} />
 
-                {/* camera inside a group to sert rotation on its own axis */}
-                <group
-                  ref={cameraHolderRef}
-                  position={[
-                      contents.slides[0].camera[deviceType].positionX, 
-                      contents.slides[0].camera[deviceType].positionY, 
-                      contents.slides[0].camera[deviceType].positionZ
-                    ]} 
-                  rotation={[
-                    THREE.MathUtils.degToRad(contents.slides[0].camera[deviceType].rotationX), 
-                    THREE.MathUtils.degToRad(contents.slides[0].camera[deviceType].rotationY), 
-                    THREE.MathUtils.degToRad(contents.slides[0].camera[deviceType].rotationZ)
-                  ]}
-                  >
-                    <PerspectiveCamera
-                      makeDefault
-                      fov={40}                  
-                    />    
-                  </group> 
+                  {/* camera inside a group to sert rotation on its own axis */}
+                  <group
+                    ref={cameraHolderRef}
+                    position={[
+                        contents.slides[0].camera[deviceType].positionX, 
+                        contents.slides[0].camera[deviceType].positionY, 
+                        contents.slides[0].camera[deviceType].positionZ
+                      ]} 
+                    rotation={[
+                      THREE.MathUtils.degToRad(contents.slides[0].camera[deviceType].rotationX), 
+                      THREE.MathUtils.degToRad(contents.slides[0].camera[deviceType].rotationY), 
+                      THREE.MathUtils.degToRad(contents.slides[0].camera[deviceType].rotationZ)
+                    ]}
+                    >
+                      <PerspectiveCamera
+                        makeDefault
+                        fov={40}                  
+                      />    
+                    </group> 
 
+                <Suspense fallback={<Loading fixed={true} />}>
                   <Logoroom />
-
-              </Suspense>
-          </View>
+                </Suspense>
+            </View>
+          </div>
+          {renderNavSlides()}
         </div>
-        {renderNavSlides()}
-      </div>
     </>
   )
 }

@@ -4,6 +4,7 @@
 .articlesSlider {
     &__wrapper {
         position: relative;
+        overflow-x: hidden;
     }
     &__gallery {
         position: relative;

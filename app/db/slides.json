@@ -27,7 +27,7 @@
     {
       "id": 1,
       "title": "Iconic design masters molded my vision",
-      "description": "I built my design culture at the <strong>Politecnico di Milano</strong>, attending courses with masters such as Giovanni Anceschi, Bob Noorda, and Sebastiano Bagnara. My experience at the <strong>Elisava School</strong> in Barcelona reignited my interest in the fusion of <strong>technology and creativity</strong>",
+      "description": "In <strong>Politecnico di Milano</strong> I built my design culture, with masters such as Giovanni Anceschi, Bob Noorda, and Sebastiano Bagnara. At <strong>Escola Elisava</strong> in Barcelona i mixed <strong>technology and creativity</strong> skills",
       "camera": {
         "desktop": {
           "rotationX": 0,
@@ -49,14 +49,14 @@
       "tips": [
         {
           "title": "Politecnico di Milano",
-          "description": "I graduated with top honors from the Politecnico di Milano, specializing in Interface Design at Design Faculty. I lived in an in-depth exploration of design culture, embodying the qualities that have distinguished the best designers across all fields.",
+          "description": "Graduated with top honors, I specialized in Interface Design at Design Faculty. I lived in an in-depth exploration of design culture, embodying the qualities that have distinguished the best designers across all fields.",
           "image": {
             "url": "/img/poli.jpg"
           }
         },
         {
           "title": "Escola Elisava",
-          "description": "During a year of studies in Barcelona for the Erasmus project, the passion for interface design mixed with an interest in coding and experimentation. I was fascinated by the possibility of creating a new way of thinking about design and engeneering.",
+          "description": "During a year of studies in Barcelona, the passion for interface design mixed with an interest in coding and experimentation. I was fascinated by the possibility of creating a new way of thinking about design and engeneering.",
           "image": {
             "url": "/img/elisava.jpg"
           }

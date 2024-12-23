@@ -57,6 +57,7 @@ const NavTrigger = (props) => {
               trigger: navTriggerRef.current,
               scrub: 0.2,
               start: 'top center',
+              type: "touch,pointer",
           },
           ease: "none",
           onUpdate: () => {

@@ -1,12 +1,12 @@
 :root {
-    --color-loader-bg: black;
+    --color-loading-bg: black;
 }
 
-body:has(.loader--fixed) {
+body:has(.loading--fixed) {
     overflow: hidden;
 }
 
-.loader {
+.loading {
     position: absolute;
     top: 50%;
     left: 50%;
@@ -39,7 +39,7 @@ body:has(.loader--fixed) {
     &__core {
         width: 100%;
         height: 100%;
-        background-color: var(--color-loader-bg);
+        background-color: var(--color-loading-bg);
         border-radius: 50%;
     }
 }
