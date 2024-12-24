@@ -66,9 +66,25 @@ const Navigator = ( { contents }) => {
           <div className='navigator__canvas'>
             <View className="navigator__canvas__scene" >
                   
-                  <ambientLight intensity={1} />
-                  <pointLight position={[20, 20, 20]} intensity={1} decay={0.2} castShadow/>
-                  <pointLight position={[-20, 20, -20]} intensity={2} decay={0.2} castShadow/>
+                  <ambientLight intensity={1} castShadow/>
+                  <pointLight
+                    position={[-20, 40, -20]}
+                    intensity={3}
+                    color="#fff"
+                    penumbra={1} 
+                    decay={0.5}
+                    castShadow
+                  />
+                  <pointLight
+                    position={[20, 40, 20]}
+                    intensity={3}
+                    color="#fff"
+                    penumbra={1} 
+                    decay={0.5}
+                    castShadow
+                  />
+                  <directionalLight intensity={1} position={[30, 50, 30]} shadow-radius={1} castShadow />
+                  <fog attach="fog" args={['#0a0a0a', 0, 200]} />
 
                   {/* camera inside a group to sert rotation on its own axis */}
                   <group
@@ -92,15 +108,15 @@ const Navigator = ( { contents }) => {
 
                 <Suspense fallback={<Loading fixed={true} />}>
                   <Logoroom />
+                  {/* floor */}
                   <mesh
-                    material={new THREE.MeshPhongMaterial({ color: 0x333333 })}
+                    material={new THREE.MeshPhongMaterial({ color: 0x470b0b })}
                     rotation={[-Math.PI /2, 0, 0]}
                     position={[0,0,0]}
                     castShadow
                     receiveShadow>
                     <planeGeometry args={[3000,3000]}  />
                   </mesh>
-                  
                 </Suspense>
             </View>
           </div>
