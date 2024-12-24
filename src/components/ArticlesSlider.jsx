@@ -43,14 +43,17 @@ const ArticlesSlider = ({contents}) => {
         gsap.from(galleryRef.current.children, {
           scrollTrigger: {
               trigger: wrapperRef.current,
-              start: 'top 40%',
+              start: 'top 30%',
+              end: 'bottom bottom',
               scrub: true,
               // markers: true
           },
           scale: 0.9,
           opacity: 0,
           ease: 'none',
-          stagger: 1
+          stagger: {
+              each: 1,
+          }
         });
        
     }, wrapperRef);

@@ -23,16 +23,16 @@
 
 @include mq.responsiveTo("md") {
     .slidingTitle {
-        padding-top: 8rem;
+        padding: 2rem 0 1rem 0;
         &__title {
-            font-size: 14vw;
+            font-size: 27vw;
         }
     }
 }
 
 @include mq.responsiveFrom("md") {
     .slidingTitle {
-        padding-top: 5rem;
+        padding: 2rem 0 2rem 0;
         &__title {
             font-size: 15.1vw;
         }

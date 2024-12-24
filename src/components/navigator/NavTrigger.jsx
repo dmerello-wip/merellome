@@ -128,7 +128,13 @@ const NavTrigger = (props) => {
   /* -------------------- render -------------------- */
 
   return (
-    <div className={NavTriggerClasses} ref={navTriggerRef} id={`slide-${slideIndex}`} data-index={slideIndex} data-tip={currentTip} />
+    <div
+      className={NavTriggerClasses}
+      ref={navTriggerRef}
+      id={`slide-${slideIndex}`}
+      data-index={slideIndex}
+      data-tip={currentTip}
+      />
   )
 
 }

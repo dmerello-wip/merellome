@@ -32,7 +32,7 @@ const SplittedText = ({contentString}) => {
               trigger: splittedTextRef.current,
               scrub: 0.1,
               start: 'top bottom',
-              end: 'top 70%',
+              end: 'top 75%',
               // markers: true
           },
           stagger: {

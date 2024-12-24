@@ -11,11 +11,7 @@
         display: flex;
         justify-content: flex-start;
         gap: 2rem;
-        padding: 0 2rem;
-        // flex-wrap: wrap;
         align-items: center;
-        // overflow-x: scroll;
-        padding: 0 var(--container-pad-x);
     }
 
     &__box {
@@ -32,17 +28,14 @@
                 transform: scale(1.025);
             }
         }
-
-        @for $i from 1 through 8 {
-            &:nth-of-type(#{$i}) {
-                // transform: rotate(1deg * f.random-float(-3, 3));
-            }
-        }
     }
 }
 
 @include mq.responsiveTo("md") {
     .articlesSlider {
+        &__gallery {
+            padding: 0rem var(--container-pad-x) 3rem;
+        }
         &__box {
             min-width: 100%;
         }
@@ -51,6 +44,9 @@
 
 @include mq.responsiveFrom("md") {
     .articlesSlider {
+        &__gallery {
+            padding: 2rem var(--container-pad-x);
+        }
         &__box {
             min-width: 30rem;
         }
