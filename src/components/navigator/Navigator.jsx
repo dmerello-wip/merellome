@@ -68,23 +68,33 @@ const Navigator = ( { contents }) => {
                   
                   <ambientLight intensity={1} castShadow/>
                   <pointLight
-                    position={[-20, 40, -20]}
-                    intensity={3}
+                    position={[-10, 30, -10]}
+                    intensity={1}
                     color="#fff"
                     penumbra={1} 
-                    decay={0.5}
+                    decay={0.2}
                     castShadow
+                    shadow-mapSize-width={1024}
+                    shadow-mapSize-height={1024}
+                    shadow-camera-near={0.1}
+                    shadow-camera-far={200}
+                    shadow-bias={-0.001}
                   />
                   <pointLight
-                    position={[20, 40, 20]}
-                    intensity={3}
+                    position={[10, 30, 10]}
+                    intensity={1}
                     color="#fff"
                     penumbra={1} 
-                    decay={0.5}
+                    decay={0.2}
                     castShadow
+                    shadow-mapSize-width={1024}
+                    shadow-mapSize-height={1024}
+                    shadow-camera-near={0.1}
+                    shadow-camera-far={200}
+                    shadow-bias={-0.001}
                   />
-                  <directionalLight intensity={1} position={[30, 50, 30]} shadow-radius={1} castShadow />
-                  <fog attach="fog" args={['#0a0a0a', 0, 200]} />
+                  {/* <directionalLight intensity={0.2} position={[0, 30, 0]} shadow-radius={3} castShadow /> */}
+                  <fog attach="fog" args={['#1f1b1b', 0, 200]} />
 
                   {/* camera inside a group to sert rotation on its own axis */}
                   <group
@@ -110,7 +120,7 @@ const Navigator = ( { contents }) => {
                   <Logoroom />
                   {/* floor */}
                   <mesh
-                    material={new THREE.MeshPhongMaterial({ color: 0x470b0b })}
+                    material={new THREE.MeshPhongMaterial({ color: 0x2a2626 })}
                     rotation={[-Math.PI /2, 0, 0]}
                     position={[0,0,0]}
                     castShadow

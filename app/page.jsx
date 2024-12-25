@@ -26,12 +26,11 @@ export default async function Page() {
       <Header />
       <Navigator contents={slides} />
       <ArticlesSlider contents={articles.items} />
-      <TempSpacer>1. Contenuto sotto al navigator</TempSpacer>
-      <TempSpacer>2. Contenuto sotto al navigator</TempSpacer>
-      <TempSpacer>3. Contenuto sotto al navigator</TempSpacer>
-      <TempSpacer>4. Contenuto sotto al navigator</TempSpacer>
+      <TempSpacer>1. E poi si va avanti...</TempSpacer>
+      <TempSpacer>2. E poi si va avanti...</TempSpacer>
+      <TempSpacer>3. E poi si va avanti...</TempSpacer>
+      <TempSpacer>4. E poi si va avanti...</TempSpacer>
 
-      {/* <Footer /> */}
     </>
   )
 }
