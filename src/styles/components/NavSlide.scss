@@ -17,10 +17,8 @@
     perspective: 80rem;
     pointer-events: none;
     transition: all 0.6s cubic-bezier(0.5, 0, 0.5, 1);
-    --max-width: 45rem;
     max-width: var(--max-width);
     border: 0px solid transparent;
-    overflow: hidden;
     &:has(.NavTrigger--open) {
         // left: calc(var(--max-width) * -1);
         .navSlide__content__card {
@@ -91,6 +89,7 @@
 @include mq.responsiveTo("md") {
     .navSlide {
         padding: 0rem var(--container-pad-x) 3rem var(--container-pad-x);
+        --max-width: 100%;
         &:has(.NavTrigger--open) {
             left: -90%;
         }
@@ -103,6 +102,7 @@
 @include mq.responsiveFrom("md") {
     .navSlide {
         padding: 0 6vw 20vh 6vw;
+        --max-width: 45rem;
         &:has(.NavTrigger--open) {
             left: -30rem;
         }

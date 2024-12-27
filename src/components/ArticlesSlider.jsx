@@ -43,7 +43,7 @@ const ArticlesSlider = ({contents}) => {
         gsap.from(galleryRef.current.children, {
           scrollTrigger: {
               trigger: wrapperRef.current,
-              start: 'top 30%',
+              start: 'top center',
               end: 'bottom bottom',
               scrub: true,
               // markers: true
