@@ -66,34 +66,20 @@ const Navigator = ( { contents }) => {
           <div className='navigator__canvas'>
             <View className="navigator__canvas__scene" >
                   
-                  <ambientLight intensity={1} castShadow/>
+                  <ambientLight intensity={1} />
                   <pointLight
                     position={[-10, 30, -10]}
-                    intensity={1}
+                    intensity={2}
                     color="#fff"
                     penumbra={1} 
                     decay={0.2}
                     castShadow
-                    shadow-mapSize-width={1024}
-                    shadow-mapSize-height={1024}
+                    shadow-mapSize-width={1200}
+                    shadow-mapSize-height={760}
                     shadow-camera-near={0.1}
                     shadow-camera-far={200}
                     shadow-bias={-0.001}
                   />
-                  <pointLight
-                    position={[10, 30, 10]}
-                    intensity={1}
-                    color="#fff"
-                    penumbra={1} 
-                    decay={0.2}
-                    castShadow
-                    shadow-mapSize-width={1024}
-                    shadow-mapSize-height={1024}
-                    shadow-camera-near={0.1}
-                    shadow-camera-far={200}
-                    shadow-bias={-0.001}
-                  />
-                  {/* <directionalLight intensity={0.2} position={[0, 30, 0]} shadow-radius={3} castShadow /> */}
                   <fog attach="fog" args={['#1f1b1b', 0, 200]} />
 
                   {/* camera inside a group to sert rotation on its own axis */}

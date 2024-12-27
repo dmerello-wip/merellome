@@ -20,6 +20,7 @@
     --max-width: 45rem;
     max-width: var(--max-width);
     border: 0px solid transparent;
+    overflow: hidden;
     &:has(.NavTrigger--open) {
         // left: calc(var(--max-width) * -1);
         .navSlide__content__card {
