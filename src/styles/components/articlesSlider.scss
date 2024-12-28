@@ -52,3 +52,11 @@
         }
     }
 }
+
+@include mq.responsiveFrom("xxxl") {
+    .articlesSlider {
+        &__gallery {
+            padding: 2rem var(--container-pad-x) 8rem;
+        }
+    }
+}
