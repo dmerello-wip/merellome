@@ -2,14 +2,12 @@
 @use "@/styles/utils/mq" as mq;
 
 .PinTabs {
-    --headerH: 8rem;
     &__wrapper {
     }
 
     &__tab {
         position: sticky;
         background: var(--color--light);
-        padding: 0 var(--container-pad-x) calc(2 * var(--padding-cards)) 12rem;
         color: var(--color-text-dark);
         border: 1px solid var(--color-bg);
 
@@ -33,7 +31,19 @@
 }
 
 @include mq.responsiveTo("md") {
+    .PinTabs {
+        --headerH: 7rem;
+        &__tab {
+            padding: 0 var(--container-pad-x) calc(2 * var(--padding-cards)) 10rem;
+        }
+    }
 }
 
 @include mq.responsiveFrom("md") {
+    .PinTabs {
+        --headerH: 9rem;
+        &__tab {
+            padding: 0 var(--container-pad-x) calc(2 * var(--padding-cards)) 12rem;
+        }
+    }
 }
