@@ -11,7 +11,9 @@
     justify-content: space-between;
     padding: var(--padding);
     pointer-events: none;
+    mix-blend-mode: exclusion;
     &__logo {
+        mix-blend-mode: normal;
         width: 100px;
         svg {
             object-fit: contain;

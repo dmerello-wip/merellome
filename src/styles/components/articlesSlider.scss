@@ -45,7 +45,7 @@
 @include mq.responsiveFrom("md") {
     .articlesSlider {
         &__gallery {
-            padding: 2rem var(--container-pad-x);
+            padding: 2rem var(--container-pad-x) 4rem;
         }
         &__box {
             min-width: 30rem;

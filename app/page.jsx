@@ -1,8 +1,9 @@
 import '@/helpers/envConfig'
 import { Header } from "@/components/Header"
 import { Navigator } from "@/components/navigator/Navigator"
-import { TempSpacer } from "@/components/TempSpacer"
 import { ArticlesSlider } from '@/components/ArticlesSlider'
+import { TempSpacer } from "@/components/TempSpacer"
+import { PinTabs } from "@/components/PinTabs"
 // import slidesContents from '@/db/slides.json';
 // import articlesContents from '@/db/articles.json';
 
@@ -17,7 +18,7 @@ export default async function Page() {
     res.json()
   )
 
-  // yes, using the api is useless... why don't:
+  // yes, using the api is useless... i can simply import the json files:
   // const slides = { slides: slidesContents.slides };
   // const articles = { items: articlesContents.articles };
 
@@ -26,10 +27,9 @@ export default async function Page() {
       <Header />
       <Navigator contents={slides} />
       <ArticlesSlider contents={articles.items} />
+      <PinTabs />
       <TempSpacer>1. E poi si va avanti...</TempSpacer>
       <TempSpacer>2. E poi si va avanti...</TempSpacer>
-      <TempSpacer>3. E poi si va avanti...</TempSpacer>
-      <TempSpacer>4. E poi si va avanti...</TempSpacer>
 
     </>
   )

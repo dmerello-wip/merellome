@@ -2,7 +2,7 @@
   "articles": [
     {
       "title": "Artificial Intelligence, concrete steps",
-      "description": "When hype takes over, common sense comes knocking. Today, artificial intelligence is the ultimate hype—and for good reason. But what goals are we actually aiming to achieve by using it?",
+      "description": "AI is the ultimate hype, but what are the actual goals we aim to achieve with it? Let's bring common sense back into the conversation.",
       "image": {
         "url": "/img/articles/dev_design.webp",
         "alt": "developer designer"
@@ -14,7 +14,7 @@
     },
     {
       "title": "The impact of new generations on UX",
-      "description": "Are young people more accustomed to digital technology? Absolutely. But should we expect them to navigate it more expertly? Not necessarily. While it’s clear to everyone that these generations show a significantly higher tendency to shop online compared to the past, it’s worth reflecting on the impact this greater predisposition might have on the design of user experiences and the development of new digital products.",
+      "description": "Young people are digital natives, but does that mean they navigate tech better? Their online habits shape UX design in unexpected ways.",
       "image": {
         "url": "/img/articles/teenagers.webp",
         "alt": "teenagers chatting"
@@ -26,7 +26,7 @@
     },
     {
       "title": "Design Thinking and the creativity of the programmer",
-      "description": "Let’s put an end to the stereotypical image of creatives and programmers once and for all. Creative (/cre·a·tì·vo/): Is he truly a chaotic thinker who generates ideas through trial and error? Programmer (/pro·gram·ma·tó·re/): Is he really a cold, methodical planner guided by mathematical precision? What's the real creativity?.",
+      "description": "Are programmers methodical and designers chaotic? Let’s break stereotypes and explore the true nature of creativity in programming.",
       "image": {
         "url": "/img/articles/coder.webp",
         "alt": "coder working"
@@ -38,7 +38,7 @@
     },
     {
       "title": "Apply Design Thinking? My daughter will explain it to you",
-      "description": "Design Thinking has been a buzzword in recent years. But what really happens during a Design Thinking process? Who gets involved, and how much time and effort does it take? Is it only suitable for large-scale projects? To find out, I tested it with one of the most creative minds of our time: my daughter.",
+      "description": "What happens in Design Thinking? I tested it with my daughter—a creative mind of our time—to understand its true dynamics and applications.",
       "image": {
         "url": "/img/articles/daughter.webp",
         "alt": "girl designing"
@@ -50,7 +50,7 @@
     },
     {
       "title": "The role of the Designer in the time of Enterprise platforms",
-      "description": "We were amazed by the power of solid, structured solutions designed to address needs identified through large-scale analysis. The role of Design has evolved once again, as redesigning a product with such significant investments behind it is a delicate matter, extremely delicate",
+      "description": "How has design evolved with large-scale, structured solutions? Redesigning high-investment platforms requires care and precision.",
       "image": {
         "url": "/img/articles/ui.webp",
         "alt": "user interface"
@@ -62,7 +62,7 @@
     },
     {
       "title": "Let's take it lightly. Design Thinking: is UX a Post-it?",
-      "description": "Continuous Butt Exhibition, Write Big in a Small Square Task, and Dirty Wall Drama are just some of the challenges tackled during a Design Thinking session. But there’s no need to worry: the world of consultancy is crafting environments with glass-only walls, offering strolls with free selfies, and employing coordinators who are increasingly agile at bending over backward. The future of innovation looks bright.",
+      "description": "Can Design Thinking avoid pitfalls like Continuous Butt Exhibition and Dirty Wall Drama? Let’s find the fun and the innovation balance.",
       "image": {
         "url": "/img/articles/designer_laughing.webp",
         "alt": "designer laughing"
@@ -74,7 +74,7 @@
     },
     {
       "title": "Gain experience to be able to design it",
-      "description": "UX: do we really want to reduce this concept to the enjoyable use of a platform or the improvement of its performance? That’s certainly a good starting point, but the experience of those who use a digital platform cannot—and should not—rely solely on well-designed interfaces and seamless flows.",
+      "description": "UX isn’t just usability and flow. True design comes from understanding users’ experiences beyond the interface, creating meaningful platforms.",
       "image": {
         "url": "/img/articles/designer.webp",
         "alt": "designer sketching"
@@ -86,7 +86,7 @@
     },
     {
       "title": "User Experience: the one they tell you and the real one",
-      "description": "We set out to uncover the meaning behind those magical words and made them our own, integrating them into our working method: the BuonSenso Approach. In the daily challenges of our work, we engage with companies—their complexities, their histories, their constraints, their goals, and, above all, their people.",
+      "description": "UX buzzwords meet real challenges: companies, goals, constraints, and people. Discover the BuonSenso Approach for authentic design.",
       "image": {
         "url": "/img/articles/team.webp",
         "alt": "design team"
