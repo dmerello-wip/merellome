@@ -2,20 +2,31 @@
 @use "@/styles/utils/mq" as mq;
 
 .PinTabs {
+    border: 3px solid green;
+    padding: 9rem var(--container-pad-x);
+    background: var(--color--light);
+
     &__wrapper {
+        color: var(--color-text-dark);
+        border: 3px dotted green;
     }
 
     &__tab {
         position: sticky;
-        background: var(--color--light);
-        color: var(--color-text-dark);
-        border: 1px solid var(--color-bg);
+        top: var(--headerH);
+        border: 3px dotted blue;
+        display: flex;
+        width: 100%;
+        justify-content: space-between;
 
         @for $i from 0 through 5 {
             &:nth-of-type(#{$i}) {
-                top: calc(var(--headerH) * (#{$i - 1}));
+                .PinTabs__tab__title {
+                    top: calc(var(--headerH) * #{$i});
+                }
             }
         }
+
         &__title {
             display: flex;
             align-items: center;
@@ -23,27 +34,30 @@
             font-size: var(--text-heading1-font-size);
             line-height: var(--text-heading1-line-height);
             font-weight: var(--text-heading1-font-weight);
+            border: 1px red solid;
+            width: var(--titlesW);
+            background: var(--color--light);
+
+            position: sticky;
         }
         &__content {
-            height: 300px;
+            min-height: 90vh;
+            border: 1px olive solid;
+            flex-basis: calc(100% - var(--titlesW));
         }
     }
 }
 
-@include mq.responsiveTo("md") {
+@include mq.responsiveTo("xl") {
+    .PinTabs {
+        --headerH: 4rem;
+        --titlesW: 300px;
+    }
+}
+
+@include mq.responsiveFrom("xl") {
     .PinTabs {
         --headerH: 7rem;
-        &__tab {
-            padding: 0 var(--container-pad-x) calc(2 * var(--padding-cards)) 10rem;
-        }
-    }
-}
-
-@include mq.responsiveFrom("md") {
-    .PinTabs {
-        --headerH: 9rem;
-        &__tab {
-            padding: 0 var(--container-pad-x) calc(2 * var(--padding-cards)) 12rem;
-        }
+        --titlesW: 300px;
     }
 }
