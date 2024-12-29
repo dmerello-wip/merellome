@@ -42,6 +42,17 @@
     }
 }
 
+@include mq.responsiveTo("xxxl") {
+    .articlesSlider {
+        .Card__content__description {
+            overflow: hidden;
+            -webkit-box-orient: vertical;
+            -webkit-line-clamp: 3;
+            line-clamp: 3;
+            display: -webkit-box;
+        }
+    }
+}
 @include mq.responsiveFrom("md") {
     .articlesSlider {
         &__gallery {
