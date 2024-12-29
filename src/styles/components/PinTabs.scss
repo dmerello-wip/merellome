@@ -1,20 +1,17 @@
-@use "@/styles/utils/functions" as f;
 @use "@/styles/utils/mq" as mq;
 
 .PinTabs {
-    border: 3px solid green;
-    padding: 9rem var(--container-pad-x);
+    padding: var(--container-pad-x);
     background: var(--color--light);
+    --titlesW: 300px;
 
     &__wrapper {
         color: var(--color-text-dark);
-        border: 3px dotted green;
     }
 
     &__tab {
         position: sticky;
         top: var(--headerH);
-        border: 3px dotted blue;
         display: flex;
         width: 100%;
         justify-content: space-between;
@@ -34,30 +31,28 @@
             font-size: var(--text-heading1-font-size);
             line-height: var(--text-heading1-line-height);
             font-weight: var(--text-heading1-font-weight);
-            border: 1px red solid;
             width: var(--titlesW);
             background: var(--color--light);
 
             position: sticky;
         }
         &__content {
-            min-height: 90vh;
-            border: 1px olive solid;
+            min-height: calc(100vh - 2 * var(--container-pad-x));
             flex-basis: calc(100% - var(--titlesW));
+            border: 2px dotted grey;
+            background: var(--color--light);
         }
     }
 }
 
-@include mq.responsiveTo("xl") {
+@include mq.responsiveTo("xxxl") {
     .PinTabs {
-        --headerH: 4rem;
-        --titlesW: 300px;
+        --headerH: 6.5rem;
     }
 }
 
-@include mq.responsiveFrom("xl") {
+@include mq.responsiveFrom("xxxl") {
     .PinTabs {
-        --headerH: 7rem;
-        --titlesW: 300px;
+        --headerH: 8rem;
     }
 }

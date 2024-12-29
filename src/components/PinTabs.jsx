@@ -10,7 +10,7 @@ return (
             Discover
           </h2>
           <div className="PinTabs__tab__content">
-            interactive view here...
+            Discover interactive view here...
           </div>
         </div>
         <div className="PinTabs__tab">
@@ -18,7 +18,7 @@ return (
             Map
           </h2>
           <div className="PinTabs__tab__content">
-            interactive view here...
+            Map interactive view here...
           </div>
         </div>
         <div className="PinTabs__tab">
@@ -26,7 +26,7 @@ return (
             Explore
           </h2>
           <div className="PinTabs__tab__content">
-            interactive view here...
+            Explore interactive view here...
           </div>
         </div>
         <div className="PinTabs__tab">
@@ -34,7 +34,7 @@ return (
             Refine
           </h2>
           <div className="PinTabs__tab__content">
-            interactive view here...
+            Refine interactive view here...
           </div>
         </div>
         <div className="PinTabs__tab">
@@ -42,7 +42,7 @@ return (
             Iterate
           </h2>
           <div className="PinTabs__tab__content">
-            interactive view here...
+            Iterate interactive view here...
           </div>
         </div>
       </div>
