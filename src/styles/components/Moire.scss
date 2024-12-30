@@ -4,20 +4,20 @@
     &__text {
         display: flex;
         flex-direction: column;
-        font-size: 4em;
+        font-size: 4.5em;
         span {
-            transform: scaleY(0.3);
+            transform: scaleY(0.1);
             display: inline-block;
             font-weight: 900;
-            line-height: 0.3;
+            line-height: 0.1;
             text-transform: uppercase;
         }
     }
     &__h-lines {
         position: relative;
-        --square-size: 12px;
-        --line-width: 12px;
+        --square-size: 5px;
+        --line-width: 5px;
         --color-bg-lines: black;
-        @extend %bg-diag-lines;
+        @extend %bg-horiz-lines;
     }
 }
