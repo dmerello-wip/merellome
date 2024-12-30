@@ -33,7 +33,7 @@ const ArticlesSlider = ({contents}) => {
               start: 'bottom bottom',
               end: () => "+=" + wrapperRef.current.offsetWidth,
               pin: true,
-              scrub: 8,
+              scrub: 4,
           },
           x: () => -(galleryRef.current.scrollWidth - document.documentElement.clientWidth) + "px",
           ease: 'none'

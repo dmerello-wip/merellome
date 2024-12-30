@@ -1,4 +1,6 @@
 import _PinTabs from '@/styles/components/PinTabs.scss'
+import _Moire from '@/styles/components/Moire.scss'
+import _Grid from '@/styles/basics/Grids.scss'
 
 const PinTabs = () => {
 
@@ -10,7 +12,19 @@ return (
             <em>01.</em> Discover
           </h2>
           <div className="PinTabs__tab__content">
-            Discover interactive view here...
+             <div className="grid-3x3">
+              <div></div>
+              <div></div>
+              <div></div>
+              <div></div>
+              <div></div>
+              <div></div>
+              <div
+                className='moire__text'
+                  style={{gridRow: '1/4', gridColumn: '3/4'}}>
+                    {[...Array(100)].map((_, i) => <span>Discover </span>)}
+              </div>
+            </div>
           </div>
         </div>
         <div className="PinTabs__tab">
@@ -18,7 +32,17 @@ return (
             <em>02.</em> Map
           </h2>
           <div className="PinTabs__tab__content">
-            Map interactive view here...
+             <div className="grid-3x3">
+              <div></div>
+              <div></div>
+              <div></div>
+              <div></div>
+              <div></div>
+              <div></div>
+              <div className="moire__h-lines"
+                    style={{gridRow: '1/4', gridColumn: '3/4'}}>
+              </div>
+            </div>
           </div>
         </div>
         <div className="PinTabs__tab">

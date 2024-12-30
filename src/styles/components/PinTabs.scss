@@ -26,12 +26,6 @@
             }
         }
 
-        // &:last-child {
-        //     .PinTabs__tab__title {
-        //         border-top: 1px solid var(--color-secondary);
-        //     }
-        // }
-
         &__title {
             display: flex;
             // align-items: flex-end;
@@ -55,8 +49,7 @@
         &__content {
             min-height: calc(100vh - 2 * var(--container-pad-x));
             flex-basis: calc(100% - var(--titlesW));
-            border: 2px dotted grey;
-            background: var(--color--light);
+            // background: var(--color--light);
         }
     }
 }

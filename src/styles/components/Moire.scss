@@ -1,0 +1,23 @@
+@use "@/styles/utils/shortcuts";
+
+.moire {
+    &__text {
+        display: flex;
+        flex-direction: column;
+        font-size: 4em;
+        span {
+            transform: scaleY(0.3);
+            display: inline-block;
+            font-weight: 900;
+            line-height: 0.3;
+            text-transform: uppercase;
+        }
+    }
+    &__h-lines {
+        position: relative;
+        --square-size: 12px;
+        --line-width: 12px;
+        --color-bg-lines: black;
+        @extend %bg-diag-lines;
+    }
+}

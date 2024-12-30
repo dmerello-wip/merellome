@@ -9,7 +9,7 @@ import { PinTabs } from "@/components/PinTabs"
 
 export default async function Page() {
 
-  const url = process.env.BASE_URL || 'https://merellome.vercel.app';
+  const url = process.env.BASE_URL || 'https://merellome.vercel.app' || 'http://localhost:3000';
   
   const slides = await fetch(`${url}/api/navigator`, { next: { tags: ['navigator'] } }).then((res) =>
     res.json()

@@ -1,0 +1,15 @@
+@use "@/styles/utils/shortcuts";
+
+.grid-3x3 {
+    --gap: 1rem;
+    display: grid;
+    grid-template-columns: repeat(3, calc((100% - (2 * var(--gap))) / 3));
+    grid-template-rows: repeat(3, calc((100% - (2 * var(--gap))) / 3));
+    gap: var(--gap);
+    justify-content: center;
+    height: 100%;
+
+    &__item {
+        position: relative;
+    }
+}
