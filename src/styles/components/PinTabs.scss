@@ -17,7 +17,6 @@
         display: flex;
         width: 100%;
         justify-content: space-between;
-
         @for $i from 0 through 5 {
             &:nth-of-type(#{$i}) {
                 .PinTabs__tab__title {
@@ -47,7 +46,7 @@
             }
         }
         &__content {
-            min-height: calc(100vh - 2 * var(--container-pad-x));
+            height: calc(100vh - 2 * var(--container-pad-x));
             flex-basis: calc(100% - var(--titlesW));
             // background: var(--color--light);
         }

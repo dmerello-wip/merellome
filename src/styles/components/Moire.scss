@@ -5,6 +5,7 @@
         display: flex;
         flex-direction: column;
         font-size: 4.5em;
+        color: #c5c5c5;
         span {
             transform: scaleY(0.1);
             display: inline-block;
@@ -12,12 +13,24 @@
             line-height: 0.1;
             text-transform: uppercase;
         }
+        &--bright {
+            color: white;
+        }
     }
-    &__h-lines {
+    &__diag-r-lines {
         position: relative;
-        --square-size: 5px;
-        --line-width: 5px;
-        --color-bg-lines: black;
-        @extend %bg-horiz-lines;
+        --square-size: 2px;
+        --line-width: 6px;
+        --color-bg-lines: #c5c5c5;
+        --angle: 4deg;
+        @extend %bg-lines;
+    }
+    &__diag-l-lines {
+        position: relative;
+        --square-size: 2px;
+        --line-width: 6px;
+        --color-bg-lines: white;
+        --angle: 5deg;
+        @extend %bg-lines;
     }
 }

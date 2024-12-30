@@ -44,30 +44,7 @@
   }
 }
 
-%bg-vert-lines {
-  &:before {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100vw;
-    height: 100vh;
-    z-index: 1;
-    pointer-events: none;
-    content: "";
-    --square-size: 60px !default;
-    --line-width: 1px !default;
-    --color-bg-lines: black !default;
-    background: repeating-linear-gradient(
-      90deg,
-      transparent 0,
-      transparent var(--square-size),
-      var(--color-bg-lines) var(--square-size),
-      var(--color-bg-lines) calc(var(--square-size) + var(--line-width))
-    );
-  }
-}
-
-%bg-horiz-lines {
+%bg-lines {
   &:before {
     position: absolute;
     top: 0;
@@ -80,31 +57,9 @@
     --square-size: 60px !default;
     --line-width: 1px !default;
     --color-bg-lines: black !default;
+    --angle: 4deg !default;
     background: repeating-linear-gradient(
-      0deg,
-      transparent 0,
-      transparent var(--square-size),
-      var(--color-bg-lines) var(--square-size),
-      var(--color-bg-lines) calc(var(--square-size) + var(--line-width))
-    );
-  }
-}
-
-%bg-diag-lines {
-  &:before {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    z-index: 1;
-    pointer-events: none;
-    content: "";
-    --square-size: 60px !default;
-    --line-width: 1px !default;
-    --color-bg-lines: black !default;
-    background: repeating-linear-gradient(
-      4deg,
+      var(--angle),
       transparent 0,
       transparent var(--square-size),
       var(--color-bg-lines) var(--square-size),
