@@ -3,6 +3,7 @@
 .navigator {
     position: relative;
     min-height: 100vh;
+    background: var(--color-bg);
     .navSlide {
         z-index: 3;
     }

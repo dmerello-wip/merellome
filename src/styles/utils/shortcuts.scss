@@ -13,3 +13,57 @@
   width: 100%;
   height: 100%;
 }
+
+%bg-squares {
+  &:before {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 1;
+    pointer-events: none;
+    content: "";
+    --square-size: 60px;
+    --line-width: 1px;
+    --color-bg-lines: #2d2b2b;
+    background: repeating-linear-gradient(
+        90deg,
+        transparent 0,
+        transparent var(--square-size),
+        var(--color-bg-lines) var(--square-size),
+        var(--color-bg-lines) calc(var(--square-size) + var(--line-width))
+      ),
+      repeating-linear-gradient(
+        0deg,
+        transparent 0,
+        transparent var(--square-size),
+        var(--color-bg-lines) var(--square-size),
+        var(--color-bg-lines) calc(var(--square-size) + var(--line-width))
+      );
+    z-index: 1;
+  }
+}
+
+%bg-vert-lines {
+  &:before {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 1;
+    pointer-events: none;
+    content: "";
+    --square-size: 60px;
+    --line-width: 1px;
+    background: repeating-linear-gradient(
+      90deg,
+      transparent 0,
+      transparent var(--square-size),
+      var(--color-bg-lines) var(--square-size),
+      var(--color-bg-lines) calc(var(--square-size) + var(--line-width))
+    );
+    z-index: 1;
+  }
+}

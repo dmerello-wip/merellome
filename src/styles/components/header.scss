@@ -13,7 +13,6 @@
     pointer-events: none;
     mix-blend-mode: exclusion;
     &__logo {
-        mix-blend-mode: normal;
         width: 100px;
         svg {
             object-fit: contain;
@@ -31,7 +30,7 @@
         text-orientation: mixed;
         -webkit-font-smoothing: antialiased;
         font-weight: 900;
-        color: var(--color-secondary);
+        // color: var(--color-secondary);
     }
 }
 

@@ -1,6 +1,7 @@
 @use "font";
 @use "./utils/reset";
 @use "@/styles/utils/mq" as mq;
+@use "@/styles/utils/shortcuts";
 @use "@/styles/basics/buttons";
 
 * {
@@ -9,7 +10,6 @@
 
 :root {
     --color-bg: #1f1b1b;
-    --color-bg-lines: #201e1e;
     --color-primary: #000000;
     --color-secondary: #c51717;
     --color-text-light: #b8b8b8;
@@ -68,40 +68,16 @@ body {
     font-family: var(--base-font-family);
     color: var(--color-text-light);
     font-weight: 400;
-    --square-size: 40px;
-    --line-width: 1px;
     background: var(--color-bg);
+
+    // --square-size: 40px;
+    // --line-width: 1px;
+    // --color-bg-lines: #292929;
+    // @extend %bg-vert-lines;
 
     > * {
         z-index: 2;
     }
-    // &:before {
-    //     position: fixed;
-    //     top: 0;
-    //     left: 0;
-    //     width: 100vw;
-    //     height: 100vh;
-    //     z-index: 1;
-    //     pointer-events: none;
-    //     content: "";
-    //     --square-size: 60px;
-    //     --line-width: 1px;
-    //     background: repeating-linear-gradient(
-    //             90deg,
-    //             transparent 0,
-    //             transparent var(--square-size),
-    //             var(--color-bg-lines) var(--square-size),
-    //             var(--color-bg-lines) calc(var(--square-size) + var(--line-width))
-    //         ),
-    //         repeating-linear-gradient(
-    //             0deg,
-    //             transparent 0,
-    //             transparent var(--square-size),
-    //             var(--color-bg-lines) var(--square-size),
-    //             var(--color-bg-lines) calc(var(--square-size) + var(--line-width))
-    //         );
-    //     z-index: 1;
-    // }
 }
 
 .word {

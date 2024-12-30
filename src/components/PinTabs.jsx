@@ -7,7 +7,7 @@ return (
       <div className="PinTabs__wrapper">
         <div className="PinTabs__tab">
           <h2 className="PinTabs__tab__title">
-            Discover
+            <em>01.</em> Discover
           </h2>
           <div className="PinTabs__tab__content">
             Discover interactive view here...
@@ -15,7 +15,7 @@ return (
         </div>
         <div className="PinTabs__tab">
           <h2 className="PinTabs__tab__title">
-            Map
+            <em>02.</em> Map
           </h2>
           <div className="PinTabs__tab__content">
             Map interactive view here...
@@ -23,7 +23,7 @@ return (
         </div>
         <div className="PinTabs__tab">
           <h2 className="PinTabs__tab__title">
-            Explore
+            <em>03.</em> Explore
           </h2>
           <div className="PinTabs__tab__content">
             Explore interactive view here...
@@ -31,7 +31,7 @@ return (
         </div>
         <div className="PinTabs__tab">
           <h2 className="PinTabs__tab__title">
-            Refine
+            <em>04.</em> Refine
           </h2>
           <div className="PinTabs__tab__content">
             Refine interactive view here...
@@ -39,10 +39,10 @@ return (
         </div>
         <div className="PinTabs__tab">
           <h2 className="PinTabs__tab__title">
-            Iterate
+            <em>05.</em> Iterate
           </h2>
           <div className="PinTabs__tab__content">
-            Iterate interactive view here...
+            Iterateinteractive view here...
           </div>
         </div>
       </div>

@@ -1,6 +1,8 @@
 @use "@/styles/utils/mq" as mq;
+@use "@/styles/utils/shortcuts";
 
 .PinTabs {
+    position: relative;
     padding: var(--container-pad-x);
     background: var(--color--light);
     --titlesW: 300px;
@@ -24,8 +26,15 @@
             }
         }
 
+        // &:last-child {
+        //     .PinTabs__tab__title {
+        //         border-top: 1px solid var(--color-secondary);
+        //     }
+        // }
+
         &__title {
             display: flex;
+            // align-items: flex-end;
             align-items: center;
             height: var(--headerH);
             font-size: var(--text-heading1-font-size);
@@ -35,6 +44,13 @@
             background: var(--color--light);
 
             position: sticky;
+            em {
+                color: var(--color-secondary);
+                font-weight: 700;
+                padding-right: 1rem;
+                font-size: 0.5em;
+                line-height: 1.7em;
+            }
         }
         &__content {
             min-height: calc(100vh - 2 * var(--container-pad-x));
