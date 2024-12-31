@@ -1,16 +1,29 @@
 @use "@/styles/utils/shortcuts";
 
-.grid-3x3 {
-    --gap: 1rem;
+.gr3x3 {
     display: grid;
+    --gap: 3rem;
+    column-gap: var(--gap);
+    row-gap: 0;
     grid-template-columns: repeat(3, calc((100% - (2 * var(--gap))) / 3));
     grid-template-rows: repeat(3, calc((100% - (2 * var(--gap))) / 3));
-    gap: var(--gap);
     justify-content: center;
     height: 100%;
+    overflow: hidden;
 
-    &__item {
+    .gr3x3__item {
         position: relative;
-        // background-color: rgba(10, 10, 10, 0.1);
+        padding: 1.5rem 0;
+        &:not([class*="moire"]) {
+            background-color: white;
+        }
+        &.gr--1-lg {
+            grid-column: 1 / 2;
+            grid-row: 1 / 4;
+        }
+        &.gr--2-md {
+            grid-column: 2 / 3;
+            grid-row: 1 / 3;
+        }
     }
 }

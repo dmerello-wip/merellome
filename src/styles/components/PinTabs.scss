@@ -46,8 +46,10 @@
             }
         }
         &__content {
-            height: calc(100vh - 2 * var(--container-pad-x));
+            height: calc(75vh - 2 * var(--container-pad-x));
             flex-basis: calc(100% - var(--titlesW));
+            line-height: var(--text-line-height);
+            color: var(--color-text-dark);
             // background: var(--color--light);
         }
     }
