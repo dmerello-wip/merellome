@@ -2,18 +2,16 @@
 
 .gr3x3 {
     display: grid;
-    --gap: 3rem;
-    column-gap: var(--gap);
-    row-gap: 0;
-    grid-template-columns: repeat(3, calc((100% - (2 * var(--gap))) / 3));
-    grid-template-rows: repeat(3, calc((100% - (2 * var(--gap))) / 3));
+    --pad: 2rem;
+    grid-template-columns: repeat(3, calc((100% - (2 * var(--pad))) / 3));
+    grid-template-rows: repeat(3, calc((100% - (2 * var(--pad))) / 3));
     justify-content: center;
     height: 100%;
     overflow: hidden;
 
     .gr3x3__item {
         position: relative;
-        padding: 1.5rem 0;
+        padding: var(--pad);
         &:not([class*="moire"]) {
             background-color: white;
         }

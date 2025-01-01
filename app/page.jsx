@@ -3,7 +3,7 @@ import { Header } from "@/components/Header"
 import { Navigator } from "@/components/navigator/Navigator"
 import { ArticlesSlider } from '@/components/ArticlesSlider'
 import { TempSpacer } from "@/components/TempSpacer"
-import { PinTabs } from "@/components/PinTabs"
+import { PinTabs } from "@/components/PinTabs/PinTabs"
 // import slidesContents from '@/db/slides.json';
 // import articlesContents from '@/db/articles.json';
 

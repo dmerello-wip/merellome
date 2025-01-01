@@ -1,5 +1,6 @@
 @use "@/styles/utils/mq" as mq;
 @use "@/styles/utils/shortcuts";
+@use "@/styles/components/PinTabs/PinTabsGrids";
 
 .PinTabs {
     position: relative;
