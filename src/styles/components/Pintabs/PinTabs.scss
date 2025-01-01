@@ -4,11 +4,12 @@
 
 .PinTabs {
     position: relative;
-    padding: var(--container-pad-x);
     background: var(--color--light);
     --titlesW: 300px;
+    --headerH: 8rem;
 
     &__wrapper {
+        padding: var(--container-pad-x);
         color: var(--color-text-dark);
     }
 
@@ -51,18 +52,35 @@
             flex-basis: calc(100% - var(--titlesW));
             line-height: var(--text-line-height);
             color: var(--color-text-dark);
+            &__figure {
+                grid-row: 1/4;
+                grid-column: 1/2;
+            }
         }
     }
 }
 
-@include mq.responsiveTo("xxxl") {
-    .PinTabs {
-        --headerH: 6.5rem;
+@include mq.responsiveTo("xl") {
+    .PinTabs__tab__content {
+        &__highlight {
+            grid-row: 1/4;
+            grid-column: 3/4;
+        }
+        &__description {
+            grid-row: 1/4;
+            grid-column: 2/3;
+        }
     }
 }
-
-@include mq.responsiveFrom("xxxl") {
-    .PinTabs {
-        --headerH: 8rem;
+@include mq.responsiveFrom("xl") {
+    .PinTabs__tab__content {
+        &__highlight {
+            grid-row: 1/4;
+            grid-column: 3/4;
+        }
+        &__description {
+            grid-row: 1/4;
+            grid-column: 2/3;
+        }
     }
 }

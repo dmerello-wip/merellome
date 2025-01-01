@@ -39,15 +39,6 @@
         @extend %bg-lines;
         background-color: transparent;
     }
-    &__diag-l-lines {
-        position: relative;
-        --gap: 2px;
-        --size: 6px;
-        --color: white;
-        --angle: 5deg;
-        @extend %bg-lines;
-        background-color: transparent;
-    }
     &__dots {
         position: relative;
         overflow: hidden;
@@ -60,7 +51,6 @@
             width: 200%;
             height: 200%;
             transform-origin: 0 0;
-            border: 1px solid green;
         }
         &--moving {
             &::before {

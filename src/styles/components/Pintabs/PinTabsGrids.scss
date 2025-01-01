@@ -6,20 +6,13 @@
     grid-template-columns: repeat(3, calc((100% - (2 * var(--pad))) / 3));
     grid-template-rows: repeat(3, calc((100% - (2 * var(--pad))) / 3));
     justify-content: center;
+    min-height: calc(100vh - var(--headerH));
 
     .gr3x3__item {
         position: relative;
-        padding: var(--pad);
+        padding: calc(var(--pad) * 1.5) var(--pad);
         &:not(.transparent) {
             background-color: white;
-        }
-        &.gr--1-lg {
-            grid-column: 1 / 2;
-            grid-row: 1 / 4;
-        }
-        &.gr--2-md {
-            grid-column: 2 / 3;
-            grid-row: 1 / 3;
         }
     }
 }
