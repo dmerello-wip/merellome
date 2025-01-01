@@ -69,15 +69,6 @@ body {
     color: var(--color-text-light);
     font-weight: 400;
     background: var(--color-bg);
-
-    // --square-size: 40px;
-    // --line-width: 1px;
-    // --color-bg-lines: #292929;
-    // @extend %bg-vert-lines;
-
-    > * {
-        z-index: 2;
-    }
 }
 
 .word {

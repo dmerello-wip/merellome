@@ -6,8 +6,6 @@
     grid-template-columns: repeat(3, calc((100% - (2 * var(--pad))) / 3));
     grid-template-rows: repeat(3, calc((100% - (2 * var(--pad))) / 3));
     justify-content: center;
-    height: 100%;
-    overflow: hidden;
 
     .gr3x3__item {
         position: relative;

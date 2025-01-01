@@ -18,6 +18,7 @@
         display: flex;
         width: 100%;
         justify-content: space-between;
+        border-top: 1px solid black;
         @for $i from 0 through 5 {
             &:nth-of-type(#{$i}) {
                 .PinTabs__tab__title {
@@ -47,11 +48,9 @@
             }
         }
         &__content {
-            height: calc(75vh - 2 * var(--container-pad-x));
             flex-basis: calc(100% - var(--titlesW));
             line-height: var(--text-line-height);
             color: var(--color-text-dark);
-            // background: var(--color--light);
         }
     }
 }
