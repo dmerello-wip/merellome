@@ -1,4 +1,4 @@
-
+'use client'
 
 import _SlidingTitle from '@/styles/components/slidingTitle.scss'
 import { useRef } from "react"

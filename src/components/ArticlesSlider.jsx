@@ -8,7 +8,7 @@ import { gsap } from 'gsap/dist/gsap'
 import { ScrollTrigger } from 'gsap/dist/ScrollTrigger'
 import { useIsomorphicLayoutEffect } from '@/hooks/useIsomorphicLayoutEffect';
 
-import { SlidingTitle } from './SlidingTitle';
+import { SlidingTitle } from '@/components/SlidingTitle';
 
 //TODO: usare l'hook useAspectRation per gestire alternativamente il pin dello scrollTrigger fra wrapper e gallery
 // se no su 16:9 non si vedono le cards

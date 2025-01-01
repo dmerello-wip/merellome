@@ -1,16 +1,18 @@
 import _PinTabs from '@/styles/components/PinTabs/PinTabs.scss'
 import _Moire from '@/styles/components/Moire.scss'
 import _Typo from '@/styles/basics/Typography.scss'
+import { SlidingTitle } from '@/components/SlidingTitle';
 import Image from 'next/image'
 
 const PinTabs = () => {
 
 return (
     <div className="PinTabs">
+      <SlidingTitle content={"a method"} />
       <div className="PinTabs__wrapper">
         <div className="PinTabs__tab">
           <h2 className="PinTabs__tab__title">
-            <em>01.</em> Discover
+            <em>01.</em> Discovery
           </h2>
           <div className="PinTabs__tab__content">
             <div className="gr3x3">
@@ -29,7 +31,7 @@ return (
         </div>
         <div className="PinTabs__tab">
           <h2 className="PinTabs__tab__title">
-            <em>02.</em> Map
+            <em>02.</em> Mapping
           </h2>
           <div className="PinTabs__tab__content">
             <div className="gr3x3">
@@ -42,7 +44,7 @@ return (
                 <p>Interviews, Workshops, collaborative Design Thinking, User Testing on existing products, Pain Points Meetings ... these are some of the tools i love to use in this first Discovery Phase.</p>
                 <p>Once a brief is received from the Business or Marketing department, I try to open a dialogue with Customer Care and the IT department. This helps me to explore the needs and solutions they provide daily to end users and identify potential technical action boundaries. </p><p>Everything then starts again by engaging with end users, who help us redefine everything with realism and a genuine discovery-driven approach.</p>
               </div>
-              <div className="gr3x3__item moire__diag-r-lines"
+              <div className="gr3x3__item moire__diag-r-lines transparent"
                     style={{gridRow: '1/4', gridColumn: '1/2'}}>
               </div>
             </div>
@@ -63,7 +65,7 @@ return (
                 <p>Interviews, Workshops, collaborative Design Thinking, User Testing on existing products, Pain Points Meetings ... these are some of the tools i love to use in this first Discovery Phase.</p>
                 <p>Once a brief is received from the Business or Marketing department, I try to open a dialogue with Customer Care and the IT department. This helps me to explore the needs and solutions they provide daily to end users and identify potential technical action boundaries. </p><p>Everything then starts again by engaging with end users, who help us redefine everything with realism and a genuine discovery-driven approach.</p>
               </div>
-              <div className="gr3x3__item moire__diag-l-lines"
+              <div className="gr3x3__item moire__dots"
                     style={{gridRow: '1/4', gridColumn: '1/2'}}>
               </div>
             </div>
@@ -84,7 +86,7 @@ return (
                 <p>Interviews, Workshops, collaborative Design Thinking, User Testing on existing products, Pain Points Meetings ... these are some of the tools i love to use in this first Discovery Phase.</p>
                 <p>Once a brief is received from the Business or Marketing department, I try to open a dialogue with Customer Care and the IT department. This helps me to explore the needs and solutions they provide daily to end users and identify potential technical action boundaries. </p><p>Everything then starts again by engaging with end users, who help us redefine everything with realism and a genuine discovery-driven approach.</p>
               </div>
-              <div className="gr3x3__item moire__diag-l-lines"
+              <div className="gr3x3__item moire__dots moire__dots--moving transparent"
                     style={{gridRow: '1/4', gridColumn: '1/2'}}>
               </div>
             </div>
@@ -104,8 +106,15 @@ return (
                 <p>Interviews, Workshops, collaborative Design Thinking, User Testing on existing products, Pain Points Meetings ... these are some of the tools i love to use in this first Discovery Phase.</p>
                 <p>Once a brief is received from the Business or Marketing department, I try to open a dialogue with Customer Care and the IT department. This helps me to explore the needs and solutions they provide daily to end users and identify potential technical action boundaries. </p><p>Everything then starts again by engaging with end users, who help us redefine everything with realism and a genuine discovery-driven approach.</p>
               </div>
-              <div className="gr3x3__item moire__dots"
-                    style={{gridRow: '1/4', gridColumn: '1/2'}}>
+              <div className="gr3x3__item" style={{gridRow: '1/4', gridColumn: '1/2'}}>
+                  <Image 
+                    src='/img/elisava.jpg'
+                    width={500}
+                    height={300}
+                    loading='lazy'
+                    alt='elisava'
+                    style={{objectFit: 'cover', width: '100%', height: '100%'}}
+                  />
               </div>
             </div>
           </div>

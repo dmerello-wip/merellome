@@ -10,7 +10,7 @@
     .gr3x3__item {
         position: relative;
         padding: var(--pad);
-        &:not([class*="moire"]) {
+        &:not(.transparent) {
             background-color: white;
         }
         &.gr--1-lg {
