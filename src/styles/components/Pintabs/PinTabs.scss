@@ -83,6 +83,10 @@
 }
 
 @include mq.responsiveTo("xl") {
+    .PinTabs__tab__content__text {
+        --gap: 2rem;
+        flex-direction: column-reverse;
+    }
 }
 @include mq.responsiveFrom("xl") {
 }
