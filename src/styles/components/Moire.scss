@@ -20,7 +20,7 @@
             height: 100%;
             $content: "design";
             @for $i from 1 through 100 {
-                $content: $content + "-design";
+                $content: $content + " design";
             }
             content: $content;
             text-transform: uppercase;
