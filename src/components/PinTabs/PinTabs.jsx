@@ -12,7 +12,7 @@ return (
       <div className="PinTabs__wrapper">
 
         {contents.map((item, index) => (
-          <PinTab key={index} data={item} />
+          <PinTab key={index} data={item} id={index}/>
         ))}
       </div>
     </div>  

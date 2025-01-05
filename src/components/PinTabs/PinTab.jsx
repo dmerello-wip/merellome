@@ -4,7 +4,7 @@ import classNames from 'classnames';
 import Image from 'next/image'
 
 
-const PinTab = ({data}) => {
+const PinTab = ({id, data}) => {
 
   
   const figureClasses = classNames('PinTabs__tab__content__figure', {
@@ -18,7 +18,7 @@ const PinTab = ({data}) => {
 return (
         <div className="PinTabs__tab">
           <h2 className="PinTabs__tab__title heading-1">
-            <em>0{data.id}.</em> {data.title}
+            <em>0{id+1}.</em> {data.title}
           </h2>
           <div className="PinTabs__tab__content">
             <div className={figureClasses}>
