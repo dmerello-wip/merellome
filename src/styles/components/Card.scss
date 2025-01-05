@@ -10,6 +10,7 @@
     flex-direction: column;
     justify-content: flex-start;
     align-items: space-between;
+
     &__close {
         position: absolute;
         top: 0;
@@ -46,8 +47,6 @@
             font-size: var(--text-heading2-font-size);
             line-height: var(--text-heading2-line-height);
             font-weight: var(--text-heading2-font-weight);
-        }
-        &__cta {
         }
     }
 }

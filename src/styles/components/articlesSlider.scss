@@ -25,7 +25,10 @@
         }
         &:hover {
             .Card {
-                transform: scale(1.025);
+                transform: scale(1.05);
+                &__content__link {
+                    padding-left: var(--cta-pad-horiz);
+                }
             }
         }
     }

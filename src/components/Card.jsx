@@ -5,13 +5,13 @@ import { IconX } from './icons/IconX'
 import { IconArrowRight } from './icons/IconArrowRight'
 
 const Card = ({id, image, title, description, link, isActive, closeAction }) => {
-
-  const tipClasses = classNames('Card', {
-    'Card--active': isActive
+  const cardClasses = classNames('Card', {
+    'Card--active': isActive,
+    'Card--linked': link
   })
 
-return (
-    <div className={tipClasses} data-id={id}>
+  const CardContent = () => (
+    <>
       <div className='Card__close'>
         {closeAction &&
           <button className="btn--primary" onClick={closeAction}>
@@ -33,14 +33,30 @@ return (
       <div className='Card__content'>
         <div className='Card__content__title'>{title}</div>
         <div className='Card__content__description'>{description}</div>
-        {link &&
-          <a className='Card__content__link btn--text --has-icon' href={link.url} target={link.target || '_blank'}>
+        {link && link.label &&
+          <span className='Card__content__link btn--text --has-icon'>
             <IconArrowRight />
-            {link.label || 'Read more'}
-          </a>
+            {link.label}
+          </span>
         }
       </div>
-    </div>  
+    </>
+  )
+
+  return link ? (
+    <a 
+      href={link.url}
+      target={link.target || '_blank'}
+      className={cardClasses}
+      data-id={id}
+      rel={link.target === '_blank' ? 'noopener noreferrer' : undefined}
+    >
+      <CardContent />
+    </a>
+  ) : (
+    <div className={cardClasses} data-id={id}>
+      <CardContent />
+    </div>
   )
 }
 
