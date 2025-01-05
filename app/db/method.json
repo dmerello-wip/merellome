@@ -1,0 +1,59 @@
+{
+  "pins": [
+    {
+      "title": "Discovery",
+      "description": "Interviews, collaborative Design Thinking, User Testing on existing products, Pain Points Meetings ... some of the tools of Discovery Phase. A dialogue with Business and Marketing departments focused on objectives, then workshops with Customer Care and IT department to explore needs and solutions provided daily to end users and identify potential technical action boundaries. Engaging with end users help me to redefine everything with a genuine user-driven approach.",
+      "highlight": "Empathy is the key, dialogue and data analysis are the method.",
+      "figure": {
+        "type": "text",
+        "transparent": false,
+        "src": false,
+        "alt": false
+      }
+    },
+    {
+      "title": "Mapping",
+      "description": "Interviews, Workshops, collaborative Design Thinking, User Testing on existing products, Pain Points Meetings ... these are some of the tools I love to use in this first Discovery Phase. Once a brief is received from the Business or Marketing department, I try to open a dialogue with Customer Care and the IT department. This helps me to explore the needs and solutions they provide daily to end users and identify potential technical action boundaries. Everything then starts again by engaging with end users, who help us redefine everything with realism and a genuine discovery-driven approach.",
+      "highlight": "Experience mapping is almost like magic: it’s as if the project has always been there, just waiting to be uncovered.",
+      "figure": {
+        "type": "diagonals",
+        "transparent": true,
+        "src": false,
+        "alt": false
+      }
+    },
+    {
+      "title": "Explore",
+      "description": "Interviews, Workshops, collaborative Design Thinking, User Testing on existing products, Pain Points Meetings ... these are some of the tools I love to use in this first Discovery Phase. Once a brief is received from the Business or Marketing department, I try to open a dialogue with Customer Care and the IT department. This helps me to explore the needs and solutions they provide daily to end users and identify potential technical action boundaries. Everything then starts again by engaging with end users, who help us redefine everything with realism and a genuine discovery-driven approach.",
+      "highlight": "Exploration needs pragmatism: focus is not detail, but distinctiveness.",
+      "figure": {
+        "type": "dots",
+        "transparent": false,
+        "src": false,
+        "alt": false
+      }
+    },
+    {
+      "title": "Refine",
+      "description": "Interviews, Workshops, collaborative Design Thinking, User Testing on existing products, Pain Points Meetings ... these are some of the tools I love to use in this first Discovery Phase. Once a brief is received from the Business or Marketing department, I try to open a dialogue with Customer Care and the IT department. This helps me to explore the needs and solutions they provide daily to end users and identify potential technical action boundaries. Everything then starts again by engaging with end users, who help us redefine everything with realism and a genuine discovery-driven approach.",
+      "highlight": "UI and interaction Design: where the product begins to be familiar.",
+      "figure": {
+        "type": "dots-animation",
+        "transparent": true,
+        "src": false,
+        "alt": false
+      }
+    },
+    {
+      "title": "Iterate",
+      "description": "Interviews, Workshops, collaborative Design Thinking, User Testing on existing products, Pain Points Meetings ... these are some of the tools I love to use in this first Discovery Phase. Once a brief is received from the Business or Marketing department, I try to open a dialogue with Customer Care and the IT department. This helps me to explore the needs and solutions they provide daily to end users and identify potential technical action boundaries. Everything then starts again by engaging with end users, who help us redefine everything with realism and a genuine discovery-driven approach.",
+      "highlight": "A digital product is born. But improvement is an everyday process.",
+      "figure": {
+        "type": "image",
+        "transparent": false,
+        "src": "/img/elisava.jpg",
+        "alt": "Elisava"
+      }
+    }
+  ]
+}

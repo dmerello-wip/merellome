@@ -4,8 +4,9 @@ import { Navigator } from "@/components/navigator/Navigator"
 import { ArticlesSlider } from '@/components/ArticlesSlider'
 import { TempSpacer } from "@/components/TempSpacer"
 import { PinTabs } from "@/components/PinTabs/PinTabs"
-// import slidesContents from '@/db/slides.json';
-// import articlesContents from '@/db/articles.json';
+// import slidesData from '@/db/slides.json';
+// import articlesData from '@/db/articles.json';
+// import methodData from '@/db/method.json';
 
 export default async function Page() {
 
@@ -17,17 +18,21 @@ export default async function Page() {
   const articles = await fetch(`${url}/api/articles`, { next: { tags: ['articles'] } }).then((res) =>
     res.json()
   )
+  const pins = await fetch(`${url}/api/method`, { next: { tags: ['method'] } }).then((res) =>
+    res.json()
+  )
 
   // yes, using the api is useless... i can simply import the json files:
-  // const slides = { slides: slidesContents.slides };
-  // const articles = { items: articlesContents.articles };
+  // const slides = { slides: slidesData.slides };
+  // const articles = { items: articlesData.articles };
+  // const pins = { items: methodData.pins };
 
   return (
     <>
       <Header />
       <Navigator contents={slides} />
       <ArticlesSlider contents={articles.items} />
-      <PinTabs />
+      <PinTabs contents={pins.items}/>
       <TempSpacer>1. E poi si va avanti...</TempSpacer>
       <TempSpacer>2. E poi si va avanti...</TempSpacer>
 
