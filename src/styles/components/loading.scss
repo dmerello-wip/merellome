@@ -1,5 +1,5 @@
 :root {
-    --color-loading-bg: black;
+    --color-loading-bg: var(--color-bg);
 }
 
 body:has(.loading--fixed) {
@@ -16,8 +16,9 @@ body:has(.loading--fixed) {
     display: flex;
     justify-content: center;
     align-items: center;
-    z-index: 10;
-    background-color: var(--color-bg);
+    z-index: 100;
+    gap: 1rem;
+    background-color: var(--color-loading-bg);
     &--fixed {
         position: fixed;
         width: 100vw;
@@ -41,6 +42,10 @@ body:has(.loading--fixed) {
         height: 100%;
         background-color: var(--color-loading-bg);
         border-radius: 50%;
+    }
+    &__text {
+        color: white;
+        font-size: 1.5rem;
     }
 }
 

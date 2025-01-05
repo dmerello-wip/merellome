@@ -11,7 +11,7 @@ import {Loading} from '@/components/Loading';
 
 const Logoroom = dynamic(() => import('@/components/Logoroom').then((mod) => mod.Logoroom), { ssr: false })
 const View = dynamic(() => import('@/components/View').then((mod) => mod.View), {
-  ssr: false
+  ssr: false, loading: () => <Loading isThree={false} fixed={true} />
 })
 
 
@@ -102,7 +102,6 @@ const Navigator = ( { contents }) => {
                       />    
                     </group> 
 
-                <Suspense fallback={<Loading fixed={true} />}>
                   <Logoroom />
                   {/* floor */}
                   <mesh
@@ -113,7 +112,6 @@ const Navigator = ( { contents }) => {
                     receiveShadow>
                     <planeGeometry args={[3000,3000]}  />
                   </mesh>
-                </Suspense>
             </View>
           </div>
           {renderNavSlides()}
