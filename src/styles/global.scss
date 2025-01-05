@@ -19,35 +19,18 @@
     --cards-radius: 10px;
 
     --text-line-height: 1.6em;
-
-    --text-heading1-font-weight: 400;
-    --text-heading2-font-weight: 400;
 }
 
-@include mq.responsiveTo("md") {
+@include mq.responsiveTo("lg") {
     :root {
         --padding-cards: 1.5rem;
-
-        --text-heading1-font-size: 1.8rem;
-        --text-heading1-line-height: 2.2rem;
-
-        --text-heading2-font-size: 1.6rem;
-        --text-heading2-line-height: 2rem;
-
-        --text-base-font-size: 16px;
+        --text-base-font-size: 15px;
         --container-pad-x: 1rem;
     }
 }
-@include mq.responsiveFrom("md") {
+@include mq.responsiveFrom("lg") {
     :root {
         --padding-cards: 2.5rem;
-
-        --text-heading1-font-size: 2.5rem;
-        --text-heading1-line-height: 2.8rem;
-
-        --text-heading2-font-size: 1.8rem;
-        --text-heading2-line-height: 2.2rem;
-
         --text-base-font-size: 16px;
         --container-pad-x: 3rem;
     }

@@ -1,6 +1,34 @@
-.txt-lg {
-    font-size: 1.8rem;
-    line-height: var(--text-line-height);
+@use "@/styles/utils/mq" as mq;
+
+:root {
+    --text-heading1-font-weight: 400;
+    --text-heading2-font-weight: 400;
+    --text-heading3-font-weight: 600;
+}
+
+@include mq.responsiveTo("xl") {
+    :root {
+        --text-heading1-font-size: 1.8rem;
+        --text-heading1-line-height: 2.2rem;
+
+        --text-heading2-font-size: 1.4rem;
+        --text-heading2-line-height: 2rem;
+
+        --text-heading3-font-size: 1.2rem;
+        --text-heading3-line-height: 1.8rem;
+    }
+}
+@include mq.responsiveFrom("xl") {
+    :root {
+        --text-heading1-font-size: 2.5rem;
+        --text-heading1-line-height: 2.8rem;
+
+        --text-heading2-font-size: 1.8rem;
+        --text-heading2-line-height: 2.2rem;
+
+        --text-heading3-font-size: 1.3rem;
+        --text-heading3-line-height: 2rem;
+    }
 }
 
 p {
@@ -8,4 +36,22 @@ p {
         padding-top: 0;
     }
     padding: 0.5em 0;
+}
+
+.heading-1 {
+    font-size: var(--text-heading1-font-size);
+    line-height: var(--text-heading1-line-height);
+    font-weight: var(--text-heading1-font-weight);
+}
+
+.heading-2 {
+    font-size: var(--text-heading2-font-size);
+    line-height: var(--text-heading2-line-height);
+    font-weight: var(--text-heading2-font-weight);
+}
+
+.heading-3 {
+    font-size: var(--text-heading3-font-size);
+    line-height: var(--text-heading3-line-height);
+    font-weight: var(--text-heading3-font-weight);
 }

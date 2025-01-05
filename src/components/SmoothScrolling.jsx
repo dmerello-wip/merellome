@@ -27,10 +27,10 @@ function SmoothScrolling({ children }) {
 
   return (
     <ReactLenis root className="lenis-wrapper" ref={lenisRef} autoRaf={false} options={{   
-      lerp: 0.1,  // 0.1 > smoother - 1 > neater
+      lerp: 0.2,  // 0.1 > smoother - 1 > neater
       // duration: 0.5, 
       wheelMultiplier: 0.6,
-      touchMultiplier: 0.6, 
+      touchMultiplier: 0.5, 
      }}>
       {children}
     </ReactLenis>

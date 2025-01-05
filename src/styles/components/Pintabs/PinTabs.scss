@@ -4,8 +4,6 @@
 .PinTabs {
     position: relative;
     background: var(--color--light);
-    --titlesW: 300px;
-    --headerH: 8rem;
 
     &__wrapper {
         padding: var(--container-pad-x);
@@ -19,6 +17,7 @@
         width: 100%;
         justify-content: space-between;
         border-top: 1px solid black;
+
         @for $i from 0 through 5 {
             &:nth-of-type(#{$i}) {
                 .PinTabs__tab__title {
@@ -29,16 +28,10 @@
 
         &__title {
             display: flex;
-            // align-items: flex-end;
             align-items: center;
             height: var(--headerH);
-            font-size: var(--text-heading1-font-size);
-            line-height: var(--text-heading1-line-height);
-            font-weight: var(--text-heading1-font-weight);
             width: var(--titlesW);
             background: var(--color--light);
-
-            position: sticky;
             em {
                 color: var(--color-secondary);
                 font-weight: 700;
@@ -48,33 +41,25 @@
             }
         }
         &__content {
-            --gap: 4rem;
             flex-basis: calc(100% - var(--titlesW));
             display: flex;
             flex-direction: row;
-            gap: var(--gap);
+            gap: var(--content-gap);
             justify-content: space-between;
             line-height: var(--text-line-height);
             color: var(--color-text-dark);
-            min-height: 60vh;
             &__figure {
-                height: 100%;
+                flex-basis: 30%;
                 &:not(.transparent) {
                     background-color: white;
                 }
-                flex-basis: 30%;
             }
             &__text {
                 background-color: white;
                 flex-basis: 70%;
                 display: flex;
-                gap: var(--gap);
                 justify-content: space-between;
-                padding: var(--gap) 0;
                 &__description {
-                    flex-basis: 50%;
-                }
-                &__highlight {
                     flex-basis: 50%;
                 }
             }
@@ -82,11 +67,71 @@
     }
 }
 
-@include mq.responsiveTo("xl") {
-    .PinTabs__tab__content__text {
-        --gap: 2rem;
-        flex-direction: column-reverse;
+@include mq.responsiveTo("md") {
+    .PinTabs {
+        --headerH: 4.5rem;
+        &__tab {
+            --titlesW: 100%;
+            flex-direction: column;
+            &__content {
+                min-height: 30vh;
+            }
+        }
+    }
+}
+@include mq.responsiveFrom("md") {
+    .PinTabs {
+        --headerH: 8rem;
+        &__tab {
+            flex-direction: row;
+            --titlesW: 200px;
+            &__title {
+                position: sticky;
+            }
+            &__content {
+                flex-direction: row;
+                min-height: 60vh;
+                &__text {
+                    padding: var(--content-gap) 0;
+                }
+            }
+        }
     }
 }
 @include mq.responsiveFrom("xl") {
+    .PinTabs {
+        &__tab {
+            --titlesW: 300px;
+        }
+    }
+}
+
+@include mq.responsiveTo("xxl") {
+    .PinTabs {
+        --content-gap: 2rem;
+        &__tab {
+            &__content {
+                &__text {
+                    flex-direction: column-reverse;
+                    justify-content: flex-end;
+                }
+            }
+        }
+    }
+}
+@include mq.responsiveFrom("xxl") {
+    .PinTabs {
+        --content-gap: 4rem;
+        &__tab {
+            &__content {
+                &__text {
+                    flex-direction: row;
+                    gap: var(--content-gap);
+                    &__highlight {
+                        flex-basis: 50%;
+                    }
+                }
+            }
+        }
+    }
 }

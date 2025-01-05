@@ -9,11 +9,10 @@
     z-index: 5;
     display: flex;
     justify-content: space-between;
-    padding: var(--padding);
+    padding: var(--padding) var(--container-pad-x);
     pointer-events: none;
     mix-blend-mode: exclusion;
     &__logo {
-        width: 100px;
         svg {
             object-fit: contain;
         }
@@ -36,11 +35,17 @@
 
 @include mq.responsiveTo("md") {
     .header {
-        --padding: 2rem;
+        --padding: var(--container-pad-x);
+        &__logo {
+            width: 70px;
+        }
     }
 }
 @include mq.responsiveFrom("md") {
     .header {
         --padding: 3rem;
+        &__logo {
+            width: 100px;
+        }
     }
 }
