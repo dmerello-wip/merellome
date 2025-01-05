@@ -48,8 +48,8 @@
         @extend %bg-dots;
         background-color: transparent;
         &::before {
-            width: 200%;
-            height: 200%;
+            width: 900px;
+            height: 900px;
             transform-origin: 0 0;
         }
         &--moving {
