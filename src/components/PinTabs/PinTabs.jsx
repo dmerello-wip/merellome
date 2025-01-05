@@ -8,7 +8,7 @@ const PinTabs = ({contents}) => {
 
 return (
     <div className="PinTabs">
-      <SlidingTitle content={"a method"} />
+      <SlidingTitle content={"method"} />
       <div className="PinTabs__wrapper">
 
         {contents.map((item, index) => (

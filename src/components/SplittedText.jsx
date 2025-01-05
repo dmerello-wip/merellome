@@ -6,7 +6,7 @@ import { gsap } from 'gsap/dist/gsap'
 import { ScrollTrigger } from 'gsap/dist/ScrollTrigger'
 import { useIsomorphicLayoutEffect } from '@/hooks/useIsomorphicLayoutEffect';
 
-const SplittedText = ({contentString}) => {
+const SplittedText = ({contentString, startTrigger, endTrigger}) => {
 
   const words = contentString.split(' ');
   const splittedTextRef = useRef(null);
@@ -31,8 +31,8 @@ const SplittedText = ({contentString}) => {
           scrollTrigger: {
               trigger: splittedTextRef.current,
               scrub: 0.1,
-              start: 'top bottom',
-              end: 'top 75%',
+              start: startTrigger ? startTrigger : 'top bottom',
+              end: endTrigger ? endTrigger : 'top 50%',
               // markers: true
           },
           stagger: {

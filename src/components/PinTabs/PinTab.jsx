@@ -2,6 +2,7 @@ import _Moire from '@/styles/components/Moire.scss'
 import _Typo from '@/styles/basics/Typography.scss'
 import classNames from 'classnames';
 import Image from 'next/image'
+import { SplittedText } from '@/components/SplittedText'
 
 
 const PinTab = ({id, data}) => {
@@ -18,7 +19,7 @@ const PinTab = ({id, data}) => {
 return (
         <div className="PinTabs__tab">
           <h2 className="PinTabs__tab__title heading-1">
-            <em>0{id+1}.</em> {data.title}
+            <em>0{id+1}.</em><SplittedText contentString={data.title}  endTrigger={'top 40%'}/>
           </h2>
           <div className="PinTabs__tab__content">
             <div className={figureClasses}>
@@ -35,10 +36,12 @@ return (
             </div>
               <div className='PinTabs__tab__content__text'>
                 <div className='PinTabs__tab__content__text__description'>
-                  {data.description}
+                  <SplittedText contentString={data.description} endTrigger={'top 20%'}/>
                 </div>
                 <div className='PinTabs__tab__content__text__highlight'>
-                  <p className='heading-2'>{data.highlight}</p>
+                  <p className='heading-2'>
+                    <SplittedText contentString={data.highlight} endTrigger={'top 50%'}/>
+                  </p>
                 </div>
               </div>
           </div>

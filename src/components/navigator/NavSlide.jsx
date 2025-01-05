@@ -21,7 +21,7 @@ const NavSlide = (props) => {
       <div className="navSlide__content">
         <div className="navSlide__content__card">
           <div className='navSlide__content__card__title'>
-            <h2><SplittedText contentString={title} /></h2>
+            <h2><SplittedText contentString={title} endTrigger={'top 75%'}/></h2>
           </div>
           <div className='navSlide__content__card__description' dangerouslySetInnerHTML={{ __html: description }} />
         </div>
