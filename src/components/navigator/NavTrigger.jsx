@@ -92,17 +92,17 @@ const NavTrigger = (props) => {
 
 
         /* ------------ 03. animate slide card ------------ */
-        gsap.from(`#slide-${slideIndex} .navSlide__content`, {
-          // x: '-100%',
-          // rotateY: '180deg',
-          rotateX: '120deg',
-          scrollTrigger: {
-              trigger: navTriggerRef.current,
-              scrub: 0.1,
-              start: 'top bottom',
-              end: 'center center',
-          },
-        });
+        // gsap.from(`#slide-${slideIndex} .navSlide__content`, {
+        //   // x: '-100%',
+        //   // rotateY: '180deg',
+        //   rotateX: '120deg',
+        //   scrollTrigger: {
+        //       trigger: navTriggerRef.current,
+        //       scrub: 0.1,
+        //       start: 'top bottom',
+        //       end: 'center center',
+        //   },
+        // });
 
 
         /* ------------ 05. animate slide descriptions ------------ */
