@@ -1,6 +1,4 @@
 import _PinTabs from '@/styles/components/PinTabs/PinTabs.scss'
-import _Moire from '@/styles/components/Moire.scss'
-import _Typo from '@/styles/basics/Typography.scss'
 import { SlidingTitle } from '@/components/SlidingTitle';
 import { PinTab } from './PinTab';
 

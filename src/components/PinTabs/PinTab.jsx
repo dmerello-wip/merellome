@@ -1,5 +1,5 @@
 import _Moire from '@/styles/components/Moire.scss'
-import _Typo from '@/styles/basics/Typography.scss'
+import _Typo from '@/styles/basics/typography.scss'
 import classNames from 'classnames';
 import Image from 'next/image'
 import { SplittedText } from '@/components/SplittedText'
