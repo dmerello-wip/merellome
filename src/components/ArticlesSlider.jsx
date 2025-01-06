@@ -24,13 +24,13 @@ const ArticlesSlider = ({contents}) => {
         gsap.registerPlugin(ScrollTrigger)
 
         /* ------------ animate all cards wrapper ------------ */
-        gsap.to(galleryRef.current.children, {
+        gsap.to(galleryRef.current, {
           scrollTrigger: {
               trigger: wrapperRef.current,
               start: 'center 40%',
-              end: () => "+=" + wrapperRef.current.offsetWidth,
+              end: () => "+=" + wrapperRef.current.offsetHeight,
               pin: true,
-              scrub: 4,
+              scrub: 1,
           },
           x: () => -(galleryRef.current.scrollWidth - document.documentElement.clientWidth) + "px",
           ease: 'none'
