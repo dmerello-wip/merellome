@@ -2,9 +2,9 @@
 @use "@/styles/utils/mq" as mq;
 
 .articlesSlider {
+    overflow-x: hidden;
     &__wrapper {
         position: relative;
-        overflow-x: hidden;
     }
     &__gallery {
         position: relative;

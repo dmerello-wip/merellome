@@ -8,6 +8,7 @@ import { PerspectiveCamera } from '@react-three/drei'
 import * as THREE from 'three'
 import { useIsMobile } from '@/hooks/useIsMobile';
 import {Loading} from '@/components/Loading';
+import {Floor} from '@/components/Floor'
 
 const Logoroom = dynamic(() => import('@/components/Logoroom').then((mod) => mod.Logoroom), { ssr: false })
 const View = dynamic(() => import('@/components/View').then((mod) => mod.View), {
@@ -103,15 +104,8 @@ const Navigator = ( { contents }) => {
                     </group> 
 
                   <Logoroom />
-                  {/* floor */}
-                  <mesh
-                    material={new THREE.MeshPhongMaterial({ color: 0x2a2626 })}
-                    rotation={[-Math.PI /2, 0, 0]}
-                    position={[0,0,0]}
-                    castShadow
-                    receiveShadow>
-                    <planeGeometry args={[3000,3000]}  />
-                  </mesh>
+                  
+                                <Floor color={'#2a2626'}/>
             </View>
           </div>
           {renderNavSlides()}

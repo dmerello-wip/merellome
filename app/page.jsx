@@ -1,8 +1,8 @@
 import '@/helpers/envConfig'
 import { Header } from "@/components/Header"
 import { Navigator } from "@/components/navigator/Navigator"
+import { Contact } from "@/components/Contact"
 import { ArticlesSlider } from '@/components/ArticlesSlider'
-import { TempSpacer } from "@/components/TempSpacer"
 import { PinTabs } from "@/components/PinTabs/PinTabs"
 import slidesData from '@/db/slides.json';
 import articlesData from '@/db/articles.json';
@@ -33,8 +33,7 @@ export default async function Page() {
       <Navigator contents={slides} />
       <ArticlesSlider contents={articles.items} />
       <PinTabs contents={pins.items}/>
-      <TempSpacer>1. E poi si va avanti...</TempSpacer>
-      <TempSpacer>2. E poi si va avanti...</TempSpacer>
+      <Contact />
 
     </>
   )

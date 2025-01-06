@@ -1,4 +1,4 @@
-import _PinTabs from '@/styles/components/Pintabs/PinTabs.scss'
+import _PinTabs from '@/styles/components/PinTabs.scss'
 import { SlidingTitle } from '@/components/SlidingTitle';
 import { PinTab } from './PinTab';
 
