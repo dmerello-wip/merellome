@@ -49,6 +49,13 @@
             line-height: var(--text-line-height);
             color: var(--color-text-dark);
             &__figure {
+                --distance: 2rem;
+                border-radius: 1rem;
+                inset: var(--distance) 0;
+                height: calc(100% - 2 * var(--distance));
+                overflow: hidden;
+                border: 1px solid black;
+
                 &:not(.transparent) {
                     background-color: white;
                 }
