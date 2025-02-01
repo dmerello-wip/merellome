@@ -16,8 +16,7 @@ export function Me(props) {
   useEffect(() => {
     actions["Armature|mixamo.com|Layer0"].play();
   }, [actions]);
-
-  return (
+return (
     <group ref={group} {...props} dispose={null}>
       <group name="Scene">
         <group name="Armature" rotation={[Math.PI / 2, 0, 0]} scale={0.01}>
@@ -49,6 +48,12 @@ export function Me(props) {
               skeleton={nodes.arm_rightmesh_1.skeleton}
             />
           </group>
+          <skinnedMesh
+            name="beard"
+            geometry={nodes.beard.geometry}
+            material={materials.black}
+            skeleton={nodes.beard.skeleton}
+          />
           <group name="body">
             <skinnedMesh
               name="bodymesh"
@@ -63,12 +68,6 @@ export function Me(props) {
               skeleton={nodes.bodymesh_1.skeleton}
             />
           </group>
-          <skinnedMesh
-            name="Cube001"
-            geometry={nodes.Cube001.geometry}
-            material={materials.black}
-            skeleton={nodes.Cube001.skeleton}
-          />
           <skinnedMesh
             name="eyebrow_left"
             geometry={nodes.eyebrow_left.geometry}
@@ -94,16 +93,16 @@ export function Me(props) {
             skeleton={nodes.glasses.skeleton}
           />
           <skinnedMesh
+            name="hairs"
+            geometry={nodes.hairs.geometry}
+            material={materials.black}
+            skeleton={nodes.hairs.skeleton}
+          />
+          <skinnedMesh
             name="head"
             geometry={nodes.head.geometry}
             material={materials.skin}
             skeleton={nodes.head.skeleton}
-          />
-          <skinnedMesh
-            name="head001"
-            geometry={nodes.head001.geometry}
-            material={materials.black}
-            skeleton={nodes.head001.skeleton}
           />
           <skinnedMesh
             name="leg_left"

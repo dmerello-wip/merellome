@@ -14,6 +14,7 @@ const PinTab = ({id, data}) => {
     'moire__dots' : data.figure.type === 'dots',
     'moire__dots moire__dots--moving' : data.figure.type === 'dots-animation',
     'transparent' : data.figure.transparent,
+    'moire__dots--red' : data.figure.color === 'red',
   });
 
 return (

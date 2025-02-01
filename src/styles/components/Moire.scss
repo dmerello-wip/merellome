@@ -56,6 +56,9 @@
                 animation: infiniteRotate 30s linear infinite;
             }
         }
+        &--red {
+            --color: var(--color-secondary);
+        }
     }
 }
 

@@ -38,7 +38,6 @@ $viewports: (
         @content;
     }
 }
-
 @mixin responsiveFrom($viewportRef) {
     $currBreak: map.get($viewports, $viewportRef);
     $selectedViewport: map.get($currBreak, "base");

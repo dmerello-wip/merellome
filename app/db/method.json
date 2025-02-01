@@ -6,9 +6,7 @@
       "highlight": "Empathy is the key, dialogue and data analysis are the method.",
       "figure": {
         "type": "text",
-        "transparent": false,
-        "src": false,
-        "alt": false
+        "transparent": false
       }
     },
     {
@@ -17,9 +15,7 @@
       "highlight": "As if the project has always been there, just waiting to be uncovered.",
       "figure": {
         "type": "diagonals",
-        "transparent": true,
-        "src": false,
-        "alt": false
+        "transparent": true
       }
     },
     {
@@ -28,9 +24,7 @@
       "highlight": "Exploration needs pragmatism: focus is not detail, but distinctiveness.",
       "figure": {
         "type": "dots",
-        "transparent": false,
-        "src": false,
-        "alt": false
+        "transparent": false
       }
     },
     {
@@ -39,9 +33,7 @@
       "highlight": "UI and interaction Design: where the product begins to be familiar.",
       "figure": {
         "type": "dots-animation",
-        "transparent": true,
-        "src": false,
-        "alt": false
+        "transparent": true
       }
     },
     {
@@ -51,8 +43,8 @@
       "figure": {
         "type": "image",
         "transparent": false,
-        "src": "/img/elisava.jpg",
-        "alt": "Elisava"
+        "src": "/img/iterate.jpg",
+        "alt": "Iterate"
       }
     }
   ]

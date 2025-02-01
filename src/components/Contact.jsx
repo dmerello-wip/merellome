@@ -23,13 +23,13 @@ const Contact = ( { contents }) => {
               <pointLight
                 position={[0, 2, -2]}
                 intensity={5}
-                color="#fceed4"
+                color="#eee8dd" 
                 decay={1}
               />
               <pointLight
                 position={[0, 1, 1]}
                 intensity={10}
-                color="#fceed4"
+                color="#eee8dd"
                 decay={0.2}
               />
               <PerspectiveCamera fov={40} makeDefault position={[0,1.5,4]} rotation={[-0.15,0,0]} />
