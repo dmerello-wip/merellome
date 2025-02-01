@@ -17,195 +17,132 @@ export function Me(props) {
     actions["Armature|mixamo.com|Layer0"].play();
   }, [actions]);
 
-
   return (
     <group ref={group} {...props} dispose={null}>
       <group name="Scene">
         <group name="Armature" rotation={[Math.PI / 2, 0, 0]} scale={0.01}>
           <group name="arm_left">
             <skinnedMesh
-              name="group4920458"
-              geometry={nodes.group4920458.geometry}
-              material={materials.mat18}
-              skeleton={nodes.group4920458.skeleton}
-              castShadow
-              receiveShadow
+              name="arm_leftmesh"
+              geometry={nodes.arm_leftmesh.geometry}
+              material={materials.skin}
+              skeleton={nodes.arm_leftmesh.skeleton}
             />
             <skinnedMesh
-              name="group4920458_1"
-              geometry={nodes.group4920458_1.geometry}
-              material={materials.mat21}
-              skeleton={nodes.group4920458_1.skeleton}
-              castShadow
-              receiveShadow
+              name="arm_leftmesh_1"
+              geometry={nodes.arm_leftmesh_1.geometry}
+              material={materials.black}
+              skeleton={nodes.arm_leftmesh_1.skeleton}
             />
           </group>
           <group name="arm_right">
             <skinnedMesh
-              name="group1155631885"
-              geometry={nodes.group1155631885.geometry}
-              material={materials.mat18}
-              skeleton={nodes.group1155631885.skeleton}
-              castShadow
-              receiveShadow
+              name="arm_rightmesh"
+              geometry={nodes.arm_rightmesh.geometry}
+              material={materials.skin}
+              skeleton={nodes.arm_rightmesh.skeleton}
             />
             <skinnedMesh
-              name="group1155631885_1"
-              geometry={nodes.group1155631885_1.geometry}
-              material={materials.mat21}
-              skeleton={nodes.group1155631885_1.skeleton}
-              castShadow
-              receiveShadow
+              name="arm_rightmesh_1"
+              geometry={nodes.arm_rightmesh_1.geometry}
+              material={materials.black}
+              skeleton={nodes.arm_rightmesh_1.skeleton}
+            />
+          </group>
+          <group name="body">
+            <skinnedMesh
+              name="bodymesh"
+              geometry={nodes.bodymesh.geometry}
+              material={materials['dark-grey']}
+              skeleton={nodes.bodymesh.skeleton}
+            />
+            <skinnedMesh
+              name="bodymesh_1"
+              geometry={nodes.bodymesh_1.geometry}
+              material={materials.black}
+              skeleton={nodes.bodymesh_1.skeleton}
             />
           </group>
           <skinnedMesh
-            name="beard"
-            geometry={nodes.beard.geometry}
-            material={materials.mat23}
-            skeleton={nodes.beard.skeleton}
-            castShadow
-              receiveShadow
+            name="Cube001"
+            geometry={nodes.Cube001.geometry}
+            material={materials.black}
+            skeleton={nodes.Cube001.skeleton}
           />
-          <group name="body">
-            <skinnedMesh
-              name="group1524745835"
-              geometry={nodes.group1524745835.geometry}
-              material={materials.mat23}
-              skeleton={nodes.group1524745835.skeleton}
-              castShadow
-              receiveShadow
-            />
-            <skinnedMesh
-              name="group1524745835_1"
-              geometry={nodes.group1524745835_1.geometry}
-              material={materials.mat17}
-              skeleton={nodes.group1524745835_1.skeleton}
-              castShadow
-              receiveShadow
-            />
-          </group>
           <skinnedMesh
             name="eyebrow_left"
             geometry={nodes.eyebrow_left.geometry}
-            material={materials.mat23}
+            material={materials.black}
             skeleton={nodes.eyebrow_left.skeleton}
-            castShadow
-              receiveShadow
           />
           <skinnedMesh
             name="eyebrow_right"
             geometry={nodes.eyebrow_right.geometry}
-            material={materials.mat23}
+            material={materials.black}
             skeleton={nodes.eyebrow_right.skeleton}
-            castShadow
-              receiveShadow
           />
           <skinnedMesh
             name="eyes"
             geometry={nodes.eyes.geometry}
-            material={materials.mat23}
+            material={materials.black}
             skeleton={nodes.eyes.skeleton}
-            castShadow
-              receiveShadow
           />
           <skinnedMesh
             name="glasses"
             geometry={nodes.glasses.geometry}
-            material={materials.mat23}
+            material={materials.black}
             skeleton={nodes.glasses.skeleton}
-            castShadow
-              receiveShadow
-          />
-          <skinnedMesh
-            name="group76706235"
-            geometry={nodes.group76706235.geometry}
-            material={materials.mat17}
-            skeleton={nodes.group76706235.skeleton}
-            castShadow
-              receiveShadow
-          />
-          <skinnedMesh
-            name="hairs"
-            geometry={nodes.hairs.geometry}
-            material={materials.mat23}
-            skeleton={nodes.hairs.skeleton}
-            castShadow
-              receiveShadow
           />
           <skinnedMesh
             name="head"
             geometry={nodes.head.geometry}
-            material={materials.mat18}
+            material={materials.skin}
             skeleton={nodes.head.skeleton}
-            castShadow
-              receiveShadow
+          />
+          <skinnedMesh
+            name="head001"
+            geometry={nodes.head001.geometry}
+            material={materials.black}
+            skeleton={nodes.head001.skeleton}
           />
           <skinnedMesh
             name="leg_left"
             geometry={nodes.leg_left.geometry}
-            material={materials.mat17}
+            material={materials['dark-grey']}
             skeleton={nodes.leg_left.skeleton}
-            castShadow
-              receiveShadow
           />
           <skinnedMesh
             name="leg_right"
             geometry={nodes.leg_right.geometry}
-            material={materials.mat17}
+            material={materials['dark-grey']}
             skeleton={nodes.leg_right.skeleton}
-            castShadow
-              receiveShadow
           />
           <group name="shoe_left">
             <skinnedMesh
-              name="group1754668845"
-              geometry={nodes.group1754668845.geometry}
-              material={materials.mat21}
-              skeleton={nodes.group1754668845.skeleton}
-              castShadow
-              receiveShadow
+              name="shoe_leftmesh"
+              geometry={nodes.shoe_leftmesh.geometry}
+              material={materials.black}
+              skeleton={nodes.shoe_leftmesh.skeleton}
             />
             <skinnedMesh
-              name="group1754668845_1"
-              geometry={nodes.group1754668845_1.geometry}
-              material={materials.mat22}
-              skeleton={nodes.group1754668845_1.skeleton}
-              castShadow
-              receiveShadow
-            />
-            <skinnedMesh
-              name="group1754668845_2"
-              geometry={nodes.group1754668845_2.geometry}
-              material={materials.mat15}
-              skeleton={nodes.group1754668845_2.skeleton}
-              castShadow
-              receiveShadow
+              name="shoe_leftmesh_1"
+              geometry={nodes.shoe_leftmesh_1.geometry}
+              material={materials.white}
+              skeleton={nodes.shoe_leftmesh_1.skeleton}
             />
           </group>
           <group name="shoe_right">
             <skinnedMesh
-              name="group976850016"
-              geometry={nodes.group976850016.geometry}
-              material={materials.mat21}
-              skeleton={nodes.group976850016.skeleton}
-              castShadow
-              receiveShadow
+              name="shoe_rightmesh"
+              geometry={nodes.shoe_rightmesh.geometry}
+              material={materials.black}
+              skeleton={nodes.shoe_rightmesh.skeleton}
             />
             <skinnedMesh
-              name="group976850016_1"
-              geometry={nodes.group976850016_1.geometry}
-              material={materials.mat22}
-              skeleton={nodes.group976850016_1.skeleton}
-              castShadow
-              receiveShadow
-            />
-            <skinnedMesh
-              name="group976850016_2"
-              geometry={nodes.group976850016_2.geometry}
-              material={materials.mat15}
-              skeleton={nodes.group976850016_2.skeleton}
-              castShadow
-              receiveShadow
+              name="shoe_rightmesh_1"
+              geometry={nodes.shoe_rightmesh_1.geometry}
+              material={materials.white}
+              skeleton={nodes.shoe_rightmesh_1.skeleton}
             />
           </group>
           <primitive object={nodes.mixamorigHips} />
