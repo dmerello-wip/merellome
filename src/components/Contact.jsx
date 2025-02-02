@@ -15,9 +15,15 @@ const View = dynamic(() => import('@/components/View').then((mod) => mod.View), 
 const Contact = ( { contents }) => {
 
   const bgcolor = '#1f1b1b';
+  // const fontUrl = '/fonts/Figtree_Light_Regular.json';
 
   return (
       <div className="Contact">
+        <div className="Contact__content">
+          <div className="Contact__content__title">
+            And that's all folks!
+          </div>
+        </div>
         <View className="Contact__canvas">
               <ambientLight intensity={1} />
               <pointLight
@@ -33,12 +39,23 @@ const Contact = ( { contents }) => {
                 decay={0.2}
               />
               <PerspectiveCamera fov={40} makeDefault position={[0,1.5,4]} rotation={[-0.15,0,0]} />
+              {/* <Text
+                scale={[1, 1, 1]}
+                position={[0, 0, -0.5]}
+                color="white"
+                anchorX="center"
+                anchorY="bottom-baseline"
+                fontSize={0.4}
+                fontWeight="bold"
+              >
+                THAT'S ALL FOLKS!
+              </Text> */}
               <Me />
               <ContactShadows resolution={512} position={[0, 0, 0]} opacity={1} scale={3} blur={2} far={1.3} />
               <fog attach="fog" args={[bgcolor, 0, 15]} />
 
-              <Floor color={bgcolor}/>
-          </View>
+              {/* <Floor color={bgcolor}/> */}
+        </View>
       </div>
   )
 }

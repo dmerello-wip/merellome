@@ -1,14 +1,50 @@
 // @use "@/styles/utils/typography" as typo;
-// @use "@/styles/utils/mq" as mq;
-// @use "@/styles/utils/shortcuts";
+@use "@/styles/utils/mq" as mq;
+@use "@/styles/utils/shortcuts";
 
 .Contact {
-    overflow: hidden;
+    position: relative;
     width: 100%;
     height: 100vh;
     background-color: var(--bg-color);
+    &__content {
+        @extend %absoluteCentered;
+        display: flex;
+        justify-content: center;
+        &__title {
+            font-weight: 900;
+            line-height: 1.2;
+            color: var(--color-text-dark);
+            text-transform: uppercase;
+            text-align: center;
+            line-height: 1em;
+        }
+    }
     &__canvas {
+        @extend %absoluteCentered;
         width: 100%;
         height: 100vh;
+    }
+}
+
+@include mq.responsiveFrom("md") {
+    .Contact {
+        &__content {
+            width: 80vw;
+            &__title {
+                font-size: 13vw;
+            }
+        }
+    }
+}
+
+@include mq.responsiveTo("md") {
+    .Contact {
+        &__content {
+            width: 60vw;
+            &__title {
+                font-size: 22vw;
+            }
+        }
     }
 }
