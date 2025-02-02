@@ -4,7 +4,8 @@ import _contact from '@/styles/components/Contact.scss'
 import dynamic from 'next/dynamic'
 import {  PerspectiveCamera, ContactShadows } from '@react-three/drei'
 import {Loading} from '@/components/Loading';
-import {Floor} from '@/components/Floor'
+import { IconArrowRight } from './icons/IconArrowRight'
+// import {Floor} from '@/components/Floor'
 
 const Me = dynamic(() => import('@/components/Me').then((mod) => mod.Me), { ssr: false })
 const View = dynamic(() => import('@/components/View').then((mod) => mod.View), {
@@ -15,13 +16,22 @@ const View = dynamic(() => import('@/components/View').then((mod) => mod.View), 
 const Contact = ( { contents }) => {
 
   const bgcolor = '#1f1b1b';
-  // const fontUrl = '/fonts/Figtree_Light_Regular.json';
 
   return (
       <div className="Contact">
         <div className="Contact__content">
           <div className="Contact__content__title">
             And that's all folks!
+          </div>
+          <div className='Contact__content__actions'>
+            <a className='btn--text --has-icon' href="https://www.wipitalia.it">
+              <IconArrowRight />
+              my agency website
+            </a>
+            <a className='btn--text --has-icon' href="https://www.wipitalia.it">
+              <IconArrowRight />
+              my linkedin portfolio
+            </a>
           </div>
         </div>
         <View className="Contact__canvas">
@@ -39,17 +49,6 @@ const Contact = ( { contents }) => {
                 decay={0.2}
               />
               <PerspectiveCamera fov={40} makeDefault position={[0,1.5,4]} rotation={[-0.15,0,0]} />
-              {/* <Text
-                scale={[1, 1, 1]}
-                position={[0, 0, -0.5]}
-                color="white"
-                anchorX="center"
-                anchorY="bottom-baseline"
-                fontSize={0.4}
-                fontWeight="bold"
-              >
-                THAT'S ALL FOLKS!
-              </Text> */}
               <Me />
               <ContactShadows resolution={512} position={[0, 0, 0]} opacity={1} scale={3} blur={2} far={1.3} />
               <fog attach="fog" args={[bgcolor, 0, 15]} />

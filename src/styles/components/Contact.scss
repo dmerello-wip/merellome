@@ -6,11 +6,25 @@
     position: relative;
     width: 100%;
     height: 100vh;
-    background-color: var(--bg-color);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    &::before {
+        @extend %absoluteCenteredSized;
+        content: "";
+        background: radial-gradient(at 50% 90%, rgb(67, 67, 60) 0%, rgba(0, 0, 0, 0) 30%, rgb(0, 0, 0) 100%);
+    }
+
     &__content {
         @extend %absoluteCentered;
         display: flex;
-        justify-content: center;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        height: 80vh;
+        padding-bottom: 2vh;
         &__title {
             font-weight: 900;
             line-height: 1.2;
@@ -19,31 +33,49 @@
             text-align: center;
             line-height: 1em;
         }
+        &__actions {
+            display: flex;
+            justify-content: space-between;
+            padding: 4rem 3rem;
+            width: 60vw;
+            background-color: rgba(0, 0, 0, 0.15);
+            // border: 3px solid var(--color-secondary);
+            border-radius: var(--cards-radius);
+        }
     }
     &__canvas {
         @extend %absoluteCentered;
         width: 100%;
         height: 100vh;
-    }
-}
-
-@include mq.responsiveFrom("md") {
-    .Contact {
-        &__content {
-            width: 80vw;
-            &__title {
-                font-size: 13vw;
-            }
-        }
+        pointer-events: none;
     }
 }
 
 @include mq.responsiveTo("md") {
     .Contact {
+        &:before {
+            width: 300vw;
+        }
         &__content {
-            width: 60vw;
             &__title {
-                font-size: 22vw;
+                font-size: 24vw;
+            }
+            &__actions {
+                flex-direction: column;
+            }
+        }
+    }
+}
+
+@include mq.responsiveFrom("md") {
+    .Contact {
+        &:before {
+            width: 200vw;
+        }
+        &__content {
+            width: 80vw;
+            &__title {
+                font-size: 13vw;
             }
         }
     }

@@ -67,7 +67,7 @@ const Navigator = ( { contents }) => {
           <div className='navigator__canvas'>
             <View className="navigator__canvas__scene" >
                   
-                  <ambientLight intensity={1} />
+                  <ambientLight intensity={1.5} />
                   <pointLight
                     position={[-10, 30, -10]}
                     intensity={2}
@@ -104,8 +104,7 @@ const Navigator = ( { contents }) => {
                     </group> 
 
                   <Logoroom />
-                  
-                                <Floor color={'#2a2626'}/>
+                  <Floor color={'#2a2626'}/>
             </View>
           </div>
           {renderNavSlides()}
