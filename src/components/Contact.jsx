@@ -4,7 +4,8 @@ import _contact from '@/styles/components/Contact.scss'
 import dynamic from 'next/dynamic'
 import {  PerspectiveCamera, ContactShadows } from '@react-three/drei'
 import {Loading} from '@/components/Loading';
-import { IconArrowRight } from './icons/IconArrowRight'
+import { Wip } from './icons/Wip'
+import { Linkedin } from './icons/Linkedin'
 // import {Floor} from '@/components/Floor'
 
 const Me = dynamic(() => import('@/components/Me').then((mod) => mod.Me), { ssr: false })
@@ -24,13 +25,13 @@ const Contact = ( { contents }) => {
             And that's all folks!
           </div>
           <div className='Contact__content__actions'>
-            <a className='btn--text --has-icon' href="https://www.wipitalia.it">
-              <IconArrowRight />
+            <a className='btn--text --has-icon' href="https://www.wipitalia.it"  target='_blank'>
+              <Wip />
               my agency website
             </a>
-            <a className='btn--text --has-icon' href="https://www.wipitalia.it">
-              <IconArrowRight />
-              my linkedin portfolio
+            <a className='btn--text --has-icon' href="https://www.linkedin.com/in/diegomerello/" target='_blank'>
+              <Linkedin />
+              my linkedin profile
             </a>
           </div>
         </div>
