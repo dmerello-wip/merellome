@@ -22,14 +22,14 @@ const Contact = ( { contents }) => {
       <div className="Contact">
         <div className="Contact__content">
           <div className="Contact__content__title">
-            And that's all folks!
+            And that&#39;s all folks!
           </div>
-          <div className='Contact__content__actions'>
-            <a className='btn--text --has-icon' href="https://www.wipitalia.it"  target='_blank'>
+          <div className="Contact__content__actions">
+            <a className="btn--text --has-icon" href="https://www.wipitalia.it"  target="_blank">
               <Wip />
               my agency website
             </a>
-            <a className='btn--text --has-icon' href="https://www.linkedin.com/in/diegomerello/" target='_blank'>
+            <a className="btn--text --has-icon" href="https://www.linkedin.com/in/diegomerello/" target="_blank">
               <Linkedin />
               my linkedin profile
             </a>
