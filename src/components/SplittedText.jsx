@@ -36,7 +36,7 @@ const SplittedText = ({contentString, startTrigger, endTrigger}) => {
               // markers: true
           },
           stagger: {
-              each: 0.04,
+              each: 1,
           },
         });
     }, splittedTextRef);

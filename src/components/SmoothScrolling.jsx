@@ -2,7 +2,7 @@
 
 import gsap from 'gsap';
 import { useRef, useEffect } from 'react';
-import { ReactLenis, useLenis } from '@studio-freight/react-lenis'
+import { ReactLenis, useLenis } from 'lenis/react';
 
 function SmoothScrolling({ children }) {
 
@@ -27,10 +27,14 @@ function SmoothScrolling({ children }) {
 
   return (
     <ReactLenis root className="lenis-wrapper" ref={lenisRef} autoRaf={false} options={{   
-      lerp: 0.2,  // 0.1 > smoother - 1 > neater
-      // duration: 0.5, 
-      wheelMultiplier: 0.6,
-      touchMultiplier: 0.5, 
+        lerp: 0.2,               
+        duration: 2,          
+        wheelMultiplier: 0.4,    
+        touchMultiplier: 2,      
+        touchInertiaMultiplier: 2, 
+        smoothWheel: true,       
+        smoothTouch: true,       
+        gestureOrientation: "vertical" 
      }}>
       {children}
     </ReactLenis>

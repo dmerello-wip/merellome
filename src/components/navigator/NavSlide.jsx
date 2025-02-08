@@ -3,10 +3,12 @@ import _NavSlide from '@/styles/components/NavSlide.scss'
 import { Card } from '@/components/Card'
 import { NavTrigger } from '@/components/navigator/NavTrigger'
 import { SplittedText } from '@/components/SplittedText'
+import { useIsMobile } from '@/hooks/useIsMobile';
 
 const NavSlide = (props) => {
 
   const { title, description, tips, cameraStartSettings, cameraEndSettings, slideIndex, setCamera } = props;
+  const isMobile = useIsMobile();
 
   /* -------------------- render -------------------- */
 
@@ -21,7 +23,14 @@ const NavSlide = (props) => {
       <div className="navSlide__content">
         <div className="navSlide__content__card">
           <div className='navSlide__content__card__title'>
-            <h2><SplittedText contentString={title} endTrigger={'top 75%'}/></h2>
+            <h2>
+              {isMobile &&
+                <SplittedText contentString={title} startTrigger={'top 100%'} endTrigger={'top 75%'}/>
+              }
+              {!isMobile &&
+                <SplittedText contentString={title} startTrigger={'top 100%'} endTrigger={'top 50%'}/>
+              }
+            </h2>
           </div>
           <div className='navSlide__content__card__description' dangerouslySetInnerHTML={{ __html: description }} />
         </div>
