@@ -2,15 +2,36 @@
 @use "@/styles/utils/mq" as mq;
 @use "@/styles/utils/shortcuts";
 
+@keyframes imageAnimation {
+    from {
+        opacity: 0;
+        transform: scale(1.2);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
 .Card {
+    --cubic-bezier: cubic-bezier(0.5, 0, 0.5, 1);
     background: var(--color--light);
-    transition: all 0.6s cubic-bezier(0.5, 0, 0.5, 1);
+    transition: all 0.6s var(--cubic-bezier);
     border-radius: var(--cards-radius);
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
     align-items: space-between;
     box-shadow: 0px 0px 1rem 0 rgba(0, 0, 0, 0.6);
+
+    &.in-view {
+        .Card__image {
+            img {
+                animation: imageAnimation 0.8s var(--cubic-bezier);
+                animation-fill-mode: forwards;
+            }
+        }
+    }
 
     &__close {
         position: absolute;
@@ -34,6 +55,8 @@
             width: 100%;
             object-fit: cover;
             height: 100%;
+            opacity: 0;
+            transform: scale(1.2);
         }
     }
     &__content {

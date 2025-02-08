@@ -3,11 +3,16 @@ import _Card from '@/styles/components/Card.scss'
 import Image from 'next/image'
 import { IconX } from './icons/IconX'
 import { IconArrowRight } from './icons/IconArrowRight'
+import { useInView } from '@/hooks/useInView'
 
 const Card = ({id, image, title, description, link, isActive, closeAction }) => {
+  
+  const [elementRef, isInView] = useInView({ threshold: 0.2 })
+
   const cardClasses = classNames('Card', {
     'Card--active': isActive,
-    'Card--linked': link
+    'Card--linked': link,
+    'in-view': isInView
   })
 
   const CardContent = () => (
@@ -45,6 +50,7 @@ const Card = ({id, image, title, description, link, isActive, closeAction }) => 
 
   return link ? (
     <a 
+      ref={elementRef}
       href={link.url}
       target={link.target || '_blank'}
       className={cardClasses}
@@ -54,7 +60,10 @@ const Card = ({id, image, title, description, link, isActive, closeAction }) => 
       <CardContent />
     </a>
   ) : (
-    <div className={cardClasses} data-id={id}>
+    <div 
+      ref={elementRef}
+      className={cardClasses}
+      data-id={id}>
       <CardContent />
     </div>
   )
