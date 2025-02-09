@@ -1,7 +1,7 @@
 'use client'
 
 import _NavSlide from '@/styles/components/NavTrigger.scss'
-import {  useEffect, useRef } from "react"
+import {  useRef } from "react"
 import useNavigatorStore from '@/stores/navigatorStore'
 import classNames from 'classnames';
 
@@ -15,31 +15,12 @@ const NavTrigger = (props) => {
   const navTriggerRef = useRef();
   const { setSection} = useNavigatorStore((state) => state)
   const currentTip = useNavigatorStore((state) => state.tip)
-  // const setTip = useNavigatorStore((state) => state.setTip)
 
   const NavTriggerClasses = classNames('NavTrigger', {
      'NavTrigger--open': (currentTip && Number(currentTip.split('|')[0]) === slideIndex)
   })
 
-  useEffect(() => {
-    const closeAllCards = () => {
-      const cards = document.querySelectorAll('.navSlide__content__tips .Card');
-      cards.forEach(card => {
-          card.classList.remove('Card--active');
-      });
-    }
-    const activateCard = () => {
-      closeAllCards();
-      const tipElement = document.querySelector(`[data-id="${currentTip}"]`);
-      tipElement.classList.add('Card--active'); 
-    }
 
-    if(!currentTip) {
-      closeAllCards();
-    } else {
-      activateCard()
-    }
-  }, [currentTip, slideIndex])
 
   useIsomorphicLayoutEffect(() => {
     

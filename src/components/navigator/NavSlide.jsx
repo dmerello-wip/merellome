@@ -4,11 +4,13 @@ import { Card } from '@/components/Card'
 import { NavTrigger } from '@/components/navigator/NavTrigger'
 import { SplittedText } from '@/components/SplittedText'
 import { useIsMobile } from '@/hooks/useIsMobile';
+import useNavigatorStore from '@/stores/navigatorStore'
 
 const NavSlide = (props) => {
 
   const { title, description, tips, cameraStartSettings, cameraEndSettings, slideIndex, setCamera } = props;
   const isMobile = useIsMobile();
+  const currentTip = useNavigatorStore((state) => state.tip)
 
   /* -------------------- render -------------------- */
 
@@ -38,13 +40,14 @@ const NavSlide = (props) => {
           {tips.map((tip,i) => {
             return (
               <Card
+                isActive={currentTip === `${slideIndex}|${i}`}
                 id={`${slideIndex}|${i}`}
                 key={`tip-${i}`}
                 image={tip.image}
                 title={tip.title}
                 description ={tip.description}
                 link={tip.link}
-                // closeAction={()=> setTip(null)}
+                closeAction={()=> setTip(null)}
               />
             )
           })}
