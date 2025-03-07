@@ -55,6 +55,14 @@ export default function Head() {
         Be sure validate your Twitter card markup on the documentation site. */}
       <meta name='twitter:card' content='summary' />
       <meta name='twitter:site' content={twitter} />
+      <script async src="https://www.googletagmanager.com/gtag/js?id=G-EWHVJF5MP6"></script>
+      <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'G-EWHVJF5MP6');
+      </script>
     </>
   )
 }
