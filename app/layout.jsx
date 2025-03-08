@@ -1,6 +1,7 @@
 import { Layout } from '@/components/Layout'
 import SmoothScrolling from "@/components/SmoothScrolling";
 import _global from '@/styles/global.scss'
+import { GoogleAnalytics } from '@next/third-parties/google'
 
 export const metadata = {
   title: 'Diego Merello | UX/UI Design passionate, music enthusiast, proud father', 
@@ -17,6 +18,7 @@ export default function RootLayout({ children }) {
           <Layout>{children}</Layout>
         </SmoothScrolling>
         
+        <GoogleAnalytics gaId="G-EWHVJF5MP6" />
       </body>
     </html>
   )

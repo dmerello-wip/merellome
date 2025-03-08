@@ -1,5 +1,3 @@
-import { GoogleAnalytics } from '@next/third-parties/google'
-
 const title = 'Diego Merello'
 const url = 'https:/merellome.vercel.app/'
 const description = 'simply a personal website of Diego Merello'
@@ -57,7 +55,6 @@ export default function Head() {
         Be sure validate your Twitter card markup on the documentation site. */}
       <meta name='twitter:card' content='summary' />
 
-      <GoogleAnalytics gaId="G-EWHVJF5MP6" />
     </>
   )
 }
