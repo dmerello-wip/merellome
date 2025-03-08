@@ -1,3 +1,5 @@
+import Script from 'next/script'
+
 const title = 'Diego Merello'
 const url = 'https:/merellome.vercel.app/'
 const description = 'simply a personal website of Diego Merello'
@@ -54,7 +56,18 @@ export default function Head() {
         documentation: https://dev.twitter.com/cards/getting-started
         Be sure validate your Twitter card markup on the documentation site. */}
       <meta name='twitter:card' content='summary' />
-      <meta name='twitter:site' content={twitter} />
+      <Script
+        src="https://www.googletagmanager.com/gtag/js?id=G-EWHVJF5MP6"
+        strategy="afterInteractive"
+      />
+      <Script id="google-analytics" strategy="afterInteractive">
+        {`
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', 'G-EWHVJF5MP6');
+        `}
+      </Script>
     </>
   )
 }
