@@ -1,4 +1,4 @@
-import Script from 'next/script'
+import { GoogleAnalytics } from '@next/third-parties/google'
 
 const title = 'Diego Merello'
 const url = 'https:/merellome.vercel.app/'
@@ -56,18 +56,8 @@ export default function Head() {
         documentation: https://dev.twitter.com/cards/getting-started
         Be sure validate your Twitter card markup on the documentation site. */}
       <meta name='twitter:card' content='summary' />
-      <Script
-        src="https://www.googletagmanager.com/gtag/js?id=G-EWHVJF5MP6"
-        strategy="afterInteractive"
-      />
-      <Script id="google-analytics" strategy="afterInteractive">
-        {`
-          window.dataLayer = window.dataLayer || [];
-          function gtag(){dataLayer.push(arguments);}
-          gtag('js', new Date());
-          gtag('config', 'G-EWHVJF5MP6');
-        `}
-      </Script>
+
+      <GoogleAnalytics gaId="G-EWHVJF5MP6" />
     </>
   )
 }
