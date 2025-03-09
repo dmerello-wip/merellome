@@ -19,7 +19,7 @@ const Card = ({id, image, title, description, link, isActive, closeAction }) => 
     <>
       <div className='Card__close'>
         {closeAction &&
-          <button className="btn--primary" onClick={closeAction}>
+          <button className="btn--primary" onClick={closeAction}  aria-label='Close'>
             <IconX />
           </button>
         }
